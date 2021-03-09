@@ -17,9 +17,9 @@ Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | vmaruseve@foi.hr | 0016140449 | ValentinaMarusevec1
-Ime i prezime | lmiroic1@foi.hr | 0016136262 | LucijaMiroic
-Ime i prezime | lsostar@foi.hr | 0016135309  | lsostar
+Valentina Maruševec | vmaruseve@foi.hr | 0016140449 | ValentinaMarusevec1
+Lucija Miroić | lmiroic1@foi.hr | 0016136262 | LucijaMiroic
+Lorena Šoštar | lsostar@foi.hr | 0016135309  | lsostar
 
 ## Opis domene
 Umjesto ovih uputa opišite domenu ili problem koji pokrivate vašim  projektom. Domena može biti proizvoljna, ali obratite pozornost da sukladno ishodima učenja, domena omogući primjenu zahtijevanih koncepata kako je to navedeno u sljedećem poglavlju. Priložite odgovarajuće skice gdje je to prikladno.
