@@ -27,10 +27,10 @@ F09 | Rezervacija termina grupnih treninga prema vrsti vježbi | Članovi tereta
 F010 | Evidencija smjena | Unos smjeni za pojedinog zaposlenika (CRUD operacije) za lakšu organizaciju grupa | Lorena Šoštar
 
 ## Tehnologije i oprema
-Visual Studio 2019
-C#
-.NET Framework
-Datagrip
-Microsoft Project
-GitHub
+Visual Studio 2019.
+C#,
+.NET Framework,
+Datagrip,
+Microsoft Project,
+GitHub,
 Visual Paradigm
