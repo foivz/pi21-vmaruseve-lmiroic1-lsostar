@@ -1,17 +1,4 @@
-# Inicijalne upute za prijavu projekta iz Programskog inženjerstva
-
-Poštovane kolegice i kolege, 
-
-čestitamo vam jer ste uspješno prijavili svoj projektni tim na kolegiju Programsko inženjerstvo, te je za vas automatski kreiran repozitorij koji ćete koristiti za verzioniranje vašega koda, ali i za pisanje dokumentacije.
-
-Ovaj dokument (README.md) predstavlja **osobnu iskaznicu vašeg projekta**. Vaš prvi zadatak, ukoliko niste odabrali da želite raditi na projektu sa nastavnicima ili u sklopu WBL-a je **prijaviti vlastiti projektni prijedlog** na način da ćete prijavu vašeg projekta, sukladno uputama danim u ovom tekstu, napisati upravo u ovaj dokument, umjesto ovoga teksta.
-
-Za upute o sintaksi koju možete koristiti u ovom dokumentu i kod pisanje vaše projektne dokumentacije pogledajte [ovaj link](https://guides.github.com/features/mastering-markdown/).
-
-Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra raditi na ovom projektu. A sada, vrijeme je da prijavite vaš projekt. Za prijavu vašeg projektnog prijedloga molimo vas koristite **predložak** koji je naveden u nastavku, a započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta :) 
-
-# Naziv projekta
-(u redak iznad navedite kratki proizvoljni naziv projekta prikladan akademskoj zajednici, a ovaj tekst obrišite)
+# eGym
 
 ## Projektni tim
 
@@ -22,15 +9,28 @@ Lucija Miroić | lmiroic1@foi.hr | 0016136262 | LucijaMiroic
 Lorena Šoštar | lsostar@foi.hr | 0016135309  | lsostar
 
 ## Opis domene
-Umjesto ovih uputa opišite domenu ili problem koji pokrivate vašim  projektom. Domena može biti proizvoljna, ali obratite pozornost da sukladno ishodima učenja, domena omogući primjenu zahtijevanih koncepata kako je to navedeno u sljedećem poglavlju. Priložite odgovarajuće skice gdje je to prikladno.
+Ova bi aplikacija omogućila vlasnicima i zaposlenicima evidentiranje članova, zaposlenika, smjena, suplemenata, opreme, praćenje članarimna, a svojim bi korisnicima omogućila rezerviranje individualnih i grupnih treninga.
 
 ## Specifikacija projekta
-Umjesto ovih uputa opišite zahtjeve za funkcionalnošću programskog proizvoda. Pobrojite osnovne funkcionalnosti i za svaku naznačite ime odgovornog člana tima. Opišite buduću arhitekturu programskog proizvoda. Obratite pozornost da bi arhitektura trebala biti višeslojna s odvojenom (dislociranom) bazom podatka. Također uzmite u obzir da bi svaki član tima treba biti odgovorana za otprilike 3 funkcionalnosti, te da bi opterećenje članova tima trebalo biti ujednačeno. Priložite odgovarajuće dijagrame i skice gdje je to prikladno. Funkcionalnosti sustava bobrojite u tablici ispod koristeći predložak koji slijedi:
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Login | Za pristup dnevniku potrebnba je autentikacija korisnika pomoću login funkcionalnosti. Korisnik se logira s podacima koji su mu dodijeljeni prilikom ... | Zlatko Stapić
-F02 | Pregled dnevnika | .... | ...
+F01 | Registracija | Za pristup aplikaciji potrebna je registracija korisnika (zaposlenika i članova teretane) svojim osobnim podacima. Zaposleniku admin dodjeljuje sve korisničke podatke | Lorena Šoštar
+F02 | Login | Nakon registracije, svaki korisnik aplikacije može pristupiti aplikaciji pomoću svojih korisničkih podataka koje je unio prilikom registracije | Lorena Šoštar
+F03 | Evidencija članova | Mogućnost pregledanja profila, CRUD operacije, pratiti status aktivan/neaktivan | Lucija Miroić
+F04 | Evidencija zaposlenika | Mogućnost pregledanja profila, CRUD operacije, dodjeljivanje vrste trenera (grupni ili individualni trener) | Lucija Miroić
+F05 | Evidencija suplemenata | Mogućnost vođenja stanja na skladištu nakon prodaje suplemenata u teretani -> ako je broj suplemenata manji od x -> naručiti novo | Valentina Maruševec
+F06 | Evidencija opreme | Mogućnost evidentiranja sve postojeće opreme koja je u teretani | Valentina Maruševec
+F07 | Praćenje članarina | Zaposlenici unose datum i iznos članarine kada član uplati iznos u teretani. Izdaje se račun. | Lorena Šoštar
+F08 | Rezervacija individualnih treninga s biranjem trenera | Članovi teretane mogu pregledati i rezevirati željeni termin prema određenom treneru | Lucija Miroić
+F09 | Rezervacija termina grupnih treninga prema vrsti vježbi | Članovi teretane mogu pregledati i rezervirati željeni termin prema određenim grupama koje su ponuđene prema vrstama vježbi. | Valentina Maruševec
+F010 | Evidencija smjena | Unos smjeni za pojedinog zaposlenika (CRUD operacije) za lakšu organizaciju grupa | Lorena Šoštar
 
 ## Tehnologije i oprema
-Umjesto ovih uputa jasno popišite sve tehnologije, alate i opremu koju ćete koristiti pri implementaciji vašeg rješenja. Ne zaboravite planirati korištenje tehnologija u aktivnostima kao što su projektni menadžment ili priprema dokumentacije. Tehnologije koje ćete koristiti bi trebale biti javno dostupne, a ako ih ne budemo obrađivali na vježbama u vašoj dokumentaciji ćete morati navesti način preuzimanja, instaliranja i korištenja onih tehnologija koje su neopbodne kako bi se vaš programski proizvod preveo i pokrenuo. Pazite da svi alati koje ćete koristiti moraju imati odgovarajuću licencu.
+Visual Studio 2019
+C#
+.NET Framework
+Datagrip
+Microsoft Project
+GitHub
+Visual Paradigm
