@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace eGym
 {
-    public partial class Form1 : Form
+    public partial class formProfilClana : Form
     {
-        public Form1()
+        public formProfilClana()
         {
             InitializeComponent();
+        }
+
+        private void lblVrijediDo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
