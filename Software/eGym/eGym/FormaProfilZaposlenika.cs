@@ -16,5 +16,19 @@ namespace eGym
         {
             InitializeComponent();
         }
+
+        private void btnZaposlenici_Click(object sender, EventArgs e)
+        {
+            FormaEvidencijaZaposlenika formaEvidencijaZaposlenika = new FormaEvidencijaZaposlenika();
+            formaEvidencijaZaposlenika.Show();
+            this.Hide();
+        }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            PocetnaStranica1 pocetnaStranica = new PocetnaStranica1();
+            pocetnaStranica.Show();
+            this.Hide();
+        }
     }
 }

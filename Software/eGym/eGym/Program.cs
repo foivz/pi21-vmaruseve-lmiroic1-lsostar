@@ -16,7 +16,7 @@ namespace eGym
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormProfilZaposlenika());
+            Application.Run(new PocetnaStranica1());
         }
     }
 }

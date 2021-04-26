@@ -10,26 +10,25 @@ using System.Windows.Forms;
 
 namespace eGym
 {
-    public partial class formProfilClana : Form
+    public partial class FormaPrijava : Form
     {
-        public formProfilClana()
+        public FormaPrijava()
         {
             InitializeComponent();
         }
 
-        private void lblVrijediDo_Click(object sender, EventArgs e)
+        private void btnPrijava_Click(object sender, EventArgs e)
         {
+            formProfilClana formProfilClana = new formProfilClana();
+            FormProfilZaposlenika formProfilZaposlenika = new FormProfilZaposlenika();
 
-        }
-
-        private void btnPlatiClanarinu_Click(object sender, EventArgs e)
-        {
-            FormaPlatiClanarinu formaPlatiClanarinu = new FormaPlatiClanarinu();
-            formaPlatiClanarinu.Show();
+            formProfilClana.Show();
+            formProfilZaposlenika.Show();
             this.Hide();
+
         }
 
-        private void btnOdjava_Click(object sender, EventArgs e)
+        private void btnPrijavaNatrag_Click(object sender, EventArgs e)
         {
             PocetnaStranica1 pocetnaStranica = new PocetnaStranica1();
             pocetnaStranica.Show();

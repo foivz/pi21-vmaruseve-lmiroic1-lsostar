@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormaAzurirajZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaAzurirajZaposlenika.Designer.cs">
+      <DependentUpon>FormaAzurirajZaposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaEvidencijaZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaEvidencijaZaposlenika.Designer.cs">
+      <DependentUpon>FormaEvidencijaZaposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPlatiClanarinu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaPlatiClanarinu.Designer.cs">
+      <DependentUpon>FormaPlatiClanarinu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaPrijava.Designer.cs">
+      <DependentUpon>FormaPrijava.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormaProfilClana.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,10 +82,46 @@
     <Compile Include="FormaProfilZaposlenika.Designer.cs">
       <DependentUpon>FormaProfilZaposlenika.cs</DependentUpon>
     </Compile>
+    <Compile Include="PocetnaStranica1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PocetnaStranica1.Designer.cs">
+      <DependentUpon>PocetnaStranica1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormaRegistracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaRegistracija.Designer.cs">
+      <DependentUpon>FormaRegistracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerifikacijskiKod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerifikacijskiKod.Designer.cs">
+      <DependentUpon>VerifikacijskiKod.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormaAzurirajZaposlenika.resx">
+      <DependentUpon>FormaAzurirajZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaEvidencijaZaposlenika.resx">
+      <DependentUpon>FormaEvidencijaZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaPlatiClanarinu.resx">
+      <DependentUpon>FormaPlatiClanarinu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaPrijava.resx">
+      <DependentUpon>FormaPrijava.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormaProfilClana.resx">
       <DependentUpon>FormaProfilClana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaRegistracija.resx">
+      <DependentUpon>FormaRegistracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PocetnaStranica1.resx">
+      <DependentUpon>PocetnaStranica1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="FormaProfilZaposlenika.resx">
       <DependentUpon>FormaProfilZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifikacijskiKod.resx">
+      <DependentUpon>VerifikacijskiKod.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
