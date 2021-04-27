@@ -30,5 +30,12 @@ namespace eGym
             pocetnaStranica.Show();
             this.Hide();
         }
+
+        private void btnSmjene_Click(object sender, EventArgs e)
+        {
+            FormaEvidencijaSmjena formaEvidencijaSmjena = new FormaEvidencijaSmjena();
+            formaEvidencijaSmjena.Show();
+            this.Hide();
+        }
     }
 }

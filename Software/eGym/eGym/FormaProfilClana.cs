@@ -35,5 +35,19 @@ namespace eGym
             pocetnaStranica.Show();
             this.Hide();
         }
+
+        private void btnNaruciSuplement_Click(object sender, EventArgs e)
+        {
+            FormaNaruciSuplement formaNaruciSuplement = new FormaNaruciSuplement();
+            formaNaruciSuplement.Show();
+            this.Hide();
+        }
+
+        private void btnRezervacijaTreninga_Click(object sender, EventArgs e)
+        {
+            FormaRezervacijaTreninga formaRezervacijaTreninga = new FormaRezervacijaTreninga();
+            formaRezervacijaTreninga.Show();
+            this.Hide();
+        }
     }
 }
