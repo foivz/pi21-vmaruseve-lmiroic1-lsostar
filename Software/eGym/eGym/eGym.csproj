@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormaAzurirajClana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaAzurirajClana.Designer.cs">
+      <DependentUpon>FormaAzurirajClana.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormaAzurirajSmjenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormaAzurirajSmjenu.Designer.cs">
       <DependentUpon>FormaAzurirajSmjenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaAzurirajSuplement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaAzurirajSuplement.Designer.cs">
+      <DependentUpon>FormaAzurirajSuplement.cs</DependentUpon>
     </Compile>
     <Compile Include="FormaAzurirajZaposlenika.cs">
       <SubType>Form</SubType>
@@ -64,11 +76,29 @@
     <Compile Include="FormaDodajSmjenu.Designer.cs">
       <DependentUpon>FormaDodajSmjenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormaDodajSuplement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaDodajSuplement.Designer.cs">
+      <DependentUpon>FormaDodajSuplement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaEvidencijaClanova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaEvidencijaClanova.Designer.cs">
+      <DependentUpon>FormaEvidencijaClanova.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormaEvidencijaSmjena.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormaEvidencijaSmjena.Designer.cs">
       <DependentUpon>FormaEvidencijaSmjena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaEvidencijaSuplemenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaEvidencijaSuplemenata.Designer.cs">
+      <DependentUpon>FormaEvidencijaSuplemenata.cs</DependentUpon>
     </Compile>
     <Compile Include="FormaEvidencijaZaposlenika.cs">
       <SubType>Form</SubType>
@@ -81,6 +111,12 @@
     </Compile>
     <Compile Include="FormaGrupniTrening.Designer.cs">
       <DependentUpon>FormaGrupniTrening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaIzvjesce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaIzvjesce.Designer.cs">
+      <DependentUpon>FormaIzvjesce.cs</DependentUpon>
     </Compile>
     <Compile Include="FormaNaruciSuplement.cs">
       <SubType>Form</SubType>
@@ -124,6 +160,24 @@
     <Compile Include="FormaUrediKosaricu.Designer.cs">
       <DependentUpon>FormaUrediKosaricu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormaUrediProfilClana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaUrediProfilClana.Designer.cs">
+      <DependentUpon>FormaUrediProfilClana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaUrediProfilZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaUrediProfilZaposlenika.Designer.cs">
+      <DependentUpon>FormaUrediProfilZaposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIndividualniTrening.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIndividualniTrening.Designer.cs">
+      <DependentUpon>FormIndividualniTrening.cs</DependentUpon>
+    </Compile>
     <Compile Include="PocetnaStranica1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,8 +198,14 @@
     <Compile Include="VerifikacijskiKod.Designer.cs">
       <DependentUpon>VerifikacijskiKod.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormaAzurirajClana.resx">
+      <DependentUpon>FormaAzurirajClana.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormaAzurirajSmjenu.resx">
       <DependentUpon>FormaAzurirajSmjenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaAzurirajSuplement.resx">
+      <DependentUpon>FormaAzurirajSuplement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormaAzurirajZaposlenika.resx">
       <DependentUpon>FormaAzurirajZaposlenika.cs</DependentUpon>
@@ -153,14 +213,26 @@
     <EmbeddedResource Include="FormaDodajSmjenu.resx">
       <DependentUpon>FormaDodajSmjenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormaDodajSuplement.resx">
+      <DependentUpon>FormaDodajSuplement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaEvidencijaClanova.resx">
+      <DependentUpon>FormaEvidencijaClanova.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormaEvidencijaSmjena.resx">
       <DependentUpon>FormaEvidencijaSmjena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaEvidencijaSuplemenata.resx">
+      <DependentUpon>FormaEvidencijaSuplemenata.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormaEvidencijaZaposlenika.resx">
       <DependentUpon>FormaEvidencijaZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormaGrupniTrening.resx">
       <DependentUpon>FormaGrupniTrening.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaIzvjesce.resx">
+      <DependentUpon>FormaIzvjesce.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormaNaruciSuplement.resx">
       <DependentUpon>FormaNaruciSuplement.cs</DependentUpon>
@@ -182,6 +254,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormaUrediKosaricu.resx">
       <DependentUpon>FormaUrediKosaricu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaUrediProfilClana.resx">
+      <DependentUpon>FormaUrediProfilClana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaUrediProfilZaposlenika.resx">
+      <DependentUpon>FormaUrediProfilZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIndividualniTrening.resx">
+      <DependentUpon>FormIndividualniTrening.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PocetnaStranica1.resx">
       <DependentUpon>PocetnaStranica1.cs</DependentUpon>

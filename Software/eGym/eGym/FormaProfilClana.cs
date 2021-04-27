@@ -49,5 +49,25 @@ namespace eGym
             formaRezervacijaTreninga.Show();
             this.Hide();
         }
+
+        private void txtClanarinaPlacena_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void formProfilClana_Load(object sender, EventArgs e)
+        {
+            cbClanarinaPlacenaProfilClana.Enabled = false;
+            dtpVrijediDo.Enabled = false;
+            dtpVrijediOd.Enabled = false;
+            txtIznosNaRacunu.Enabled = false;
+        }
+
+        private void btnUrediProfil_Click(object sender, EventArgs e)
+        {
+            FormaUrediProfilClana formaUrediProfil = new FormaUrediProfilClana();
+            formaUrediProfil.Show();
+            this.Hide();
+        }
     }
 }

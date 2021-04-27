@@ -30,5 +30,12 @@ namespace eGym
             formProfilClana.Show();
             this.Hide();
         }
+
+        private void btnIndividualniTrening_Click(object sender, EventArgs e)
+        {
+            FormIndividualniTrening formIndividualniTrening = new FormIndividualniTrening();
+            formIndividualniTrening.Show();
+            this.Hide();
+        }
     }
 }

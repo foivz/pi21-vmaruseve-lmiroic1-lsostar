@@ -50,6 +50,7 @@ namespace eGym
             this.label1.Size = new System.Drawing.Size(172, 29);
             this.label1.TabIndex = 74;
             this.label1.Text = "Grupni trening";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -61,6 +62,7 @@ namespace eGym
             this.label2.Size = new System.Drawing.Size(152, 55);
             this.label2.TabIndex = 73;
             this.label2.Text = "eGym";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dataGridView1
             // 
@@ -71,6 +73,7 @@ namespace eGym
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(733, 178);
             this.dataGridView1.TabIndex = 75;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label3
             // 
@@ -80,6 +83,7 @@ namespace eGym
             this.label3.Size = new System.Drawing.Size(143, 17);
             this.label3.TabIndex = 76;
             this.label3.Text = "Odaberi vrstu vježbe:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -89,6 +93,7 @@ namespace eGym
             this.label4.Size = new System.Drawing.Size(106, 17);
             this.label4.TabIndex = 76;
             this.label4.Text = "Odaberi datum:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // cmbVrstaVjezbe
             // 
@@ -97,6 +102,7 @@ namespace eGym
             this.cmbVrstaVjezbe.Name = "cmbVrstaVjezbe";
             this.cmbVrstaVjezbe.Size = new System.Drawing.Size(235, 24);
             this.cmbVrstaVjezbe.TabIndex = 77;
+            this.cmbVrstaVjezbe.SelectedIndexChanged += new System.EventHandler(this.cmbVrstaVjezbe_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
@@ -104,6 +110,7 @@ namespace eGym
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(235, 22);
             this.dateTimePicker1.TabIndex = 78;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // btnRezerviraj
             // 

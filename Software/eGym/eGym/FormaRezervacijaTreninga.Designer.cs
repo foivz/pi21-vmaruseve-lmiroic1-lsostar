@@ -57,6 +57,7 @@ namespace eGym
             this.btnIndividualniTrening.TabIndex = 3;
             this.btnIndividualniTrening.Text = "Individualni trening";
             this.btnIndividualniTrening.UseVisualStyleBackColor = false;
+            this.btnIndividualniTrening.Click += new System.EventHandler(this.btnIndividualniTrening_Click);
             // 
             // btnGrupniTrening
             // 

@@ -44,7 +44,6 @@ namespace eGym
             this.txtPrezimeClana = new System.Windows.Forms.TextBox();
             this.txtEmailClana = new System.Windows.Forms.TextBox();
             this.txtBrojTelefonaClana = new System.Windows.Forms.TextBox();
-            this.txtClanarinaPlacena = new System.Windows.Forms.TextBox();
             this.dtpVrijediOd = new System.Windows.Forms.DateTimePicker();
             this.dtpVrijediDo = new System.Windows.Forms.DateTimePicker();
             this.txtIznosNaRacunu = new System.Windows.Forms.TextBox();
@@ -53,6 +52,7 @@ namespace eGym
             this.btnNaruciSuplement = new System.Windows.Forms.Button();
             this.btnRezervacijaTreninga = new System.Windows.Forms.Button();
             this.btnOdjava = new System.Windows.Forms.Button();
+            this.cbClanarinaPlacenaProfilClana = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -199,14 +199,6 @@ namespace eGym
             this.txtBrojTelefonaClana.Size = new System.Drawing.Size(183, 22);
             this.txtBrojTelefonaClana.TabIndex = 14;
             // 
-            // txtClanarinaPlacena
-            // 
-            this.txtClanarinaPlacena.Location = new System.Drawing.Point(211, 325);
-            this.txtClanarinaPlacena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtClanarinaPlacena.Name = "txtClanarinaPlacena";
-            this.txtClanarinaPlacena.Size = new System.Drawing.Size(183, 22);
-            this.txtClanarinaPlacena.TabIndex = 15;
-            // 
             // dtpVrijediOd
             // 
             this.dtpVrijediOd.Location = new System.Drawing.Point(211, 362);
@@ -243,6 +235,7 @@ namespace eGym
             this.btnUrediProfil.TabIndex = 19;
             this.btnUrediProfil.Text = "Uredi profil";
             this.btnUrediProfil.UseVisualStyleBackColor = false;
+            this.btnUrediProfil.Click += new System.EventHandler(this.btnUrediProfil_Click);
             // 
             // btnPlatiClanarinu
             // 
@@ -300,12 +293,21 @@ namespace eGym
             this.btnOdjava.UseVisualStyleBackColor = false;
             this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
             // 
+            // cbClanarinaPlacenaProfilClana
+            // 
+            this.cbClanarinaPlacenaProfilClana.FormattingEnabled = true;
+            this.cbClanarinaPlacenaProfilClana.Location = new System.Drawing.Point(211, 328);
+            this.cbClanarinaPlacenaProfilClana.Name = "cbClanarinaPlacenaProfilClana";
+            this.cbClanarinaPlacenaProfilClana.Size = new System.Drawing.Size(183, 24);
+            this.cbClanarinaPlacenaProfilClana.TabIndex = 46;
+            // 
             // formProfilClana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(944, 566);
+            this.Controls.Add(this.cbClanarinaPlacenaProfilClana);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnRezervacijaTreninga);
             this.Controls.Add(this.btnNaruciSuplement);
@@ -314,7 +316,6 @@ namespace eGym
             this.Controls.Add(this.txtIznosNaRacunu);
             this.Controls.Add(this.dtpVrijediDo);
             this.Controls.Add(this.dtpVrijediOd);
-            this.Controls.Add(this.txtClanarinaPlacena);
             this.Controls.Add(this.txtBrojTelefonaClana);
             this.Controls.Add(this.txtEmailClana);
             this.Controls.Add(this.txtPrezimeClana);
@@ -333,6 +334,7 @@ namespace eGym
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "formProfilClana";
             this.Text = "Clan";
+            this.Load += new System.EventHandler(this.formProfilClana_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,7 +357,6 @@ namespace eGym
         private System.Windows.Forms.TextBox txtPrezimeClana;
         private System.Windows.Forms.TextBox txtEmailClana;
         private System.Windows.Forms.TextBox txtBrojTelefonaClana;
-        private System.Windows.Forms.TextBox txtClanarinaPlacena;
         private System.Windows.Forms.DateTimePicker dtpVrijediOd;
         private System.Windows.Forms.DateTimePicker dtpVrijediDo;
         private System.Windows.Forms.TextBox txtIznosNaRacunu;
@@ -364,5 +365,6 @@ namespace eGym
         private System.Windows.Forms.Button btnNaruciSuplement;
         private System.Windows.Forms.Button btnRezervacijaTreninga;
         private System.Windows.Forms.Button btnOdjava;
+        private System.Windows.Forms.ComboBox cbClanarinaPlacenaProfilClana;
     }
 }

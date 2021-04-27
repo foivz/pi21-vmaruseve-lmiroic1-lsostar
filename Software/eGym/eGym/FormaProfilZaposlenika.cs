@@ -37,5 +37,33 @@ namespace eGym
             formaEvidencijaSmjena.Show();
             this.Hide();
         }
+
+        private void btnClanovi_Click(object sender, EventArgs e)
+        {
+            FormaEvidencijaClanova formaEvidencijaClanova = new FormaEvidencijaClanova();
+            formaEvidencijaClanova.Show();
+            this.Hide();
+        }
+
+        private void btnSuplementi_Click(object sender, EventArgs e)
+        {
+            FormaEvidencijaSuplemenata formaEvidencijaSuplemenata = new FormaEvidencijaSuplemenata();
+            formaEvidencijaSuplemenata.Show();
+            this.Hide();
+        }
+
+        private void btnIzvjesce_Click(object sender, EventArgs e)
+        {
+            FormaIzvjesce formaIzvjesce = new FormaIzvjesce();
+            formaIzvjesce.Show();
+            this.Hide();
+        }
+
+        private void btnUrediProfil_Click(object sender, EventArgs e)
+        {
+            FormaUrediProfilZaposlenika formaUrediProfilZaposlenika = new FormaUrediProfilZaposlenika();
+            formaUrediProfilZaposlenika.Show();
+            this.Hide();
+        }
     }
 }
