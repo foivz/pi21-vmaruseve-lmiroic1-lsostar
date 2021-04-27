@@ -64,6 +64,12 @@
     <Compile Include="FormaAzurirajSuplement.Designer.cs">
       <DependentUpon>FormaAzurirajSuplement.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormaAzurirajTermin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaAzurirajTermin.Designer.cs">
+      <DependentUpon>FormaAzurirajTermin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormaAzurirajZaposlenika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     <Compile Include="FormaDodajSuplement.Designer.cs">
       <DependentUpon>FormaDodajSuplement.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormaDodajTermin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaDodajTermin.Designer.cs">
+      <DependentUpon>FormaDodajTermin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormaEvidencijaClanova.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,12 @@
     </Compile>
     <Compile Include="FormaEvidencijaSuplemenata.Designer.cs">
       <DependentUpon>FormaEvidencijaSuplemenata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaEvidencijaTermina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaEvidencijaTermina.Designer.cs">
+      <DependentUpon>FormaEvidencijaTermina.cs</DependentUpon>
     </Compile>
     <Compile Include="FormaEvidencijaZaposlenika.cs">
       <SubType>Form</SubType>
@@ -207,6 +225,9 @@
     <EmbeddedResource Include="FormaAzurirajSuplement.resx">
       <DependentUpon>FormaAzurirajSuplement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormaAzurirajTermin.resx">
+      <DependentUpon>FormaAzurirajTermin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormaAzurirajZaposlenika.resx">
       <DependentUpon>FormaAzurirajZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +237,9 @@
     <EmbeddedResource Include="FormaDodajSuplement.resx">
       <DependentUpon>FormaDodajSuplement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormaDodajTermin.resx">
+      <DependentUpon>FormaDodajTermin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormaEvidencijaClanova.resx">
       <DependentUpon>FormaEvidencijaClanova.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormaEvidencijaSuplemenata.resx">
       <DependentUpon>FormaEvidencijaSuplemenata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaEvidencijaTermina.resx">
+      <DependentUpon>FormaEvidencijaTermina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormaEvidencijaZaposlenika.resx">
       <DependentUpon>FormaEvidencijaZaposlenika.cs</DependentUpon>

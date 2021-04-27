@@ -49,6 +49,7 @@ namespace eGym
             this.txtBrojTelefonaZaposlenika = new System.Windows.Forms.TextBox();
             this.txtVrstaZaposlenika = new System.Windows.Forms.TextBox();
             this.btnUrediProfil = new System.Windows.Forms.Button();
+            this.btnTermini = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSuplementi
@@ -56,7 +57,7 @@ namespace eGym
             this.btnSuplementi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSuplementi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuplementi.ForeColor = System.Drawing.Color.White;
-            this.btnSuplementi.Location = new System.Drawing.Point(576, 242);
+            this.btnSuplementi.Location = new System.Drawing.Point(576, 241);
             this.btnSuplementi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSuplementi.Name = "btnSuplementi";
             this.btnSuplementi.Size = new System.Drawing.Size(115, 55);
@@ -70,7 +71,7 @@ namespace eGym
             this.btnZaposlenici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnZaposlenici.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZaposlenici.ForeColor = System.Drawing.Color.White;
-            this.btnZaposlenici.Location = new System.Drawing.Point(576, 177);
+            this.btnZaposlenici.Location = new System.Drawing.Point(576, 176);
             this.btnZaposlenici.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnZaposlenici.Name = "btnZaposlenici";
             this.btnZaposlenici.Size = new System.Drawing.Size(115, 50);
@@ -98,7 +99,7 @@ namespace eGym
             this.btnSmjene.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSmjene.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSmjene.ForeColor = System.Drawing.Color.White;
-            this.btnSmjene.Location = new System.Drawing.Point(576, 313);
+            this.btnSmjene.Location = new System.Drawing.Point(576, 311);
             this.btnSmjene.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSmjene.Name = "btnSmjene";
             this.btnSmjene.Size = new System.Drawing.Size(115, 55);
@@ -112,7 +113,7 @@ namespace eGym
             this.btnIzvjesce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnIzvjesce.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIzvjesce.ForeColor = System.Drawing.Color.White;
-            this.btnIzvjesce.Location = new System.Drawing.Point(576, 383);
+            this.btnIzvjesce.Location = new System.Drawing.Point(576, 451);
             this.btnIzvjesce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIzvjesce.Name = "btnIzvjesce";
             this.btnIzvjesce.Size = new System.Drawing.Size(115, 55);
@@ -126,7 +127,7 @@ namespace eGym
             this.btnOdjava.BackColor = System.Drawing.Color.Gray;
             this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdjava.ForeColor = System.Drawing.Color.White;
-            this.btnOdjava.Location = new System.Drawing.Point(665, 506);
+            this.btnOdjava.Location = new System.Drawing.Point(687, 566);
             this.btnOdjava.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(105, 50);
@@ -270,12 +271,26 @@ namespace eGym
             this.btnUrediProfil.UseVisualStyleBackColor = false;
             this.btnUrediProfil.Click += new System.EventHandler(this.btnUrediProfil_Click);
             // 
+            // btnTermini
+            // 
+            this.btnTermini.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTermini.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTermini.ForeColor = System.Drawing.Color.White;
+            this.btnTermini.Location = new System.Drawing.Point(576, 381);
+            this.btnTermini.Name = "btnTermini";
+            this.btnTermini.Size = new System.Drawing.Size(115, 55);
+            this.btnTermini.TabIndex = 49;
+            this.btnTermini.Text = "Termini";
+            this.btnTermini.UseVisualStyleBackColor = false;
+            this.btnTermini.Click += new System.EventHandler(this.btnTermini_Click);
+            // 
             // FormProfilZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(781, 569);
+            this.ClientSize = new System.Drawing.Size(814, 637);
+            this.Controls.Add(this.btnTermini);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnIzvjesce);
             this.Controls.Add(this.btnSmjene);
@@ -326,6 +341,7 @@ namespace eGym
         private System.Windows.Forms.TextBox txtBrojTelefonaZaposlenika;
         private System.Windows.Forms.TextBox txtVrstaZaposlenika;
         private System.Windows.Forms.Button btnUrediProfil;
+        private System.Windows.Forms.Button btnTermini;
     }
 }
 

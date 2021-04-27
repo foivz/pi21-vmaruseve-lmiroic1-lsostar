@@ -65,5 +65,12 @@ namespace eGym
             formaUrediProfilZaposlenika.Show();
             this.Hide();
         }
+
+        private void btnTermini_Click(object sender, EventArgs e)
+        {
+            FormaEvidencijaTermina formaEvidencijaTermina = new FormaEvidencijaTermina();
+            formaEvidencijaTermina.Show();
+            this.Hide();
+        }
     }
 }
