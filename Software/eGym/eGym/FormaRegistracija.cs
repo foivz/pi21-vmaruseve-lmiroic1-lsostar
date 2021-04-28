@@ -19,8 +19,9 @@ namespace eGym
 
         private void btnRegistrirajSe_Click(object sender, EventArgs e)
         {
-            VerifikacijskiKod verifikacijskiKod = new VerifikacijskiKod();
-            verifikacijskiKod.Show();
+            MessageBox.Show("Uspješna registracija");
+            FormaPrijava formaPrijava = new FormaPrijava();
+            formaPrijava.Show();
             this.Hide();
             
         }
