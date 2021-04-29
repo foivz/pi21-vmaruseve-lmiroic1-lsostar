@@ -22,11 +22,11 @@ F04 | Naručivanje suplemenata | Član, koji ima uplaćen iznos na svom profilu,
 F05 | Evidencija zaposlenika | Zaposlenici mogu pregledati popis svih zaposlenika, njihove profile (CRUD operacije). Svaki zaposlenik ima svoju ulogu u teretani (individualni trener, grupni trener)| Lorena Šoštar
 F06 | Evidencija suplemenata | CRUD operacije, član može naručiti određene suplemente. Također, svaki suplement ima svoju količinu te kada korisnik naruči određenu količinu tog suplementa, od trenutne količine suplementa se oduzima količina koju je korisnik naručio. | Lucija Miroić
 F07 | Praćenje članarina | Zaposlenici unose datum i iznos članarine kada član uplati iznos u teretani. Izdaje se račun. | Lorena Šoštar
-F08 | Rezervacija individualnih treninga s biranjem trenera | Članovi teretane mogu pregledati i rezevirati željeni termin prema određenom treneru | Lucija Miroić
-F09 | Rezervacija termina grupnih treninga prema vrsti vježbi | Članovi teretane mogu pregledati i rezervirati željeni termin prema određenim grupama koje su ponuđene prema vrstama vježbi. | Valentina Maruševec
+F08 | Rezervacija individualnih treninga s biranjem trenera | Članovi teretane mogu pregledati i rezevirati željeni termin prema određenom treneru. Članovi na mail dobivaju obavijest o uspješnoj rezervaciji.  | Lucija Miroić
+F09 | Rezervacija termina grupnih treninga prema vrsti vježbi | Članovi teretane mogu pregledati i rezervirati željeni termin prema određenim grupama koje su ponuđene prema vrstama vježbi. Članovi na mail dobivaju obavijest o uspješnoj rezervaciji. | Valentina Maruševec
 F10 | Evidencija smjena | Unos smjeni za pojedinog zaposlenika (CRUD operacije) za lakšu organizaciju grupa | Valentina Maruševec
-F11 | Vizualni prikaz podataka | grafovi koliko je individualnih treninga, grupnih i sl. | Lucija Miroić
-F12 | Potvrda rezervacije treninga | Korisniku na mail stiže potvrda da je uspješno rezervirao termin treninga | Valentina Maruševec
+F11 | Izvješće | izvješće o prodanim suplementima i grafički prikaz broja prodanih suplemenata | Lucija Miroić
+F12 | Evidencija termina | Zaposlenik ima mogućnost dodavati, ažurirati i brisati termine treninga. | Valentina Maruševec
 
 ## Tehnologije i oprema
 Visual Studio 2019.
