@@ -15,16 +15,18 @@ Ova bi aplikacija omogućila vlasnicima i zaposlenicima evidentiranje članova, 
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Registracija | Za pristup aplikaciji potrebna je registracija korisnika (zaposlenika i članova teretane) svojim osobnim podacima. Zaposleniku admin dodjeljuje sve korisničke podatke | Lorena Šoštar
-F02 | Login | Nakon registracije, svaki korisnik aplikacije može pristupiti aplikaciji pomoću svojih korisničkih podataka koje je unio prilikom registracije | Lorena Šoštar
-F03 | Evidencija članova | Mogućnost pregledanja profila, CRUD operacije, pratiti status aktivan/neaktivan | Lucija Miroić
-F04 | Evidencija zaposlenika | Mogućnost pregledanja profila, CRUD operacije, dodjeljivanje vrste trenera (grupni ili individualni trener) | Lucija Miroić
-F05 | Evidencija suplemenata | Mogućnost vođenja stanja na skladištu nakon prodaje suplemenata u teretani -> ako je broj suplemenata manji od x -> naručiti novo | Valentina Maruševec
-F06 | Evidencija opreme | Mogućnost evidentiranja sve postojeće opreme koja je u teretani | Valentina Maruševec
+F01 | Registracija | Za pristup aplikaciji potrebna je registracija korisnika (uloga u sustavu - obični korisnik, moderator i administrator) svojim osobnim podacima. Administrator prihvaća ili odbija registracije korisnika. | Lorena Šoštar
+F02 | Login | Nakon registracije i nakon što administrator prihvati korisnika, svaki korisnik aplikacije može pristupiti aplikaciji pomoću svojih korisničkih podataka koje je unio prilikom registracije | Lorena Šoštar
+F03 | Evidencija članova | Zaposlenik može pregledati popis svih članova, njihove profile (CRUD operacije), unijeti im određenu svotu novca koju član uplati u teretani. Tim novčanim iznosom korisnik može naručivati suplemente. | Lucija Miroić
+F04 | Naručivanje suplemenata | Član, koji ima uplaćen iznos na svom profilu, može naručivati suplemente koje želi. Kada naruči suplement, ukupna cijena svih naručenih suplemenata oduzima se od iznosa na korisnikovom računu. | Valentina Maruševec
+F05 | Evidencija zaposlenika | Zaposlenici mogu pregledati popis svih zaposlenika, njihove profile (CRUD operacije). Svaki zaposlenik ima svoju ulogu u teretani (individualni trener, grupni trener)| Lorena Šoštar
+F06 | Evidencija suplemenata | CRUD operacije, član može naručiti određene suplemente. Također, svaki suplement ima svoju količinu te kada korisnik naruči određenu količinu tog suplementa, od trenutne količine suplementa se oduzima količina koju je korisnik naručio. | Lucija Miroić
 F07 | Praćenje članarina | Zaposlenici unose datum i iznos članarine kada član uplati iznos u teretani. Izdaje se račun. | Lorena Šoštar
-F08 | Rezervacija individualnih treninga s biranjem trenera | Članovi teretane mogu pregledati i rezevirati željeni termin prema određenom treneru | Lucija Miroić
-F09 | Rezervacija termina grupnih treninga prema vrsti vježbi | Članovi teretane mogu pregledati i rezervirati željeni termin prema određenim grupama koje su ponuđene prema vrstama vježbi. | Valentina Maruševec
-F010 | Evidencija smjena | Unos smjeni za pojedinog zaposlenika (CRUD operacije) za lakšu organizaciju grupa | Lorena Šoštar
+F08 | Rezervacija individualnih treninga s biranjem trenera | Članovi teretane mogu pregledati i rezevirati željeni termin prema određenom treneru. Članovi na mail dobivaju obavijest o uspješnoj rezervaciji.  | Lucija Miroić
+F09 | Rezervacija termina grupnih treninga prema vrsti vježbi | Članovi teretane mogu pregledati i rezervirati željeni termin prema određenim grupama koje su ponuđene prema vrstama vježbi. Članovi na mail dobivaju obavijest o uspješnoj rezervaciji. | Valentina Maruševec
+F10 | Evidencija smjena | Unos smjeni za pojedinog zaposlenika (CRUD operacije) za lakšu organizaciju grupa | Valentina Maruševec
+F11 | Izvješće | izvješće o prodanim suplementima i grafički prikaz broja prodanih suplemenata | Lucija Miroić
+F12 | Evidencija termina | Zaposlenik ima mogućnost dodavati, ažurirati i brisati termine treninga. | Valentina Maruševec
 
 ## Tehnologije i oprema
 Visual Studio 2019.
