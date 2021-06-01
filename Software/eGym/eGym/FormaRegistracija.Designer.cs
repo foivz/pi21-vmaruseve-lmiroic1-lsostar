@@ -29,8 +29,6 @@ namespace eGym
         /// </summary>
         private void InitializeComponent()
         {
-            this.label7 = new System.Windows.Forms.Label();
-            this.cboxVrstaKorisnikaReg = new System.Windows.Forms.ComboBox();
             this.txtLozinkaRegistracija = new System.Windows.Forms.TextBox();
             this.txtUsernameRegistracija = new System.Windows.Forms.TextBox();
             this.txtBrojMobRegistracija = new System.Windows.Forms.TextBox();
@@ -48,24 +46,6 @@ namespace eGym
             this.btnRegistrirajSe = new System.Windows.Forms.Button();
             this.btnRegistracijaNatrag = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(197, 544);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 20);
-            this.label7.TabIndex = 45;
-            this.label7.Text = "Vrsta korisnika:";
-            // 
-            // cboxVrstaKorisnikaReg
-            // 
-            this.cboxVrstaKorisnikaReg.FormattingEnabled = true;
-            this.cboxVrstaKorisnikaReg.Location = new System.Drawing.Point(360, 546);
-            this.cboxVrstaKorisnikaReg.Name = "cboxVrstaKorisnikaReg";
-            this.cboxVrstaKorisnikaReg.Size = new System.Drawing.Size(204, 21);
-            this.cboxVrstaKorisnikaReg.TabIndex = 44;
             // 
             // txtLozinkaRegistracija
             // 
@@ -195,7 +175,7 @@ namespace eGym
             this.btnRegistrirajSe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnRegistrirajSe.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrirajSe.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrirajSe.Location = new System.Drawing.Point(473, 586);
+            this.btnRegistrirajSe.Location = new System.Drawing.Point(473, 525);
             this.btnRegistrirajSe.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrirajSe.Name = "btnRegistrirajSe";
             this.btnRegistrirajSe.Size = new System.Drawing.Size(91, 45);
@@ -209,7 +189,7 @@ namespace eGym
             this.btnRegistracijaNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnRegistracijaNatrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistracijaNatrag.ForeColor = System.Drawing.Color.White;
-            this.btnRegistracijaNatrag.Location = new System.Drawing.Point(19, 641);
+            this.btnRegistracijaNatrag.Location = new System.Drawing.Point(19, 580);
             this.btnRegistracijaNatrag.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistracijaNatrag.Name = "btnRegistracijaNatrag";
             this.btnRegistracijaNatrag.Size = new System.Drawing.Size(91, 45);
@@ -223,11 +203,9 @@ namespace eGym
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 711);
+            this.ClientSize = new System.Drawing.Size(800, 652);
             this.Controls.Add(this.btnRegistracijaNatrag);
             this.Controls.Add(this.btnRegistrirajSe);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.cboxVrstaKorisnikaReg);
             this.Controls.Add(this.txtLozinkaRegistracija);
             this.Controls.Add(this.txtUsernameRegistracija);
             this.Controls.Add(this.txtBrojMobRegistracija);
@@ -250,9 +228,6 @@ namespace eGym
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cboxVrstaKorisnikaReg;
         private System.Windows.Forms.TextBox txtLozinkaRegistracija;
         private System.Windows.Forms.TextBox txtUsernameRegistracija;
         private System.Windows.Forms.TextBox txtBrojMobRegistracija;

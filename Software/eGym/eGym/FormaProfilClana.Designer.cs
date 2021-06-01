@@ -60,9 +60,10 @@ namespace eGym
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(36, 58);
+            this.label1.Location = new System.Drawing.Point(27, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 55);
+            this.label1.Size = new System.Drawing.Size(127, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "eGym";
             // 
@@ -70,9 +71,10 @@ namespace eGym
             // 
             this.lblDobrosao.AutoSize = true;
             this.lblDobrosao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDobrosao.Location = new System.Drawing.Point(68, 130);
+            this.lblDobrosao.Location = new System.Drawing.Point(51, 106);
+            this.lblDobrosao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDobrosao.Name = "lblDobrosao";
-            this.lblDobrosao.Size = new System.Drawing.Size(124, 25);
+            this.lblDobrosao.Size = new System.Drawing.Size(101, 20);
             this.lblDobrosao.TabIndex = 1;
             this.lblDobrosao.Text = "Dobrodošao,";
             // 
@@ -80,9 +82,10 @@ namespace eGym
             // 
             this.lblImeIPrezimeClana.AutoSize = true;
             this.lblImeIPrezimeClana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImeIPrezimeClana.Location = new System.Drawing.Point(205, 130);
+            this.lblImeIPrezimeClana.Location = new System.Drawing.Point(154, 106);
+            this.lblImeIPrezimeClana.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblImeIPrezimeClana.Name = "lblImeIPrezimeClana";
-            this.lblImeIPrezimeClana.Size = new System.Drawing.Size(46, 25);
+            this.lblImeIPrezimeClana.Size = new System.Drawing.Size(35, 20);
             this.lblImeIPrezimeClana.TabIndex = 2;
             this.lblImeIPrezimeClana.Text = "N/A";
             // 
@@ -90,9 +93,10 @@ namespace eGym
             // 
             this.lblIme.AutoSize = true;
             this.lblIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIme.Location = new System.Drawing.Point(147, 185);
+            this.lblIme.Location = new System.Drawing.Point(110, 150);
+            this.lblIme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIme.Name = "lblIme";
-            this.lblIme.Size = new System.Drawing.Size(36, 18);
+            this.lblIme.Size = new System.Drawing.Size(31, 15);
             this.lblIme.TabIndex = 3;
             this.lblIme.Text = "Ime:";
             // 
@@ -100,9 +104,10 @@ namespace eGym
             // 
             this.lblPrezime.AutoSize = true;
             this.lblPrezime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrezime.Location = new System.Drawing.Point(117, 222);
+            this.lblPrezime.Location = new System.Drawing.Point(88, 180);
+            this.lblPrezime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrezime.Name = "lblPrezime";
-            this.lblPrezime.Size = new System.Drawing.Size(67, 18);
+            this.lblPrezime.Size = new System.Drawing.Size(56, 15);
             this.lblPrezime.TabIndex = 4;
             this.lblPrezime.Text = "Prezime:";
             // 
@@ -110,9 +115,10 @@ namespace eGym
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(131, 257);
+            this.lblEmail.Location = new System.Drawing.Point(98, 209);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(54, 18);
+            this.lblEmail.Size = new System.Drawing.Size(46, 15);
             this.lblEmail.TabIndex = 5;
             this.lblEmail.Text = "E-mail:";
             // 
@@ -120,9 +126,10 @@ namespace eGym
             // 
             this.lblBrojTelefona.AutoSize = true;
             this.lblBrojTelefona.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrojTelefona.Location = new System.Drawing.Point(89, 293);
+            this.lblBrojTelefona.Location = new System.Drawing.Point(67, 238);
+            this.lblBrojTelefona.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBrojTelefona.Name = "lblBrojTelefona";
-            this.lblBrojTelefona.Size = new System.Drawing.Size(95, 18);
+            this.lblBrojTelefona.Size = new System.Drawing.Size(79, 15);
             this.lblBrojTelefona.TabIndex = 6;
             this.lblBrojTelefona.Text = "Broj telefona:";
             // 
@@ -130,9 +137,10 @@ namespace eGym
             // 
             this.lblClanarinaPlacena.AutoSize = true;
             this.lblClanarinaPlacena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClanarinaPlacena.Location = new System.Drawing.Point(55, 329);
+            this.lblClanarinaPlacena.Location = new System.Drawing.Point(41, 267);
+            this.lblClanarinaPlacena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClanarinaPlacena.Name = "lblClanarinaPlacena";
-            this.lblClanarinaPlacena.Size = new System.Drawing.Size(129, 18);
+            this.lblClanarinaPlacena.Size = new System.Drawing.Size(110, 15);
             this.lblClanarinaPlacena.TabIndex = 7;
             this.lblClanarinaPlacena.Text = "Članarina plaćena:";
             // 
@@ -140,9 +148,10 @@ namespace eGym
             // 
             this.lblVrijediOd.AutoSize = true;
             this.lblVrijediOd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVrijediOd.Location = new System.Drawing.Point(109, 366);
+            this.lblVrijediOd.Location = new System.Drawing.Point(82, 297);
+            this.lblVrijediOd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVrijediOd.Name = "lblVrijediOd";
-            this.lblVrijediOd.Size = new System.Drawing.Size(72, 18);
+            this.lblVrijediOd.Size = new System.Drawing.Size(61, 15);
             this.lblVrijediOd.TabIndex = 8;
             this.lblVrijediOd.Text = "Vrijedi od:";
             // 
@@ -150,9 +159,10 @@ namespace eGym
             // 
             this.lblVrijediDo.AutoSize = true;
             this.lblVrijediDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVrijediDo.Location = new System.Drawing.Point(416, 362);
+            this.lblVrijediDo.Location = new System.Drawing.Point(312, 294);
+            this.lblVrijediDo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVrijediDo.Name = "lblVrijediDo";
-            this.lblVrijediDo.Size = new System.Drawing.Size(72, 18);
+            this.lblVrijediDo.Size = new System.Drawing.Size(61, 15);
             this.lblVrijediDo.TabIndex = 9;
             this.lblVrijediDo.Text = "Vrijedi do:";
             this.lblVrijediDo.Click += new System.EventHandler(this.lblVrijediDo_Click);
@@ -161,66 +171,67 @@ namespace eGym
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 401);
+            this.label2.Location = new System.Drawing.Point(51, 326);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 18);
+            this.label2.Size = new System.Drawing.Size(97, 15);
             this.label2.TabIndex = 10;
             this.label2.Text = "Iznos na računu:";
             // 
             // txtImeClana
             // 
-            this.txtImeClana.Location = new System.Drawing.Point(211, 180);
-            this.txtImeClana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtImeClana.Location = new System.Drawing.Point(158, 146);
+            this.txtImeClana.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtImeClana.Name = "txtImeClana";
-            this.txtImeClana.Size = new System.Drawing.Size(183, 22);
+            this.txtImeClana.Size = new System.Drawing.Size(138, 20);
             this.txtImeClana.TabIndex = 11;
             // 
             // txtPrezimeClana
             // 
-            this.txtPrezimeClana.Location = new System.Drawing.Point(211, 217);
-            this.txtPrezimeClana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrezimeClana.Location = new System.Drawing.Point(158, 176);
+            this.txtPrezimeClana.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrezimeClana.Name = "txtPrezimeClana";
-            this.txtPrezimeClana.Size = new System.Drawing.Size(183, 22);
+            this.txtPrezimeClana.Size = new System.Drawing.Size(138, 20);
             this.txtPrezimeClana.TabIndex = 12;
             // 
             // txtEmailClana
             // 
-            this.txtEmailClana.Location = new System.Drawing.Point(211, 254);
-            this.txtEmailClana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmailClana.Location = new System.Drawing.Point(158, 206);
+            this.txtEmailClana.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmailClana.Name = "txtEmailClana";
-            this.txtEmailClana.Size = new System.Drawing.Size(183, 22);
+            this.txtEmailClana.Size = new System.Drawing.Size(138, 20);
             this.txtEmailClana.TabIndex = 13;
             // 
             // txtBrojTelefonaClana
             // 
-            this.txtBrojTelefonaClana.Location = new System.Drawing.Point(211, 290);
-            this.txtBrojTelefonaClana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBrojTelefonaClana.Location = new System.Drawing.Point(158, 236);
+            this.txtBrojTelefonaClana.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBrojTelefonaClana.Name = "txtBrojTelefonaClana";
-            this.txtBrojTelefonaClana.Size = new System.Drawing.Size(183, 22);
+            this.txtBrojTelefonaClana.Size = new System.Drawing.Size(138, 20);
             this.txtBrojTelefonaClana.TabIndex = 14;
             // 
             // dtpVrijediOd
             // 
-            this.dtpVrijediOd.Location = new System.Drawing.Point(211, 362);
-            this.dtpVrijediOd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpVrijediOd.Location = new System.Drawing.Point(158, 294);
+            this.dtpVrijediOd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpVrijediOd.Name = "dtpVrijediOd";
-            this.dtpVrijediOd.Size = new System.Drawing.Size(183, 22);
+            this.dtpVrijediOd.Size = new System.Drawing.Size(138, 20);
             this.dtpVrijediOd.TabIndex = 16;
             // 
             // dtpVrijediDo
             // 
-            this.dtpVrijediDo.Location = new System.Drawing.Point(507, 362);
-            this.dtpVrijediDo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpVrijediDo.Location = new System.Drawing.Point(380, 294);
+            this.dtpVrijediDo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpVrijediDo.Name = "dtpVrijediDo";
-            this.dtpVrijediDo.Size = new System.Drawing.Size(183, 22);
+            this.dtpVrijediDo.Size = new System.Drawing.Size(138, 20);
             this.dtpVrijediDo.TabIndex = 17;
             // 
             // txtIznosNaRacunu
             // 
-            this.txtIznosNaRacunu.Location = new System.Drawing.Point(211, 401);
-            this.txtIznosNaRacunu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIznosNaRacunu.Location = new System.Drawing.Point(158, 326);
+            this.txtIznosNaRacunu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtIznosNaRacunu.Name = "txtIznosNaRacunu";
-            this.txtIznosNaRacunu.Size = new System.Drawing.Size(183, 22);
+            this.txtIznosNaRacunu.Size = new System.Drawing.Size(138, 20);
             this.txtIznosNaRacunu.TabIndex = 18;
             // 
             // btnUrediProfil
@@ -228,10 +239,10 @@ namespace eGym
             this.btnUrediProfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnUrediProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUrediProfil.ForeColor = System.Drawing.Color.White;
-            this.btnUrediProfil.Location = new System.Drawing.Point(211, 446);
-            this.btnUrediProfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUrediProfil.Location = new System.Drawing.Point(158, 362);
+            this.btnUrediProfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUrediProfil.Name = "btnUrediProfil";
-            this.btnUrediProfil.Size = new System.Drawing.Size(105, 47);
+            this.btnUrediProfil.Size = new System.Drawing.Size(79, 38);
             this.btnUrediProfil.TabIndex = 19;
             this.btnUrediProfil.Text = "Uredi profil";
             this.btnUrediProfil.UseVisualStyleBackColor = false;
@@ -242,10 +253,10 @@ namespace eGym
             this.btnPlatiClanarinu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnPlatiClanarinu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlatiClanarinu.ForeColor = System.Drawing.Color.White;
-            this.btnPlatiClanarinu.Location = new System.Drawing.Point(760, 180);
-            this.btnPlatiClanarinu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPlatiClanarinu.Location = new System.Drawing.Point(570, 146);
+            this.btnPlatiClanarinu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPlatiClanarinu.Name = "btnPlatiClanarinu";
-            this.btnPlatiClanarinu.Size = new System.Drawing.Size(105, 50);
+            this.btnPlatiClanarinu.Size = new System.Drawing.Size(79, 41);
             this.btnPlatiClanarinu.TabIndex = 20;
             this.btnPlatiClanarinu.Text = "Plati članarinu";
             this.btnPlatiClanarinu.UseVisualStyleBackColor = false;
@@ -256,10 +267,10 @@ namespace eGym
             this.btnNaruciSuplement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNaruciSuplement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNaruciSuplement.ForeColor = System.Drawing.Color.White;
-            this.btnNaruciSuplement.Location = new System.Drawing.Point(760, 245);
-            this.btnNaruciSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNaruciSuplement.Location = new System.Drawing.Point(570, 199);
+            this.btnNaruciSuplement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNaruciSuplement.Name = "btnNaruciSuplement";
-            this.btnNaruciSuplement.Size = new System.Drawing.Size(105, 50);
+            this.btnNaruciSuplement.Size = new System.Drawing.Size(79, 41);
             this.btnNaruciSuplement.TabIndex = 21;
             this.btnNaruciSuplement.Text = "Naruči suplement";
             this.btnNaruciSuplement.UseVisualStyleBackColor = false;
@@ -270,10 +281,10 @@ namespace eGym
             this.btnRezervacijaTreninga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnRezervacijaTreninga.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRezervacijaTreninga.ForeColor = System.Drawing.Color.White;
-            this.btnRezervacijaTreninga.Location = new System.Drawing.Point(760, 310);
-            this.btnRezervacijaTreninga.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRezervacijaTreninga.Location = new System.Drawing.Point(570, 252);
+            this.btnRezervacijaTreninga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRezervacijaTreninga.Name = "btnRezervacijaTreninga";
-            this.btnRezervacijaTreninga.Size = new System.Drawing.Size(105, 55);
+            this.btnRezervacijaTreninga.Size = new System.Drawing.Size(79, 45);
             this.btnRezervacijaTreninga.TabIndex = 22;
             this.btnRezervacijaTreninga.Text = "Rezervacija treninga";
             this.btnRezervacijaTreninga.UseVisualStyleBackColor = false;
@@ -284,10 +295,10 @@ namespace eGym
             this.btnOdjava.BackColor = System.Drawing.Color.Gray;
             this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdjava.ForeColor = System.Drawing.Color.White;
-            this.btnOdjava.Location = new System.Drawing.Point(819, 494);
-            this.btnOdjava.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOdjava.Location = new System.Drawing.Point(614, 401);
+            this.btnOdjava.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOdjava.Name = "btnOdjava";
-            this.btnOdjava.Size = new System.Drawing.Size(105, 50);
+            this.btnOdjava.Size = new System.Drawing.Size(79, 41);
             this.btnOdjava.TabIndex = 23;
             this.btnOdjava.Text = "Odjava";
             this.btnOdjava.UseVisualStyleBackColor = false;
@@ -296,17 +307,18 @@ namespace eGym
             // cbClanarinaPlacenaProfilClana
             // 
             this.cbClanarinaPlacenaProfilClana.FormattingEnabled = true;
-            this.cbClanarinaPlacenaProfilClana.Location = new System.Drawing.Point(211, 328);
+            this.cbClanarinaPlacenaProfilClana.Location = new System.Drawing.Point(158, 266);
+            this.cbClanarinaPlacenaProfilClana.Margin = new System.Windows.Forms.Padding(2);
             this.cbClanarinaPlacenaProfilClana.Name = "cbClanarinaPlacenaProfilClana";
-            this.cbClanarinaPlacenaProfilClana.Size = new System.Drawing.Size(183, 24);
+            this.cbClanarinaPlacenaProfilClana.Size = new System.Drawing.Size(138, 21);
             this.cbClanarinaPlacenaProfilClana.TabIndex = 46;
             // 
             // formProfilClana
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(944, 566);
+            this.ClientSize = new System.Drawing.Size(708, 460);
             this.Controls.Add(this.cbClanarinaPlacenaProfilClana);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnRezervacijaTreninga);
@@ -331,7 +343,7 @@ namespace eGym
             this.Controls.Add(this.lblImeIPrezimeClana);
             this.Controls.Add(this.lblDobrosao);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "formProfilClana";
             this.Text = "Clan";
             this.Load += new System.EventHandler(this.formProfilClana_Load);

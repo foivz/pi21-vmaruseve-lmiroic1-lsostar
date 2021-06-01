@@ -12,9 +12,13 @@ namespace eGym
 {
     public partial class formProfilClana : Form
     {
+
+        public Korisnik Korisnik { get; set; }
         public formProfilClana()
         {
             InitializeComponent();
+            
+
         }
 
         private void lblVrijediDo_Click(object sender, EventArgs e)
@@ -61,6 +65,19 @@ namespace eGym
             dtpVrijediDo.Enabled = false;
             dtpVrijediOd.Enabled = false;
             txtIznosNaRacunu.Enabled = false;
+
+            cbClanarinaPlacenaProfilClana.Enabled = false;
+            dtpVrijediDo.Enabled = false;
+            dtpVrijediOd.Enabled = false;
+            txtIznosNaRacunu.Enabled = false;
+
+            txtImeClana.Text = Sesija.PrijavljeniKorisnik.ime;
+            txtPrezimeClana.Text = Sesija.PrijavljeniKorisnik.prezime;
+            txtBrojTelefonaClana.Text = Sesija.PrijavljeniKorisnik.brojtelefona;
+            txtEmailClana.Text = Sesija.PrijavljeniKorisnik.email;
+            
+
+
         }
 
         private void btnUrediProfil_Click(object sender, EventArgs e)

@@ -19,10 +19,36 @@ namespace eGym
 
         private void btnRegistrirajSe_Click(object sender, EventArgs e)
         {
+            using (var context = new Entities())
+            {
+                string korisnickoIme = txtUsernameRegistracija.Text;
+                string ime = txtImeRegistracija.Text;
+                string prezime = txtPrezimeRegistracija.Text;
+                string email = txtEmailRegistracija.Text;
+                string brojMobitela = txtBrojMobRegistracija.Text;
+                string lozinka = txtLozinkaRegistracija.Text;
+
+                Korisnik noviKorisnik = new Korisnik
+                {
+                    korisnickoIme = korisnickoIme,
+                    ime = ime,
+                    prezime = prezime,
+                    email = email,
+                    brojtelefona = brojMobitela,
+                    lozinka = lozinka,
+                    uloga_id = 3,
+                    datum_registracije = DateTime.Now
+                    
+                };
+
+                context.Korisniks.Add(noviKorisnik);
+                context.SaveChanges();
+            }
             MessageBox.Show("Uspješna registracija");
             FormaPrijava formaPrijava = new FormaPrijava();
             formaPrijava.Show();
             this.Hide();
+
             
         }
 
