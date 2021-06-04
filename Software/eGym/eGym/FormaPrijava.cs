@@ -92,5 +92,10 @@ namespace eGym
             pocetnaStranica.Show();
             this.Hide();
         }
+
+        private void FormaPrijava_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
