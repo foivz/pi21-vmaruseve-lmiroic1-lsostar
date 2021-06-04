@@ -12,9 +12,11 @@ namespace eGym
 {
     public partial class FormaAzurirajClana : Form
     {
-        public FormaAzurirajClana()
+        public Korisnik Korisnik { get; set; }
+        public FormaAzurirajClana(Korisnik korisnik)
         {
             InitializeComponent();
+            Korisnik = korisnik;
         }
 
         private void btnAzurirajClanaA_Click(object sender, EventArgs e)
@@ -30,6 +32,16 @@ namespace eGym
             FormaEvidencijaClanova formaEvidencijaClanova = new FormaEvidencijaClanova();
             formaEvidencijaClanova.Show();
             this.Hide();
+        }
+
+        private void FormaAzurirajClana_Load(object sender, EventArgs e)
+        {
+            txtBrojTelefonaClanaA.Text = Korisnik.brojtelefona;
+            txtEmailClanaA.Text = Korisnik.email;
+            txtImeClanaA.Text = Korisnik.ime;
+           
+            txtPrezimeClanaA.Text = Korisnik.prezime;
+            
         }
     }
 }

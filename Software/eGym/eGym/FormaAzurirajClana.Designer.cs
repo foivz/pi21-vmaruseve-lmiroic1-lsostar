@@ -271,6 +271,7 @@ namespace eGym
             this.Controls.Add(this.label1);
             this.Name = "FormaAzurirajClana";
             this.Text = "AzurirajClana";
+            this.Load += new System.EventHandler(this.FormaAzurirajClana_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
