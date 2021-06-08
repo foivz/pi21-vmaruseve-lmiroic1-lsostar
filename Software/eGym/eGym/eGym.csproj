@@ -73,6 +73,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>eGymModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="FormaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaAdmin.Designer.cs">
+      <DependentUpon>FormaAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormaAzurirajClana.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,12 @@
     <Compile Include="FormIndividualniTrening.Designer.cs">
       <DependentUpon>FormIndividualniTrening.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDodajZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajZaposlenika.Designer.cs">
+      <DependentUpon>FrmDodajZaposlenika.cs</DependentUpon>
+    </Compile>
     <Compile Include="Iznimke\Iznimka.cs" />
     <Compile Include="Iznimke\NovaIznimka.cs" />
     <Compile Include="Korisnik.cs">
@@ -234,6 +246,7 @@
     <Compile Include="NovacKorisnika.cs">
       <DependentUpon>eGymModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="NovacKorisnikaView.cs" />
     <Compile Include="PocetnaStranica1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,12 +282,17 @@
     <Compile Include="UlogaUTeretani.cs">
       <DependentUpon>eGymModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="VrstaClanarine.code.cs" />
     <Compile Include="VrstaClanarine.cs">
       <DependentUpon>eGymModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="VrstaClanarineView.cs" />
     <Compile Include="VrstaVjezbe.cs">
       <DependentUpon>eGymModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormaAdmin.resx">
+      <DependentUpon>FormaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormaAzurirajClana.resx">
       <DependentUpon>FormaAzurirajClana.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormIndividualniTrening.resx">
       <DependentUpon>FormIndividualniTrening.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajZaposlenika.resx">
+      <DependentUpon>FrmDodajZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PocetnaStranica1.resx">
       <DependentUpon>PocetnaStranica1.cs</DependentUpon>

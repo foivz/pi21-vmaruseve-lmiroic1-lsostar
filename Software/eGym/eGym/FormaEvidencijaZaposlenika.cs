@@ -19,22 +19,67 @@ namespace eGym
 
         private void btnAzurirajZaposlenika_Click(object sender, EventArgs e)
         {
-            FormaAzurirajZaposlenika formaAzurirajZaposlenika = new FormaAzurirajZaposlenika();
+            Korisnik korisnik = dgvEvidencijaZaposlenika.CurrentRow.DataBoundItem as Korisnik;
+            FormaAzurirajZaposlenika formaAzurirajZaposlenika = new FormaAzurirajZaposlenika(korisnik);
             formaAzurirajZaposlenika.Show();
-            this.Hide();
+            this.Close();
+            Osvjezi();
         }
 
         private void btnEvidencijaZaposlenikaNatrag_Click(object sender, EventArgs e)
         {
-            FormProfilZaposlenika formProfilZaposlenika = new FormProfilZaposlenika();
-            formProfilZaposlenika.Show();
+            FormaAdmin formaAdmin = new FormaAdmin();
+            formaAdmin.Show();
             this.Hide();
+            Osvjezi();
         }
 
         private void btnObrisiZaposlenika_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Zaposlenik uspješno obrisan!");
-            
+            if (dgvEvidencijaZaposlenika.CurrentRow != null)
+            {
+                Korisnik korisnik = dgvEvidencijaZaposlenika.CurrentRow.DataBoundItem as Korisnik;
+                if (korisnik != null)
+                {
+                    using (var context = new Entities())
+                    {
+                        context.Korisniks.Attach(korisnik);
+                        context.Korisniks.Remove(korisnik);
+                        context.SaveChanges();
+                    }
+
+                    Osvjezi();
+                }
+            }
+
         }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            FrmDodajZaposlenika frmDodajZaposlenika = new FrmDodajZaposlenika();
+            frmDodajZaposlenika.Show();
+            this.Hide();
+        }
+
+        private void FormaEvidencijaZaposlenika_Load(object sender, EventArgs e)
+        {
+            Osvjezi();
+        }
+
+        private void Osvjezi()
+        {
+            using (var context = new Entities())
+            {
+                var upit = from k in context.Korisniks
+                           where k.uloga_id == 2
+                           orderby k.korisnickoIme ascending
+                           select k;
+                dgvEvidencijaZaposlenika.DataSource = upit.ToList();
+
+            }
+        }
+
+        
+        
     }
 }

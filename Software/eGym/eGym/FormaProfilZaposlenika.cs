@@ -17,12 +17,7 @@ namespace eGym
             InitializeComponent();
         }
 
-        private void btnZaposlenici_Click(object sender, EventArgs e)
-        {
-            FormaEvidencijaZaposlenika formaEvidencijaZaposlenika = new FormaEvidencijaZaposlenika();
-            formaEvidencijaZaposlenika.Show();
-            this.Hide();
-        }
+        
 
         private void btnOdjava_Click(object sender, EventArgs e)
         {
@@ -31,12 +26,7 @@ namespace eGym
             this.Hide();
         }
 
-        private void btnSmjene_Click(object sender, EventArgs e)
-        {
-            FormaEvidencijaSmjena formaEvidencijaSmjena = new FormaEvidencijaSmjena();
-            formaEvidencijaSmjena.Show();
-            this.Hide();
-        }
+        
 
         private void btnClanovi_Click(object sender, EventArgs e)
         {
@@ -72,5 +62,17 @@ namespace eGym
             formaEvidencijaTermina.Show();
             this.Hide();
         }
+
+        private void FormProfilZaposlenika_Load(object sender, EventArgs e)
+        {
+            lblImeIPrezimeClana.Text = Sesija.PrijavljeniKorisnik.ime + " " + Sesija.PrijavljeniKorisnik.prezime;
+
+            txtImeZaposlenika.Text = Sesija.PrijavljeniKorisnik.ime;
+            txtPrezimeZaposlenika.Text = Sesija.PrijavljeniKorisnik.prezime;
+            txtBrojTelefonaZaposlenika.Text = Sesija.PrijavljeniKorisnik.brojtelefona;
+            txtEmailZaposlenika.Text = Sesija.PrijavljeniKorisnik.email;
+        }
+
+       
     }
 }

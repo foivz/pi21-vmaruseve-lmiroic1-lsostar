@@ -30,12 +30,13 @@ namespace eGym
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEvidencijaZaposlenika = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAzurirajZaposlenika = new System.Windows.Forms.Button();
             this.btnObrisiZaposlenika = new System.Windows.Forms.Button();
             this.btnEvidencijaZaposlenikaNatrag = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnDodaj = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaZaposlenika)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,13 +49,13 @@ namespace eGym
             this.label1.TabIndex = 6;
             this.label1.Text = "Evidencija zaposlenika";
             // 
-            // dataGridView1
+            // dgvEvidencijaZaposlenika
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 115);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 235);
-            this.dataGridView1.TabIndex = 5;
+            this.dgvEvidencijaZaposlenika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvidencijaZaposlenika.Location = new System.Drawing.Point(12, 115);
+            this.dgvEvidencijaZaposlenika.Name = "dgvEvidencijaZaposlenika";
+            this.dgvEvidencijaZaposlenika.Size = new System.Drawing.Size(776, 235);
+            this.dgvEvidencijaZaposlenika.TabIndex = 5;
             // 
             // label2
             // 
@@ -110,21 +111,37 @@ namespace eGym
             this.btnEvidencijaZaposlenikaNatrag.UseVisualStyleBackColor = false;
             this.btnEvidencijaZaposlenikaNatrag.Click += new System.EventHandler(this.btnEvidencijaZaposlenikaNatrag_Click);
             // 
+            // btnDodaj
+            // 
+            this.btnDodaj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodaj.ForeColor = System.Drawing.Color.White;
+            this.btnDodaj.Location = new System.Drawing.Point(498, 364);
+            this.btnDodaj.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(79, 38);
+            this.btnDodaj.TabIndex = 28;
+            this.btnDodaj.Text = "Dodaj";
+            this.btnDodaj.UseVisualStyleBackColor = false;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
+            // 
             // FormaEvidencijaZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnEvidencijaZaposlenikaNatrag);
             this.Controls.Add(this.btnObrisiZaposlenika);
             this.Controls.Add(this.btnAzurirajZaposlenika);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvEvidencijaZaposlenika);
             this.Name = "FormaEvidencijaZaposlenika";
             this.Text = "FormaEvidencijaZaposlenika";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormaEvidencijaZaposlenika_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaZaposlenika)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,10 +149,11 @@ namespace eGym
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEvidencijaZaposlenika;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAzurirajZaposlenika;
         private System.Windows.Forms.Button btnObrisiZaposlenika;
         private System.Windows.Forms.Button btnEvidencijaZaposlenikaNatrag;
+        private System.Windows.Forms.Button btnDodaj;
     }
 }

@@ -59,9 +59,11 @@ namespace eGym
                         formProfilZaposlenika.Show();
                         this.Hide();
                     }
-                    else if (Sesija.PrijavljeniKorisnik.uloga_id == 2)
+                    else if (Sesija.PrijavljeniKorisnik.uloga_id == 1)
                     {
-
+                        FormaAdmin formaAdmin = new FormaAdmin();
+                        formaAdmin.Show();
+                        this.Hide();
                     }
 
 

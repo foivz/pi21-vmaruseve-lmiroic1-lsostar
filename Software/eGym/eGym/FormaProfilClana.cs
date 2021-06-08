@@ -28,7 +28,8 @@ namespace eGym
 
         private void btnPlatiClanarinu_Click(object sender, EventArgs e)
         {
-            FormaPlatiClanarinu formaPlatiClanarinu = new FormaPlatiClanarinu();
+            Korisnik korisnik = Sesija.PrijavljeniKorisnik;
+            FormaPlatiClanarinu formaPlatiClanarinu = new FormaPlatiClanarinu(korisnik);
             formaPlatiClanarinu.Show();
             this.Hide();
         }
@@ -61,20 +62,22 @@ namespace eGym
 
         private void formProfilClana_Load(object sender, EventArgs e)
         {
-            cbClanarinaPlacenaProfilClana.Enabled = false;
-            dtpVrijediDo.Enabled = false;
-            dtpVrijediOd.Enabled = false;
-            txtIznosNaRacunu.Enabled = false;
+            lblImeIPrezimeClana.Text = Sesija.PrijavljeniKorisnik.ime + " " + Sesija.PrijavljeniKorisnik.prezime;
+
 
             cbClanarinaPlacenaProfilClana.Enabled = false;
             dtpVrijediDo.Enabled = false;
             dtpVrijediOd.Enabled = false;
-            txtIznosNaRacunu.Enabled = false;
+
+            
 
             txtImeClana.Text = Sesija.PrijavljeniKorisnik.ime;
             txtPrezimeClana.Text = Sesija.PrijavljeniKorisnik.prezime;
             txtBrojTelefonaClana.Text = Sesija.PrijavljeniKorisnik.brojtelefona;
             txtEmailClana.Text = Sesija.PrijavljeniKorisnik.email;
+            
+            
+            
             
 
 

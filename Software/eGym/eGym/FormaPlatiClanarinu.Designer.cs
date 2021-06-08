@@ -45,7 +45,7 @@ namespace eGym
             // 
             this.lblIznosNaRacunuClanarina.AutoSize = true;
             this.lblIznosNaRacunuClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblIznosNaRacunuClanarina.Location = new System.Drawing.Point(262, 313);
+            this.lblIznosNaRacunuClanarina.Location = new System.Drawing.Point(341, 313);
             this.lblIznosNaRacunuClanarina.Name = "lblIznosNaRacunuClanarina";
             this.lblIznosNaRacunuClanarina.Size = new System.Drawing.Size(31, 20);
             this.lblIznosNaRacunuClanarina.TabIndex = 29;
@@ -65,7 +65,7 @@ namespace eGym
             // 
             this.txtIznosClanarine.Location = new System.Drawing.Point(172, 214);
             this.txtIznosClanarine.Name = "txtIznosClanarine";
-            this.txtIznosClanarine.Size = new System.Drawing.Size(121, 20);
+            this.txtIznosClanarine.Size = new System.Drawing.Size(200, 20);
             this.txtIznosClanarine.TabIndex = 26;
             // 
             // cboxVrstaClanarine
@@ -73,8 +73,9 @@ namespace eGym
             this.cboxVrstaClanarine.FormattingEnabled = true;
             this.cboxVrstaClanarine.Location = new System.Drawing.Point(172, 166);
             this.cboxVrstaClanarine.Name = "cboxVrstaClanarine";
-            this.cboxVrstaClanarine.Size = new System.Drawing.Size(121, 21);
+            this.cboxVrstaClanarine.Size = new System.Drawing.Size(200, 21);
             this.cboxVrstaClanarine.TabIndex = 25;
+            this.cboxVrstaClanarine.SelectedIndexChanged += new System.EventHandler(this.cboxVrstaClanarine_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -122,7 +123,7 @@ namespace eGym
             this.btnPlatiClanarinu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnPlatiClanarinu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlatiClanarinu.ForeColor = System.Drawing.Color.White;
-            this.btnPlatiClanarinu.Location = new System.Drawing.Point(172, 255);
+            this.btnPlatiClanarinu.Location = new System.Drawing.Point(251, 259);
             this.btnPlatiClanarinu.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlatiClanarinu.Name = "btnPlatiClanarinu";
             this.btnPlatiClanarinu.Size = new System.Drawing.Size(121, 38);
@@ -163,6 +164,7 @@ namespace eGym
             this.Controls.Add(this.lblImeiPrezimeZaposlenika);
             this.Name = "FormaPlatiClanarinu";
             this.Text = "FormaPlatiClanarinu";
+            this.Load += new System.EventHandler(this.FormaPlatiClanarinu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
