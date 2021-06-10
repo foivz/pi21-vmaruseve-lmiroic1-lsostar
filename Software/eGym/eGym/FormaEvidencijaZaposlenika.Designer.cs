@@ -29,6 +29,7 @@ namespace eGym
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvEvidencijaZaposlenika = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,7 +37,16 @@ namespace eGym
             this.btnObrisiZaposlenika = new System.Windows.Forms.Button();
             this.btnEvidencijaZaposlenikaNatrag = new System.Windows.Forms.Button();
             this.btnDodaj = new System.Windows.Forms.Button();
+            this.bsEvidencijaZaposlenika = new System.Windows.Forms.BindingSource(this.components);
+            this.korisnickoImeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lozinkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datumregistracijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brojtelefonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaZaposlenika)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsEvidencijaZaposlenika)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +61,17 @@ namespace eGym
             // 
             // dgvEvidencijaZaposlenika
             // 
+            this.dgvEvidencijaZaposlenika.AutoGenerateColumns = false;
             this.dgvEvidencijaZaposlenika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvidencijaZaposlenika.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.korisnickoImeDataGridViewTextBoxColumn,
+            this.lozinkaDataGridViewTextBoxColumn,
+            this.datumregistracijeDataGridViewTextBoxColumn,
+            this.imeDataGridViewTextBoxColumn,
+            this.prezimeDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.brojtelefonaDataGridViewTextBoxColumn});
+            this.dgvEvidencijaZaposlenika.DataSource = this.bsEvidencijaZaposlenika;
             this.dgvEvidencijaZaposlenika.Location = new System.Drawing.Point(12, 115);
             this.dgvEvidencijaZaposlenika.Name = "dgvEvidencijaZaposlenika";
             this.dgvEvidencijaZaposlenika.Size = new System.Drawing.Size(776, 235);
@@ -125,6 +145,52 @@ namespace eGym
             this.btnDodaj.UseVisualStyleBackColor = false;
             this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
+            // bsEvidencijaZaposlenika
+            // 
+            this.bsEvidencijaZaposlenika.DataSource = typeof(eGym.Korisnik);
+            // 
+            // korisnickoImeDataGridViewTextBoxColumn
+            // 
+            this.korisnickoImeDataGridViewTextBoxColumn.DataPropertyName = "korisnickoIme";
+            this.korisnickoImeDataGridViewTextBoxColumn.HeaderText = "korisnickoIme";
+            this.korisnickoImeDataGridViewTextBoxColumn.Name = "korisnickoImeDataGridViewTextBoxColumn";
+            // 
+            // lozinkaDataGridViewTextBoxColumn
+            // 
+            this.lozinkaDataGridViewTextBoxColumn.DataPropertyName = "lozinka";
+            this.lozinkaDataGridViewTextBoxColumn.HeaderText = "lozinka";
+            this.lozinkaDataGridViewTextBoxColumn.Name = "lozinkaDataGridViewTextBoxColumn";
+            // 
+            // datumregistracijeDataGridViewTextBoxColumn
+            // 
+            this.datumregistracijeDataGridViewTextBoxColumn.DataPropertyName = "datum_registracije";
+            this.datumregistracijeDataGridViewTextBoxColumn.HeaderText = "datum_registracije";
+            this.datumregistracijeDataGridViewTextBoxColumn.Name = "datumregistracijeDataGridViewTextBoxColumn";
+            // 
+            // imeDataGridViewTextBoxColumn
+            // 
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "ime";
+            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            // 
+            // prezimeDataGridViewTextBoxColumn
+            // 
+            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.HeaderText = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // brojtelefonaDataGridViewTextBoxColumn
+            // 
+            this.brojtelefonaDataGridViewTextBoxColumn.DataPropertyName = "brojtelefona";
+            this.brojtelefonaDataGridViewTextBoxColumn.HeaderText = "brojtelefona";
+            this.brojtelefonaDataGridViewTextBoxColumn.Name = "brojtelefonaDataGridViewTextBoxColumn";
+            // 
             // FormaEvidencijaZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +208,7 @@ namespace eGym
             this.Text = "FormaEvidencijaZaposlenika";
             this.Load += new System.EventHandler(this.FormaEvidencijaZaposlenika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaZaposlenika)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsEvidencijaZaposlenika)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +222,13 @@ namespace eGym
         private System.Windows.Forms.Button btnObrisiZaposlenika;
         private System.Windows.Forms.Button btnEvidencijaZaposlenikaNatrag;
         private System.Windows.Forms.Button btnDodaj;
+        private System.Windows.Forms.DataGridViewTextBoxColumn korisnickoImeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lozinkaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datumregistracijeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brojtelefonaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bsEvidencijaZaposlenika;
     }
 }

@@ -37,5 +37,10 @@ namespace eGym
             formIndividualniTrening.Show();
             this.Hide();
         }
+
+        private void FormaRezervacijaTreninga_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

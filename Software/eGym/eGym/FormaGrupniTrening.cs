@@ -63,5 +63,10 @@ namespace eGym
         {
 
         }
+
+        private void FormaGrupniTrening_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

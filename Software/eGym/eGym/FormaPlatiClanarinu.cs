@@ -34,7 +34,7 @@ namespace eGym
             NovacKorisnika novac = null;
             if (placeno)
             {
-                using (var context = new Entities())
+                using (var context = new Entities1())
                 {
                     if (novac.stanjeNaRacunu>0)
                     {
@@ -51,7 +51,7 @@ namespace eGym
                             vrijedi_od = vrijedi_od,
                             vrsta_id = vrstaClanarine.ID,
                             korisnik_korisnickoIme = korisnik.korisnickoIme,
-                            placeno = true
+                            placeno = "Da"
                             
                         };
                         context.Clanarinas.Add(novaClanarina);
@@ -75,7 +75,7 @@ namespace eGym
         private void FormaPlatiClanarinu_Load(object sender, EventArgs e)
         {
             DohvatiVrsteClanarine();
-            using (var context = new Entities())
+            using (var context = new Entities1())
             {
                 var query = from nk in context.NovacKorisnikas.Include("Korisnik")
                             where nk.korisnik_korisnickoIme == odabraniKorisnik.korisnickoIme
@@ -88,7 +88,7 @@ namespace eGym
         {
            
             
-            using (var context = new Entities())
+            using (var context = new Entities1())
             {
                 var query = from vc in context.VrstaClanarines.Include("Clanarinas")
                             select vc.naziv;
@@ -103,7 +103,7 @@ namespace eGym
         private void cboxVrstaClanarine_SelectedIndexChanged(object sender, EventArgs e)
         {
             string vrsta = cboxVrstaClanarine.SelectedItem.ToString();
-            using (var context = new Entities())
+            using (var context = new Entities1())
             {
                 var query = from vc in context.VrstaClanarines.Include("Clanarinas")
                             where vc.naziv == vrsta

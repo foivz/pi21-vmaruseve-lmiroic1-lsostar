@@ -42,20 +42,22 @@ namespace eGym
             // dgvEvidencijaTermina
             // 
             this.dgvEvidencijaTermina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEvidencijaTermina.Location = new System.Drawing.Point(83, 158);
+            this.dgvEvidencijaTermina.Location = new System.Drawing.Point(62, 128);
+            this.dgvEvidencijaTermina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvEvidencijaTermina.Name = "dgvEvidencijaTermina";
             this.dgvEvidencijaTermina.RowHeadersWidth = 51;
             this.dgvEvidencijaTermina.RowTemplate.Height = 24;
-            this.dgvEvidencijaTermina.Size = new System.Drawing.Size(800, 298);
+            this.dgvEvidencijaTermina.Size = new System.Drawing.Size(600, 242);
             this.dgvEvidencijaTermina.TabIndex = 81;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(364, 98);
+            this.label1.Location = new System.Drawing.Point(273, 80);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 29);
+            this.label1.Size = new System.Drawing.Size(170, 25);
             this.label1.TabIndex = 80;
             this.label1.Text = "Evidencija termina";
             // 
@@ -64,9 +66,10 @@ namespace eGym
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(73, 41);
+            this.label2.Location = new System.Drawing.Point(55, 33);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 55);
+            this.label2.Size = new System.Drawing.Size(123, 44);
             this.label2.TabIndex = 79;
             this.label2.Text = "eGym";
             // 
@@ -75,10 +78,10 @@ namespace eGym
             this.btnObrisiTermin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnObrisiTermin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnObrisiTermin.ForeColor = System.Drawing.Color.White;
-            this.btnObrisiTermin.Location = new System.Drawing.Point(755, 478);
-            this.btnObrisiTermin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnObrisiTermin.Location = new System.Drawing.Point(566, 388);
+            this.btnObrisiTermin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnObrisiTermin.Name = "btnObrisiTermin";
-            this.btnObrisiTermin.Size = new System.Drawing.Size(115, 52);
+            this.btnObrisiTermin.Size = new System.Drawing.Size(86, 42);
             this.btnObrisiTermin.TabIndex = 85;
             this.btnObrisiTermin.Text = "Obriši termin";
             this.btnObrisiTermin.UseVisualStyleBackColor = false;
@@ -89,10 +92,10 @@ namespace eGym
             this.btnAzurirajTerminE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAzurirajTerminE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAzurirajTerminE.ForeColor = System.Drawing.Color.White;
-            this.btnAzurirajTerminE.Location = new System.Drawing.Point(621, 480);
-            this.btnAzurirajTerminE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAzurirajTerminE.Location = new System.Drawing.Point(466, 390);
+            this.btnAzurirajTerminE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAzurirajTerminE.Name = "btnAzurirajTerminE";
-            this.btnAzurirajTerminE.Size = new System.Drawing.Size(115, 50);
+            this.btnAzurirajTerminE.Size = new System.Drawing.Size(86, 41);
             this.btnAzurirajTerminE.TabIndex = 84;
             this.btnAzurirajTerminE.Text = "Ažuriraj termin";
             this.btnAzurirajTerminE.UseVisualStyleBackColor = false;
@@ -103,10 +106,10 @@ namespace eGym
             this.btnNatragSuplement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNatragSuplement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNatragSuplement.ForeColor = System.Drawing.Color.White;
-            this.btnNatragSuplement.Location = new System.Drawing.Point(87, 480);
-            this.btnNatragSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNatragSuplement.Location = new System.Drawing.Point(65, 390);
+            this.btnNatragSuplement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNatragSuplement.Name = "btnNatragSuplement";
-            this.btnNatragSuplement.Size = new System.Drawing.Size(115, 50);
+            this.btnNatragSuplement.Size = new System.Drawing.Size(86, 41);
             this.btnNatragSuplement.TabIndex = 82;
             this.btnNatragSuplement.Text = "Natrag";
             this.btnNatragSuplement.UseVisualStyleBackColor = false;
@@ -117,10 +120,10 @@ namespace eGym
             this.btnDodajTerminE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnDodajTerminE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDodajTerminE.ForeColor = System.Drawing.Color.White;
-            this.btnDodajTerminE.Location = new System.Drawing.Point(487, 480);
-            this.btnDodajTerminE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDodajTerminE.Location = new System.Drawing.Point(365, 390);
+            this.btnDodajTerminE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDodajTerminE.Name = "btnDodajTerminE";
-            this.btnDodajTerminE.Size = new System.Drawing.Size(115, 50);
+            this.btnDodajTerminE.Size = new System.Drawing.Size(86, 41);
             this.btnDodajTerminE.TabIndex = 83;
             this.btnDodajTerminE.Text = "Dodaj termin";
             this.btnDodajTerminE.UseVisualStyleBackColor = false;
@@ -128,9 +131,9 @@ namespace eGym
             // 
             // FormaEvidencijaTermina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 589);
+            this.ClientSize = new System.Drawing.Size(728, 479);
             this.Controls.Add(this.btnObrisiTermin);
             this.Controls.Add(this.btnAzurirajTerminE);
             this.Controls.Add(this.btnNatragSuplement);
@@ -138,8 +141,10 @@ namespace eGym
             this.Controls.Add(this.dgvEvidencijaTermina);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormaEvidencijaTermina";
             this.Text = "Evidencija termina";
+            this.Load += new System.EventHandler(this.FormaEvidencijaTermina_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaTermina)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -222,6 +222,7 @@ namespace eGym
             this.Controls.Add(this.label1);
             this.Name = "FormaRegistracija";
             this.Text = "FormaRegistracija";
+            this.Load += new System.EventHandler(this.FormaRegistracija_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

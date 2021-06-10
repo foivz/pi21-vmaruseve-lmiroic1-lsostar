@@ -40,5 +40,10 @@ namespace eGym
             formaUrediKosaricu.Show();
             this.Hide();
         }
+
+        private void FormaNaruciSuplement_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

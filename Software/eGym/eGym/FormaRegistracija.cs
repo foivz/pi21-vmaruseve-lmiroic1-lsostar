@@ -19,7 +19,7 @@ namespace eGym
 
         private void btnRegistrirajSe_Click(object sender, EventArgs e)
         {
-            using (var context = new Entities())
+            using (var context = new Entities1())
             {
                 string korisnickoIme = txtUsernameRegistracija.Text;
                 string ime = txtImeRegistracija.Text;
@@ -57,6 +57,11 @@ namespace eGym
             PocetnaStranica1 pocetnaStranica = new PocetnaStranica1();
             pocetnaStranica.Show();
             this.Hide();
+        }
+
+        private void FormaRegistracija_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

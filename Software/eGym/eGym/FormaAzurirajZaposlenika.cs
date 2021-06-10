@@ -33,7 +33,7 @@ namespace eGym
 
         private void btnAzuriraj_Click_1(object sender, EventArgs e)
         {
-            using (var context = new Entities())
+            using (var context = new Entities1())
             {
                 context.Korisniks.Attach(odabraniKorisnik);
                 odabraniKorisnik.ime = txtImeZaposlenikaAzuriranje.Text;

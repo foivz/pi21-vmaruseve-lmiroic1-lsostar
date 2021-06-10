@@ -24,7 +24,7 @@ namespace eGym
 
         private void btnRegistrirajSe_Click(object sender, EventArgs e)
         {
-            using(var context = new Entities())
+            using(var context = new Entities1())
             {
                 string korisnickoIme = txtUsernameRegistracija.Text;
                 string ime = txtImeRegistracija.Text;

@@ -28,5 +28,10 @@ namespace eGym
             formaProfilClana.Show();
             this.Hide();
         }
+
+        private void FormaUrediProfilClana_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

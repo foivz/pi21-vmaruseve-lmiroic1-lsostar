@@ -1,0 +1,929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Clanarina">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="vrijedi_od" Type="datetime" Nullable="false" />
+          <Property Name="vrijedi_do" Type="datetime" Nullable="false" />
+          <Property Name="vrsta_id" Type="int" Nullable="false" />
+          <Property Name="korisnik_korisnickoIme" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="placeno" Type="varchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Korisnik">
+          <Key>
+            <PropertyRef Name="korisnickoIme" />
+          </Key>
+          <Property Name="korisnickoIme" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="lozinka" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="datum_registracije" Type="datetime" Nullable="false" />
+          <Property Name="ime" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="prezime" Type="varchar" MaxLength="20" />
+          <Property Name="email" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="brojtelefona" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="uloga_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NaruceniSuplement">
+          <Key>
+            <PropertyRef Name="korisnik_korisnickoIme" />
+            <PropertyRef Name="suplement_id" />
+          </Key>
+          <Property Name="korisnik_korisnickoIme" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="suplement_id" Type="int" Nullable="false" />
+          <Property Name="kolicina" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NovacKorisnika">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="korisnik_korisnickoIme" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="stanjeNaRacunu" Type="money" />
+        </EntityType>
+        <EntityType Name="RezervacijaTreninga">
+          <Key>
+            <PropertyRef Name="trening_id" />
+            <PropertyRef Name="korisnik_korisnickoIme" />
+            <PropertyRef Name="vrijemeRezervacije" />
+          </Key>
+          <Property Name="trening_id" Type="int" Nullable="false" />
+          <Property Name="korisnik_korisnickoIme" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="vrijemeRezervacije" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Smjena">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SmjenaZaposlenika">
+          <Key>
+            <PropertyRef Name="smjena_id" />
+            <PropertyRef Name="zaposlenik_korisnickoIme" />
+          </Key>
+          <Property Name="smjena_id" Type="int" Nullable="false" />
+          <Property Name="zaposlenik_korisnickoIme" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="od" Type="time" Precision="7" Nullable="false" />
+          <Property Name="do" Type="time" Precision="7" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Suplement">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="cijena" Type="money" Nullable="false" />
+          <Property Name="stanje" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Termin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="od" Type="datetime" Nullable="false" />
+          <Property Name="do" Type="datetime" Nullable="false" />
+          <Property Name="broj_mjesta" Type="int" Nullable="false" />
+          <Property Name="zaposlenik_korisnickoIme" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="trening_id" Type="int" Nullable="false" />
+          <Property Name="vrstaVjezbe_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Trening">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UlogaUTeretani">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VrstaClanarine">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="cijena" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VrstaVjezbe">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="Clanarina_Korisnik_korisnickoIme_fk">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnickoIme" />
+            </Principal>
+            <Dependent Role="Clanarina">
+              <PropertyRef Name="korisnik_korisnickoIme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Clanarina_VrstaClanarine_ID_fk">
+          <End Role="VrstaClanarine" Type="Self.VrstaClanarine" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VrstaClanarine">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Clanarina">
+              <PropertyRef Name="vrsta_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Korisnik_UlogaUTeretani_ID_fk">
+          <End Role="UlogaUTeretani" Type="Self.UlogaUTeretani" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UlogaUTeretani">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Korisnik">
+              <PropertyRef Name="uloga_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NaruceniSuplement_Korisnik_korisnickoIme_fk">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NaruceniSuplement" Type="Self.NaruceniSuplement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnickoIme" />
+            </Principal>
+            <Dependent Role="NaruceniSuplement">
+              <PropertyRef Name="korisnik_korisnickoIme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NaruceniSuplement_Suplement_ID_fk">
+          <End Role="Suplement" Type="Self.Suplement" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NaruceniSuplement" Type="Self.NaruceniSuplement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suplement">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NaruceniSuplement">
+              <PropertyRef Name="suplement_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NovacKorisnika_Korisnik_korisnickoIme_fk">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NovacKorisnika" Type="Self.NovacKorisnika" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnickoIme" />
+            </Principal>
+            <Dependent Role="NovacKorisnika">
+              <PropertyRef Name="korisnik_korisnickoIme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RezervacijaTreninga_Korisnik_korisnickoIme_fk">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RezervacijaTreninga" Type="Self.RezervacijaTreninga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnickoIme" />
+            </Principal>
+            <Dependent Role="RezervacijaTreninga">
+              <PropertyRef Name="korisnik_korisnickoIme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RezervacijaTreninga_Trening_ID_fk">
+          <End Role="Trening" Type="Self.Trening" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RezervacijaTreninga" Type="Self.RezervacijaTreninga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trening">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RezervacijaTreninga">
+              <PropertyRef Name="trening_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SmjenaZaposlenika_Korisnik_korisnickoIme_fk">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SmjenaZaposlenika" Type="Self.SmjenaZaposlenika" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnickoIme" />
+            </Principal>
+            <Dependent Role="SmjenaZaposlenika">
+              <PropertyRef Name="zaposlenik_korisnickoIme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SmjenaZaposlenika_Smjena_ID_fk">
+          <End Role="Smjena" Type="Self.Smjena" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SmjenaZaposlenika" Type="Self.SmjenaZaposlenika" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Smjena">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SmjenaZaposlenika">
+              <PropertyRef Name="smjena_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Termin_Korisnik_korisnickoIme_fk">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Termin" Type="Self.Termin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnickoIme" />
+            </Principal>
+            <Dependent Role="Termin">
+              <PropertyRef Name="zaposlenik_korisnickoIme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Termin_Trening_ID_fk">
+          <End Role="Trening" Type="Self.Trening" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Termin" Type="Self.Termin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trening">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Termin">
+              <PropertyRef Name="trening_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Termin_VrstaVjezbe_ID_fk">
+          <End Role="VrstaVjezbe" Type="Self.VrstaVjezbe" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Termin" Type="Self.Termin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VrstaVjezbe">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Termin">
+              <PropertyRef Name="vrstaVjezbe_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Clanarina" EntityType="Self.Clanarina" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <EntitySet Name="Korisnik" EntityType="Self.Korisnik" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <EntitySet Name="NaruceniSuplement" EntityType="Self.NaruceniSuplement" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <EntitySet Name="NovacKorisnika" EntityType="Self.NovacKorisnika" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <EntitySet Name="RezervacijaTreninga" EntityType="Self.RezervacijaTreninga" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <EntitySet Name="Smjena" EntityType="Self.Smjena" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <EntitySet Name="SmjenaZaposlenika" EntityType="Self.SmjenaZaposlenika" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <EntitySet Name="Suplement" EntityType="Self.Suplement" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <EntitySet Name="Termin" EntityType="Self.Termin" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <EntitySet Name="Trening" EntityType="Self.Trening" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <EntitySet Name="UlogaUTeretani" EntityType="Self.UlogaUTeretani" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <EntitySet Name="VrstaClanarine" EntityType="Self.VrstaClanarine" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <EntitySet Name="VrstaVjezbe" EntityType="Self.VrstaVjezbe" Schema="PI_ERA_eGYM" store:Type="Tables" />
+          <AssociationSet Name="Clanarina_Korisnik_korisnickoIme_fk" Association="Self.Clanarina_Korisnik_korisnickoIme_fk">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Clanarina" EntitySet="Clanarina" />
+          </AssociationSet>
+          <AssociationSet Name="Clanarina_VrstaClanarine_ID_fk" Association="Self.Clanarina_VrstaClanarine_ID_fk">
+            <End Role="VrstaClanarine" EntitySet="VrstaClanarine" />
+            <End Role="Clanarina" EntitySet="Clanarina" />
+          </AssociationSet>
+          <AssociationSet Name="Korisnik_UlogaUTeretani_ID_fk" Association="Self.Korisnik_UlogaUTeretani_ID_fk">
+            <End Role="UlogaUTeretani" EntitySet="UlogaUTeretani" />
+            <End Role="Korisnik" EntitySet="Korisnik" />
+          </AssociationSet>
+          <AssociationSet Name="NaruceniSuplement_Korisnik_korisnickoIme_fk" Association="Self.NaruceniSuplement_Korisnik_korisnickoIme_fk">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="NaruceniSuplement" EntitySet="NaruceniSuplement" />
+          </AssociationSet>
+          <AssociationSet Name="NaruceniSuplement_Suplement_ID_fk" Association="Self.NaruceniSuplement_Suplement_ID_fk">
+            <End Role="Suplement" EntitySet="Suplement" />
+            <End Role="NaruceniSuplement" EntitySet="NaruceniSuplement" />
+          </AssociationSet>
+          <AssociationSet Name="NovacKorisnika_Korisnik_korisnickoIme_fk" Association="Self.NovacKorisnika_Korisnik_korisnickoIme_fk">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="NovacKorisnika" EntitySet="NovacKorisnika" />
+          </AssociationSet>
+          <AssociationSet Name="RezervacijaTreninga_Korisnik_korisnickoIme_fk" Association="Self.RezervacijaTreninga_Korisnik_korisnickoIme_fk">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="RezervacijaTreninga" EntitySet="RezervacijaTreninga" />
+          </AssociationSet>
+          <AssociationSet Name="RezervacijaTreninga_Trening_ID_fk" Association="Self.RezervacijaTreninga_Trening_ID_fk">
+            <End Role="Trening" EntitySet="Trening" />
+            <End Role="RezervacijaTreninga" EntitySet="RezervacijaTreninga" />
+          </AssociationSet>
+          <AssociationSet Name="SmjenaZaposlenika_Korisnik_korisnickoIme_fk" Association="Self.SmjenaZaposlenika_Korisnik_korisnickoIme_fk">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="SmjenaZaposlenika" EntitySet="SmjenaZaposlenika" />
+          </AssociationSet>
+          <AssociationSet Name="SmjenaZaposlenika_Smjena_ID_fk" Association="Self.SmjenaZaposlenika_Smjena_ID_fk">
+            <End Role="Smjena" EntitySet="Smjena" />
+            <End Role="SmjenaZaposlenika" EntitySet="SmjenaZaposlenika" />
+          </AssociationSet>
+          <AssociationSet Name="Termin_Korisnik_korisnickoIme_fk" Association="Self.Termin_Korisnik_korisnickoIme_fk">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Termin" EntitySet="Termin" />
+          </AssociationSet>
+          <AssociationSet Name="Termin_Trening_ID_fk" Association="Self.Termin_Trening_ID_fk">
+            <End Role="Trening" EntitySet="Trening" />
+            <End Role="Termin" EntitySet="Termin" />
+          </AssociationSet>
+          <AssociationSet Name="Termin_VrstaVjezbe_ID_fk" Association="Self.Termin_VrstaVjezbe_ID_fk">
+            <End Role="VrstaVjezbe" EntitySet="VrstaVjezbe" />
+            <End Role="Termin" EntitySet="Termin" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Clanarina">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="vrijedi_od" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="vrijedi_do" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="vrsta_id" Type="Int32" Nullable="false" />
+          <Property Name="korisnik_korisnickoIme" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="placeno" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Korisnik" Relationship="Self.Clanarina_Korisnik_korisnickoIme_fk" FromRole="Clanarina" ToRole="Korisnik" />
+          <NavigationProperty Name="VrstaClanarine" Relationship="Self.Clanarina_VrstaClanarine_ID_fk" FromRole="Clanarina" ToRole="VrstaClanarine" />
+        </EntityType>
+        <EntityType Name="Korisnik">
+          <Key>
+            <PropertyRef Name="korisnickoIme" />
+          </Key>
+          <Property Name="korisnickoIme" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lozinka" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="datum_registracije" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="prezime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="brojtelefona" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="uloga_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clanarinas" Relationship="Self.Clanarina_Korisnik_korisnickoIme_fk" FromRole="Korisnik" ToRole="Clanarina" />
+          <NavigationProperty Name="UlogaUTeretani" Relationship="Self.Korisnik_UlogaUTeretani_ID_fk" FromRole="Korisnik" ToRole="UlogaUTeretani" />
+          <NavigationProperty Name="NaruceniSuplements" Relationship="Self.NaruceniSuplement_Korisnik_korisnickoIme_fk" FromRole="Korisnik" ToRole="NaruceniSuplement" />
+          <NavigationProperty Name="NovacKorisnikas" Relationship="Self.NovacKorisnika_Korisnik_korisnickoIme_fk" FromRole="Korisnik" ToRole="NovacKorisnika" />
+          <NavigationProperty Name="RezervacijaTreningas" Relationship="Self.RezervacijaTreninga_Korisnik_korisnickoIme_fk" FromRole="Korisnik" ToRole="RezervacijaTreninga" />
+          <NavigationProperty Name="SmjenaZaposlenikas" Relationship="Self.SmjenaZaposlenika_Korisnik_korisnickoIme_fk" FromRole="Korisnik" ToRole="SmjenaZaposlenika" />
+          <NavigationProperty Name="Termins" Relationship="Self.Termin_Korisnik_korisnickoIme_fk" FromRole="Korisnik" ToRole="Termin" />
+        </EntityType>
+        <EntityType Name="NaruceniSuplement">
+          <Key>
+            <PropertyRef Name="korisnik_korisnickoIme" />
+            <PropertyRef Name="suplement_id" />
+          </Key>
+          <Property Name="korisnik_korisnickoIme" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="suplement_id" Type="Int32" Nullable="false" />
+          <Property Name="kolicina" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Korisnik" Relationship="Self.NaruceniSuplement_Korisnik_korisnickoIme_fk" FromRole="NaruceniSuplement" ToRole="Korisnik" />
+          <NavigationProperty Name="Suplement" Relationship="Self.NaruceniSuplement_Suplement_ID_fk" FromRole="NaruceniSuplement" ToRole="Suplement" />
+        </EntityType>
+        <EntityType Name="NovacKorisnika">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="korisnik_korisnickoIme" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="stanjeNaRacunu" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Korisnik" Relationship="Self.NovacKorisnika_Korisnik_korisnickoIme_fk" FromRole="NovacKorisnika" ToRole="Korisnik" />
+        </EntityType>
+        <EntityType Name="RezervacijaTreninga">
+          <Key>
+            <PropertyRef Name="trening_id" />
+            <PropertyRef Name="korisnik_korisnickoIme" />
+            <PropertyRef Name="vrijemeRezervacije" />
+          </Key>
+          <Property Name="trening_id" Type="Int32" Nullable="false" />
+          <Property Name="korisnik_korisnickoIme" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="vrijemeRezervacije" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Korisnik" Relationship="Self.RezervacijaTreninga_Korisnik_korisnickoIme_fk" FromRole="RezervacijaTreninga" ToRole="Korisnik" />
+          <NavigationProperty Name="Trening" Relationship="Self.RezervacijaTreninga_Trening_ID_fk" FromRole="RezervacijaTreninga" ToRole="Trening" />
+        </EntityType>
+        <EntityType Name="Smjena">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="SmjenaZaposlenikas" Relationship="Self.SmjenaZaposlenika_Smjena_ID_fk" FromRole="Smjena" ToRole="SmjenaZaposlenika" />
+        </EntityType>
+        <EntityType Name="SmjenaZaposlenika">
+          <Key>
+            <PropertyRef Name="smjena_id" />
+            <PropertyRef Name="zaposlenik_korisnickoIme" />
+          </Key>
+          <Property Name="smjena_id" Type="Int32" Nullable="false" />
+          <Property Name="zaposlenik_korisnickoIme" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="od" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="do" Type="Time" Nullable="false" Precision="7" />
+          <NavigationProperty Name="Korisnik" Relationship="Self.SmjenaZaposlenika_Korisnik_korisnickoIme_fk" FromRole="SmjenaZaposlenika" ToRole="Korisnik" />
+          <NavigationProperty Name="Smjena" Relationship="Self.SmjenaZaposlenika_Smjena_ID_fk" FromRole="SmjenaZaposlenika" ToRole="Smjena" />
+        </EntityType>
+        <EntityType Name="Suplement">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cijena" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="stanje" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="NaruceniSuplements" Relationship="Self.NaruceniSuplement_Suplement_ID_fk" FromRole="Suplement" ToRole="NaruceniSuplement" />
+        </EntityType>
+        <EntityType Name="Termin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="od" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="do" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="broj_mjesta" Type="Int32" Nullable="false" />
+          <Property Name="zaposlenik_korisnickoIme" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="trening_id" Type="Int32" Nullable="false" />
+          <Property Name="vrstaVjezbe_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Korisnik" Relationship="Self.Termin_Korisnik_korisnickoIme_fk" FromRole="Termin" ToRole="Korisnik" />
+          <NavigationProperty Name="Trening" Relationship="Self.Termin_Trening_ID_fk" FromRole="Termin" ToRole="Trening" />
+          <NavigationProperty Name="VrstaVjezbe" Relationship="Self.Termin_VrstaVjezbe_ID_fk" FromRole="Termin" ToRole="VrstaVjezbe" />
+        </EntityType>
+        <EntityType Name="Trening">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="RezervacijaTreningas" Relationship="Self.RezervacijaTreninga_Trening_ID_fk" FromRole="Trening" ToRole="RezervacijaTreninga" />
+          <NavigationProperty Name="Termins" Relationship="Self.Termin_Trening_ID_fk" FromRole="Trening" ToRole="Termin" />
+        </EntityType>
+        <EntityType Name="UlogaUTeretani">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="naziv" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Korisniks" Relationship="Self.Korisnik_UlogaUTeretani_ID_fk" FromRole="UlogaUTeretani" ToRole="Korisnik" />
+        </EntityType>
+        <EntityType Name="VrstaClanarine">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="naziv" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cijena" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="Clanarinas" Relationship="Self.Clanarina_VrstaClanarine_ID_fk" FromRole="VrstaClanarine" ToRole="Clanarina" />
+        </EntityType>
+        <EntityType Name="VrstaVjezbe">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="naziv" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Termins" Relationship="Self.Termin_VrstaVjezbe_ID_fk" FromRole="VrstaVjezbe" ToRole="Termin" />
+        </EntityType>
+        <Association Name="Clanarina_Korisnik_korisnickoIme_fk">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnickoIme" />
+            </Principal>
+            <Dependent Role="Clanarina">
+              <PropertyRef Name="korisnik_korisnickoIme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Clanarina_VrstaClanarine_ID_fk">
+          <End Role="VrstaClanarine" Type="Self.VrstaClanarine" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VrstaClanarine">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Clanarina">
+              <PropertyRef Name="vrsta_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Korisnik_UlogaUTeretani_ID_fk">
+          <End Role="UlogaUTeretani" Type="Self.UlogaUTeretani" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UlogaUTeretani">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Korisnik">
+              <PropertyRef Name="uloga_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NaruceniSuplement_Korisnik_korisnickoIme_fk">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NaruceniSuplement" Type="Self.NaruceniSuplement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnickoIme" />
+            </Principal>
+            <Dependent Role="NaruceniSuplement">
+              <PropertyRef Name="korisnik_korisnickoIme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NovacKorisnika_Korisnik_korisnickoIme_fk">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NovacKorisnika" Type="Self.NovacKorisnika" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnickoIme" />
+            </Principal>
+            <Dependent Role="NovacKorisnika">
+              <PropertyRef Name="korisnik_korisnickoIme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RezervacijaTreninga_Korisnik_korisnickoIme_fk">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RezervacijaTreninga" Type="Self.RezervacijaTreninga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnickoIme" />
+            </Principal>
+            <Dependent Role="RezervacijaTreninga">
+              <PropertyRef Name="korisnik_korisnickoIme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SmjenaZaposlenika_Korisnik_korisnickoIme_fk">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SmjenaZaposlenika" Type="Self.SmjenaZaposlenika" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnickoIme" />
+            </Principal>
+            <Dependent Role="SmjenaZaposlenika">
+              <PropertyRef Name="zaposlenik_korisnickoIme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Termin_Korisnik_korisnickoIme_fk">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Termin" Type="Self.Termin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnickoIme" />
+            </Principal>
+            <Dependent Role="Termin">
+              <PropertyRef Name="zaposlenik_korisnickoIme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NaruceniSuplement_Suplement_ID_fk">
+          <End Role="Suplement" Type="Self.Suplement" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NaruceniSuplement" Type="Self.NaruceniSuplement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suplement">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NaruceniSuplement">
+              <PropertyRef Name="suplement_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RezervacijaTreninga_Trening_ID_fk">
+          <End Role="Trening" Type="Self.Trening" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RezervacijaTreninga" Type="Self.RezervacijaTreninga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trening">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RezervacijaTreninga">
+              <PropertyRef Name="trening_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SmjenaZaposlenika_Smjena_ID_fk">
+          <End Role="Smjena" Type="Self.Smjena" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SmjenaZaposlenika" Type="Self.SmjenaZaposlenika" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Smjena">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SmjenaZaposlenika">
+              <PropertyRef Name="smjena_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Termin_Trening_ID_fk">
+          <End Role="Trening" Type="Self.Trening" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Termin" Type="Self.Termin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trening">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Termin">
+              <PropertyRef Name="trening_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Termin_VrstaVjezbe_ID_fk">
+          <End Role="VrstaVjezbe" Type="Self.VrstaVjezbe" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Termin" Type="Self.Termin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VrstaVjezbe">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Termin">
+              <PropertyRef Name="vrstaVjezbe_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clanarinas" EntityType="Self.Clanarina" />
+          <EntitySet Name="Korisniks" EntityType="Self.Korisnik" />
+          <EntitySet Name="NaruceniSuplements" EntityType="Self.NaruceniSuplement" />
+          <EntitySet Name="NovacKorisnikas" EntityType="Self.NovacKorisnika" />
+          <EntitySet Name="RezervacijaTreningas" EntityType="Self.RezervacijaTreninga" />
+          <EntitySet Name="Smjenas" EntityType="Self.Smjena" />
+          <EntitySet Name="SmjenaZaposlenikas" EntityType="Self.SmjenaZaposlenika" />
+          <EntitySet Name="Suplements" EntityType="Self.Suplement" />
+          <EntitySet Name="Termins" EntityType="Self.Termin" />
+          <EntitySet Name="Trenings" EntityType="Self.Trening" />
+          <EntitySet Name="UlogaUTeretanis" EntityType="Self.UlogaUTeretani" />
+          <EntitySet Name="VrstaClanarines" EntityType="Self.VrstaClanarine" />
+          <EntitySet Name="VrstaVjezbes" EntityType="Self.VrstaVjezbe" />
+          <AssociationSet Name="Clanarina_Korisnik_korisnickoIme_fk" Association="Self.Clanarina_Korisnik_korisnickoIme_fk">
+            <End Role="Korisnik" EntitySet="Korisniks" />
+            <End Role="Clanarina" EntitySet="Clanarinas" />
+          </AssociationSet>
+          <AssociationSet Name="Clanarina_VrstaClanarine_ID_fk" Association="Self.Clanarina_VrstaClanarine_ID_fk">
+            <End Role="VrstaClanarine" EntitySet="VrstaClanarines" />
+            <End Role="Clanarina" EntitySet="Clanarinas" />
+          </AssociationSet>
+          <AssociationSet Name="Korisnik_UlogaUTeretani_ID_fk" Association="Self.Korisnik_UlogaUTeretani_ID_fk">
+            <End Role="UlogaUTeretani" EntitySet="UlogaUTeretanis" />
+            <End Role="Korisnik" EntitySet="Korisniks" />
+          </AssociationSet>
+          <AssociationSet Name="NaruceniSuplement_Korisnik_korisnickoIme_fk" Association="Self.NaruceniSuplement_Korisnik_korisnickoIme_fk">
+            <End Role="Korisnik" EntitySet="Korisniks" />
+            <End Role="NaruceniSuplement" EntitySet="NaruceniSuplements" />
+          </AssociationSet>
+          <AssociationSet Name="NovacKorisnika_Korisnik_korisnickoIme_fk" Association="Self.NovacKorisnika_Korisnik_korisnickoIme_fk">
+            <End Role="Korisnik" EntitySet="Korisniks" />
+            <End Role="NovacKorisnika" EntitySet="NovacKorisnikas" />
+          </AssociationSet>
+          <AssociationSet Name="RezervacijaTreninga_Korisnik_korisnickoIme_fk" Association="Self.RezervacijaTreninga_Korisnik_korisnickoIme_fk">
+            <End Role="Korisnik" EntitySet="Korisniks" />
+            <End Role="RezervacijaTreninga" EntitySet="RezervacijaTreningas" />
+          </AssociationSet>
+          <AssociationSet Name="SmjenaZaposlenika_Korisnik_korisnickoIme_fk" Association="Self.SmjenaZaposlenika_Korisnik_korisnickoIme_fk">
+            <End Role="Korisnik" EntitySet="Korisniks" />
+            <End Role="SmjenaZaposlenika" EntitySet="SmjenaZaposlenikas" />
+          </AssociationSet>
+          <AssociationSet Name="Termin_Korisnik_korisnickoIme_fk" Association="Self.Termin_Korisnik_korisnickoIme_fk">
+            <End Role="Korisnik" EntitySet="Korisniks" />
+            <End Role="Termin" EntitySet="Termins" />
+          </AssociationSet>
+          <AssociationSet Name="NaruceniSuplement_Suplement_ID_fk" Association="Self.NaruceniSuplement_Suplement_ID_fk">
+            <End Role="Suplement" EntitySet="Suplements" />
+            <End Role="NaruceniSuplement" EntitySet="NaruceniSuplements" />
+          </AssociationSet>
+          <AssociationSet Name="RezervacijaTreninga_Trening_ID_fk" Association="Self.RezervacijaTreninga_Trening_ID_fk">
+            <End Role="Trening" EntitySet="Trenings" />
+            <End Role="RezervacijaTreninga" EntitySet="RezervacijaTreningas" />
+          </AssociationSet>
+          <AssociationSet Name="SmjenaZaposlenika_Smjena_ID_fk" Association="Self.SmjenaZaposlenika_Smjena_ID_fk">
+            <End Role="Smjena" EntitySet="Smjenas" />
+            <End Role="SmjenaZaposlenika" EntitySet="SmjenaZaposlenikas" />
+          </AssociationSet>
+          <AssociationSet Name="Termin_Trening_ID_fk" Association="Self.Termin_Trening_ID_fk">
+            <End Role="Trening" EntitySet="Trenings" />
+            <End Role="Termin" EntitySet="Termins" />
+          </AssociationSet>
+          <AssociationSet Name="Termin_VrstaVjezbe_ID_fk" Association="Self.Termin_VrstaVjezbe_ID_fk">
+            <End Role="VrstaVjezbe" EntitySet="VrstaVjezbes" />
+            <End Role="Termin" EntitySet="Termins" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities1">
+          <EntitySetMapping Name="Clanarinas">
+            <EntityTypeMapping TypeName="Model.Clanarina">
+              <MappingFragment StoreEntitySet="Clanarina">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="vrijedi_od" ColumnName="vrijedi_od" />
+                <ScalarProperty Name="vrijedi_do" ColumnName="vrijedi_do" />
+                <ScalarProperty Name="vrsta_id" ColumnName="vrsta_id" />
+                <ScalarProperty Name="korisnik_korisnickoIme" ColumnName="korisnik_korisnickoIme" />
+                <ScalarProperty Name="placeno" ColumnName="placeno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Korisniks">
+            <EntityTypeMapping TypeName="Model.Korisnik">
+              <MappingFragment StoreEntitySet="Korisnik">
+                <ScalarProperty Name="korisnickoIme" ColumnName="korisnickoIme" />
+                <ScalarProperty Name="lozinka" ColumnName="lozinka" />
+                <ScalarProperty Name="datum_registracije" ColumnName="datum_registracije" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="brojtelefona" ColumnName="brojtelefona" />
+                <ScalarProperty Name="uloga_id" ColumnName="uloga_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NaruceniSuplements">
+            <EntityTypeMapping TypeName="Model.NaruceniSuplement">
+              <MappingFragment StoreEntitySet="NaruceniSuplement">
+                <ScalarProperty Name="korisnik_korisnickoIme" ColumnName="korisnik_korisnickoIme" />
+                <ScalarProperty Name="suplement_id" ColumnName="suplement_id" />
+                <ScalarProperty Name="kolicina" ColumnName="kolicina" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NovacKorisnikas">
+            <EntityTypeMapping TypeName="Model.NovacKorisnika">
+              <MappingFragment StoreEntitySet="NovacKorisnika">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="korisnik_korisnickoIme" ColumnName="korisnik_korisnickoIme" />
+                <ScalarProperty Name="stanjeNaRacunu" ColumnName="stanjeNaRacunu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RezervacijaTreningas">
+            <EntityTypeMapping TypeName="Model.RezervacijaTreninga">
+              <MappingFragment StoreEntitySet="RezervacijaTreninga">
+                <ScalarProperty Name="trening_id" ColumnName="trening_id" />
+                <ScalarProperty Name="korisnik_korisnickoIme" ColumnName="korisnik_korisnickoIme" />
+                <ScalarProperty Name="vrijemeRezervacije" ColumnName="vrijemeRezervacije" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Smjenas">
+            <EntityTypeMapping TypeName="Model.Smjena">
+              <MappingFragment StoreEntitySet="Smjena">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SmjenaZaposlenikas">
+            <EntityTypeMapping TypeName="Model.SmjenaZaposlenika">
+              <MappingFragment StoreEntitySet="SmjenaZaposlenika">
+                <ScalarProperty Name="smjena_id" ColumnName="smjena_id" />
+                <ScalarProperty Name="zaposlenik_korisnickoIme" ColumnName="zaposlenik_korisnickoIme" />
+                <ScalarProperty Name="od" ColumnName="od" />
+                <ScalarProperty Name="do" ColumnName="do" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suplements">
+            <EntityTypeMapping TypeName="Model.Suplement">
+              <MappingFragment StoreEntitySet="Suplement">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="cijena" ColumnName="cijena" />
+                <ScalarProperty Name="stanje" ColumnName="stanje" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Termins">
+            <EntityTypeMapping TypeName="Model.Termin">
+              <MappingFragment StoreEntitySet="Termin">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="od" ColumnName="od" />
+                <ScalarProperty Name="do" ColumnName="do" />
+                <ScalarProperty Name="broj_mjesta" ColumnName="broj_mjesta" />
+                <ScalarProperty Name="zaposlenik_korisnickoIme" ColumnName="zaposlenik_korisnickoIme" />
+                <ScalarProperty Name="trening_id" ColumnName="trening_id" />
+                <ScalarProperty Name="vrstaVjezbe_id" ColumnName="vrstaVjezbe_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trenings">
+            <EntityTypeMapping TypeName="Model.Trening">
+              <MappingFragment StoreEntitySet="Trening">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UlogaUTeretanis">
+            <EntityTypeMapping TypeName="Model.UlogaUTeretani">
+              <MappingFragment StoreEntitySet="UlogaUTeretani">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VrstaClanarines">
+            <EntityTypeMapping TypeName="Model.VrstaClanarine">
+              <MappingFragment StoreEntitySet="VrstaClanarine">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="cijena" ColumnName="cijena" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VrstaVjezbes">
+            <EntityTypeMapping TypeName="Model.VrstaVjezbe">
+              <MappingFragment StoreEntitySet="VrstaVjezbe">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

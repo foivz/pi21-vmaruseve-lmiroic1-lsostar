@@ -28,5 +28,10 @@ namespace eGym
         {
             MessageBox.Show("Uspješno ste spremili promjene!");
         }
+
+        private void FormaUrediProfilZaposlenika_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

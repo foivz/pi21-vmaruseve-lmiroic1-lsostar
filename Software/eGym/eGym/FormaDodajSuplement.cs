@@ -26,7 +26,7 @@ namespace eGym
 
         private void btnDodajSuplementD_Click(object sender, EventArgs e)
         {
-            using (var context = new Entities())
+            using (var context = new Entities1())
             {
                 string naziv = txtNazivDodajSuplement.Text;
                 decimal cijena = decimal.Parse(txtCijenaDodajSuplement.Text);
@@ -49,6 +49,11 @@ namespace eGym
             FormaEvidencijaSuplemenata formaEvidencijaSuplemenata = new FormaEvidencijaSuplemenata();
             formaEvidencijaSuplemenata.Show();
             this.Hide();
+        }
+
+        private void FormaDodajSuplement_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

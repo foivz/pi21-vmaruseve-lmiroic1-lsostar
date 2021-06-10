@@ -31,5 +31,10 @@ namespace eGym
             formaEvidencijaSmjena.Show();
             this.Hide();
         }
+
+        private void FormaAzurirajSmjenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

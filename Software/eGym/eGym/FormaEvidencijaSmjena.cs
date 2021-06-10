@@ -47,5 +47,10 @@ namespace eGym
             formProfilZaposlenika.Show();
             this.Hide();
         }
+
+        private void FormaEvidencijaSmjena_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

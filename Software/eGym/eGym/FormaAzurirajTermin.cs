@@ -28,5 +28,10 @@ namespace eGym
             formaEvidencijaTermina.Show();
             this.Hide();
         }
+
+        private void FormaAzurirajTermin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

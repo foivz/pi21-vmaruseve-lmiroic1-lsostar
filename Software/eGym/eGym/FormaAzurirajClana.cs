@@ -44,7 +44,7 @@ namespace eGym
             cbClanarinaPlacenaAzurirajClana.Items.Add("Ne");
             if (OdabraniKorisnik != null)
             {
-                using (var context = new Entities())
+                using (var context = new Entities1())
                 {
                     var query1 = from nk in context.NovacKorisnikas.Include("Korisnik")
                                 where nk.korisnik_korisnickoIme == OdabraniKorisnik.korisnickoIme
