@@ -23,6 +23,13 @@ namespace eGym
             DohvatiVrsteTreninga();
             DohvatiVrsteVjezbi();
             DohvatiZaposlenika();
+
+            dtpDatumTerminaOdD.Format = DateTimePickerFormat.Time;
+            dtpDatumDoD.Format = DateTimePickerFormat.Time;
+
+            dtpDatumDoD.ShowUpDown = true;
+            dtpDatumTerminaOdD.ShowUpDown = true;
+
         }
 
         private void DohvatiVrsteVjezbi()
@@ -32,7 +39,7 @@ namespace eGym
                 var query = from vv in context.VrstaVjezbes.Include("Termins")
 
                             select vv.naziv;
-                cmbVrstaVjezbeD.DataSource = query.Distinct().ToList();
+                cmbVrstaVjezbeD.DataSource = query.ToList();
 
             }
         }
@@ -55,8 +62,8 @@ namespace eGym
             {
                 var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("NovacKorisnikas").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
                             where k.uloga_id == 2
-                            select k.prezime;
-                cmbZaposlenikD.DataSource = query.Distinct().ToList();
+                            select k;
+                dgvZaposlenici.DataSource = query.Distinct().ToList();
 
             }
         }
@@ -66,11 +73,17 @@ namespace eGym
        
             using (var context = new Entities5())
             {
-                Korisnik korisnik = cmbZaposlenikD.SelectedItem as Korisnik;
+                dtpDatumTerminaOdD.Format = DateTimePickerFormat.Time;
+                dtpDatumDoD.Format = DateTimePickerFormat.Time;
+
+                dtpDatumDoD.ShowUpDown = true;
+                dtpDatumTerminaOdD.ShowUpDown = true;
+
+                Korisnik korisnik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
                 VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbeD.SelectedItem as VrstaVjezbe;
                 Trening trening = cmbVrstaTreningaD.SelectedItem as Trening;
-                DateTime od = DateTime.Parse(dtpDatumTerminaOdD.Text);
-                DateTime do1 = DateTime.Parse(dtpDatumTerminaOdD.Text);
+                DateTime od = this.dtpDatumTerminaOdD.Value.ToLocalTime();
+                DateTime do1 = this.dtpDatumDoD.Value.ToLocalTime();
                 int brojMjesta = int.Parse(txtBrojMjestaD.Text);
 
 
