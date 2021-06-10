@@ -21,6 +21,7 @@ namespace eGym
         {
             Smjena odabranaSmjena = cmbNaziv.SelectedItem as Smjena;
             Korisnik odabraniKorisnik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
+            DateTime odabraniDatum = this.dtpDatum.Value.Date;
 
             using (var context = new Entities5())
             {
@@ -31,7 +32,7 @@ namespace eGym
                     {
                         zaposlenik_korisnickoIme = odabraniKorisnik.korisnickoIme,
                         smjena_id = odabranaSmjena.ID,
-                        datum = DateTime.Now
+                        datum = odabraniDatum
 
                     };
                 context.SmjenaZaposlenikas.Add(novaSmjena);

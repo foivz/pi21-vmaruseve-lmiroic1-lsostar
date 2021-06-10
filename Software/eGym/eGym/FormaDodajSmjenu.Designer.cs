@@ -36,6 +36,8 @@ namespace eGym
             this.btnDodajSmjenu = new System.Windows.Forms.Button();
             this.btnNatrag = new System.Windows.Forms.Button();
             this.dgvZaposlenici = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +79,7 @@ namespace eGym
             // 
             this.cmbNaziv.FormattingEnabled = true;
             this.cmbNaziv.Location = new System.Drawing.Point(130, 302);
-            this.cmbNaziv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbNaziv.Margin = new System.Windows.Forms.Padding(2);
             this.cmbNaziv.Name = "cmbNaziv";
             this.cmbNaziv.Size = new System.Drawing.Size(164, 21);
             this.cmbNaziv.TabIndex = 42;
@@ -88,7 +90,7 @@ namespace eGym
             this.btnDodajSmjenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDodajSmjenu.ForeColor = System.Drawing.Color.White;
             this.btnDodajSmjenu.Location = new System.Drawing.Point(421, 345);
-            this.btnDodajSmjenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDodajSmjenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnDodajSmjenu.Name = "btnDodajSmjenu";
             this.btnDodajSmjenu.Size = new System.Drawing.Size(92, 41);
             this.btnDodajSmjenu.TabIndex = 49;
@@ -102,7 +104,7 @@ namespace eGym
             this.btnNatrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNatrag.ForeColor = System.Drawing.Color.White;
             this.btnNatrag.Location = new System.Drawing.Point(38, 345);
-            this.btnNatrag.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNatrag.Margin = new System.Windows.Forms.Padding(2);
             this.btnNatrag.Name = "btnNatrag";
             this.btnNatrag.Size = new System.Drawing.Size(88, 41);
             this.btnNatrag.TabIndex = 48;
@@ -118,11 +120,31 @@ namespace eGym
             this.dgvZaposlenici.Size = new System.Drawing.Size(456, 150);
             this.dgvZaposlenici.TabIndex = 50;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(338, 303);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 15);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Datum:";
+            // 
+            // dtpDatum
+            // 
+            this.dtpDatum.Location = new System.Drawing.Point(399, 303);
+            this.dtpDatum.Name = "dtpDatum";
+            this.dtpDatum.Size = new System.Drawing.Size(114, 20);
+            this.dtpDatum.TabIndex = 52;
+            // 
             // FormaDodajSmjenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(579, 465);
+            this.Controls.Add(this.dtpDatum);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvZaposlenici);
             this.Controls.Add(this.btnDodajSmjenu);
             this.Controls.Add(this.btnNatrag);
@@ -130,7 +152,7 @@ namespace eGym
             this.Controls.Add(this.lblRadnoVrijeme);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormaDodajSmjenu";
             this.Text = "Dodaj smjenu";
             this.Load += new System.EventHandler(this.FormaDodajSmjenu_Load);
@@ -149,5 +171,7 @@ namespace eGym
         private System.Windows.Forms.Button btnDodajSmjenu;
         private System.Windows.Forms.Button btnNatrag;
         private System.Windows.Forms.DataGridView dgvZaposlenici;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtpDatum;
     }
 }
