@@ -19,30 +19,32 @@ namespace eGym
 
         private void btnDodajSmjenu_Click(object sender, EventArgs e)
         {
-            Korisnik korisnik = cmbPrezime.SelectedItem as Korisnik;
-            Smjena smjena = cmbNaziv.SelectedItem as Smjena;
+            Smjena odabranaSmjena = cmbNaziv.SelectedItem as Smjena;
+            Korisnik odabraniKorisnik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
+
             using (var context = new Entities5())
             {
-                context.Korisniks.Attach(korisnik);
-                context.Smjenas.Attach(smjena);
-                SmjenaZaposlenika newSmjena = new SmjenaZaposlenika
-                {
+                context.Smjenas.Attach(odabranaSmjena);
+                context.Korisniks.Attach(odabraniKorisnik);
+               
+                 SmjenaZaposlenika novaSmjena = new SmjenaZaposlenika
+                    {
+                        zaposlenik_korisnickoIme = odabraniKorisnik.korisnickoIme,
+                        smjena_id = odabranaSmjena.ID,
+                        datum = DateTime.Now
 
-                    smjena_id = smjena.ID,
-                    zaposlenik_korisnickoIme = korisnik.prezime,
-                    datum = DateTime.Now
-                };
-
-                context.SmjenaZaposlenikas.Add(newSmjena);
+                    };
+                context.SmjenaZaposlenikas.Add(novaSmjena);
                 context.SaveChanges();
             }
-            Close();
 
-       
-            MessageBox.Show("Uspješno dodana smjena.");
+
+
+
+            MessageBox.Show("Smjena uspješno dodana");
             FormaEvidencijaSmjena formaEvidencijaSmjena = new FormaEvidencijaSmjena();
             formaEvidencijaSmjena.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnNatrag_Click(object sender, EventArgs e)
@@ -54,23 +56,21 @@ namespace eGym
 
         private void FormaDodajSmjenu_Load(object sender, EventArgs e)
         {
-            DohvatiZaposlenike();
-            DohvatiSmjene();
+            Osvjezi();
         }
 
-        private void DohvatiSmjene()
+        private object DohvatiSmjene()
         {
+
             using (var context = new Entities5())
             {
-                var query = from s in context.Smjenas.Include("SmjenaZaposlenikas")
-
-                            select s.naziv;
-                cmbNaziv.DataSource = query.Distinct().ToList();
+                return context.Smjenas.ToList();
 
             }
+            
         }
 
-        private void DohvatiZaposlenike()
+        private object DohvatiZaposlenike()
         {
 
 
@@ -78,10 +78,17 @@ namespace eGym
             {
                 var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("NovacKorisnikas").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
                             where k.uloga_id == 2
-                            select k.prezime;
-                cmbPrezime.DataSource = query.Distinct().ToList();
+                            select k;
+
+                return query.ToList();
 
             }
+        }
+
+        private void Osvjezi()
+        {
+            cmbNaziv.DataSource = DohvatiSmjene();
+            dgvZaposlenici.DataSource = DohvatiZaposlenike();
         }
     }
 }

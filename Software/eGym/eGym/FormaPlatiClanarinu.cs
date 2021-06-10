@@ -30,10 +30,8 @@ namespace eGym
 
         private void btnPlatiClanarinu_Click(object sender, EventArgs e)
         {
-            bool placeno = false;
             NovacKorisnika novac = null;
-            if (placeno)
-            {
+            
                 using (var context = new Entities5())
                 {
                     if (novac.stanjeNaRacunu>0)
@@ -63,7 +61,7 @@ namespace eGym
                     }
                 }
                     
-            }
+            
 
 
             MessageBox.Show("Članarina uspješno plaćena!");
