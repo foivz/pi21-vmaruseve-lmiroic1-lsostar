@@ -41,7 +41,7 @@ namespace eGym
                 Korisnik korisnik = dgvEvidencijaZaposlenika.CurrentRow.DataBoundItem as Korisnik;
                 if (korisnik != null)
                 {
-                    using (var context = new Entities1())
+                    using (var context = new Entities5())
                     {
                         context.Korisniks.Attach(korisnik);
                         context.Korisniks.Remove(korisnik);
@@ -68,7 +68,7 @@ namespace eGym
 
         private void Osvjezi()
         {
-            using (var context = new Entities1())
+            using (var context = new Entities5())
             {
                 var upit = from k in context.Korisniks
                            where k.uloga_id == 2

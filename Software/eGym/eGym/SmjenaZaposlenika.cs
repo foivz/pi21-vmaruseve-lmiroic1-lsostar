@@ -16,8 +16,7 @@ namespace eGym
     {
         public int smjena_id { get; set; }
         public string zaposlenik_korisnickoIme { get; set; }
-        public System.TimeSpan od { get; set; }
-        public System.TimeSpan @do { get; set; }
+        public System.DateTime datum { get; set; }
     
         public virtual Korisnik Korisnik { get; set; }
         public virtual Smjena Smjena { get; set; }

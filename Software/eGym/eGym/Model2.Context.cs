@@ -13,10 +13,10 @@ namespace eGym
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities4 : DbContext
+    public partial class Entities5 : DbContext
     {
-        public Entities4()
-            : base("name=Entities4")
+        public Entities5()
+            : base("name=Entities5")
         {
         }
     

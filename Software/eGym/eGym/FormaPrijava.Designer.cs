@@ -53,7 +53,7 @@ namespace eGym
             // txtLozinkaPrijava
             // 
             this.txtLozinkaPrijava.Location = new System.Drawing.Point(440, 302);
-            this.txtLozinkaPrijava.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLozinkaPrijava.Margin = new System.Windows.Forms.Padding(4);
             this.txtLozinkaPrijava.Name = "txtLozinkaPrijava";
             this.txtLozinkaPrijava.Size = new System.Drawing.Size(271, 22);
             this.txtLozinkaPrijava.TabIndex = 14;
@@ -61,7 +61,7 @@ namespace eGym
             // txtUsernamePrijava
             // 
             this.txtUsernamePrijava.Location = new System.Drawing.Point(440, 230);
-            this.txtUsernamePrijava.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsernamePrijava.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsernamePrijava.Name = "txtUsernamePrijava";
             this.txtUsernamePrijava.Size = new System.Drawing.Size(271, 22);
             this.txtUsernamePrijava.TabIndex = 13;
@@ -76,6 +76,7 @@ namespace eGym
             this.label3.Size = new System.Drawing.Size(86, 25);
             this.label3.TabIndex = 12;
             this.label3.Text = "Lozinka:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -142,7 +143,7 @@ namespace eGym
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormaPrijava";
             this.Text = "FormaPrijava";
             this.Load += new System.EventHandler(this.FormaPrijava_Load);

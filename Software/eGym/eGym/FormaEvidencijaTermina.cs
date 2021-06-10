@@ -19,6 +19,22 @@ namespace eGym
 
         private void btnObrisiTermin_Click(object sender, EventArgs e)
         {
+
+            if (dgvEvidencijaTermina.CurrentRow != null)
+            {
+                Termin termin = dgvEvidencijaTermina.CurrentRow.DataBoundItem as Termin;
+                if (termin != null)
+                {
+                    using (var context = new Entities5())
+                    {
+                        context.Termins.Attach(termin);
+                        context.Termins.Remove(termin);
+                        context.SaveChanges();
+                    }
+
+                    Osvjezi();
+                }
+            }
             MessageBox.Show("Uspješno obrisan termin!");
         }
 
@@ -38,14 +54,23 @@ namespace eGym
 
         private void btnAzurirajTerminE_Click(object sender, EventArgs e)
         {
-            FormaAzurirajTermin formaAzurirajTermin = new FormaAzurirajTermin();
-            formaAzurirajTermin.Show();
-            this.Hide();
+            
         }
 
         private void FormaEvidencijaTermina_Load(object sender, EventArgs e)
         {
+            Osvjezi();
+        }
 
+        private void Osvjezi()
+        {
+            using (var context = new Entities5())
+            {
+                var upit = from t in context.Termins.Include("Trening").Include("Korisnik").Include("VrstaVjezbe")
+                           select t;
+                dgvEvidencijaTermina.DataSource = upit.ToList();
+
+            }
         }
     }
 }

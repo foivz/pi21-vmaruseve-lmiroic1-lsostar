@@ -24,7 +24,7 @@ namespace eGym
         {
             try
             {
-                using (var context = new Entities1())
+                using (var context = new Entities5())
                 {
                     string username = txtUsernamePrijava.Text;
                     string lozinka = txtLozinkaPrijava.Text;
@@ -96,6 +96,11 @@ namespace eGym
         }
 
         private void FormaPrijava_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

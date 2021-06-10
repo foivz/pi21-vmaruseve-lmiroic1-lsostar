@@ -31,13 +31,27 @@ namespace eGym
 
         private void btnAzurirajSmjenuE_Click(object sender, EventArgs e)
         {
-            FormaAzurirajSmjenu formaAzurirajSmjenu = new FormaAzurirajSmjenu();
-            formaAzurirajSmjenu.Show();
-            this.Hide();
+           
         }
 
         private void btnObrisiSmjenuE_Click(object sender, EventArgs e)
         {
+            if (dtgEvidencijaSmjena.CurrentRow != null)
+            {
+                SmjenaZaposlenika smjena = dtgEvidencijaSmjena.CurrentRow.DataBoundItem as SmjenaZaposlenika;
+                if (smjena != null)
+                {
+                    using (var context = new Entities5())
+                    {
+                        context.SmjenaZaposlenikas.Attach(smjena);
+                        context.SmjenaZaposlenikas.Remove(smjena);
+                        context.SaveChanges();
+                    }
+
+                    Osvjezi();
+                }
+            }
+            
             MessageBox.Show("Uspješno obrisana smjena.");
         }
 
@@ -50,7 +64,18 @@ namespace eGym
 
         private void FormaEvidencijaSmjena_Load(object sender, EventArgs e)
         {
+            Osvjezi();
+        }
 
+        private void Osvjezi()
+        {
+            using (var context = new Entities5())
+            {
+                var upit = from s in context.SmjenaZaposlenikas.Include("Smjena").Include("Korisnik")
+                           select s;
+                dtgEvidencijaSmjena.DataSource = upit.ToList();
+
+            }
         }
     }
 }

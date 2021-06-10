@@ -17,7 +17,7 @@ namespace eGym
             List<Korisnik> SviKorisnici = null;
 
 
-            using (var context = new Entities1())
+            using (var context = new Entities5())
             {
                 SviKorisnici = context.Korisniks.ToList();
             }

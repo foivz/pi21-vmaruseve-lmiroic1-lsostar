@@ -36,14 +36,12 @@ namespace eGym
             this.cmbVrstaTreningaD = new System.Windows.Forms.ComboBox();
             this.lblRadnoVrijeme = new System.Windows.Forms.Label();
             this.lblDatum = new System.Windows.Forms.Label();
-            this.lblImeiPrezime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtNazivTerminaD = new System.Windows.Forms.TextBox();
             this.txtBrojMjestaD = new System.Windows.Forms.TextBox();
             this.dtpDatumDoD = new System.Windows.Forms.DateTimePicker();
             this.cmbVrstaVjezbeD = new System.Windows.Forms.ComboBox();
@@ -80,14 +78,14 @@ namespace eGym
             // cmbZaposlenikD
             // 
             this.cmbZaposlenikD.FormattingEnabled = true;
-            this.cmbZaposlenikD.Location = new System.Drawing.Point(186, 346);
+            this.cmbZaposlenikD.Location = new System.Drawing.Point(188, 313);
             this.cmbZaposlenikD.Name = "cmbZaposlenikD";
             this.cmbZaposlenikD.Size = new System.Drawing.Size(218, 24);
             this.cmbZaposlenikD.TabIndex = 57;
             // 
             // dtpDatumTerminaOdD
             // 
-            this.dtpDatumTerminaOdD.Location = new System.Drawing.Point(186, 204);
+            this.dtpDatumTerminaOdD.Location = new System.Drawing.Point(188, 171);
             this.dtpDatumTerminaOdD.Name = "dtpDatumTerminaOdD";
             this.dtpDatumTerminaOdD.Size = new System.Drawing.Size(218, 22);
             this.dtpDatumTerminaOdD.TabIndex = 56;
@@ -95,7 +93,7 @@ namespace eGym
             // cmbVrstaTreningaD
             // 
             this.cmbVrstaTreningaD.FormattingEnabled = true;
-            this.cmbVrstaTreningaD.Location = new System.Drawing.Point(186, 383);
+            this.cmbVrstaTreningaD.Location = new System.Drawing.Point(188, 350);
             this.cmbVrstaTreningaD.Name = "cmbVrstaTreningaD";
             this.cmbVrstaTreningaD.Size = new System.Drawing.Size(218, 24);
             this.cmbVrstaTreningaD.TabIndex = 55;
@@ -104,7 +102,7 @@ namespace eGym
             // 
             this.lblRadnoVrijeme.AutoSize = true;
             this.lblRadnoVrijeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRadnoVrijeme.Location = new System.Drawing.Point(133, 242);
+            this.lblRadnoVrijeme.Location = new System.Drawing.Point(135, 209);
             this.lblRadnoVrijeme.Name = "lblRadnoVrijeme";
             this.lblRadnoVrijeme.Size = new System.Drawing.Size(32, 18);
             this.lblRadnoVrijeme.TabIndex = 54;
@@ -114,21 +112,11 @@ namespace eGym
             // 
             this.lblDatum.AutoSize = true;
             this.lblDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatum.Location = new System.Drawing.Point(133, 206);
+            this.lblDatum.Location = new System.Drawing.Point(135, 173);
             this.lblDatum.Name = "lblDatum";
             this.lblDatum.Size = new System.Drawing.Size(32, 18);
             this.lblDatum.TabIndex = 53;
             this.lblDatum.Text = "Od:";
-            // 
-            // lblImeiPrezime
-            // 
-            this.lblImeiPrezime.AutoSize = true;
-            this.lblImeiPrezime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImeiPrezime.Location = new System.Drawing.Point(116, 170);
-            this.lblImeiPrezime.Name = "lblImeiPrezime";
-            this.lblImeiPrezime.Size = new System.Drawing.Size(49, 18);
-            this.lblImeiPrezime.TabIndex = 52;
-            this.lblImeiPrezime.Text = "Naziv:";
             // 
             // label1
             // 
@@ -155,7 +143,7 @@ namespace eGym
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(78, 278);
+            this.label3.Location = new System.Drawing.Point(80, 245);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 18);
             this.label3.TabIndex = 54;
@@ -165,7 +153,7 @@ namespace eGym
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(73, 314);
+            this.label4.Location = new System.Drawing.Point(75, 281);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 18);
             this.label4.TabIndex = 54;
@@ -175,7 +163,7 @@ namespace eGym
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(81, 350);
+            this.label5.Location = new System.Drawing.Point(83, 317);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 18);
             this.label5.TabIndex = 54;
@@ -185,29 +173,22 @@ namespace eGym
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(63, 386);
+            this.label6.Location = new System.Drawing.Point(65, 353);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 18);
             this.label6.TabIndex = 54;
             this.label6.Text = "Vrsta treninga:";
             // 
-            // txtNazivTerminaD
-            // 
-            this.txtNazivTerminaD.Location = new System.Drawing.Point(186, 169);
-            this.txtNazivTerminaD.Name = "txtNazivTerminaD";
-            this.txtNazivTerminaD.Size = new System.Drawing.Size(218, 22);
-            this.txtNazivTerminaD.TabIndex = 60;
-            // 
             // txtBrojMjestaD
             // 
-            this.txtBrojMjestaD.Location = new System.Drawing.Point(186, 274);
+            this.txtBrojMjestaD.Location = new System.Drawing.Point(188, 241);
             this.txtBrojMjestaD.Name = "txtBrojMjestaD";
             this.txtBrojMjestaD.Size = new System.Drawing.Size(218, 22);
             this.txtBrojMjestaD.TabIndex = 60;
             // 
             // dtpDatumDoD
             // 
-            this.dtpDatumDoD.Location = new System.Drawing.Point(186, 239);
+            this.dtpDatumDoD.Location = new System.Drawing.Point(188, 206);
             this.dtpDatumDoD.Name = "dtpDatumDoD";
             this.dtpDatumDoD.Size = new System.Drawing.Size(218, 22);
             this.dtpDatumDoD.TabIndex = 56;
@@ -215,7 +196,7 @@ namespace eGym
             // cmbVrstaVjezbeD
             // 
             this.cmbVrstaVjezbeD.FormattingEnabled = true;
-            this.cmbVrstaVjezbeD.Location = new System.Drawing.Point(186, 309);
+            this.cmbVrstaVjezbeD.Location = new System.Drawing.Point(188, 276);
             this.cmbVrstaVjezbeD.Name = "cmbVrstaVjezbeD";
             this.cmbVrstaVjezbeD.Size = new System.Drawing.Size(218, 24);
             this.cmbVrstaVjezbeD.TabIndex = 57;
@@ -226,7 +207,6 @@ namespace eGym
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 580);
             this.Controls.Add(this.txtBrojMjestaD);
-            this.Controls.Add(this.txtNazivTerminaD);
             this.Controls.Add(this.btnDodajTermin);
             this.Controls.Add(this.btnNatrag);
             this.Controls.Add(this.cmbVrstaVjezbeD);
@@ -240,7 +220,6 @@ namespace eGym
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblRadnoVrijeme);
             this.Controls.Add(this.lblDatum);
-            this.Controls.Add(this.lblImeiPrezime);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Name = "FormaDodajTermin";
@@ -260,14 +239,12 @@ namespace eGym
         private System.Windows.Forms.ComboBox cmbVrstaTreningaD;
         private System.Windows.Forms.Label lblRadnoVrijeme;
         private System.Windows.Forms.Label lblDatum;
-        private System.Windows.Forms.Label lblImeiPrezime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtNazivTerminaD;
         private System.Windows.Forms.TextBox txtBrojMjestaD;
         private System.Windows.Forms.DateTimePicker dtpDatumDoD;
         private System.Windows.Forms.ComboBox cmbVrstaVjezbeD;
