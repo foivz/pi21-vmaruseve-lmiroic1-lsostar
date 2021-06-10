@@ -26,6 +26,25 @@ namespace eGym
 
         private void btnDodajSuplementD_Click(object sender, EventArgs e)
         {
+            using (var context = new Entities())
+            {
+                string naziv = txtNazivDodajSuplement.Text;
+                decimal cijena = decimal.Parse(txtCijenaDodajSuplement.Text);
+                int kolicina = int.Parse(txtKolicinaDodajSuplement.Text);
+             
+
+                Suplement noviSuplement = new Suplement
+                {
+                    
+                    naziv = naziv,
+                    cijena = cijena,
+                    stanje = kolicina
+                  
+                };
+
+                context.Suplements.Add(noviSuplement);
+                context.SaveChanges();
+            }
             MessageBox.Show("Uspješno ste dodali suplement!");
             FormaEvidencijaSuplemenata formaEvidencijaSuplemenata = new FormaEvidencijaSuplemenata();
             formaEvidencijaSuplemenata.Show();

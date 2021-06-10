@@ -31,15 +31,11 @@ namespace eGym
         {
             this.btnNatragAzuriranjeClana = new System.Windows.Forms.Button();
             this.txtIznosNaRacunuA = new System.Windows.Forms.TextBox();
-            this.dtpVrijediDoA = new System.Windows.Forms.DateTimePicker();
-            this.dtpVrijediOdA = new System.Windows.Forms.DateTimePicker();
             this.txtBrojTelefonaClanaA = new System.Windows.Forms.TextBox();
             this.txtEmailClanaA = new System.Windows.Forms.TextBox();
             this.txtPrezimeClanaA = new System.Windows.Forms.TextBox();
             this.txtImeClanaA = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblVrijediDo = new System.Windows.Forms.Label();
-            this.lblVrijediOd = new System.Windows.Forms.Label();
             this.lblClanarinaPlacena = new System.Windows.Forms.Label();
             this.lblBrojTelefona = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -49,6 +45,7 @@ namespace eGym
             this.label1 = new System.Windows.Forms.Label();
             this.btnAzurirajClanaA = new System.Windows.Forms.Button();
             this.cbClanarinaPlacenaAzurirajClana = new System.Windows.Forms.ComboBox();
+            this.lblIznosNaRacunu = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnNatragAzuriranjeClana
@@ -67,27 +64,11 @@ namespace eGym
             // 
             // txtIznosNaRacunuA
             // 
-            this.txtIznosNaRacunuA.Location = new System.Drawing.Point(221, 379);
+            this.txtIznosNaRacunuA.Location = new System.Drawing.Point(294, 345);
             this.txtIznosNaRacunuA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIznosNaRacunuA.Name = "txtIznosNaRacunuA";
-            this.txtIznosNaRacunuA.Size = new System.Drawing.Size(183, 22);
+            this.txtIznosNaRacunuA.Size = new System.Drawing.Size(110, 22);
             this.txtIznosNaRacunuA.TabIndex = 42;
-            // 
-            // dtpVrijediDoA
-            // 
-            this.dtpVrijediDoA.Location = new System.Drawing.Point(517, 340);
-            this.dtpVrijediDoA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpVrijediDoA.Name = "dtpVrijediDoA";
-            this.dtpVrijediDoA.Size = new System.Drawing.Size(183, 22);
-            this.dtpVrijediDoA.TabIndex = 41;
-            // 
-            // dtpVrijediOdA
-            // 
-            this.dtpVrijediOdA.Location = new System.Drawing.Point(221, 340);
-            this.dtpVrijediOdA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpVrijediOdA.Name = "dtpVrijediOdA";
-            this.dtpVrijediOdA.Size = new System.Drawing.Size(183, 22);
-            this.dtpVrijediOdA.TabIndex = 40;
             // 
             // txtBrojTelefonaClanaA
             // 
@@ -125,31 +106,11 @@ namespace eGym
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(78, 379);
+            this.label2.Location = new System.Drawing.Point(76, 349);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 18);
             this.label2.TabIndex = 34;
             this.label2.Text = "Iznos na računu:";
-            // 
-            // lblVrijediDo
-            // 
-            this.lblVrijediDo.AutoSize = true;
-            this.lblVrijediDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVrijediDo.Location = new System.Drawing.Point(426, 340);
-            this.lblVrijediDo.Name = "lblVrijediDo";
-            this.lblVrijediDo.Size = new System.Drawing.Size(72, 18);
-            this.lblVrijediDo.TabIndex = 33;
-            this.lblVrijediDo.Text = "Vrijedi do:";
-            // 
-            // lblVrijediOd
-            // 
-            this.lblVrijediOd.AutoSize = true;
-            this.lblVrijediOd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVrijediOd.Location = new System.Drawing.Point(119, 344);
-            this.lblVrijediOd.Name = "lblVrijediOd";
-            this.lblVrijediOd.Size = new System.Drawing.Size(72, 18);
-            this.lblVrijediOd.TabIndex = 32;
-            this.lblVrijediOd.Text = "Vrijedi od:";
             // 
             // lblClanarinaPlacena
             // 
@@ -244,24 +205,30 @@ namespace eGym
             this.cbClanarinaPlacenaAzurirajClana.Size = new System.Drawing.Size(183, 24);
             this.cbClanarinaPlacenaAzurirajClana.TabIndex = 45;
             // 
+            // lblIznosNaRacunu
+            // 
+            this.lblIznosNaRacunu.AutoSize = true;
+            this.lblIznosNaRacunu.Location = new System.Drawing.Point(218, 348);
+            this.lblIznosNaRacunu.Name = "lblIznosNaRacunu";
+            this.lblIznosNaRacunu.Size = new System.Drawing.Size(31, 17);
+            this.lblIznosNaRacunu.TabIndex = 47;
+            this.lblIznosNaRacunu.Text = "N/A";
+            // 
             // FormaAzurirajClana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 617);
+            this.Controls.Add(this.lblIznosNaRacunu);
             this.Controls.Add(this.cbClanarinaPlacenaAzurirajClana);
             this.Controls.Add(this.btnAzurirajClanaA);
             this.Controls.Add(this.btnNatragAzuriranjeClana);
             this.Controls.Add(this.txtIznosNaRacunuA);
-            this.Controls.Add(this.dtpVrijediDoA);
-            this.Controls.Add(this.dtpVrijediOdA);
             this.Controls.Add(this.txtBrojTelefonaClanaA);
             this.Controls.Add(this.txtEmailClanaA);
             this.Controls.Add(this.txtPrezimeClanaA);
             this.Controls.Add(this.txtImeClanaA);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblVrijediDo);
-            this.Controls.Add(this.lblVrijediOd);
             this.Controls.Add(this.lblClanarinaPlacena);
             this.Controls.Add(this.lblBrojTelefona);
             this.Controls.Add(this.lblEmail);
@@ -280,15 +247,11 @@ namespace eGym
         #endregion
         private System.Windows.Forms.Button btnNatragAzuriranjeClana;
         private System.Windows.Forms.TextBox txtIznosNaRacunuA;
-        private System.Windows.Forms.DateTimePicker dtpVrijediDoA;
-        private System.Windows.Forms.DateTimePicker dtpVrijediOdA;
         private System.Windows.Forms.TextBox txtBrojTelefonaClanaA;
         private System.Windows.Forms.TextBox txtEmailClanaA;
         private System.Windows.Forms.TextBox txtPrezimeClanaA;
         private System.Windows.Forms.TextBox txtImeClanaA;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblVrijediDo;
-        private System.Windows.Forms.Label lblVrijediOd;
         private System.Windows.Forms.Label lblClanarinaPlacena;
         private System.Windows.Forms.Label lblBrojTelefona;
         private System.Windows.Forms.Label lblEmail;
@@ -298,5 +261,6 @@ namespace eGym
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAzurirajClanaA;
         private System.Windows.Forms.ComboBox cbClanarinaPlacenaAzurirajClana;
+        private System.Windows.Forms.Label lblIznosNaRacunu;
     }
 }

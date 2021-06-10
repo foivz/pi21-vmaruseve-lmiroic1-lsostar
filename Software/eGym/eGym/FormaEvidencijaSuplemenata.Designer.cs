@@ -29,6 +29,7 @@ namespace eGym
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnObrisiSuplementE = new System.Windows.Forms.Button();
             this.btnAzurirajSuplementE = new System.Windows.Forms.Button();
             this.btnNatragSuplement = new System.Windows.Forms.Button();
@@ -36,7 +37,15 @@ namespace eGym
             this.dtgEvidencijaSuplemenata = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bsSuplementi = new System.Windows.Forms.BindingSource(this.components);
+            this.suplementBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stanjeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEvidencijaSuplemenata)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suplementBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnObrisiSuplementE
@@ -97,7 +106,14 @@ namespace eGym
             // 
             // dtgEvidencijaSuplemenata
             // 
+            this.dtgEvidencijaSuplemenata.AutoGenerateColumns = false;
             this.dtgEvidencijaSuplemenata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEvidencijaSuplemenata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.nazivDataGridViewTextBoxColumn,
+            this.cijenaDataGridViewTextBoxColumn,
+            this.stanjeDataGridViewTextBoxColumn});
+            this.dtgEvidencijaSuplemenata.DataSource = this.suplementBindingSource;
             this.dtgEvidencijaSuplemenata.Location = new System.Drawing.Point(58, 150);
             this.dtgEvidencijaSuplemenata.Name = "dtgEvidencijaSuplemenata";
             this.dtgEvidencijaSuplemenata.RowHeadersWidth = 51;
@@ -126,6 +142,42 @@ namespace eGym
             this.label1.TabIndex = 50;
             this.label1.Text = "Evidencija suplemenata";
             // 
+            // suplementBindingSource
+            // 
+            this.suplementBindingSource.DataSource = typeof(eGym.Suplement);
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
+            this.nazivDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // cijenaDataGridViewTextBoxColumn
+            // 
+            this.cijenaDataGridViewTextBoxColumn.DataPropertyName = "cijena";
+            this.cijenaDataGridViewTextBoxColumn.HeaderText = "cijena";
+            this.cijenaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cijenaDataGridViewTextBoxColumn.Name = "cijenaDataGridViewTextBoxColumn";
+            this.cijenaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // stanjeDataGridViewTextBoxColumn
+            // 
+            this.stanjeDataGridViewTextBoxColumn.DataPropertyName = "stanje";
+            this.stanjeDataGridViewTextBoxColumn.HeaderText = "stanje";
+            this.stanjeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stanjeDataGridViewTextBoxColumn.Name = "stanjeDataGridViewTextBoxColumn";
+            this.stanjeDataGridViewTextBoxColumn.Width = 125;
+            // 
             // FormaEvidencijaSuplemenata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -140,7 +192,10 @@ namespace eGym
             this.Controls.Add(this.label1);
             this.Name = "FormaEvidencijaSuplemenata";
             this.Text = "EvidencijaSuplemenata";
+            this.Load += new System.EventHandler(this.FormaEvidencijaSuplemenata_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgEvidencijaSuplemenata)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suplementBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +210,11 @@ namespace eGym
         private System.Windows.Forms.DataGridView dtgEvidencijaSuplemenata;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cijenaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stanjeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource suplementBindingSource;
+        private System.Windows.Forms.BindingSource bsSuplementi;
     }
 }

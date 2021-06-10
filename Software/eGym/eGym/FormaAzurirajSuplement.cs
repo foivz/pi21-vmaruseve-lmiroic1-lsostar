@@ -12,9 +12,12 @@ namespace eGym
 {
     public partial class FormaAzurirajSuplement : Form
     {
-        public FormaAzurirajSuplement()
+        public Suplement OdabraniSuplement { get; set; }
+        public FormaAzurirajSuplement(Suplement suplement)
         {
+            
             InitializeComponent();
+            OdabraniSuplement = suplement;
         }
 
         private void btnNatragAzurirajSuplement_Click(object sender, EventArgs e)
@@ -26,10 +29,27 @@ namespace eGym
 
         private void btnAzurirajSuplementA_Click(object sender, EventArgs e)
         {
+            using (var context = new Entities())
+            {
+                context.Suplements.Attach(OdabraniSuplement);
+                OdabraniSuplement.naziv = txtNazivAzurirajSuplement.Text;
+                OdabraniSuplement.stanje = int.Parse(txtKolicinaAzurirajSuplement.Text);
+                OdabraniSuplement.cijena = decimal.Parse(txtCijenaAzurirajSuplement.Text);
+       
+                context.SaveChanges();
+            }
             MessageBox.Show("Uspješno ste ažurirali suplement!");
             FormaEvidencijaSuplemenata formaEvidencijaSuplemenata = new FormaEvidencijaSuplemenata();
             formaEvidencijaSuplemenata.Show();
             this.Hide();
+        }
+
+        private void FormaAzurirajSuplement_Load(object sender, EventArgs e)
+        {
+            txtNazivAzurirajSuplement.Text = OdabraniSuplement.naziv;
+            txtKolicinaAzurirajSuplement.Text = OdabraniSuplement.stanje.ToString();
+            txtCijenaAzurirajSuplement.Text = OdabraniSuplement.cijena.ToString();
+
         }
     }
 }

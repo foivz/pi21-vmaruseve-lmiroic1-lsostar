@@ -12,11 +12,11 @@ namespace eGym
 {
     public partial class FormaAzurirajClana : Form
     {
-        public Korisnik Korisnik { get; set; }
+        public Korisnik OdabraniKorisnik { get; set; }
         public FormaAzurirajClana(Korisnik korisnik)
         {
             InitializeComponent();
-            Korisnik = korisnik;
+            OdabraniKorisnik = korisnik;
         }
 
         private void btnAzurirajClanaA_Click(object sender, EventArgs e)
@@ -36,12 +36,30 @@ namespace eGym
 
         private void FormaAzurirajClana_Load(object sender, EventArgs e)
         {
-            txtBrojTelefonaClanaA.Text = Korisnik.brojtelefona;
-            txtEmailClanaA.Text = Korisnik.email;
-            txtImeClanaA.Text = Korisnik.ime;
-           
-            txtPrezimeClanaA.Text = Korisnik.prezime;
-            
+            txtBrojTelefonaClanaA.Text = OdabraniKorisnik.brojtelefona;
+            txtEmailClanaA.Text = OdabraniKorisnik.email;
+            txtImeClanaA.Text = OdabraniKorisnik.ime;
+            txtPrezimeClanaA.Text = OdabraniKorisnik.prezime;
+            cbClanarinaPlacenaAzurirajClana.Items.Add("Da");
+            cbClanarinaPlacenaAzurirajClana.Items.Add("Ne");
+            if (OdabraniKorisnik != null)
+            {
+                using (var context = new Entities())
+                {
+                    var query1 = from nk in context.NovacKorisnikas.Include("Korisnik")
+                                where nk.korisnik_korisnickoIme == OdabraniKorisnik.korisnickoIme
+                                select new NovacKorisnikaView { StanjeNaRacunu = nk.stanjeNaRacunu };
+                    //lblIznosNaRacunu.Text = query1.FirstOrDefault().StanjeNaRacunu.ToString();
+
+                }
+            }
+
+
+
         }
+
+      
+
+        
     }
 }
