@@ -384,12 +384,14 @@
       <DependentUpon>Model3.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Clanarina.datasource" />
     <None Include="Properties\DataSources\Korisnik.datasource" />
     <None Include="Properties\DataSources\NaruceniSuplement.datasource" />
     <None Include="Properties\DataSources\SmjenaZaposlenika.datasource" />
     <None Include="Properties\DataSources\Suplement.datasource" />
     <None Include="Properties\DataSources\Termin.datasource" />
     <None Include="Properties\DataSources\Trening.datasource" />
+    <None Include="Properties\DataSources\VrstaClanarine.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

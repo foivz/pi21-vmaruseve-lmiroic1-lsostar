@@ -30,35 +30,34 @@ namespace eGym
 
         private void btnPlatiClanarinu_Click(object sender, EventArgs e)
         {
-            NovacKorisnika novac = null;
+            VrstaClanarine vrstaClanarine = dgvClanarina.CurrentRow.DataBoundItem as VrstaClanarine;
             
-                using (var context = new Entities_())
+
+            using (var context = new Entities_())
                 {
-                    if (novac.stanjeNaRacunu>0)
-                    {
-                        VrstaClanarine vrstaClanarine = cboxVrstaClanarine.SelectedItem as VrstaClanarine;
+                    
+
                         DateTime vrijedi_od = DateTime.Now;
                         DateTime vrijedi_do = DateTime.Now;
-                        Korisnik korisnik = odabraniKorisnik;
+
+                        
+                        context.Korisniks.Attach(odabraniKorisnik);
                         context.VrstaClanarines.Attach(vrstaClanarine);
-                        context.Korisniks.Attach(korisnik);
 
                         Clanarina novaClanarina = new Clanarina
                         {
                             vrijedi_do = vrijedi_do,
                             vrijedi_od = vrijedi_od,
                             vrsta_id = vrstaClanarine.ID,
-                            korisnik_korisnickoIme = korisnik.korisnickoIme,
+                            korisnik_korisnickoIme = odabraniKorisnik.korisnickoIme,
                             placeno = "Da"
                             
                         };
                         context.Clanarinas.Add(novaClanarina);
+                        SkiniNovacSRacuna();
                         context.SaveChanges();
-                    }
-                    else
-                    {
-                        throw new ApplicationException("Ne možete platiti račun");
-                    }
+                    
+                   
                 }
                     
             
@@ -68,6 +67,11 @@ namespace eGym
             formProfilClana formProfilClana = new formProfilClana();
             formProfilClana.Show();
             this.Close();
+        }
+
+        private void SkiniNovacSRacuna()
+        {
+            
         }
 
         private void FormaPlatiClanarinu_Load(object sender, EventArgs e)
@@ -89,8 +93,8 @@ namespace eGym
             using (var context = new Entities_())
             {
                 var query = from vc in context.VrstaClanarines.Include("Clanarinas")
-                            select vc.naziv;
-                cboxVrstaClanarine.DataSource = query.Distinct().ToList();
+                            select vc;
+                dgvClanarina.DataSource = query.ToList();
 
             }
 
@@ -98,17 +102,21 @@ namespace eGym
 
         }
 
-        private void cboxVrstaClanarine_SelectedIndexChanged(object sender, EventArgs e)
+        
+
+        private void label2_Click(object sender, EventArgs e)
         {
-            string vrsta = cboxVrstaClanarine.SelectedItem.ToString();
-            using (var context = new Entities_())
-            {
-                var query = from vc in context.VrstaClanarines.Include("Clanarinas")
-                            where vc.naziv == vrsta
-                            select new VrstaClanarineView { Cijena = vc.cijena, Naziv = vc.naziv };
-                txtIznosClanarine.Text = query.FirstOrDefault().Cijena.ToString();
-                
-            }
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIznosClanarine_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
