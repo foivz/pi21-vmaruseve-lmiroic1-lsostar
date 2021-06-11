@@ -13,10 +13,10 @@ namespace eGym
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities_ : DbContext
+    public partial class Entities6 : DbContext
     {
-        public Entities_()
-            : base("name=Entities_")
+        public Entities6()
+            : base("name=Entities6")
         {
         }
     
@@ -28,7 +28,6 @@ namespace eGym
         public virtual DbSet<Clanarina> Clanarinas { get; set; }
         public virtual DbSet<Korisnik> Korisniks { get; set; }
         public virtual DbSet<NaruceniSuplement> NaruceniSuplements { get; set; }
-        public virtual DbSet<NovacKorisnika> NovacKorisnikas { get; set; }
         public virtual DbSet<RezervacijaTreninga> RezervacijaTreningas { get; set; }
         public virtual DbSet<Smjena> Smjenas { get; set; }
         public virtual DbSet<SmjenaZaposlenika> SmjenaZaposlenikas { get; set; }

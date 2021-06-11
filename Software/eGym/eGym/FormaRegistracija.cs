@@ -19,7 +19,7 @@ namespace eGym
 
         private void btnRegistrirajSe_Click(object sender, EventArgs e)
         {
-            using (var context = new Entities_())
+            using (var context = new Entities6())
             {
                 string korisnickoIme = txtUsernameRegistracija.Text;
                 string ime = txtImeRegistracija.Text;
@@ -37,7 +37,8 @@ namespace eGym
                     brojtelefona = brojMobitela,
                     lozinka = lozinka,
                     uloga_id = 3,
-                    datum_registracije = DateTime.Now
+                    datum_registracije = DateTime.Now,
+                    stanjeNaRacunu = 0
                     
                 };
 

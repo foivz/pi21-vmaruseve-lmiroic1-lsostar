@@ -15,7 +15,7 @@ namespace eGym
         BindingList<NaruceniSuplement> listaSuplementa = new BindingList<NaruceniSuplement>();
        
         public Korisnik OdabraniKorisnik { get; set; }
-        public Entities_ Entities = new Entities_();
+        public Entities6 Entities = new Entities6();
 
         public FormaNaruciSuplement(Korisnik korisnik)
         {
@@ -58,15 +58,15 @@ namespace eGym
 
         private void FormaNaruciSuplement_Load(object sender, EventArgs e)
         {
-            using (var context = new Entities_())
+            using (var context = new Entities6())
             {
-                var upit = from nk in context.NovacKorisnikas.Include("Korisnik")
-                            where nk.korisnik_korisnickoIme == OdabraniKorisnik.korisnickoIme
-                            select new NovacKorisnikaView { StanjeNaRacunu = nk.stanjeNaRacunu };
-                txtIznosNaRacunu.Text = upit.FirstOrDefault().StanjeNaRacunu.ToString();
+                var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
+                            where k.korisnickoIme == OdabraniKorisnik.korisnickoIme
+                            select k.stanjeNaRacunu;
+                txtIznosNaRacunu.Text = query.FirstOrDefault().ToString();
             }
 
-            using (var context = new Entities_())
+            using (var context = new Entities6())
             {
                 var upit = from su in context.Suplements.Include("NaruceniSuplements")
                            select su;
@@ -79,7 +79,7 @@ namespace eGym
         {
             Suplement suplement = dgvNazivSuplementa.CurrentRow.DataBoundItem as Suplement;
             int kolicina = int.Parse(txtKolicina.Text);
-            using (var context = new Entities_())
+            using (var context = new Entities6())
             {
                 var upit = from s in context.NaruceniSuplements.Include("Suplement").Include("Korisnik")
                            where s.suplement_id == suplement.ID 

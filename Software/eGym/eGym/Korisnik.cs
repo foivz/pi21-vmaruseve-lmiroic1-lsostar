@@ -19,7 +19,6 @@ namespace eGym
         {
             this.Clanarinas = new HashSet<Clanarina>();
             this.NaruceniSuplements = new HashSet<NaruceniSuplement>();
-            this.NovacKorisnikas = new HashSet<NovacKorisnika>();
             this.RezervacijaTreningas = new HashSet<RezervacijaTreninga>();
             this.SmjenaZaposlenikas = new HashSet<SmjenaZaposlenika>();
             this.Termins = new HashSet<Termin>();
@@ -33,14 +32,13 @@ namespace eGym
         public string email { get; set; }
         public string brojtelefona { get; set; }
         public int uloga_id { get; set; }
+        public Nullable<decimal> stanjeNaRacunu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Clanarina> Clanarinas { get; set; }
         public virtual UlogaUTeretani UlogaUTeretani { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NaruceniSuplement> NaruceniSuplements { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NovacKorisnika> NovacKorisnikas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RezervacijaTreninga> RezervacijaTreningas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

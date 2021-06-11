@@ -33,14 +33,13 @@ namespace eGym
 
         private void btnAzuriraj_Click_1(object sender, EventArgs e)
         {
-            using (var context = new Entities_())
+            using (var context = new Entities6())
             {
                 context.Korisniks.Attach(odabraniKorisnik);
                 odabraniKorisnik.ime = txtImeZaposlenikaAzuriranje.Text;
                 odabraniKorisnik.prezime = txtPrezimeZaposlenikaAzuriranje.Text;
                 odabraniKorisnik.email = txtEmailZaposlenikaAzuriranje.Text;
                 odabraniKorisnik.brojtelefona = txtBrojTelefonaZaposlenikaAzuriranje.Text;
-                odabraniKorisnik.korisnickoIme = txtKorisnickoIme.Text;
                 odabraniKorisnik.lozinka = txtLozinka.Text;
                 context.SaveChanges();
             }
@@ -56,7 +55,6 @@ namespace eGym
             txtPrezimeZaposlenikaAzuriranje.Text = odabraniKorisnik.prezime;
             txtEmailZaposlenikaAzuriranje.Text = odabraniKorisnik.email;
             txtBrojTelefonaZaposlenikaAzuriranje.Text = odabraniKorisnik.brojtelefona;
-            txtKorisnickoIme.Text = odabraniKorisnik.korisnickoIme;
             txtLozinka.Text = odabraniKorisnik.lozinka;
         }
     }

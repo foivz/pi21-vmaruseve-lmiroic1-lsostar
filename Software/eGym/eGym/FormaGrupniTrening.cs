@@ -37,7 +37,7 @@ namespace eGym
         private void cmbVrstaVjezbe_SelectedIndexChanged(object sender, EventArgs e)
         {
             VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbe.SelectedItem as VrstaVjezbe;
-            using(var context = new Entities_())
+            using(var context = new Entities6())
             {
                 var upit = from t in context.Termins.Include("Korisnik").Include("Trening").Include("VrstaVjezbe")
                            where t.vrstaVjezbe_id == vrstaVjezbe.ID
@@ -81,7 +81,7 @@ namespace eGym
 
         private void DohvatiVrsteVjezbi()
         {
-            using (var context = new Entities_())
+            using (var context = new Entities6())
             {
                 var upit = from vv in context.VrstaVjezbes.Include("Termin")
                            select vv.naziv;

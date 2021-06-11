@@ -28,6 +28,7 @@
           <Property Name="email" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="brojtelefona" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="uloga_id" Type="int" Nullable="false" />
+          <Property Name="stanjeNaRacunu" Type="money" />
         </EntityType>
         <EntityType Name="NaruceniSuplement">
           <Key>
@@ -39,14 +40,6 @@
           <Property Name="suplement_id" Type="int" Nullable="false" />
           <Property Name="kolicina" Type="int" Nullable="false" />
           <Property Name="datum_narudzbe" Type="datetime" Nullable="false" />
-        </EntityType>
-        <EntityType Name="NovacKorisnika">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="korisnik_korisnickoIme" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="stanjeNaRacunu" Type="money" />
         </EntityType>
         <EntityType Name="RezervacijaTreninga">
           <Key>
@@ -197,20 +190,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="NovacKorisnika_Korisnik_korisnickoIme_fk">
-          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="NovacKorisnika" Type="Self.NovacKorisnika" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Korisnik">
-              <PropertyRef Name="korisnickoIme" />
-            </Principal>
-            <Dependent Role="NovacKorisnika">
-              <PropertyRef Name="korisnik_korisnickoIme" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="RezervacijaTreninga_Korisnik_korisnickoIme_fk">
           <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -313,7 +292,6 @@
           <EntitySet Name="Clanarina" EntityType="Self.Clanarina" Schema="PI_ERA_eGYM" store:Type="Tables" />
           <EntitySet Name="Korisnik" EntityType="Self.Korisnik" Schema="PI_ERA_eGYM" store:Type="Tables" />
           <EntitySet Name="NaruceniSuplement" EntityType="Self.NaruceniSuplement" Schema="PI_ERA_eGYM" store:Type="Tables" />
-          <EntitySet Name="NovacKorisnika" EntityType="Self.NovacKorisnika" Schema="PI_ERA_eGYM" store:Type="Tables" />
           <EntitySet Name="RezervacijaTreninga" EntityType="Self.RezervacijaTreninga" Schema="PI_ERA_eGYM" store:Type="Tables" />
           <EntitySet Name="Smjena" EntityType="Self.Smjena" Schema="PI_ERA_eGYM" store:Type="Tables" />
           <EntitySet Name="SmjenaZaposlenika" EntityType="Self.SmjenaZaposlenika" Schema="PI_ERA_eGYM" store:Type="Tables" />
@@ -342,10 +320,6 @@
           <AssociationSet Name="NaruceniSuplement_Suplement_ID_fk" Association="Self.NaruceniSuplement_Suplement_ID_fk">
             <End Role="Suplement" EntitySet="Suplement" />
             <End Role="NaruceniSuplement" EntitySet="NaruceniSuplement" />
-          </AssociationSet>
-          <AssociationSet Name="NovacKorisnika_Korisnik_korisnickoIme_fk" Association="Self.NovacKorisnika_Korisnik_korisnickoIme_fk">
-            <End Role="Korisnik" EntitySet="Korisnik" />
-            <End Role="NovacKorisnika" EntitySet="NovacKorisnika" />
           </AssociationSet>
           <AssociationSet Name="RezervacijaTreninga_Korisnik_korisnickoIme_fk" Association="Self.RezervacijaTreninga_Korisnik_korisnickoIme_fk">
             <End Role="Korisnik" EntitySet="Korisnik" />
@@ -406,10 +380,10 @@
           <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="brojtelefona" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="uloga_id" Type="Int32" Nullable="false" />
+          <Property Name="stanjeNaRacunu" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="Clanarinas" Relationship="Self.Clanarina_Korisnik_korisnickoIme_fk" FromRole="Korisnik" ToRole="Clanarina" />
           <NavigationProperty Name="UlogaUTeretani" Relationship="Self.Korisnik_UlogaUTeretani_ID_fk" FromRole="Korisnik" ToRole="UlogaUTeretani" />
           <NavigationProperty Name="NaruceniSuplements" Relationship="Self.NaruceniSuplement_Korisnik_korisnickoIme_fk" FromRole="Korisnik" ToRole="NaruceniSuplement" />
-          <NavigationProperty Name="NovacKorisnikas" Relationship="Self.NovacKorisnika_Korisnik_korisnickoIme_fk" FromRole="Korisnik" ToRole="NovacKorisnika" />
           <NavigationProperty Name="RezervacijaTreningas" Relationship="Self.RezervacijaTreninga_Korisnik_korisnickoIme_fk" FromRole="Korisnik" ToRole="RezervacijaTreninga" />
           <NavigationProperty Name="SmjenaZaposlenikas" Relationship="Self.SmjenaZaposlenika_Korisnik_korisnickoIme_fk" FromRole="Korisnik" ToRole="SmjenaZaposlenika" />
           <NavigationProperty Name="Termins" Relationship="Self.Termin_Korisnik_korisnickoIme_fk" FromRole="Korisnik" ToRole="Termin" />
@@ -426,15 +400,6 @@
           <Property Name="datum_narudzbe" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Korisnik" Relationship="Self.NaruceniSuplement_Korisnik_korisnickoIme_fk" FromRole="NaruceniSuplement" ToRole="Korisnik" />
           <NavigationProperty Name="Suplement" Relationship="Self.NaruceniSuplement_Suplement_ID_fk" FromRole="NaruceniSuplement" ToRole="Suplement" />
-        </EntityType>
-        <EntityType Name="NovacKorisnika">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="korisnik_korisnickoIme" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="stanjeNaRacunu" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Korisnik" Relationship="Self.NovacKorisnika_Korisnik_korisnickoIme_fk" FromRole="NovacKorisnika" ToRole="Korisnik" />
         </EntityType>
         <EntityType Name="RezervacijaTreninga">
           <Key>
@@ -585,20 +550,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="NovacKorisnika_Korisnik_korisnickoIme_fk">
-          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="NovacKorisnika" Type="Self.NovacKorisnika" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Korisnik">
-              <PropertyRef Name="korisnickoIme" />
-            </Principal>
-            <Dependent Role="NovacKorisnika">
-              <PropertyRef Name="korisnik_korisnickoIme" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="RezervacijaTreninga_Korisnik_korisnickoIme_fk">
           <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -711,11 +662,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities_" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities6" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Clanarinas" EntityType="Self.Clanarina" />
           <EntitySet Name="Korisniks" EntityType="Self.Korisnik" />
           <EntitySet Name="NaruceniSuplements" EntityType="Self.NaruceniSuplement" />
-          <EntitySet Name="NovacKorisnikas" EntityType="Self.NovacKorisnika" />
           <EntitySet Name="RezervacijaTreningas" EntityType="Self.RezervacijaTreninga" />
           <EntitySet Name="Smjenas" EntityType="Self.Smjena" />
           <EntitySet Name="SmjenaZaposlenikas" EntityType="Self.SmjenaZaposlenika" />
@@ -740,10 +690,6 @@
           <AssociationSet Name="NaruceniSuplement_Korisnik_korisnickoIme_fk" Association="Self.NaruceniSuplement_Korisnik_korisnickoIme_fk">
             <End Role="Korisnik" EntitySet="Korisniks" />
             <End Role="NaruceniSuplement" EntitySet="NaruceniSuplements" />
-          </AssociationSet>
-          <AssociationSet Name="NovacKorisnika_Korisnik_korisnickoIme_fk" Association="Self.NovacKorisnika_Korisnik_korisnickoIme_fk">
-            <End Role="Korisnik" EntitySet="Korisniks" />
-            <End Role="NovacKorisnika" EntitySet="NovacKorisnikas" />
           </AssociationSet>
           <AssociationSet Name="RezervacijaTreninga_Korisnik_korisnickoIme_fk" Association="Self.RezervacijaTreninga_Korisnik_korisnickoIme_fk">
             <End Role="Korisnik" EntitySet="Korisniks" />
@@ -783,7 +729,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities_">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities6">
           <EntitySetMapping Name="Clanarinas">
             <EntityTypeMapping TypeName="Model.Clanarina">
               <MappingFragment StoreEntitySet="Clanarina">
@@ -807,6 +753,7 @@
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="brojtelefona" ColumnName="brojtelefona" />
                 <ScalarProperty Name="uloga_id" ColumnName="uloga_id" />
+                <ScalarProperty Name="stanjeNaRacunu" ColumnName="stanjeNaRacunu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -817,15 +764,6 @@
                 <ScalarProperty Name="suplement_id" ColumnName="suplement_id" />
                 <ScalarProperty Name="kolicina" ColumnName="kolicina" />
                 <ScalarProperty Name="datum_narudzbe" ColumnName="datum_narudzbe" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="NovacKorisnikas">
-            <EntityTypeMapping TypeName="Model.NovacKorisnika">
-              <MappingFragment StoreEntitySet="NovacKorisnika">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="korisnik_korisnickoIme" ColumnName="korisnik_korisnickoIme" />
-                <ScalarProperty Name="stanjeNaRacunu" ColumnName="stanjeNaRacunu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

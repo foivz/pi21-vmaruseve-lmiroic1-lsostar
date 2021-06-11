@@ -29,7 +29,7 @@ namespace eGym
 
         private void btnAzurirajSuplementA_Click(object sender, EventArgs e)
         {
-            using (var context = new Entities_())
+            using (var context = new Entities6())
             {
                 context.Suplements.Attach(OdabraniSuplement);
                 OdabraniSuplement.naziv = txtNazivAzurirajSuplement.Text;

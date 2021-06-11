@@ -41,7 +41,7 @@ namespace eGym
                 SmjenaZaposlenika smjena = dtgEvidencijaSmjena.CurrentRow.DataBoundItem as SmjenaZaposlenika;
                 if (smjena != null)
                 {
-                    using (var context = new Entities_())
+                    using (var context = new Entities6())
                     {
                         context.SmjenaZaposlenikas.Attach(smjena);
                         context.SmjenaZaposlenikas.Remove(smjena);
@@ -57,8 +57,8 @@ namespace eGym
 
         private void btnNatragSmjena_Click(object sender, EventArgs e)
         {
-            FormProfilZaposlenika formProfilZaposlenika = new FormProfilZaposlenika();
-            formProfilZaposlenika.Show();
+            FormaAdmin formAdmin = new FormaAdmin();
+            formAdmin.Show();
             this.Hide();
         }
 
@@ -69,7 +69,7 @@ namespace eGym
 
         private void Osvjezi()
         {
-            using (var context = new Entities_())
+            using (var context = new Entities6())
             {
                 var upit = from s in context.SmjenaZaposlenikas.Include("Smjena").Include("Korisnik")
                            select s;

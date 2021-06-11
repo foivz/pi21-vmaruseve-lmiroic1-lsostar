@@ -23,5 +23,10 @@ namespace eGym
             formProfilZaposlenika.Show();
             this.Hide();
         }
+
+        private void FormaIzvjesce_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

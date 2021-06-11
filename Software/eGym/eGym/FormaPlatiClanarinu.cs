@@ -31,34 +31,36 @@ namespace eGym
         private void btnPlatiClanarinu_Click(object sender, EventArgs e)
         {
             VrstaClanarine vrstaClanarine = dgvClanarina.CurrentRow.DataBoundItem as VrstaClanarine;
-            
 
-            using (var context = new Entities_())
+
+            using (var context = new Entities6())
+            {
+
+
+                DateTime vrijedi_od = DateTime.Now;
+                DateTime vrijedi_do = DateTime.Now;
+
+
+                context.Korisniks.Attach(odabraniKorisnik);
+                context.VrstaClanarines.Attach(vrstaClanarine);
+
+                Clanarina novaClanarina = new Clanarina
                 {
-                    
+                    vrijedi_do = vrijedi_do,
+                    vrijedi_od = vrijedi_od,
+                    vrsta_id = vrstaClanarine.ID,
+                    korisnik_korisnickoIme = odabraniKorisnik.korisnickoIme,
+                    placeno = "Da"
 
-                        DateTime vrijedi_od = DateTime.Now;
-                        DateTime vrijedi_do = DateTime.Now;
+                };
+                context.Clanarinas.Add(novaClanarina);
+                SkiniNovacSRacuna();
+                context.SaveChanges();
 
-                        
-                        context.Korisniks.Attach(odabraniKorisnik);
-                        context.VrstaClanarines.Attach(vrstaClanarine);
+                
+            }
 
-                        Clanarina novaClanarina = new Clanarina
-                        {
-                            vrijedi_do = vrijedi_do,
-                            vrijedi_od = vrijedi_od,
-                            vrsta_id = vrstaClanarine.ID,
-                            korisnik_korisnickoIme = odabraniKorisnik.korisnickoIme,
-                            placeno = "Da"
-                            
-                        };
-                        context.Clanarinas.Add(novaClanarina);
-                        SkiniNovacSRacuna();
-                        context.SaveChanges();
-                    
-                   
-                }
+            
                     
             
 
@@ -69,20 +71,25 @@ namespace eGym
             this.Close();
         }
 
-        private void SkiniNovacSRacuna()
+        private decimal? SkiniNovacSRacuna()
         {
-            
+            VrstaClanarine vrstaClanarine = dgvClanarina.CurrentRow.DataBoundItem as VrstaClanarine;
+
+            decimal? stanje = odabraniKorisnik.stanjeNaRacunu - vrstaClanarine.cijena;
+
+            return stanje;
+                     
         }
 
         private void FormaPlatiClanarinu_Load(object sender, EventArgs e)
         {
             DohvatiVrsteClanarine();
-            using (var context = new Entities_())
+            using (var context = new Entities6())
             {
-                var query = from nk in context.NovacKorisnikas.Include("Korisnik")
-                            where nk.korisnik_korisnickoIme == odabraniKorisnik.korisnickoIme
-                            select new NovacKorisnikaView { StanjeNaRacunu = nk.stanjeNaRacunu };
-                lblIznosNaRacunuClanarina.Text = query.FirstOrDefault().StanjeNaRacunu.ToString();
+                var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
+                            where k.korisnickoIme == odabraniKorisnik.korisnickoIme
+                            select k.stanjeNaRacunu;
+                lblIznosNaRacunuClanarina.Text = query.FirstOrDefault().ToString();
             }
         }
 
@@ -90,7 +97,7 @@ namespace eGym
         {
            
             
-            using (var context = new Entities_())
+            using (var context = new Entities6())
             {
                 var query = from vc in context.VrstaClanarines.Include("Clanarinas")
                             select vc;

@@ -25,7 +25,7 @@ namespace eGym
                 Termin termin = dgvEvidencijaTermina.CurrentRow.DataBoundItem as Termin;
                 if (termin != null)
                 {
-                    using (var context = new Entities_())
+                    using (var context = new Entities6())
                     {
                         context.Termins.Attach(termin);
                         context.Termins.Remove(termin);
@@ -64,7 +64,7 @@ namespace eGym
 
         private void Osvjezi()
         {
-            using (var context = new Entities_())
+            using (var context = new Entities6())
             {
                 var upit = from t in context.Termins.Include("Trening").Include("Korisnik").Include("VrstaVjezbe")
                            select t;

@@ -41,8 +41,6 @@ namespace eGym
             this.label1 = new System.Windows.Forms.Label();
             this.btnAzuriraj = new System.Windows.Forms.Button();
             this.btnAzurirajZaposlenikaNatrag = new System.Windows.Forms.Button();
-            this.txtKorisnickoIme = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtLozinka = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -138,7 +136,7 @@ namespace eGym
             this.btnAzuriraj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAzuriraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAzuriraj.ForeColor = System.Drawing.Color.White;
-            this.btnAzuriraj.Location = new System.Drawing.Point(400, 422);
+            this.btnAzuriraj.Location = new System.Drawing.Point(400, 382);
             this.btnAzuriraj.Margin = new System.Windows.Forms.Padding(2);
             this.btnAzuriraj.Name = "btnAzuriraj";
             this.btnAzuriraj.Size = new System.Drawing.Size(79, 38);
@@ -152,7 +150,7 @@ namespace eGym
             this.btnAzurirajZaposlenikaNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAzurirajZaposlenikaNatrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAzurirajZaposlenikaNatrag.ForeColor = System.Drawing.Color.White;
-            this.btnAzurirajZaposlenikaNatrag.Location = new System.Drawing.Point(19, 438);
+            this.btnAzurirajZaposlenikaNatrag.Location = new System.Drawing.Point(19, 398);
             this.btnAzurirajZaposlenikaNatrag.Margin = new System.Windows.Forms.Padding(2);
             this.btnAzurirajZaposlenikaNatrag.Name = "btnAzurirajZaposlenikaNatrag";
             this.btnAzurirajZaposlenikaNatrag.Size = new System.Drawing.Size(79, 38);
@@ -161,26 +159,10 @@ namespace eGym
             this.btnAzurirajZaposlenikaNatrag.UseVisualStyleBackColor = false;
             this.btnAzurirajZaposlenikaNatrag.Click += new System.EventHandler(this.btnAzurirajZaposlenikaNatrag_Click);
             // 
-            // txtKorisnickoIme
-            // 
-            this.txtKorisnickoIme.Location = new System.Drawing.Point(273, 330);
-            this.txtKorisnickoIme.Name = "txtKorisnickoIme";
-            this.txtKorisnickoIme.Size = new System.Drawing.Size(206, 20);
-            this.txtKorisnickoIme.TabIndex = 67;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(152, 337);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 13);
-            this.label6.TabIndex = 66;
-            this.label6.Text = "Korisničko ime:";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(152, 380);
+            this.label7.Location = new System.Drawing.Point(152, 338);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 68;
@@ -188,7 +170,7 @@ namespace eGym
             // 
             // txtLozinka
             // 
-            this.txtLozinka.Location = new System.Drawing.Point(273, 373);
+            this.txtLozinka.Location = new System.Drawing.Point(273, 331);
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(206, 20);
             this.txtLozinka.TabIndex = 69;
@@ -201,8 +183,6 @@ namespace eGym
             this.ClientSize = new System.Drawing.Size(599, 552);
             this.Controls.Add(this.txtLozinka);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtKorisnickoIme);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnAzurirajZaposlenikaNatrag);
             this.Controls.Add(this.btnAzuriraj);
             this.Controls.Add(this.label1);
@@ -237,8 +217,6 @@ namespace eGym
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAzuriraj;
         private System.Windows.Forms.Button btnAzurirajZaposlenikaNatrag;
-        private System.Windows.Forms.TextBox txtKorisnickoIme;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtLozinka;
     }
