@@ -33,10 +33,12 @@
           <Key>
             <PropertyRef Name="korisnik_korisnickoIme" />
             <PropertyRef Name="suplement_id" />
+            <PropertyRef Name="datum_narudzbe" />
           </Key>
           <Property Name="korisnik_korisnickoIme" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="suplement_id" Type="int" Nullable="false" />
           <Property Name="kolicina" Type="int" Nullable="false" />
+          <Property Name="datum_narudzbe" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="NovacKorisnika">
           <Key>
@@ -416,10 +418,12 @@
           <Key>
             <PropertyRef Name="korisnik_korisnickoIme" />
             <PropertyRef Name="suplement_id" />
+            <PropertyRef Name="datum_narudzbe" />
           </Key>
           <Property Name="korisnik_korisnickoIme" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="suplement_id" Type="Int32" Nullable="false" />
           <Property Name="kolicina" Type="Int32" Nullable="false" />
+          <Property Name="datum_narudzbe" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Korisnik" Relationship="Self.NaruceniSuplement_Korisnik_korisnickoIme_fk" FromRole="NaruceniSuplement" ToRole="Korisnik" />
           <NavigationProperty Name="Suplement" Relationship="Self.NaruceniSuplement_Suplement_ID_fk" FromRole="NaruceniSuplement" ToRole="Suplement" />
         </EntityType>
@@ -707,7 +711,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities5" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities_" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Clanarinas" EntityType="Self.Clanarina" />
           <EntitySet Name="Korisniks" EntityType="Self.Korisnik" />
           <EntitySet Name="NaruceniSuplements" EntityType="Self.NaruceniSuplement" />
@@ -779,7 +783,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities5">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities_">
           <EntitySetMapping Name="Clanarinas">
             <EntityTypeMapping TypeName="Model.Clanarina">
               <MappingFragment StoreEntitySet="Clanarina">
@@ -812,6 +816,7 @@
                 <ScalarProperty Name="korisnik_korisnickoIme" ColumnName="korisnik_korisnickoIme" />
                 <ScalarProperty Name="suplement_id" ColumnName="suplement_id" />
                 <ScalarProperty Name="kolicina" ColumnName="kolicina" />
+                <ScalarProperty Name="datum_narudzbe" ColumnName="datum_narudzbe" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

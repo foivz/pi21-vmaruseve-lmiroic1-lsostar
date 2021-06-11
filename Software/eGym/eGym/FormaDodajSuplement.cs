@@ -26,7 +26,7 @@ namespace eGym
 
         private void btnDodajSuplementD_Click(object sender, EventArgs e)
         {
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 string naziv = txtNazivDodajSuplement.Text;
                 decimal cijena = decimal.Parse(txtCijenaDodajSuplement.Text);

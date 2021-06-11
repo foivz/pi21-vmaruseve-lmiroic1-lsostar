@@ -41,7 +41,7 @@ namespace eGym
                 SmjenaZaposlenika smjena = dtgEvidencijaSmjena.CurrentRow.DataBoundItem as SmjenaZaposlenika;
                 if (smjena != null)
                 {
-                    using (var context = new Entities5())
+                    using (var context = new Entities_())
                     {
                         context.SmjenaZaposlenikas.Attach(smjena);
                         context.SmjenaZaposlenikas.Remove(smjena);
@@ -69,7 +69,7 @@ namespace eGym
 
         private void Osvjezi()
         {
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 var upit = from s in context.SmjenaZaposlenikas.Include("Smjena").Include("Korisnik")
                            select s;

@@ -12,13 +12,16 @@ namespace eGym
 {
     public partial class FormaUrediKosaricu : Form
     {
-        public FormaUrediKosaricu()
+        public Suplement OdabraniSuplement { get; set; }
+        public FormaUrediKosaricu(Suplement suplement)
         {
             InitializeComponent();
+            OdabraniSuplement = suplement;
         }
 
         private void FormaUrediKosaricu_Load(object sender, EventArgs e)
         {
+            txtNazivSuplementa.Text = OdabraniSuplement.naziv;
 
         }
 
@@ -30,6 +33,11 @@ namespace eGym
         private void btnNatrag_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void lblPopisSuplemenata_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

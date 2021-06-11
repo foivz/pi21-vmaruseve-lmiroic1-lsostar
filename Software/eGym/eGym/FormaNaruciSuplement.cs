@@ -12,8 +12,10 @@ namespace eGym
 {
     public partial class FormaNaruciSuplement : Form
     {
+        BindingList<NaruceniSuplement> listaSuplementa = new BindingList<NaruceniSuplement>();
+       
         public Korisnik OdabraniKorisnik { get; set; }
-        public Entities5 Entities { get; set; }
+        public Entities_ Entities = new Entities_();
 
         public FormaNaruciSuplement(Korisnik korisnik)
         {
@@ -23,9 +25,17 @@ namespace eGym
 
         private void btnObrisiKosaricu_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Uspješno obrisan suplement u košarici.");
-        }
+            if (dgvKosarica.CurrentRow != null)
+            {
+                foreach (DataGridViewRow item in this.dgvKosarica.SelectedRows)
+                {
+                    listaSuplementa.Remove(dgvKosarica.CurrentRow.DataBoundItem as NaruceniSuplement);
+                }
+            } 
 
+            MessageBox.Show("Uspješno obrisan suplement u košarici.");
+            
+        }
         private void btnNaruci_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Uspješno naručen suplement.");
@@ -40,14 +50,15 @@ namespace eGym
 
         private void btnUrediKosaricu_Click(object sender, EventArgs e)
         {
-            FormaUrediKosaricu formaUrediKosaricu = new FormaUrediKosaricu();
+            Suplement suplement = dgvKosarica.CurrentRow.DataBoundItem as Suplement;
+            FormaUrediKosaricu formaUrediKosaricu = new FormaUrediKosaricu(suplement);
             formaUrediKosaricu.Show();
             this.Hide();
         }
 
         private void FormaNaruciSuplement_Load(object sender, EventArgs e)
         {
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 var upit = from nk in context.NovacKorisnikas.Include("Korisnik")
                             where nk.korisnik_korisnickoIme == OdabraniKorisnik.korisnickoIme
@@ -55,7 +66,7 @@ namespace eGym
                 txtIznosNaRacunu.Text = upit.FirstOrDefault().StanjeNaRacunu.ToString();
             }
 
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 var upit = from su in context.Suplements.Include("NaruceniSuplements")
                            select su;
@@ -67,11 +78,11 @@ namespace eGym
         private void btnDodajSuplement_Click(object sender, EventArgs e)
         {
             Suplement suplement = dgvNazivSuplementa.CurrentRow.DataBoundItem as Suplement;
-           
-            using (var context = new Entities5())
+            int kolicina = int.Parse(txtKolicina.Text);
+            using (var context = new Entities_())
             {
-                var upit = from s in context.Suplements.Include("NaruceniSuplements")
-                           where s.ID == suplement.ID
+                var upit = from s in context.NaruceniSuplements.Include("Suplement").Include("Korisnik")
+                           where s.suplement_id == suplement.ID 
                            select s;
                 dgvKosarica.DataSource = upit.ToList();
 
@@ -84,24 +95,29 @@ namespace eGym
 
         private void OsvjeziKosaricu()
         {
-            List<Suplement> listaSuplementi = new List<Suplement>();
+           
             Suplement suplement = dgvNazivSuplementa.CurrentRow.DataBoundItem as Suplement;
 
-            foreach (Suplement item in Entities.Suplements)
+            foreach (NaruceniSuplement item in Entities.NaruceniSuplements)
             {
-                if (item.ID == suplement.ID)
+                if (item.suplement_id == suplement.ID)
                 {
-                    listaSuplementi.Add(item);
+                    listaSuplementa.Add(item);
                 }
             }
             
-            dgvKosarica.DataSource = listaSuplementi;
+            dgvKosarica.DataSource = listaSuplementa;
         }
     
 
         private void dgvNazivSuplementa_SelectionChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void dgvKosarica_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 

@@ -23,7 +23,7 @@ namespace eGym
             Korisnik odabraniKorisnik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
             DateTime odabraniDatum = this.dtpDatum.Value.Date;
 
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 context.Smjenas.Attach(odabranaSmjena);
                 context.Korisniks.Attach(odabraniKorisnik);
@@ -63,7 +63,7 @@ namespace eGym
         private object DohvatiSmjene()
         {
 
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 return context.Smjenas.ToList();
 
@@ -75,7 +75,7 @@ namespace eGym
         {
 
 
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("NovacKorisnikas").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
                             where k.uloga_id == 2

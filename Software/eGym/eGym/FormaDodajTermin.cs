@@ -34,7 +34,7 @@ namespace eGym
 
         private void DohvatiVrsteVjezbi()
         {
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 var query = from vv in context.VrstaVjezbes.Include("Termins")
 
@@ -46,7 +46,7 @@ namespace eGym
 
         private void DohvatiVrsteTreninga()
         {
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 var query = from vt in context.Trenings.Include("RezervacijaTreningas").Include("Termins")
 
@@ -58,7 +58,7 @@ namespace eGym
 
         private void DohvatiZaposlenika()
         {
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("NovacKorisnikas").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
                             where k.uloga_id == 2
@@ -71,7 +71,7 @@ namespace eGym
         private void btnDodajTermin_Click(object sender, EventArgs e)
         {
        
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 dtpDatumTerminaOdD.Format = DateTimePickerFormat.Time;
                 dtpDatumDoD.Format = DateTimePickerFormat.Time;

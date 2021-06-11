@@ -43,18 +43,22 @@ namespace eGym
             this.btnDodajSuplement = new System.Windows.Forms.Button();
             this.grbKosarica = new System.Windows.Forms.GroupBox();
             this.dgvKosarica = new System.Windows.Forms.DataGridView();
+            this.bsSuplementi = new System.Windows.Forms.BindingSource(this.components);
             this.btnUrediKosaricu = new System.Windows.Forms.Button();
             this.btnObrisiKosaricu = new System.Windows.Forms.Button();
             this.dgvNazivSuplementa = new System.Windows.Forms.DataGridView();
-            this.txtKolicina = new System.Windows.Forms.TextBox();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stanjeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bsSuplementi = new System.Windows.Forms.BindingSource(this.components);
+            this.txtKolicina = new System.Windows.Forms.TextBox();
+            this.bsKosarica = new System.Windows.Forms.BindingSource(this.components);
+            this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Suplement = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbKosarica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKosarica)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNazivSuplementa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNazivSuplementa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsKosarica)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNaruci
@@ -193,7 +197,12 @@ namespace eGym
             // 
             // dgvKosarica
             // 
+            this.dgvKosarica.AutoGenerateColumns = false;
             this.dgvKosarica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKosarica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kolicinaDataGridViewTextBoxColumn,
+            this.Suplement});
+            this.dgvKosarica.DataSource = this.bsKosarica;
             this.dgvKosarica.Location = new System.Drawing.Point(19, 32);
             this.dgvKosarica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvKosarica.Name = "dgvKosarica";
@@ -201,6 +210,11 @@ namespace eGym
             this.dgvKosarica.RowTemplate.Height = 24;
             this.dgvKosarica.Size = new System.Drawing.Size(491, 174);
             this.dgvKosarica.TabIndex = 0;
+            this.dgvKosarica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKosarica_CellContentClick);
+            // 
+            // bsSuplementi
+            // 
+            this.bsSuplementi.DataSource = typeof(eGym.Suplement);
             // 
             // btnUrediKosaricu
             // 
@@ -248,14 +262,6 @@ namespace eGym
             this.dgvNazivSuplementa.TabIndex = 0;
             this.dgvNazivSuplementa.SelectionChanged += new System.EventHandler(this.dgvNazivSuplementa_SelectionChanged);
             // 
-            // txtKolicina
-            // 
-            this.txtKolicina.Location = new System.Drawing.Point(207, 334);
-            this.txtKolicina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(217, 22);
-            this.txtKolicina.TabIndex = 70;
-            // 
             // nazivDataGridViewTextBoxColumn
             // 
             this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
@@ -280,9 +286,33 @@ namespace eGym
             this.stanjeDataGridViewTextBoxColumn.Name = "stanjeDataGridViewTextBoxColumn";
             this.stanjeDataGridViewTextBoxColumn.Width = 125;
             // 
-            // bsSuplementi
+            // txtKolicina
             // 
-            this.bsSuplementi.DataSource = typeof(eGym.Suplement);
+            this.txtKolicina.Location = new System.Drawing.Point(207, 334);
+            this.txtKolicina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtKolicina.Name = "txtKolicina";
+            this.txtKolicina.Size = new System.Drawing.Size(217, 22);
+            this.txtKolicina.TabIndex = 70;
+            // 
+            // bsKosarica
+            // 
+            this.bsKosarica.DataSource = typeof(eGym.NaruceniSuplement);
+            // 
+            // kolicinaDataGridViewTextBoxColumn
+            // 
+            this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "kolicina";
+            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "kolicina";
+            this.kolicinaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
+            this.kolicinaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Suplement
+            // 
+            this.Suplement.DataPropertyName = "Suplement";
+            this.Suplement.HeaderText = "Suplement";
+            this.Suplement.MinimumWidth = 6;
+            this.Suplement.Name = "Suplement";
+            this.Suplement.Width = 125;
             // 
             // FormaNaruciSuplement
             // 
@@ -309,8 +339,9 @@ namespace eGym
             this.Load += new System.EventHandler(this.FormaNaruciSuplement_Load);
             this.grbKosarica.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKosarica)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNazivSuplementa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNazivSuplementa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsKosarica)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,5 +370,8 @@ namespace eGym
         private System.Windows.Forms.DataGridViewTextBoxColumn stanjeDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bsSuplementi;
         private System.Windows.Forms.TextBox txtKolicina;
+        private System.Windows.Forms.BindingSource bsKosarica;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Suplement;
     }
 }

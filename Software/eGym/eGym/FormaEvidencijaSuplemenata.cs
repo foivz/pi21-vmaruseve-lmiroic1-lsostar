@@ -50,7 +50,7 @@ namespace eGym
                 Suplement suplement = dtgEvidencijaSuplemenata.CurrentRow.DataBoundItem as Suplement;
                 if (suplement != null)
                 {
-                    using (var context = new Entities5())
+                    using (var context = new Entities_())
                     {
                         context.Suplements.Attach(suplement);
                         context.Suplements.Remove(suplement);
@@ -69,7 +69,7 @@ namespace eGym
         }
         private void Osvjezi()
         {
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 var upit = from s in context.Suplements.Include("NaruceniSuplements")
                            select s;

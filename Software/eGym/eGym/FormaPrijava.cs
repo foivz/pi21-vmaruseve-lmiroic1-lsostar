@@ -24,7 +24,7 @@ namespace eGym
         {
             try
             {
-                using (var context = new Entities5())
+                using (var context = new Entities_())
                 {
                     string username = txtUsernamePrijava.Text;
                     string lozinka = txtLozinkaPrijava.Text;

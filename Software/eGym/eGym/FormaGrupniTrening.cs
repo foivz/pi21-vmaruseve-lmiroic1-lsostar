@@ -36,7 +36,14 @@ namespace eGym
 
         private void cmbVrstaVjezbe_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbe.SelectedItem as VrstaVjezbe;
+            using(var context = new Entities_())
+            {
+                var upit = from t in context.Termins.Include("Korisnik").Include("Trening").Include("VrstaVjezbe")
+                           where t.vrstaVjezbe_id == vrstaVjezbe.ID
+                           select t;
+                dgvGrupniTrening.DataSource = upit.ToList();
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -66,25 +73,15 @@ namespace eGym
 
         private void FormaGrupniTrening_Load(object sender, EventArgs e)
         {
-            DohvatiGrupneTreninge();
+            
             DohvatiVrsteVjezbi();
         }
 
-        private void DohvatiGrupneTreninge()
-        {
-            using (var context = new Entities5())
-            {
-                var upit = from t in context.Termins.Include("Korisnik").Include("Trening").Include("VrstaVjezbe")
-
-                           select t;
-                dgvGrupniTrening.DataSource = upit.ToList();
-
-            }
-        }
+    
 
         private void DohvatiVrsteVjezbi()
         {
-            using (var context = new Entities5())
+            using (var context = new Entities_())
             {
                 var upit = from vv in context.VrstaVjezbes.Include("Termin")
                            select vv.naziv;

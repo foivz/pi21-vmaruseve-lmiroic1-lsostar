@@ -17,6 +17,7 @@ namespace eGym
         public string korisnik_korisnickoIme { get; set; }
         public int suplement_id { get; set; }
         public int kolicina { get; set; }
+        public System.DateTime datum_narudzbe { get; set; }
     
         public virtual Korisnik Korisnik { get; set; }
         public virtual Suplement Suplement { get; set; }

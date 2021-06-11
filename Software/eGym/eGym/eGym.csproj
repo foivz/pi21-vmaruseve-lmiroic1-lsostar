@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clanarina.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="FormaAdmin.cs">
       <SubType>Form</SubType>
@@ -212,28 +212,28 @@
     <Compile Include="Iznimke\Iznimka.cs" />
     <Compile Include="Iznimke\NovaIznimka.cs" />
     <Compile Include="Korisnik.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model2.Context.cs">
+    <Compile Include="Model3.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model2.Context.tt</DependentUpon>
+      <DependentUpon>Model3.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model2.cs">
+    <Compile Include="Model3.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model2.Designer.cs">
+    <Compile Include="Model3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model2.edmx</DependentUpon>
+      <DependentUpon>Model3.edmx</DependentUpon>
     </Compile>
     <Compile Include="NaruceniSuplement.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="NovacKorisnika.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="NovacKorisnikaView.cs" />
     <Compile Include="PocetnaStranica1.cs">
@@ -252,39 +252,39 @@
       <DependentUpon>FormaRegistracija.cs</DependentUpon>
     </Compile>
     <Compile Include="RezervacijaTreninga.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="Sesija.cs" />
     <Compile Include="Smjena.code.cs" />
     <Compile Include="Smjena.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="SmjenaZaposlenika.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Suplement.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="Suplement.code.cs" />
+    <Compile Include="Suplement.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
     <Compile Include="SuplementView.cs" />
     <Compile Include="Termin.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="Trening.code.cs" />
     <Compile Include="Trening.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="UlogaUTeretani.code.cs" />
     <Compile Include="UlogaUTeretani.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="VrstaClanarine.code.cs" />
     <Compile Include="VrstaClanarine.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="VrstaClanarineView.cs" />
     <Compile Include="VrstaVjezbe.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormaAdmin.resx">
       <DependentUpon>FormaAdmin.cs</DependentUpon>
@@ -376,15 +376,16 @@
     <EmbeddedResource Include="FormaProfilZaposlenika.resx">
       <DependentUpon>FormaProfilZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model2.edmx">
+    <EntityDeploy Include="Model3.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model3.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model2.edmx.diagram">
-      <DependentUpon>Model2.edmx</DependentUpon>
+    <None Include="Model3.edmx.diagram">
+      <DependentUpon>Model3.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Korisnik.datasource" />
+    <None Include="Properties\DataSources\NaruceniSuplement.datasource" />
     <None Include="Properties\DataSources\SmjenaZaposlenika.datasource" />
     <None Include="Properties\DataSources\Suplement.datasource" />
     <None Include="Properties\DataSources\Termin.datasource" />
@@ -406,15 +407,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model2.Context.tt">
+    <Content Include="Model3.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model2.edmx</DependentUpon>
-      <LastGenOutput>Model2.Context.cs</LastGenOutput>
+      <DependentUpon>Model3.edmx</DependentUpon>
+      <LastGenOutput>Model3.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model2.tt">
+    <Content Include="Model3.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model2.edmx</DependentUpon>
-      <LastGenOutput>Model2.cs</LastGenOutput>
+      <DependentUpon>Model3.edmx</DependentUpon>
+      <LastGenOutput>Model3.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
