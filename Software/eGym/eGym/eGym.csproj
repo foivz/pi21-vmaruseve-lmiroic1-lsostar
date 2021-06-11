@@ -265,10 +265,12 @@
     <Compile Include="Suplement.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <Compile Include="Suplement.code.cs" />
     <Compile Include="SuplementView.cs" />
     <Compile Include="Termin.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <Compile Include="Trening.code.cs" />
     <Compile Include="Trening.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
@@ -385,6 +387,8 @@
     <None Include="Properties\DataSources\Korisnik.datasource" />
     <None Include="Properties\DataSources\SmjenaZaposlenika.datasource" />
     <None Include="Properties\DataSources\Suplement.datasource" />
+    <None Include="Properties\DataSources\Termin.datasource" />
+    <None Include="Properties\DataSources\Trening.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

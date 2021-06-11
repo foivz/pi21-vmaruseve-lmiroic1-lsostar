@@ -24,17 +24,12 @@ namespace eGym
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Uspješno ažurirana košarica.");
-            FormaNaruciSuplement formaNaruciSuplement = new FormaNaruciSuplement();
-            formaNaruciSuplement.Show();
-            this.Hide();
+            
         }
 
         private void btnNatrag_Click(object sender, EventArgs e)
         {
-            FormaNaruciSuplement formaNaruciSuplement = new FormaNaruciSuplement();
-            formaNaruciSuplement.Show();
-            this.Hide();
+            
         }
     }
 }

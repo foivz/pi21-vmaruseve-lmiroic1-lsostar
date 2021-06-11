@@ -43,7 +43,8 @@ namespace eGym
 
         private void btnNaruciSuplement_Click(object sender, EventArgs e)
         {
-            FormaNaruciSuplement formaNaruciSuplement = new FormaNaruciSuplement();
+            Korisnik korisnik = Sesija.PrijavljeniKorisnik;
+            FormaNaruciSuplement formaNaruciSuplement = new FormaNaruciSuplement(korisnik);
             formaNaruciSuplement.Show();
             this.Hide();
         }

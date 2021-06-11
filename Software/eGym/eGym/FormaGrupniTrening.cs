@@ -66,7 +66,31 @@ namespace eGym
 
         private void FormaGrupniTrening_Load(object sender, EventArgs e)
         {
+            DohvatiGrupneTreninge();
+            DohvatiVrsteVjezbi();
+        }
 
+        private void DohvatiGrupneTreninge()
+        {
+            using (var context = new Entities5())
+            {
+                var upit = from t in context.Termins.Include("Korisnik").Include("Trening").Include("VrstaVjezbe")
+
+                           select t;
+                dgvGrupniTrening.DataSource = upit.ToList();
+
+            }
+        }
+
+        private void DohvatiVrsteVjezbi()
+        {
+            using (var context = new Entities5())
+            {
+                var upit = from vv in context.VrstaVjezbes.Include("Termin")
+                           select vv.naziv;
+                cmbVrstaVjezbe.DataSource = upit.ToList();
+
+            }
         }
     }
 }
