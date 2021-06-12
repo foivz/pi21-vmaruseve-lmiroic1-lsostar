@@ -31,6 +31,8 @@ namespace eGym
                 context.SaveChanges();
             }
             MessageBox.Show("Uspješno rezerviran trening!");
+            Korisnik trener = cmbOdabirTrenera.SelectedItem as Korisnik;
+            Mailer.PosaljiObavijestNaMail(Sesija.PrijavljeniKorisnik, "Obavijest o uspjesnoj rezervaciji termina individualnog treninga koji počinje "+ odabraniTermin.od+" h, a vodi ga "+trener.ime +" "+trener.prezime, "Rezervacija individualnog terninga");
         }
 
         private void btnNatragIT_Click(object sender, EventArgs e)
