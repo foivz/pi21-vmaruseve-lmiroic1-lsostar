@@ -45,17 +45,15 @@ namespace eGym
             this.Hide();
         }
 
+
+
         private void FormaAzurirajClana_Load(object sender, EventArgs e)
         {
             txtBrojTelefonaClanaA.Text = OdabraniKorisnik.brojtelefona;
             txtEmailClanaA.Text = OdabraniKorisnik.email;
             txtImeClanaA.Text = OdabraniKorisnik.ime;
             txtPrezimeClanaA.Text = OdabraniKorisnik.prezime;
-            cbClanarinaPlacenaAzurirajClana.Items.Add("Da");
-            cbClanarinaPlacenaAzurirajClana.Items.Add("Ne");
             txtIznosNaRacunuA.Text = OdabraniKorisnik.stanjeNaRacunu.ToString();
-
-
 
         }
 

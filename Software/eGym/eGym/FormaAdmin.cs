@@ -44,5 +44,10 @@ namespace eGym
             
 
         }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

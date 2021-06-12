@@ -32,7 +32,6 @@ namespace eGym
             this.btnZaposlenici = new System.Windows.Forms.Button();
             this.btnOdjava = new System.Windows.Forms.Button();
             this.btnSmjene = new System.Windows.Forms.Button();
-            this.btnUrediProfil = new System.Windows.Forms.Button();
             this.txtBrojTelefonaAdmina = new System.Windows.Forms.TextBox();
             this.txtEmailAdmina = new System.Windows.Forms.TextBox();
             this.txtPrezimeAdmina = new System.Windows.Forms.TextBox();
@@ -65,13 +64,14 @@ namespace eGym
             this.btnOdjava.BackColor = System.Drawing.Color.Gray;
             this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdjava.ForeColor = System.Drawing.Color.White;
-            this.btnOdjava.Location = new System.Drawing.Point(417, 298);
+            this.btnOdjava.Location = new System.Drawing.Point(424, 266);
             this.btnOdjava.Margin = new System.Windows.Forms.Padding(2);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(79, 41);
             this.btnOdjava.TabIndex = 67;
             this.btnOdjava.Text = "Odjava";
             this.btnOdjava.UseVisualStyleBackColor = false;
+            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
             // 
             // btnSmjene
             // 
@@ -86,19 +86,6 @@ namespace eGym
             this.btnSmjene.Text = "Smjene";
             this.btnSmjene.UseVisualStyleBackColor = false;
             this.btnSmjene.Click += new System.EventHandler(this.btnSmjene_Click);
-            // 
-            // btnUrediProfil
-            // 
-            this.btnUrediProfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnUrediProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUrediProfil.ForeColor = System.Drawing.Color.White;
-            this.btnUrediProfil.Location = new System.Drawing.Point(215, 244);
-            this.btnUrediProfil.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUrediProfil.Name = "btnUrediProfil";
-            this.btnUrediProfil.Size = new System.Drawing.Size(79, 38);
-            this.btnUrediProfil.TabIndex = 63;
-            this.btnUrediProfil.Text = "Uredi profil";
-            this.btnUrediProfil.UseVisualStyleBackColor = false;
             // 
             // txtBrojTelefonaAdmina
             // 
@@ -214,11 +201,10 @@ namespace eGym
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 376);
+            this.ClientSize = new System.Drawing.Size(570, 338);
             this.Controls.Add(this.btnZaposlenici);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnSmjene);
-            this.Controls.Add(this.btnUrediProfil);
             this.Controls.Add(this.txtBrojTelefonaAdmina);
             this.Controls.Add(this.txtEmailAdmina);
             this.Controls.Add(this.txtPrezimeAdmina);
@@ -243,7 +229,6 @@ namespace eGym
         private System.Windows.Forms.Button btnZaposlenici;
         private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Button btnSmjene;
-        private System.Windows.Forms.Button btnUrediProfil;
         private System.Windows.Forms.TextBox txtBrojTelefonaAdmina;
         private System.Windows.Forms.TextBox txtEmailAdmina;
         private System.Windows.Forms.TextBox txtPrezimeAdmina;

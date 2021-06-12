@@ -36,21 +36,18 @@ namespace eGym
             this.lblPrezime = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblBrojTelefona = new System.Windows.Forms.Label();
-            this.lblClanarinaPlacena = new System.Windows.Forms.Label();
             this.lblVrijediOd = new System.Windows.Forms.Label();
             this.lblVrijediDo = new System.Windows.Forms.Label();
             this.txtImeClana = new System.Windows.Forms.TextBox();
             this.txtPrezimeClana = new System.Windows.Forms.TextBox();
             this.txtEmailClana = new System.Windows.Forms.TextBox();
             this.txtBrojTelefonaClana = new System.Windows.Forms.TextBox();
-            this.dtpVrijediOd = new System.Windows.Forms.DateTimePicker();
-            this.dtpVrijediDo = new System.Windows.Forms.DateTimePicker();
-            this.btnUrediProfil = new System.Windows.Forms.Button();
             this.btnPlatiClanarinu = new System.Windows.Forms.Button();
             this.btnNaruciSuplement = new System.Windows.Forms.Button();
             this.btnRezervacijaTreninga = new System.Windows.Forms.Button();
             this.btnOdjava = new System.Windows.Forms.Button();
-            this.cbClanarinaPlacenaProfilClana = new System.Windows.Forms.ComboBox();
+            this.lblOd = new System.Windows.Forms.Label();
+            this.lblDo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -131,22 +128,11 @@ namespace eGym
             this.lblBrojTelefona.TabIndex = 6;
             this.lblBrojTelefona.Text = "Broj telefona:";
             // 
-            // lblClanarinaPlacena
-            // 
-            this.lblClanarinaPlacena.AutoSize = true;
-            this.lblClanarinaPlacena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClanarinaPlacena.Location = new System.Drawing.Point(41, 267);
-            this.lblClanarinaPlacena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblClanarinaPlacena.Name = "lblClanarinaPlacena";
-            this.lblClanarinaPlacena.Size = new System.Drawing.Size(110, 15);
-            this.lblClanarinaPlacena.TabIndex = 7;
-            this.lblClanarinaPlacena.Text = "Članarina plaćena:";
-            // 
             // lblVrijediOd
             // 
             this.lblVrijediOd.AutoSize = true;
             this.lblVrijediOd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVrijediOd.Location = new System.Drawing.Point(82, 297);
+            this.lblVrijediOd.Location = new System.Drawing.Point(82, 275);
             this.lblVrijediOd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVrijediOd.Name = "lblVrijediOd";
             this.lblVrijediOd.Size = new System.Drawing.Size(61, 15);
@@ -157,7 +143,7 @@ namespace eGym
             // 
             this.lblVrijediDo.AutoSize = true;
             this.lblVrijediDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVrijediDo.Location = new System.Drawing.Point(312, 294);
+            this.lblVrijediDo.Location = new System.Drawing.Point(312, 272);
             this.lblVrijediDo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVrijediDo.Name = "lblVrijediDo";
             this.lblVrijediDo.Size = new System.Drawing.Size(61, 15);
@@ -196,36 +182,6 @@ namespace eGym
             this.txtBrojTelefonaClana.Name = "txtBrojTelefonaClana";
             this.txtBrojTelefonaClana.Size = new System.Drawing.Size(138, 20);
             this.txtBrojTelefonaClana.TabIndex = 14;
-            // 
-            // dtpVrijediOd
-            // 
-            this.dtpVrijediOd.Location = new System.Drawing.Point(158, 294);
-            this.dtpVrijediOd.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpVrijediOd.Name = "dtpVrijediOd";
-            this.dtpVrijediOd.Size = new System.Drawing.Size(138, 20);
-            this.dtpVrijediOd.TabIndex = 16;
-            // 
-            // dtpVrijediDo
-            // 
-            this.dtpVrijediDo.Location = new System.Drawing.Point(380, 294);
-            this.dtpVrijediDo.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpVrijediDo.Name = "dtpVrijediDo";
-            this.dtpVrijediDo.Size = new System.Drawing.Size(138, 20);
-            this.dtpVrijediDo.TabIndex = 17;
-            // 
-            // btnUrediProfil
-            // 
-            this.btnUrediProfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnUrediProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUrediProfil.ForeColor = System.Drawing.Color.White;
-            this.btnUrediProfil.Location = new System.Drawing.Point(158, 362);
-            this.btnUrediProfil.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUrediProfil.Name = "btnUrediProfil";
-            this.btnUrediProfil.Size = new System.Drawing.Size(79, 38);
-            this.btnUrediProfil.TabIndex = 19;
-            this.btnUrediProfil.Text = "Uredi profil";
-            this.btnUrediProfil.UseVisualStyleBackColor = false;
-            this.btnUrediProfil.Click += new System.EventHandler(this.btnUrediProfil_Click);
             // 
             // btnPlatiClanarinu
             // 
@@ -274,7 +230,7 @@ namespace eGym
             this.btnOdjava.BackColor = System.Drawing.Color.Gray;
             this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdjava.ForeColor = System.Drawing.Color.White;
-            this.btnOdjava.Location = new System.Drawing.Point(570, 362);
+            this.btnOdjava.Location = new System.Drawing.Point(570, 337);
             this.btnOdjava.Margin = new System.Windows.Forms.Padding(2);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(79, 41);
@@ -283,36 +239,42 @@ namespace eGym
             this.btnOdjava.UseVisualStyleBackColor = false;
             this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
             // 
-            // cbClanarinaPlacenaProfilClana
+            // lblOd
             // 
-            this.cbClanarinaPlacenaProfilClana.FormattingEnabled = true;
-            this.cbClanarinaPlacenaProfilClana.Location = new System.Drawing.Point(158, 266);
-            this.cbClanarinaPlacenaProfilClana.Margin = new System.Windows.Forms.Padding(2);
-            this.cbClanarinaPlacenaProfilClana.Name = "cbClanarinaPlacenaProfilClana";
-            this.cbClanarinaPlacenaProfilClana.Size = new System.Drawing.Size(138, 21);
-            this.cbClanarinaPlacenaProfilClana.TabIndex = 46;
+            this.lblOd.AutoSize = true;
+            this.lblOd.Location = new System.Drawing.Point(155, 277);
+            this.lblOd.Name = "lblOd";
+            this.lblOd.Size = new System.Drawing.Size(24, 13);
+            this.lblOd.TabIndex = 24;
+            this.lblOd.Text = "n/a";
+            // 
+            // lblDo
+            // 
+            this.lblDo.AutoSize = true;
+            this.lblDo.Location = new System.Drawing.Point(391, 274);
+            this.lblDo.Name = "lblDo";
+            this.lblDo.Size = new System.Drawing.Size(24, 13);
+            this.lblDo.TabIndex = 25;
+            this.lblDo.Text = "n/a";
             // 
             // formProfilClana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(708, 460);
-            this.Controls.Add(this.cbClanarinaPlacenaProfilClana);
+            this.ClientSize = new System.Drawing.Size(708, 412);
+            this.Controls.Add(this.lblDo);
+            this.Controls.Add(this.lblOd);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnRezervacijaTreninga);
             this.Controls.Add(this.btnNaruciSuplement);
             this.Controls.Add(this.btnPlatiClanarinu);
-            this.Controls.Add(this.btnUrediProfil);
-            this.Controls.Add(this.dtpVrijediDo);
-            this.Controls.Add(this.dtpVrijediOd);
             this.Controls.Add(this.txtBrojTelefonaClana);
             this.Controls.Add(this.txtEmailClana);
             this.Controls.Add(this.txtPrezimeClana);
             this.Controls.Add(this.txtImeClana);
             this.Controls.Add(this.lblVrijediDo);
             this.Controls.Add(this.lblVrijediOd);
-            this.Controls.Add(this.lblClanarinaPlacena);
             this.Controls.Add(this.lblBrojTelefona);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblPrezime);
@@ -338,20 +300,17 @@ namespace eGym
         private System.Windows.Forms.Label lblPrezime;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblBrojTelefona;
-        private System.Windows.Forms.Label lblClanarinaPlacena;
         private System.Windows.Forms.Label lblVrijediOd;
         private System.Windows.Forms.Label lblVrijediDo;
         private System.Windows.Forms.TextBox txtImeClana;
         private System.Windows.Forms.TextBox txtPrezimeClana;
         private System.Windows.Forms.TextBox txtEmailClana;
         private System.Windows.Forms.TextBox txtBrojTelefonaClana;
-        private System.Windows.Forms.DateTimePicker dtpVrijediOd;
-        private System.Windows.Forms.DateTimePicker dtpVrijediDo;
-        private System.Windows.Forms.Button btnUrediProfil;
         private System.Windows.Forms.Button btnPlatiClanarinu;
         private System.Windows.Forms.Button btnNaruciSuplement;
         private System.Windows.Forms.Button btnRezervacijaTreninga;
         private System.Windows.Forms.Button btnOdjava;
-        private System.Windows.Forms.ComboBox cbClanarinaPlacenaProfilClana;
+        private System.Windows.Forms.Label lblOd;
+        private System.Windows.Forms.Label lblDo;
     }
 }

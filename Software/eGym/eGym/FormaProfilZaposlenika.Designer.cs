@@ -44,10 +44,7 @@ namespace eGym
             this.txtPrezimeZaposlenika = new System.Windows.Forms.TextBox();
             this.txtEmailZaposlenika = new System.Windows.Forms.TextBox();
             this.txtBrojTelefonaZaposlenika = new System.Windows.Forms.TextBox();
-            this.btnUrediProfil = new System.Windows.Forms.Button();
             this.btnTermini = new System.Windows.Forms.Button();
-            this.txtVrsta = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSuplementi
@@ -216,20 +213,6 @@ namespace eGym
             this.txtBrojTelefonaZaposlenika.Size = new System.Drawing.Size(138, 20);
             this.txtBrojTelefonaZaposlenika.TabIndex = 37;
             // 
-            // btnUrediProfil
-            // 
-            this.btnUrediProfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnUrediProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUrediProfil.ForeColor = System.Drawing.Color.White;
-            this.btnUrediProfil.Location = new System.Drawing.Point(230, 284);
-            this.btnUrediProfil.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUrediProfil.Name = "btnUrediProfil";
-            this.btnUrediProfil.Size = new System.Drawing.Size(79, 38);
-            this.btnUrediProfil.TabIndex = 42;
-            this.btnUrediProfil.Text = "Uredi profil";
-            this.btnUrediProfil.UseVisualStyleBackColor = false;
-            this.btnUrediProfil.Click += new System.EventHandler(this.btnUrediProfil_Click);
-            // 
             // btnTermini
             // 
             this.btnTermini.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -244,39 +227,17 @@ namespace eGym
             this.btnTermini.UseVisualStyleBackColor = false;
             this.btnTermini.Click += new System.EventHandler(this.btnTermini_Click);
             // 
-            // txtVrsta
-            // 
-            this.txtVrsta.Location = new System.Drawing.Point(171, 256);
-            this.txtVrsta.Margin = new System.Windows.Forms.Padding(2);
-            this.txtVrsta.Name = "txtVrsta";
-            this.txtVrsta.Size = new System.Drawing.Size(138, 20);
-            this.txtVrsta.TabIndex = 51;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 257);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 15);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Vrsta zaposlenika";
-            // 
             // FormProfilZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(610, 497);
-            this.Controls.Add(this.txtVrsta);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnTermini);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnIzvjesce);
             this.Controls.Add(this.btnSuplementi);
             this.Controls.Add(this.btnClanovi);
-            this.Controls.Add(this.btnUrediProfil);
             this.Controls.Add(this.txtBrojTelefonaZaposlenika);
             this.Controls.Add(this.txtEmailZaposlenika);
             this.Controls.Add(this.txtPrezimeZaposlenika);
@@ -314,10 +275,7 @@ namespace eGym
         private System.Windows.Forms.TextBox txtPrezimeZaposlenika;
         private System.Windows.Forms.TextBox txtEmailZaposlenika;
         private System.Windows.Forms.TextBox txtBrojTelefonaZaposlenika;
-        private System.Windows.Forms.Button btnUrediProfil;
         private System.Windows.Forms.Button btnTermini;
-        private System.Windows.Forms.TextBox txtVrsta;
-        private System.Windows.Forms.Label label2;
     }
 }
 
