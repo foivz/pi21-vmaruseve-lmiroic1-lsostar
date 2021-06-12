@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
 
 namespace eGym
 {
@@ -75,7 +77,7 @@ namespace eGym
             txtPrezimeClana.Text = Sesija.PrijavljeniKorisnik.prezime;
             txtBrojTelefonaClana.Text = Sesija.PrijavljeniKorisnik.brojtelefona;
             txtEmailClana.Text = Sesija.PrijavljeniKorisnik.email;
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var query = from c in context.Clanarinas.Include("Korisnik")
                             where c.korisnik_korisnickoIme == Sesija.PrijavljeniKorisnik.korisnickoIme

@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace eGym
+namespace Pristup_podacima
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class SmjenaZaposlenika
+    public partial class RezervacijaTreninga
     {
-        public int smjena_id { get; set; }
-        public string zaposlenik_korisnickoIme { get; set; }
-        public System.DateTime datum { get; set; }
+        public int trening_id { get; set; }
+        public string korisnik_korisnickoIme { get; set; }
+        public System.DateTime vrijemeRezervacije { get; set; }
     
         public virtual Korisnik Korisnik { get; set; }
-        public virtual Smjena Smjena { get; set; }
+        public virtual Trening Trening { get; set; }
     }
 }

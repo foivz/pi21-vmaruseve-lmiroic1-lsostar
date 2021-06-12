@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -19,24 +22,23 @@ namespace eGym
 
         private void btnDodajSmjenu_Click(object sender, EventArgs e)
         {
-            Smjena odabranaSmjena = cmbNaziv.SelectedItem as Smjena;
+            Pristup_podacima.Smjena odabranaSmjena = cmbNaziv.SelectedItem as Pristup_podacima.Smjena;
             Korisnik odabraniKorisnik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
             DateTime odabraniDatum = this.dtpDatum.Value.Date;
 
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 context.Smjenas.Attach(odabranaSmjena);
                 context.Korisniks.Attach(odabraniKorisnik);
                
-                 SmjenaZaposlenika novaSmjena = new SmjenaZaposlenika
+                    SmjenaZaposlenika novaSmjena = new SmjenaZaposlenika
                     {
                         zaposlenik_korisnickoIme = odabraniKorisnik.korisnickoIme,
                         smjena_id = odabranaSmjena.ID,
                         datum = odabraniDatum
 
                     };
-                context.SmjenaZaposlenikas.Add(novaSmjena);
-                context.SaveChanges();
+                Pristup_podacima.Dohvaćanje_podataka.UpravljanjeSmjenamaDAL.UnosSmjene(novaSmjena);
             }
 
 
@@ -63,7 +65,7 @@ namespace eGym
         private object DohvatiSmjene()
         {
 
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 return context.Smjenas.ToList();
 
@@ -75,7 +77,7 @@ namespace eGym
         {
 
 
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
                             where k.uloga_id == 2

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -47,6 +50,7 @@ namespace eGym
 
         private void btnOdjava_Click(object sender, EventArgs e)
         {
+
 
         }
     }

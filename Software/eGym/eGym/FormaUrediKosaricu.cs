@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
     public partial class FormaUrediKosaricu : Form
     {
-        public Suplement OdabraniSuplement { get; set; }
-        public FormaUrediKosaricu(Suplement suplement)
+        public Pristup_podacima.Suplement OdabraniSuplement { get; set; }
+        public FormaUrediKosaricu(Pristup_podacima.Suplement suplement)
         {
             InitializeComponent();
             OdabraniSuplement = suplement;

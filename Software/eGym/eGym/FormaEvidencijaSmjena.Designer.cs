@@ -127,7 +127,7 @@ namespace eGym
             // 
             // bsSmjena
             // 
-            this.bsSmjena.DataSource = typeof(eGym.SmjenaZaposlenika);
+            this.bsSmjena.DataSource = typeof(Pristup_podacima.SmjenaZaposlenika);
             // 
             // zaposlenikkorisnickoImeDataGridViewTextBoxColumn
             // 

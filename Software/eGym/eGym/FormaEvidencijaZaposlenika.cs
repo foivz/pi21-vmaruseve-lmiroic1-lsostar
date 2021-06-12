@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -41,11 +44,11 @@ namespace eGym
                 Korisnik korisnik = dgvEvidencijaZaposlenika.CurrentRow.DataBoundItem as Korisnik;
                 if (korisnik != null)
                 {
-                    using (var context = new Entities6())
+                    using (var context = new Entities())
                     {
                         context.Korisniks.Attach(korisnik);
                         context.Korisniks.Remove(korisnik);
-                        context.SaveChanges();
+                        Pristup_podacima.Dohvaćanje_podataka.UpravljanjeKorisnicimaDAL.ObrisiZaposlenika(korisnik);
                     }
 
                     Osvjezi();
@@ -68,7 +71,7 @@ namespace eGym
 
         private void Osvjezi()
         {
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var upit = from k in context.Korisniks
                            where k.uloga_id == 2

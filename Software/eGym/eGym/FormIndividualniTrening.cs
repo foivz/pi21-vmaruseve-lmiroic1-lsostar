@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -21,7 +24,7 @@ namespace eGym
         private void btnRezervirajIT_Click(object sender, EventArgs e)
         {
             Termin odabraniTermin = dgvIndividualniTrening.CurrentRow.DataBoundItem as Termin;
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 Termin query = (from t in context.Termins
                              where t.ID==odabraniTermin.ID
@@ -45,7 +48,7 @@ namespace eGym
         private void FormIndividualniTrening_Load(object sender, EventArgs e)
         {
             List<Korisnik> treneri = new List<Korisnik>();
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var query = (from k in context.Korisniks
                              where k.uloga_id == 2
@@ -64,7 +67,7 @@ namespace eGym
             Korisnik trener = cmbOdabirTrenera.SelectedItem as Korisnik;
             DateTime zeljenidatum = dtpOdaberiDatumIndividualni.Value.Date;
             List<Termin> terminiIndividualnihTreninga = new List<Termin>();
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var query = (from t in context.Termins
                              where t.zaposlenik_korisnickoIme == trener.korisnickoIme && t.vrstaVjezbe_id == 1 && t.od.Month == zeljenidatum.Month && t.od.Day == zeljenidatum.Day&&t.broj_mjesta>=1
@@ -80,7 +83,7 @@ namespace eGym
             Korisnik trener = cmbOdabirTrenera.SelectedItem as Korisnik;
             DateTime zeljenidatum = dtpOdaberiDatumIndividualni.Value.Date;
             List<Termin> terminiIndividualnihTreninga = new List<Termin>();
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var query = (from t in context.Termins
                              where t.zaposlenik_korisnickoIme == trener.korisnickoIme && t.vrstaVjezbe_id == 1 && t.od.Month== zeljenidatum.Month&&t.od.Day==zeljenidatum.Day&&t.broj_mjesta>=1

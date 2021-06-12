@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eGym
 {
-    public partial class VrstaClanarine
+    public class VrstaClanarine:Pristup_podacima.VrstaClanarine
     {
         public override string ToString()
         {

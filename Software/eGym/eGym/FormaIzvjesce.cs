@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -27,15 +30,15 @@ namespace eGym
 
         private void FormaIzvjesce_Load(object sender, EventArgs e)
         {
-            foreach (Suplement s in VratiListuNarucenihSuplemenata())
+            foreach (Pristup_podacima.Suplement s in VratiListuNarucenihSuplemenata())
             {
                 
             }
         }
-        private int VratiBrojProdanihSuplemenata(Suplement suplement)
+        private int VratiBrojProdanihSuplemenata(Pristup_podacima.Suplement suplement)
         {
             int brojac = 0;
-            using (var db = new Entities6())
+            using (var db = new Entities())
             {
                 int brojProdanihSuplemeneta = (from ns in db.NaruceniSuplements
                                                where ns.suplement_id == suplement.ID
@@ -44,18 +47,23 @@ namespace eGym
             }
             return brojac;
         }
-        private List<Suplement> VratiListuNarucenihSuplemenata()
+        private List<Pristup_podacima.Suplement> VratiListuNarucenihSuplemenata()
         {
-            List<Suplement> NaruceniSuplement = new List<Suplement>();
-            using (var db = new Entities6())
+            List<Pristup_podacima.Suplement> NaruceniSuplementi = new List<Pristup_podacima.Suplement>();
+            using (var db = new Entities())
             {
                 var ProdaniSuplementi = (from ns in db.NaruceniSuplements
                                          from s in db.Suplements
                                                where ns.suplement_id == s.ID
                                                select s).ToList();
-                NaruceniSuplement = ProdaniSuplementi;
+                NaruceniSuplementi = ProdaniSuplementi;
             }
-            return NaruceniSuplement;
+            return NaruceniSuplementi;
+        }
+
+        private void btnPrintajIzvjesce_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

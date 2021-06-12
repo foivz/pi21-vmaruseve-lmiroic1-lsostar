@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -31,11 +34,11 @@ namespace eGym
         List<Clanarina> clanarinas = new List<Clanarina>();
         private void btnPlatiClanarinu_Click(object sender, EventArgs e)
         {
-            VrstaClanarine vrstaClanarine = dgvClanarina.CurrentRow.DataBoundItem as VrstaClanarine;
+            Pristup_podacima.VrstaClanarine vrstaClanarine = dgvClanarina.CurrentRow.DataBoundItem as Pristup_podacima.VrstaClanarine;
 
             bool clanarinaPlacena = false;
 
-            using (var contex = new Entities6())
+            using (var contex = new Entities())
             {
                 var query = from c in contex.Clanarinas.Include("Korisnik")
                             where c.korisnik_korisnickoIme == odabraniKorisnik.korisnickoIme
@@ -59,7 +62,7 @@ namespace eGym
 
             if (!clanarinaPlacena)
             {
-                using (var context = new Entities6())
+                using (var context = new Entities())
                 {
 
 
@@ -107,7 +110,7 @@ namespace eGym
         private void FormaPlatiClanarinu_Load(object sender, EventArgs e)
         {
             DohvatiVrsteClanarine();
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
                             where k.korisnickoIme == odabraniKorisnik.korisnickoIme
@@ -120,7 +123,7 @@ namespace eGym
         {
 
 
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var query = from vc in context.VrstaClanarines.Include("Clanarinas")
                             select vc;

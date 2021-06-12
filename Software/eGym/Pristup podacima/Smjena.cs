@@ -7,23 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace eGym
+namespace Pristup_podacima
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class VrstaVjezbe
+    public partial class Smjena
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public VrstaVjezbe()
+        public Smjena()
         {
-            this.Termins = new HashSet<Termin>();
+            this.SmjenaZaposlenikas = new HashSet<SmjenaZaposlenika>();
         }
     
         public int ID { get; set; }
         public string naziv { get; set; }
+        public Nullable<System.TimeSpan> od { get; set; }
+        public Nullable<System.TimeSpan> @do { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Termin> Termins { get; set; }
+        public virtual ICollection<SmjenaZaposlenika> SmjenaZaposlenikas { get; set; }
     }
 }

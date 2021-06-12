@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -34,33 +37,33 @@ namespace eGym
 
         private void DohvatiVrsteVjezbi()
         {
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var query = from vv in context.VrstaVjezbes.Include("Termins")
 
-                            select vv.naziv;
-                cmbVrstaVjezbeD.DataSource = query.ToList();
+                            select vv;
+                dgvVrstaVjezbe.DataSource = query.ToList();
 
             }
         }
 
         private void DohvatiVrsteTreninga()
         {
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var query = from vt in context.Trenings.Include("RezervacijaTreningas").Include("Termins")
 
                             select vt.naziv;
-                cmbVrstaTreningaD.DataSource = query.Distinct().ToList();
+                cbVrstaTreninga.DataSource = query.Distinct().ToList();
 
             }
         }
 
         private void DohvatiZaposlenika()
         {
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
-                var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("NovacKorisnikas").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
+                var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
                             where k.uloga_id == 2
                             select k;
                 dgvZaposlenici.DataSource = query.Distinct().ToList();
@@ -70,8 +73,8 @@ namespace eGym
 
         private void btnDodajTermin_Click(object sender, EventArgs e)
         {
-       
-            using (var context = new Entities6())
+
+            using (var context = new Entities())
             {
                 dtpDatumTerminaOdD.Format = DateTimePickerFormat.Time;
                 dtpDatumDoD.Format = DateTimePickerFormat.Time;
@@ -80,15 +83,15 @@ namespace eGym
                 dtpDatumTerminaOdD.ShowUpDown = true;
 
                 Korisnik korisnik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
-                VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbeD.SelectedItem as VrstaVjezbe;
-                Trening trening = cmbVrstaTreningaD.SelectedItem as Trening;
+                VrstaVjezbe vrstaVjezbe = dgvVrstaVjezbe.CurrentRow.DataBoundItem as VrstaVjezbe;
+                Trening trening = cbVrstaTreninga.SelectedItem as Trening;
                 DateTime od = this.dtpDatumTerminaOdD.Value.ToLocalTime();
                 DateTime do1 = this.dtpDatumDoD.Value.ToLocalTime();
                 int brojMjesta = int.Parse(txtBrojMjestaD.Text);
 
 
                 context.Korisniks.Attach(korisnik);
-                context.VrstaVjezbes.Attach(vrstaVjezbe);
+                context.VrstaVjezbes.Add(vrstaVjezbe);
                 context.Trenings.Attach(trening);
 
 
@@ -104,9 +107,9 @@ namespace eGym
 
 
                 };
+                Pristup_podacima.Dohvaćanje_podataka.UpravljanjeTerminimaDAL.UnosTermina(noviTermin);
 
-                context.Termins.Add(noviTermin);
-                context.SaveChanges();
+
             }
             MessageBox.Show("Uspješno dodan termin!");
         }

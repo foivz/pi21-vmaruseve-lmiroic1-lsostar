@@ -136,7 +136,7 @@ namespace eGym
             // 
             // bsEvidencijaClanova
             // 
-            this.bsEvidencijaClanova.DataSource = typeof(eGym.Korisnik);
+            this.bsEvidencijaClanova.DataSource = typeof(Pristup_podacima.Korisnik);
             // 
             // korisnickoImeDataGridViewTextBoxColumn
             // 

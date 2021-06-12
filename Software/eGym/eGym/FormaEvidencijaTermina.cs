@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -25,11 +28,11 @@ namespace eGym
                 Termin termin = dgvEvidencijaTermina.CurrentRow.DataBoundItem as Termin;
                 if (termin != null)
                 {
-                    using (var context = new Entities6())
+                    using (var context = new Entities())
                     {
                         context.Termins.Attach(termin);
                         context.Termins.Remove(termin);
-                        context.SaveChanges();
+                        Pristup_podacima.Dohvaćanje_podataka.UpravljanjeTerminimaDAL.ObrisiTermin(termin);
                     }
 
                     Osvjezi();
@@ -64,7 +67,7 @@ namespace eGym
 
         private void Osvjezi()
         {
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var upit = from t in context.Termins.Include("Trening").Include("Korisnik").Include("VrstaVjezbe")
                            select t;

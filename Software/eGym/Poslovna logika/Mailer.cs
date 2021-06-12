@@ -4,8 +4,9 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using Pristup_podacima;
 
-namespace eGym
+namespace Poslovna_logika
 {
     public class Mailer
     {

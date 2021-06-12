@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eGym
 {
-    public partial class Trening
+    public class Trening:Pristup_podacima.Trening
     {
         public override string ToString()
         {

@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
     public partial class FormaAzurirajSuplement : Form
     {
-        public Suplement OdabraniSuplement { get; set; }
-        public FormaAzurirajSuplement(Suplement suplement)
+        public Pristup_podacima.Suplement OdabraniSuplement { get; set; }
+        public FormaAzurirajSuplement(Pristup_podacima.Suplement suplement)
         {
             
             InitializeComponent();
@@ -29,15 +32,11 @@ namespace eGym
 
         private void btnAzurirajSuplementA_Click(object sender, EventArgs e)
         {
-            using (var context = new Entities6())
-            {
-                context.Suplements.Attach(OdabraniSuplement);
-                OdabraniSuplement.naziv = txtNazivAzurirajSuplement.Text;
-                OdabraniSuplement.stanje = int.Parse(txtKolicinaAzurirajSuplement.Text);
-                OdabraniSuplement.cijena = decimal.Parse(txtCijenaAzurirajSuplement.Text);
-       
-                context.SaveChanges();
-            }
+
+            OdabraniSuplement.naziv = txtNazivAzurirajSuplement.Text;
+            OdabraniSuplement.stanje = int.Parse(txtKolicinaAzurirajSuplement.Text);
+            OdabraniSuplement.cijena = decimal.Parse(txtCijenaAzurirajSuplement.Text);
+            Pristup_podacima.Dohvaćanje_podataka.UpravljanjeSuplementimaDAL.AzuriranjeSuplementa(OdabraniSuplement);
             MessageBox.Show("Uspješno ste ažurirali suplement!");
             FormaEvidencijaSuplemenata formaEvidencijaSuplemenata = new FormaEvidencijaSuplemenata();
             formaEvidencijaSuplemenata.Show();

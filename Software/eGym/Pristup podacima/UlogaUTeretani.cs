@@ -7,21 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace eGym
+namespace Pristup_podacima
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Clanarina
+    public partial class UlogaUTeretani
     {
-        public int ID { get; set; }
-        public System.DateTime vrijedi_od { get; set; }
-        public System.DateTime vrijedi_do { get; set; }
-        public int vrsta_id { get; set; }
-        public string korisnik_korisnickoIme { get; set; }
-        public string placeno { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public UlogaUTeretani()
+        {
+            this.Korisniks = new HashSet<Korisnik>();
+        }
     
-        public virtual Korisnik Korisnik { get; set; }
-        public virtual VrstaClanarine VrstaClanarine { get; set; }
+        public int ID { get; set; }
+        public string naziv { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Korisnik> Korisniks { get; set; }
     }
 }

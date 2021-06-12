@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -37,7 +40,7 @@ namespace eGym
             //SuplementView odabranisuplement = dtgEvidencijaSuplemenata.CurrentRow.DataBoundItem as SuplementView;
          
 
-            Suplement suplement = dtgEvidencijaSuplemenata.CurrentRow.DataBoundItem as Suplement;
+            Pristup_podacima.Suplement suplement = dtgEvidencijaSuplemenata.CurrentRow.DataBoundItem as Pristup_podacima.Suplement;
             FormaAzurirajSuplement formaAzurirajSuplement = new FormaAzurirajSuplement(suplement);
             formaAzurirajSuplement.Show();
             this.Hide();
@@ -47,14 +50,14 @@ namespace eGym
         {
             if (dtgEvidencijaSuplemenata.CurrentRow != null)
             {
-                Suplement suplement = dtgEvidencijaSuplemenata.CurrentRow.DataBoundItem as Suplement;
+                Pristup_podacima.Suplement suplement = dtgEvidencijaSuplemenata.CurrentRow.DataBoundItem as Pristup_podacima.Suplement;
                 if (suplement != null)
                 {
-                    using (var context = new Entities6())
+                    using (var context = new Entities())
                     {
                         context.Suplements.Attach(suplement);
                         context.Suplements.Remove(suplement);
-                        context.SaveChanges();
+                        Pristup_podacima.Dohvaćanje_podataka.UpravljanjeSuplementimaDAL.ObrisiSuplement(suplement);
                     }
 
                     Osvjezi();
@@ -69,7 +72,7 @@ namespace eGym
         }
         private void Osvjezi()
         {
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var upit = from s in context.Suplements.Include("NaruceniSuplements")
                            select s;

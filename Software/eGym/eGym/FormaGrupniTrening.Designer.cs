@@ -140,7 +140,7 @@ namespace eGym
             // 
             // bsTermin
             // 
-            this.bsTermin.DataSource = typeof(eGym.Termin);
+            this.bsTermin.DataSource = typeof(Pristup_podacima.Termin);
             // 
             // iDDataGridViewTextBoxColumn
             // 

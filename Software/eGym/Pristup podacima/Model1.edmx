@@ -25,7 +25,7 @@
           <Property Name="datum_registracije" Type="datetime" Nullable="false" />
           <Property Name="ime" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="prezime" Type="varchar" MaxLength="20" />
-          <Property Name="email" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="brojtelefona" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="uloga_id" Type="int" Nullable="false" />
           <Property Name="stanjeNaRacunu" Type="money" />
@@ -377,7 +377,7 @@
           <Property Name="datum_registracije" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="ime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="prezime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="brojtelefona" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="uloga_id" Type="Int32" Nullable="false" />
           <Property Name="stanjeNaRacunu" Type="Decimal" Precision="19" Scale="4" />
@@ -662,7 +662,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities6" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Clanarinas" EntityType="Self.Clanarina" />
           <EntitySet Name="Korisniks" EntityType="Self.Korisnik" />
           <EntitySet Name="NaruceniSuplements" EntityType="Self.NaruceniSuplement" />
@@ -729,7 +729,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities6">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="Clanarinas">
             <EntityTypeMapping TypeName="Model.Clanarina">
               <MappingFragment StoreEntitySet="Clanarina">

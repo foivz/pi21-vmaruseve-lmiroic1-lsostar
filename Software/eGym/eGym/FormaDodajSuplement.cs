@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -26,14 +29,13 @@ namespace eGym
 
         private void btnDodajSuplementD_Click(object sender, EventArgs e)
         {
-            using (var context = new Entities6())
-            {
+           
                 string naziv = txtNazivDodajSuplement.Text;
                 decimal cijena = decimal.Parse(txtCijenaDodajSuplement.Text);
                 int kolicina = int.Parse(txtKolicinaDodajSuplement.Text);
              
 
-                Suplement noviSuplement = new Suplement
+                Pristup_podacima.Suplement noviSuplement = new Pristup_podacima.Suplement
                 {
                     
                     naziv = naziv,
@@ -41,10 +43,10 @@ namespace eGym
                     stanje = kolicina
                   
                 };
+            Pristup_podacima.Dohvaćanje_podataka.UpravljanjeSuplementimaDAL.UnosSuplementa(noviSuplement);
 
-                context.Suplements.Add(noviSuplement);
-                context.SaveChanges();
-            }
+               
+            
             MessageBox.Show("Uspješno ste dodali suplement!");
             FormaEvidencijaSuplemenata formaEvidencijaSuplemenata = new FormaEvidencijaSuplemenata();
             formaEvidencijaSuplemenata.Show();

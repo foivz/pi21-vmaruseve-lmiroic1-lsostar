@@ -147,7 +147,7 @@ namespace eGym
             // 
             // bsEvidencijaZaposlenika
             // 
-            this.bsEvidencijaZaposlenika.DataSource = typeof(eGym.Korisnik);
+            this.bsEvidencijaZaposlenika.DataSource = typeof(Pristup_podacima.Korisnik);
             // 
             // korisnickoImeDataGridViewTextBoxColumn
             // 

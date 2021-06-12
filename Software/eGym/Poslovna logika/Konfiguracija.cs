@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eGym
+namespace Poslovna_logika
 {
     public class Konfiguracija
     {

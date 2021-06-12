@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
 
 namespace eGym
 {
@@ -24,7 +25,7 @@ namespace eGym
 
         private void btnRegistrirajSe_Click(object sender, EventArgs e)
         {
-            using(var context = new Entities6())
+            using(var context = new Entities())
             {
                 string korisnickoIme = txtUsernameRegistracija.Text;
                 string ime = txtImeRegistracija.Text;
@@ -47,8 +48,7 @@ namespace eGym
 
                 };
 
-                context.Korisniks.Add(noviKorisnik);
-                context.SaveChanges();
+                Pristup_podacima.Dohvaćanje_podataka.UpravljanjeKorisnicimaDAL.UnosZaposlenika(noviKorisnik);
             }
             MessageBox.Show("Uspješna registracija");
             FormaEvidencijaZaposlenika formaEvidencijaZaposlenika = new FormaEvidencijaZaposlenika();

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -41,11 +44,12 @@ namespace eGym
                 SmjenaZaposlenika smjena = dtgEvidencijaSmjena.CurrentRow.DataBoundItem as SmjenaZaposlenika;
                 if (smjena != null)
                 {
-                    using (var context = new Entities6())
+                    using (var context = new Entities())
                     {
                         context.SmjenaZaposlenikas.Attach(smjena);
                         context.SmjenaZaposlenikas.Remove(smjena);
-                        context.SaveChanges();
+
+                        Pristup_podacima.Dohvaćanje_podataka.UpravljanjeSmjenamaDAL.ObrisiSmjenuKorisnika(smjena);
                     }
 
                     Osvjezi();
@@ -69,7 +73,7 @@ namespace eGym
 
         private void Osvjezi()
         {
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var upit = from s in context.SmjenaZaposlenikas.Include("Smjena").Include("Korisnik")
                            select s;

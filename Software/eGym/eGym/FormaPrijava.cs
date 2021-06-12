@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
 
 
 namespace eGym
@@ -24,27 +26,11 @@ namespace eGym
         {
             try
             {
-                using (var context = new Entities6())
+                string username = txtUsernamePrijava.Text;
+                string lozinka = txtLozinkaPrijava.Text;
+
+                if(Poslovna_logika.Provjere_unosa.Upravljanje_korisnicima.PrijaviKorisnika(username, lozinka))
                 {
-                    string username = txtUsernamePrijava.Text;
-                    string lozinka = txtLozinkaPrijava.Text;
-
-                    Korisnik korisnik = Prijava.DohvatiKorisnika(username, lozinka);
-
-
-
-                    if (korisnik != null)
-                    {
-                        Sesija.PrijavljeniKorisnik = korisnik;
-
-                    }
-
-                    else
-                    {
-                        ValidacijaProfila();
-
-                    }
-
                     if (Sesija.PrijavljeniKorisnik.uloga_id == 3)
                     {
 
@@ -65,28 +51,21 @@ namespace eGym
                         formaAdmin.Show();
                         this.Hide();
                     }
-
-
                 }
+                else
+                {
+                    MessageBox.Show("Ne postoji takav korisnik!");
+                }
+                                 
             }
             catch (NovaIznimka ex)
             {
-
                 MessageBox.Show(ex.poruka);
             }
-
             
 
-
         }
 
-        private void ValidacijaProfila()
-        {
-            if (Sesija.PrijavljeniKorisnik == null)
-            {
-                throw new NovaIznimka("Ne postoji taj korisnik.");
-            }
-        }
 
         private void btnPrijavaNatrag_Click(object sender, EventArgs e)
         {

@@ -7,25 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace eGym
+namespace Pristup_podacima
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Suplement
+    public partial class VrstaClanarine
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Suplement()
+        public VrstaClanarine()
         {
-            this.NaruceniSuplements = new HashSet<NaruceniSuplement>();
+            this.Clanarinas = new HashSet<Clanarina>();
         }
     
         public int ID { get; set; }
         public string naziv { get; set; }
         public decimal cijena { get; set; }
-        public int stanje { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NaruceniSuplement> NaruceniSuplements { get; set; }
+        public virtual ICollection<Clanarina> Clanarinas { get; set; }
     }
 }

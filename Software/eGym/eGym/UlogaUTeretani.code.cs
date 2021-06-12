@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eGym
 {
-    public partial class UlogaUTeretani
+    public class UlogaUTeretani:Pristup_podacima.UlogaUTeretani
     {
         public override string ToString()
         {

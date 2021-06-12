@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eGym", "eGym\eGym.csproj", "{3C4D9675-9569-4BEE-B95C-33A29597CF3B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poslovna logika", "Poslovna logika\Poslovna logika.csproj", "{0D0249F8-AC87-4486-AE1D-8945E2D109E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pristup podacima", "Pristup podacima\Pristup podacima.csproj", "{F53D9279-7C6A-4B8E-B7B5-E5340CE80D2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3C4D9675-9569-4BEE-B95C-33A29597CF3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C4D9675-9569-4BEE-B95C-33A29597CF3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C4D9675-9569-4BEE-B95C-33A29597CF3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0249F8-AC87-4486-AE1D-8945E2D109E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0249F8-AC87-4486-AE1D-8945E2D109E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0249F8-AC87-4486-AE1D-8945E2D109E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0249F8-AC87-4486-AE1D-8945E2D109E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F53D9279-7C6A-4B8E-B7B5-E5340CE80D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53D9279-7C6A-4B8E-B7B5-E5340CE80D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53D9279-7C6A-4B8E-B7B5-E5340CE80D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53D9279-7C6A-4B8E-B7B5-E5340CE80D2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

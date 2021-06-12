@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace eGym
+namespace Pristup_podacima
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities6 : DbContext
+    public partial class Entities : DbContext
     {
-        public Entities6()
-            : base("name=Entities6")
+        public Entities()
+            : base("name=Entities")
         {
         }
     

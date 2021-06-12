@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -37,7 +40,7 @@ namespace eGym
         private void cmbVrstaVjezbe_SelectedIndexChanged(object sender, EventArgs e)
         {
             VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbe.SelectedItem as VrstaVjezbe;
-            using(var context = new Entities6())
+            using(var context = new Entities())
             {
                 var upit = from t in context.Termins.Include("Korisnik").Include("Trening").Include("VrstaVjezbe")
                            where t.vrstaVjezbe_id == vrstaVjezbe.ID
@@ -81,7 +84,7 @@ namespace eGym
 
         private void DohvatiVrsteVjezbi()
         {
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var upit = from vv in context.VrstaVjezbes.Include("Termin")
                            select vv.naziv;

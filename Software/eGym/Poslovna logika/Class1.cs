@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eGym
+namespace Poslovna_logika
 {
-    public class Sesija
+    public class Class1
     {
-        public static Korisnik PrijavljeniKorisnik { get; set; }
-
     }
 }

@@ -85,24 +85,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clanarina.cs">
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="eGymModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>eGymModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="eGymModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="eGymModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>eGymModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="FormaAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,14 +237,6 @@
     </Compile>
     <Compile Include="Iznimke\Iznimka.cs" />
     <Compile Include="Iznimke\NovaIznimka.cs" />
-    <Compile Include="Konfiguracija.cs" />
-    <Compile Include="Korisnik.cs">
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Mailer.cs" />
-    <Compile Include="NaruceniSuplement.cs">
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="NovacKorisnikaView.cs" />
     <Compile Include="PocetnaStranica1.cs">
       <SubType>Form</SubType>
@@ -270,7 +244,6 @@
     <Compile Include="PocetnaStranica1.Designer.cs">
       <DependentUpon>PocetnaStranica1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Prijava.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormaRegistracija.cs">
@@ -279,42 +252,14 @@
     <Compile Include="FormaRegistracija.Designer.cs">
       <DependentUpon>FormaRegistracija.cs</DependentUpon>
     </Compile>
-    <Compile Include="RezervacijaTreninga.cs">
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Sesija.cs" />
-    <Compile Include="Smjena.code.cs" />
-    <Compile Include="Smjena.cs">
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SmjenaZaposlenika.cs">
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Smjena.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Suplement.code.cs" />
-    <Compile Include="Suplement.cs">
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="SuplementView.cs" />
-    <Compile Include="Termin.cs">
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Trening.code.cs" />
-    <Compile Include="Trening.cs">
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="UlogaUTeretani.code.cs" />
-    <Compile Include="UlogaUTeretani.cs">
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="VrstaClanarine.code.cs" />
-    <Compile Include="VrstaClanarine.cs">
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="VrstaClanarineView.cs" />
-    <Compile Include="VrstaVjezbe.cs">
-      <DependentUpon>eGymModel.tt</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FormaAdmin.resx">
       <DependentUpon>FormaAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,13 +350,6 @@
     <EmbeddedResource Include="FormaProfilZaposlenika.resx">
       <DependentUpon>FormaProfilZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="eGymModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>eGymModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="eGymModel.edmx.diagram">
-      <DependentUpon>eGymModel.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Clanarina.datasource" />
     <None Include="Properties\DataSources\Korisnik.datasource" />
@@ -438,16 +376,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="eGymModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>eGymModel.edmx</DependentUpon>
-      <LastGenOutput>eGymModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="eGymModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>eGymModel.edmx</DependentUpon>
-      <LastGenOutput>eGymModel.cs</LastGenOutput>
-    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -461,6 +389,16 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Poslovna logika\Poslovna logika.csproj">
+      <Project>{0d0249f8-ac87-4486-ae1d-8945e2d109e9}</Project>
+      <Name>Poslovna logika</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pristup podacima\Pristup podacima.csproj">
+      <Project>{f53d9279-7c6a-4b8e-b7b5-e5340ce80d2e}</Project>
+      <Name>Pristup podacima</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

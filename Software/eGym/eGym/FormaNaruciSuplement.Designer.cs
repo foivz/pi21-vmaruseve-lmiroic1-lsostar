@@ -296,7 +296,7 @@ namespace eGym
             // 
             // bsKosarica
             // 
-            this.bsKosarica.DataSource = typeof(eGym.NaruceniSuplement);
+            this.bsKosarica.DataSource = typeof(Pristup_podacima.NaruceniSuplement);
             // 
             // kolicinaDataGridViewTextBoxColumn
             // 

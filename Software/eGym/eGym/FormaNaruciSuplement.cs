@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pristup_podacima;
+using Poslovna_logika;
+
 
 namespace eGym
 {
@@ -15,7 +18,6 @@ namespace eGym
         BindingList<NaruceniSuplement> listaSuplementa = new BindingList<NaruceniSuplement>();
        
         public Korisnik OdabraniKorisnik { get; set; }
-        public Entities6 Entities = new Entities6();
 
         public FormaNaruciSuplement(Korisnik korisnik)
         {
@@ -50,7 +52,7 @@ namespace eGym
 
         private void btnUrediKosaricu_Click(object sender, EventArgs e)
         {
-            Suplement suplement = dgvKosarica.CurrentRow.DataBoundItem as Suplement;
+            Pristup_podacima.Suplement suplement = dgvKosarica.CurrentRow.DataBoundItem as Pristup_podacima.Suplement;
             FormaUrediKosaricu formaUrediKosaricu = new FormaUrediKosaricu(suplement);
             formaUrediKosaricu.Show();
             this.Hide();
@@ -58,7 +60,7 @@ namespace eGym
 
         private void FormaNaruciSuplement_Load(object sender, EventArgs e)
         {
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
                             where k.korisnickoIme == OdabraniKorisnik.korisnickoIme
@@ -66,7 +68,7 @@ namespace eGym
                 txtIznosNaRacunu.Text = query.FirstOrDefault().ToString();
             }
 
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var upit = from su in context.Suplements.Include("NaruceniSuplements")
                            select su;
@@ -77,9 +79,9 @@ namespace eGym
 
         private void btnDodajSuplement_Click(object sender, EventArgs e)
         {
-            Suplement suplement = dgvNazivSuplementa.CurrentRow.DataBoundItem as Suplement;
+            Pristup_podacima.Suplement suplement = dgvNazivSuplementa.CurrentRow.DataBoundItem as Pristup_podacima.Suplement;
             int kolicina = int.Parse(txtKolicina.Text);
-            using (var context = new Entities6())
+            using (var context = new Entities())
             {
                 var upit = from s in context.NaruceniSuplements.Include("Suplement").Include("Korisnik")
                            where s.suplement_id == suplement.ID 
@@ -88,28 +90,8 @@ namespace eGym
 
                
             }
-
-            OsvjeziKosaricu();
             
         }
-
-        private void OsvjeziKosaricu()
-        {
-           
-            Suplement suplement = dgvNazivSuplementa.CurrentRow.DataBoundItem as Suplement;
-
-            foreach (NaruceniSuplement item in Entities.NaruceniSuplements)
-            {
-                if (item.suplement_id == suplement.ID)
-                {
-                    listaSuplementa.Add(item);
-                }
-            }
-            
-            dgvKosarica.DataSource = listaSuplementa;
-        }
-    
-
         private void dgvNazivSuplementa_SelectionChanged(object sender, EventArgs e)
         {
            
