@@ -32,7 +32,7 @@ namespace eGym
         {
             foreach (Pristup_podacima.Suplement s in VratiListuNarucenihSuplemenata())
             {
-                
+
             }
         }
         private int VratiBrojProdanihSuplemenata(Pristup_podacima.Suplement suplement)
@@ -60,6 +60,7 @@ namespace eGym
             }
             return NaruceniSuplementi;
         }
+
 
         private void btnPrintajIzvjesce_Click(object sender, EventArgs e)
         {
