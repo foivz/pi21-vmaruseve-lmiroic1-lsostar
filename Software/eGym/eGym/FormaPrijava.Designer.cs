@@ -55,6 +55,7 @@ namespace eGym
             this.txtLozinkaPrijava.Location = new System.Drawing.Point(440, 302);
             this.txtLozinkaPrijava.Margin = new System.Windows.Forms.Padding(4);
             this.txtLozinkaPrijava.Name = "txtLozinkaPrijava";
+            this.txtLozinkaPrijava.PasswordChar = '*';
             this.txtLozinkaPrijava.Size = new System.Drawing.Size(271, 22);
             this.txtLozinkaPrijava.TabIndex = 14;
             // 

@@ -52,9 +52,11 @@ namespace eGym
             using (var context = new Entities())
             {
                 var query = from vt in context.Trenings.Include("RezervacijaTreningas").Include("Termins")
-
-                            select vt.naziv;
+                            select vt;
+                cbVrstaTreninga.DataSource = null;
                 cbVrstaTreninga.DataSource = query.Distinct().ToList();
+                cbVrstaTreninga.DisplayMember = "naziv";
+                cbVrstaTreninga.ValueMember = "ID";
 
             }
         }
@@ -74,43 +76,29 @@ namespace eGym
         private void btnDodajTermin_Click(object sender, EventArgs e)
         {
 
-            using (var context = new Entities())
+            dtpDatumTerminaOdD.Format = DateTimePickerFormat.Time;
+            dtpDatumDoD.Format = DateTimePickerFormat.Time;
+
+            dtpDatumDoD.ShowUpDown = true;
+            dtpDatumTerminaOdD.ShowUpDown = true;
+
+            Korisnik korisnik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
+            VrstaVjezbe vrstaVjezbe = dgvVrstaVjezbe.CurrentRow.DataBoundItem as VrstaVjezbe;
+            Pristup_podacima.Trening trening = cbVrstaTreninga.SelectedItem as Pristup_podacima.Trening;
+            DateTime od = this.dtpDatumTerminaOdD.Value.ToLocalTime();
+            DateTime do1 = this.dtpDatumDoD.Value.ToLocalTime();
+            int brojMjesta = int.Parse(txtBrojMjestaD.Text);
+
+            Termin noviTermin = new Termin
             {
-                dtpDatumTerminaOdD.Format = DateTimePickerFormat.Time;
-                dtpDatumDoD.Format = DateTimePickerFormat.Time;
-
-                dtpDatumDoD.ShowUpDown = true;
-                dtpDatumTerminaOdD.ShowUpDown = true;
-
-                Korisnik korisnik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
-                VrstaVjezbe vrstaVjezbe = dgvVrstaVjezbe.CurrentRow.DataBoundItem as VrstaVjezbe;
-                Trening trening = cbVrstaTreninga.SelectedItem as Trening;
-                DateTime od = this.dtpDatumTerminaOdD.Value.ToLocalTime();
-                DateTime do1 = this.dtpDatumDoD.Value.ToLocalTime();
-                int brojMjesta = int.Parse(txtBrojMjestaD.Text);
-
-
-                context.Korisniks.Attach(korisnik);
-                context.VrstaVjezbes.Add(vrstaVjezbe);
-                context.Trenings.Attach(trening);
-
-
-                Termin noviTermin = new Termin
-                {
-
-                    od = od,
-                    @do = do1,
-                    broj_mjesta = brojMjesta,
-                    zaposlenik_korisnickoIme = korisnik.prezime,
-                    vrstaVjezbe_id = vrstaVjezbe.ID,
-                    trening_id = trening.ID
-
-
-                };
-                Pristup_podacima.Dohvaćanje_podataka.UpravljanjeTerminimaDAL.UnosTermina(noviTermin);
-
-
-            }
+                od = od,
+                @do = do1,
+                broj_mjesta = brojMjesta,
+                zaposlenik_korisnickoIme = korisnik.korisnickoIme,
+                vrstaVjezbe_id = vrstaVjezbe.ID,
+                trening_id = trening.ID
+            };
+            Pristup_podacima.Dohvaćanje_podataka.UpravljanjeTerminimaDAL.UnosTermina(noviTermin);
             MessageBox.Show("Uspješno dodan termin!");
         }
 

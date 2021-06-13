@@ -24,6 +24,7 @@ namespace eGym
 
         private void btnOdjava_Click(object sender, EventArgs e)
         {
+            Sesija.PrijavljeniKorisnik = null;
             PocetnaStranica1 pocetnaStranica = new PocetnaStranica1();
             pocetnaStranica.Show();
             this.Hide();

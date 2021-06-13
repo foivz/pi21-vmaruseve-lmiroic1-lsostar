@@ -9,6 +9,7 @@ namespace Pristup_podacima.Dohvaćanje_podataka
 {
     public class UpravljanjeKorisnicimaDAL
     {
+
         public static Korisnik DohvatiKorisnika(string korisničkoIme, string lozinka)
         {
             Korisnik korisnikZaPrijavu = new Korisnik();
@@ -72,7 +73,16 @@ namespace Pristup_podacima.Dohvaćanje_podataka
             }
 
         }
-        
+
+        public static void UnosPrveClanarine(Clanarina clanarina)
+        {
+            using (var db = new Entities())
+            {
+                db.Clanarinas.Add(clanarina);
+                db.SaveChanges();
+            }
+
+        }
 
         public static void ObrisiClana(Korisnik odabraniClan)
         {

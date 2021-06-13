@@ -43,6 +43,16 @@ namespace eGym
                     stanjeNaRacunu = 0
                 };
                 Pristup_podacima.Dohvaćanje_podataka.UpravljanjeKorisnicimaDAL.UnosKorisnika(noviKorisnik);
+                Clanarina clanarina = new Clanarina
+                {
+                    korisnik_korisnickoIme = noviKorisnik.korisnickoIme,
+                    vrijedi_od = DateTime.Now,
+                    vrijedi_do = DateTime.Now.AddDays(30),
+                    vrsta_id = 1,
+                    placeno = "da"
+                };
+                Pristup_podacima.Dohvaćanje_podataka.UpravljanjeKorisnicimaDAL.UnosPrveClanarine(clanarina);
+
             }
             else
                 MessageBox.Show("Morate popuniti sva polja sa vrijednostima");

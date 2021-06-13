@@ -90,8 +90,12 @@ namespace eGym
 
         private void Osvjezi()
         {
+            cmbNaziv.DataSource = null;
             cmbNaziv.DataSource = DohvatiSmjene();
-            dgvZaposlenici.DataSource = DohvatiZaposlenike();
+            cmbNaziv.DisplayMember = "naziv";
+            cmbNaziv.ValueMember = "ID";
+            dgvZaposlenici.DataSource = null;
+            dgvZaposlenici.DataSource = DohvatiZaposlenike();            
         }
     }
 }

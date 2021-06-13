@@ -75,10 +75,10 @@ namespace eGym
         {
             using (var context = new Entities())
             {
-                var upit = from s in context.SmjenaZaposlenikas.Include("Smjena").Include("Korisnik")
-                           select s;
-                dtgEvidencijaSmjena.DataSource = upit.ToList();
-
+                var upit = (from s in context.SmjenaZaposlenikas.Include("Smjena").Include("Korisnik")
+                            select s).ToList();
+                dtgEvidencijaSmjena.DataSource = null;
+                dtgEvidencijaSmjena.DataSource = upit;
             }
         }
     }
