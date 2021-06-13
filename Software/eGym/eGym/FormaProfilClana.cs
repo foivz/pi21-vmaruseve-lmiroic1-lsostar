@@ -100,6 +100,14 @@ namespace eGym
 
         }
 
-        
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void korisničkiPriručnikToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file://C:\\PI Projekt\\Software\\eGym\\eGym\\eGym_Help.chm");
+        }
     }
 }
