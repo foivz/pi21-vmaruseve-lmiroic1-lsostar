@@ -50,5 +50,10 @@ namespace eGym
             txtCijenaAzurirajSuplement.Text = OdabraniSuplement.cijena.ToString();
 
         }
+
+        private void FormaAzurirajSuplement_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, "eGym_Help.chm", HelpNavigator.Topic, "O aplikaciji.html");
+        }
     }
 }

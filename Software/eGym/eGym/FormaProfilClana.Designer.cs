@@ -48,10 +48,6 @@ namespace eGym
             this.btnOdjava = new System.Windows.Forms.Button();
             this.lblOd = new System.Windows.Forms.Label();
             this.lblDo = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.korisničkiPriručnikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -254,33 +250,6 @@ namespace eGym
             this.lblDo.TabIndex = 25;
             this.lblDo.Text = "n/a";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(944, 28);
-            this.menuStrip1.TabIndex = 26;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.korisničkiPriručnikToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(55, 24);
-            this.toolStripMenuItem1.Text = "Help";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // korisničkiPriručnikToolStripMenuItem
-            // 
-            this.korisničkiPriručnikToolStripMenuItem.Name = "korisničkiPriručnikToolStripMenuItem";
-            this.korisničkiPriručnikToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.korisničkiPriručnikToolStripMenuItem.Text = "Korisnički priručnik";
-            this.korisničkiPriručnikToolStripMenuItem.Click += new System.EventHandler(this.korisničkiPriručnikToolStripMenuItem_Click);
-            // 
             // formProfilClana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -306,14 +275,11 @@ namespace eGym
             this.Controls.Add(this.lblImeIPrezimeClana);
             this.Controls.Add(this.lblDobrosao);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "formProfilClana";
             this.Text = "Clan";
             this.Load += new System.EventHandler(this.formProfilClana_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.formProfilClana_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,8 +306,5 @@ namespace eGym
         private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Label lblOd;
         private System.Windows.Forms.Label lblDo;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem korisničkiPriručnikToolStripMenuItem;
     }
 }

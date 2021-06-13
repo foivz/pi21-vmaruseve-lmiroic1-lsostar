@@ -35,17 +35,17 @@ namespace eGym
             this.btnNatragSuplement = new System.Windows.Forms.Button();
             this.btnDodajSSuplementE = new System.Windows.Forms.Button();
             this.dtgEvidencijaSuplemenata = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.bsSuplementi = new System.Windows.Forms.BindingSource(this.components);
-            this.suplementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stanjeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suplementBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bsSuplementi = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgEvidencijaSuplemenata)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suplementBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).BeginInit();
             this.SuspendLayout();
             // 
             // btnObrisiSuplementE
@@ -121,31 +121,6 @@ namespace eGym
             this.dtgEvidencijaSuplemenata.Size = new System.Drawing.Size(784, 186);
             this.dtgEvidencijaSuplemenata.TabIndex = 51;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(48, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 55);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "eGym";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(339, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 29);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Evidencija suplemenata";
-            // 
-            // suplementBindingSource
-            // 
-            this.suplementBindingSource.DataSource = typeof(eGym.Suplement);
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -178,6 +153,31 @@ namespace eGym
             this.stanjeDataGridViewTextBoxColumn.Name = "stanjeDataGridViewTextBoxColumn";
             this.stanjeDataGridViewTextBoxColumn.Width = 125;
             // 
+            // suplementBindingSource
+            // 
+            this.suplementBindingSource.DataSource = typeof(eGym.Suplement);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(48, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(152, 55);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "eGym";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(339, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(283, 29);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Evidencija suplemenata";
+            // 
             // FormaEvidencijaSuplemenata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -193,9 +193,10 @@ namespace eGym
             this.Name = "FormaEvidencijaSuplemenata";
             this.Text = "EvidencijaSuplemenata";
             this.Load += new System.EventHandler(this.FormaEvidencijaSuplemenata_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaEvidencijaSuplemenata_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dtgEvidencijaSuplemenata)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suplementBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

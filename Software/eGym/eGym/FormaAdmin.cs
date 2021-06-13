@@ -55,5 +55,10 @@ namespace eGym
             pocetnaStranica.Show();
             this.Hide();
         }
+
+        private void FormaAdmin_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, "eGym_Help.chm", HelpNavigator.Topic, "O aplikaciji.html");
+        }
     }
 }

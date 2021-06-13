@@ -176,7 +176,7 @@ namespace eGym
             // 
             this.dgvZaposlenici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvZaposlenici.Location = new System.Drawing.Point(90, 271);
-            this.dgvZaposlenici.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvZaposlenici.Margin = new System.Windows.Forms.Padding(4);
             this.dgvZaposlenici.Name = "dgvZaposlenici";
             this.dgvZaposlenici.RowHeadersWidth = 51;
             this.dgvZaposlenici.Size = new System.Drawing.Size(364, 197);
@@ -235,6 +235,7 @@ namespace eGym
             this.Name = "FormaDodajTermin";
             this.Text = "Dodaj termin";
             this.Load += new System.EventHandler(this.FormaDodajTermin_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaDodajTermin_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVrstaVjezbe)).EndInit();
             this.ResumeLayout(false);

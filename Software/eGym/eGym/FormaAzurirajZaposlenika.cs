@@ -56,5 +56,10 @@ namespace eGym
             txtBrojTelefonaZaposlenikaAzuriranje.Text = odabraniKorisnik.brojtelefona;
             txtLozinka.Text = odabraniKorisnik.lozinka;
         }
+
+        private void FormaAzurirajZaposlenika_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, "eGym_Help.chm", HelpNavigator.Topic, "O aplikaciji.html");
+        }
     }
 }

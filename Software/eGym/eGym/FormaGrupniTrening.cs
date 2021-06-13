@@ -119,5 +119,10 @@ namespace eGym
             dgvGrupniTrening.DataSource = null;
             dgvGrupniTrening.DataSource = terminiGrupnogTreninga;
         }
+
+        private void FormaGrupniTrening_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, "eGym_Help.chm", HelpNavigator.Topic, "O aplikaciji.html");
+        }
     }
 }

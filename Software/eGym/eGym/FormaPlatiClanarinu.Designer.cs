@@ -49,9 +49,10 @@ namespace eGym
             // 
             this.lblIznosNaRacunuClanarina.AutoSize = true;
             this.lblIznosNaRacunuClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblIznosNaRacunuClanarina.Location = new System.Drawing.Point(339, 249);
+            this.lblIznosNaRacunuClanarina.Location = new System.Drawing.Point(452, 306);
+            this.lblIznosNaRacunuClanarina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIznosNaRacunuClanarina.Name = "lblIznosNaRacunuClanarina";
-            this.lblIznosNaRacunuClanarina.Size = new System.Drawing.Size(31, 20);
+            this.lblIznosNaRacunuClanarina.Size = new System.Drawing.Size(40, 25);
             this.lblIznosNaRacunuClanarina.TabIndex = 29;
             this.lblIznosNaRacunuClanarina.Text = "n/a";
             // 
@@ -59,9 +60,10 @@ namespace eGym
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(22, 251);
+            this.label4.Location = new System.Drawing.Point(29, 309);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 18);
+            this.label4.Size = new System.Drawing.Size(230, 24);
             this.label4.TabIndex = 28;
             this.label4.Text = "Trenutan iznos na računu:";
             // 
@@ -70,9 +72,10 @@ namespace eGym
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Location = new System.Drawing.Point(16, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 55);
+            this.label1.Size = new System.Drawing.Size(190, 69);
             this.label1.TabIndex = 22;
             this.label1.Text = "eGym";
             // 
@@ -80,9 +83,10 @@ namespace eGym
             // 
             this.lblImeiPrezimeZaposlenika.AutoSize = true;
             this.lblImeiPrezimeZaposlenika.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblImeiPrezimeZaposlenika.Location = new System.Drawing.Point(20, 96);
+            this.lblImeiPrezimeZaposlenika.Location = new System.Drawing.Point(27, 118);
+            this.lblImeiPrezimeZaposlenika.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblImeiPrezimeZaposlenika.Name = "lblImeiPrezimeZaposlenika";
-            this.lblImeiPrezimeZaposlenika.Size = new System.Drawing.Size(104, 25);
+            this.lblImeiPrezimeZaposlenika.Size = new System.Drawing.Size(130, 31);
             this.lblImeiPrezimeZaposlenika.TabIndex = 21;
             this.lblImeiPrezimeZaposlenika.Text = "Članarina";
             // 
@@ -91,10 +95,10 @@ namespace eGym
             this.btnPlatiClanarinu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnPlatiClanarinu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlatiClanarinu.ForeColor = System.Drawing.Color.White;
-            this.btnPlatiClanarinu.Location = new System.Drawing.Point(249, 298);
-            this.btnPlatiClanarinu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlatiClanarinu.Location = new System.Drawing.Point(332, 367);
+            this.btnPlatiClanarinu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPlatiClanarinu.Name = "btnPlatiClanarinu";
-            this.btnPlatiClanarinu.Size = new System.Drawing.Size(121, 38);
+            this.btnPlatiClanarinu.Size = new System.Drawing.Size(161, 47);
             this.btnPlatiClanarinu.TabIndex = 30;
             this.btnPlatiClanarinu.Text = "Plati";
             this.btnPlatiClanarinu.UseVisualStyleBackColor = false;
@@ -105,10 +109,10 @@ namespace eGym
             this.btnPlatiClanarinuOdustani.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnPlatiClanarinuOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlatiClanarinuOdustani.ForeColor = System.Drawing.Color.White;
-            this.btnPlatiClanarinuOdustani.Location = new System.Drawing.Point(25, 371);
-            this.btnPlatiClanarinuOdustani.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlatiClanarinuOdustani.Location = new System.Drawing.Point(33, 457);
+            this.btnPlatiClanarinuOdustani.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPlatiClanarinuOdustani.Name = "btnPlatiClanarinuOdustani";
-            this.btnPlatiClanarinuOdustani.Size = new System.Drawing.Size(121, 38);
+            this.btnPlatiClanarinuOdustani.Size = new System.Drawing.Size(161, 47);
             this.btnPlatiClanarinuOdustani.TabIndex = 31;
             this.btnPlatiClanarinuOdustani.Text = "Odustani";
             this.btnPlatiClanarinuOdustani.UseVisualStyleBackColor = false;
@@ -123,28 +127,36 @@ namespace eGym
             this.nazivDataGridViewTextBoxColumn,
             this.cijenaDataGridViewTextBoxColumn});
             this.dgvClanarina.DataSource = this.bsVrstaClanarine;
-            this.dgvClanarina.Location = new System.Drawing.Point(25, 138);
+            this.dgvClanarina.Location = new System.Drawing.Point(33, 170);
+            this.dgvClanarina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvClanarina.Name = "dgvClanarina";
-            this.dgvClanarina.Size = new System.Drawing.Size(345, 79);
+            this.dgvClanarina.RowHeadersWidth = 51;
+            this.dgvClanarina.Size = new System.Drawing.Size(460, 97);
             this.dgvClanarina.TabIndex = 32;
             // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Width = 125;
             // 
             // nazivDataGridViewTextBoxColumn
             // 
             this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
             this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
+            this.nazivDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.Width = 125;
             // 
             // cijenaDataGridViewTextBoxColumn
             // 
             this.cijenaDataGridViewTextBoxColumn.DataPropertyName = "cijena";
             this.cijenaDataGridViewTextBoxColumn.HeaderText = "cijena";
+            this.cijenaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cijenaDataGridViewTextBoxColumn.Name = "cijenaDataGridViewTextBoxColumn";
+            this.cijenaDataGridViewTextBoxColumn.Width = 125;
             // 
             // bsVrstaClanarine
             // 
@@ -152,10 +164,10 @@ namespace eGym
             // 
             // FormaPlatiClanarinu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(416, 441);
+            this.ClientSize = new System.Drawing.Size(555, 543);
             this.Controls.Add(this.dgvClanarina);
             this.Controls.Add(this.btnPlatiClanarinuOdustani);
             this.Controls.Add(this.btnPlatiClanarinu);
@@ -163,9 +175,11 @@ namespace eGym
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblImeiPrezimeZaposlenika);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormaPlatiClanarinu";
             this.Text = "FormaPlatiClanarinu";
             this.Load += new System.EventHandler(this.FormaPlatiClanarinu_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaPlatiClanarinu_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClanarina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsVrstaClanarine)).EndInit();
             this.ResumeLayout(false);

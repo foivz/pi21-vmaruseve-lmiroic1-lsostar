@@ -148,6 +148,7 @@ namespace eGym
             this.Name = "FormaPrijava";
             this.Text = "FormaPrijava";
             this.Load += new System.EventHandler(this.FormaPrijava_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaPrijava_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 

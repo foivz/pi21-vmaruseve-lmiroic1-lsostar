@@ -37,9 +37,6 @@ namespace eGym
             this.btnDodajSmjenu = new System.Windows.Forms.Button();
             this.btnNatrag = new System.Windows.Forms.Button();
             this.dgvZaposlenici = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtpDatum = new System.Windows.Forms.DateTimePicker();
-            this.bsDodajSmjenu = new System.Windows.Forms.BindingSource(this.components);
             this.korisnickoImeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lozinkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumregistracijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +44,9 @@ namespace eGym
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brojtelefonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsDodajSmjenu = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDodajSmjenu)).BeginInit();
             this.SuspendLayout();
@@ -56,10 +56,9 @@ namespace eGym
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(17, 24);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(23, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 44);
+            this.label2.Size = new System.Drawing.Size(152, 55);
             this.label2.TabIndex = 1;
             this.label2.Text = "eGym";
             // 
@@ -67,10 +66,9 @@ namespace eGym
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 93);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(69, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 25);
+            this.label1.Size = new System.Drawing.Size(169, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Dodaj smjenu";
             // 
@@ -78,20 +76,19 @@ namespace eGym
             // 
             this.lblRadnoVrijeme.AutoSize = true;
             this.lblRadnoVrijeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRadnoVrijeme.Location = new System.Drawing.Point(38, 303);
-            this.lblRadnoVrijeme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRadnoVrijeme.Location = new System.Drawing.Point(51, 373);
             this.lblRadnoVrijeme.Name = "lblRadnoVrijeme";
-            this.lblRadnoVrijeme.Size = new System.Drawing.Size(84, 15);
+            this.lblRadnoVrijeme.Size = new System.Drawing.Size(101, 18);
             this.lblRadnoVrijeme.TabIndex = 39;
             this.lblRadnoVrijeme.Text = "Naziv smjene:";
             // 
             // cmbNaziv
             // 
             this.cmbNaziv.FormattingEnabled = true;
-            this.cmbNaziv.Location = new System.Drawing.Point(130, 302);
-            this.cmbNaziv.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbNaziv.Location = new System.Drawing.Point(173, 372);
+            this.cmbNaziv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbNaziv.Name = "cmbNaziv";
-            this.cmbNaziv.Size = new System.Drawing.Size(164, 21);
+            this.cmbNaziv.Size = new System.Drawing.Size(217, 24);
             this.cmbNaziv.TabIndex = 42;
             // 
             // btnDodajSmjenu
@@ -99,10 +96,10 @@ namespace eGym
             this.btnDodajSmjenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnDodajSmjenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDodajSmjenu.ForeColor = System.Drawing.Color.White;
-            this.btnDodajSmjenu.Location = new System.Drawing.Point(421, 345);
-            this.btnDodajSmjenu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDodajSmjenu.Location = new System.Drawing.Point(561, 425);
+            this.btnDodajSmjenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDodajSmjenu.Name = "btnDodajSmjenu";
-            this.btnDodajSmjenu.Size = new System.Drawing.Size(92, 41);
+            this.btnDodajSmjenu.Size = new System.Drawing.Size(123, 50);
             this.btnDodajSmjenu.TabIndex = 49;
             this.btnDodajSmjenu.Text = "Dodaj smjenu";
             this.btnDodajSmjenu.UseVisualStyleBackColor = false;
@@ -113,10 +110,10 @@ namespace eGym
             this.btnNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNatrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNatrag.ForeColor = System.Drawing.Color.White;
-            this.btnNatrag.Location = new System.Drawing.Point(38, 345);
-            this.btnNatrag.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNatrag.Location = new System.Drawing.Point(51, 425);
+            this.btnNatrag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNatrag.Name = "btnNatrag";
-            this.btnNatrag.Size = new System.Drawing.Size(88, 41);
+            this.btnNatrag.Size = new System.Drawing.Size(117, 50);
             this.btnNatrag.TabIndex = 48;
             this.btnNatrag.Text = "Natrag";
             this.btnNatrag.UseVisualStyleBackColor = false;
@@ -135,80 +132,96 @@ namespace eGym
             this.emailDataGridViewTextBoxColumn,
             this.brojtelefonaDataGridViewTextBoxColumn});
             this.dgvZaposlenici.DataSource = this.bsDodajSmjenu;
-            this.dgvZaposlenici.Location = new System.Drawing.Point(57, 130);
+            this.dgvZaposlenici.Location = new System.Drawing.Point(76, 160);
+            this.dgvZaposlenici.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvZaposlenici.Name = "dgvZaposlenici";
-            this.dgvZaposlenici.Size = new System.Drawing.Size(456, 150);
+            this.dgvZaposlenici.RowHeadersWidth = 51;
+            this.dgvZaposlenici.Size = new System.Drawing.Size(608, 185);
             this.dgvZaposlenici.TabIndex = 50;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(338, 303);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 15);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "Datum:";
-            // 
-            // dtpDatum
-            // 
-            this.dtpDatum.Location = new System.Drawing.Point(399, 303);
-            this.dtpDatum.Name = "dtpDatum";
-            this.dtpDatum.Size = new System.Drawing.Size(114, 20);
-            this.dtpDatum.TabIndex = 52;
-            // 
-            // bsDodajSmjenu
-            // 
-            this.bsDodajSmjenu.DataSource = typeof(Pristup_podacima.Korisnik);
             // 
             // korisnickoImeDataGridViewTextBoxColumn
             // 
             this.korisnickoImeDataGridViewTextBoxColumn.DataPropertyName = "korisnickoIme";
             this.korisnickoImeDataGridViewTextBoxColumn.HeaderText = "korisnickoIme";
+            this.korisnickoImeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.korisnickoImeDataGridViewTextBoxColumn.Name = "korisnickoImeDataGridViewTextBoxColumn";
+            this.korisnickoImeDataGridViewTextBoxColumn.Width = 125;
             // 
             // lozinkaDataGridViewTextBoxColumn
             // 
             this.lozinkaDataGridViewTextBoxColumn.DataPropertyName = "lozinka";
             this.lozinkaDataGridViewTextBoxColumn.HeaderText = "lozinka";
+            this.lozinkaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.lozinkaDataGridViewTextBoxColumn.Name = "lozinkaDataGridViewTextBoxColumn";
+            this.lozinkaDataGridViewTextBoxColumn.Width = 125;
             // 
             // datumregistracijeDataGridViewTextBoxColumn
             // 
             this.datumregistracijeDataGridViewTextBoxColumn.DataPropertyName = "datum_registracije";
             this.datumregistracijeDataGridViewTextBoxColumn.HeaderText = "datum_registracije";
+            this.datumregistracijeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.datumregistracijeDataGridViewTextBoxColumn.Name = "datumregistracijeDataGridViewTextBoxColumn";
+            this.datumregistracijeDataGridViewTextBoxColumn.Width = 125;
             // 
             // imeDataGridViewTextBoxColumn
             // 
             this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
             this.imeDataGridViewTextBoxColumn.HeaderText = "ime";
+            this.imeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            this.imeDataGridViewTextBoxColumn.Width = 125;
             // 
             // prezimeDataGridViewTextBoxColumn
             // 
             this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
             this.prezimeDataGridViewTextBoxColumn.HeaderText = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            this.prezimeDataGridViewTextBoxColumn.Width = 125;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.Width = 125;
             // 
             // brojtelefonaDataGridViewTextBoxColumn
             // 
             this.brojtelefonaDataGridViewTextBoxColumn.DataPropertyName = "brojtelefona";
             this.brojtelefonaDataGridViewTextBoxColumn.HeaderText = "brojtelefona";
+            this.brojtelefonaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.brojtelefonaDataGridViewTextBoxColumn.Name = "brojtelefonaDataGridViewTextBoxColumn";
+            this.brojtelefonaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bsDodajSmjenu
+            // 
+            this.bsDodajSmjenu.DataSource = typeof(Pristup_podacima.Korisnik);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(451, 373);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 18);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Datum:";
+            // 
+            // dtpDatum
+            // 
+            this.dtpDatum.Location = new System.Drawing.Point(532, 373);
+            this.dtpDatum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDatum.Name = "dtpDatum";
+            this.dtpDatum.Size = new System.Drawing.Size(151, 22);
+            this.dtpDatum.TabIndex = 52;
             // 
             // FormaDodajSmjenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 465);
+            this.ClientSize = new System.Drawing.Size(772, 572);
             this.Controls.Add(this.dtpDatum);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvZaposlenici);
@@ -218,10 +231,11 @@ namespace eGym
             this.Controls.Add(this.lblRadnoVrijeme);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormaDodajSmjenu";
             this.Text = "Dodaj smjenu";
             this.Load += new System.EventHandler(this.FormaDodajSmjenu_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaDodajSmjenu_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDodajSmjenu)).EndInit();
             this.ResumeLayout(false);

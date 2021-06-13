@@ -108,5 +108,10 @@ namespace eGym
             formaEvidencijaTermina.Show();
             this.Hide();
         }
+
+        private void FormaDodajTermin_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, "eGym_Help.chm", HelpNavigator.Topic, "O aplikaciji.html");
+        }
     }
 }

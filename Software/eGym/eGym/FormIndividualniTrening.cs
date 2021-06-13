@@ -93,5 +93,10 @@ namespace eGym
             dgvIndividualniTrening.DataSource = null;
             dgvIndividualniTrening.DataSource = terminiIndividualnihTreninga;
         }
+
+        private void FormIndividualniTrening_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, "eGym_Help.chm", HelpNavigator.Topic, "O aplikaciji.html");
+        }
     }
 }

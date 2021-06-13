@@ -105,9 +105,9 @@ namespace eGym
 
         }
 
-        private void korisničkiPriručnikToolStripMenuItem_Click(object sender, EventArgs e)
+        private void formProfilClana_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
-            Help.ShowHelp(this, "file://C:\\PI Projekt\\Software\\eGym\\eGym\\eGym_Help.chm");
+            System.Windows.Forms.Help.ShowHelp(this, "eGym_Help.chm", HelpNavigator.Topic, "O aplikaciji.html");
         }
     }
 }

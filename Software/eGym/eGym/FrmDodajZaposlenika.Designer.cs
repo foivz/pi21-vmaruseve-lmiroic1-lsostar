@@ -78,7 +78,7 @@ namespace eGym
             // txtLozinkaRegistracija
             // 
             this.txtLozinkaRegistracija.Location = new System.Drawing.Point(489, 593);
-            this.txtLozinkaRegistracija.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLozinkaRegistracija.Margin = new System.Windows.Forms.Padding(4);
             this.txtLozinkaRegistracija.Name = "txtLozinkaRegistracija";
             this.txtLozinkaRegistracija.Size = new System.Drawing.Size(271, 22);
             this.txtLozinkaRegistracija.TabIndex = 77;
@@ -86,7 +86,7 @@ namespace eGym
             // txtUsernameRegistracija
             // 
             this.txtUsernameRegistracija.Location = new System.Drawing.Point(489, 513);
-            this.txtUsernameRegistracija.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsernameRegistracija.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsernameRegistracija.Name = "txtUsernameRegistracija";
             this.txtUsernameRegistracija.Size = new System.Drawing.Size(271, 22);
             this.txtUsernameRegistracija.TabIndex = 76;
@@ -94,7 +94,7 @@ namespace eGym
             // txtBrojMobRegistracija
             // 
             this.txtBrojMobRegistracija.Location = new System.Drawing.Point(489, 432);
-            this.txtBrojMobRegistracija.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBrojMobRegistracija.Margin = new System.Windows.Forms.Padding(4);
             this.txtBrojMobRegistracija.Name = "txtBrojMobRegistracija";
             this.txtBrojMobRegistracija.Size = new System.Drawing.Size(271, 22);
             this.txtBrojMobRegistracija.TabIndex = 75;
@@ -113,7 +113,7 @@ namespace eGym
             // txtEmailRegistracija
             // 
             this.txtEmailRegistracija.Location = new System.Drawing.Point(489, 359);
-            this.txtEmailRegistracija.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmailRegistracija.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmailRegistracija.Name = "txtEmailRegistracija";
             this.txtEmailRegistracija.Size = new System.Drawing.Size(271, 22);
             this.txtEmailRegistracija.TabIndex = 73;
@@ -165,7 +165,7 @@ namespace eGym
             // txtPrezimeRegistracija
             // 
             this.txtPrezimeRegistracija.Location = new System.Drawing.Point(489, 288);
-            this.txtPrezimeRegistracija.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrezimeRegistracija.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrezimeRegistracija.Name = "txtPrezimeRegistracija";
             this.txtPrezimeRegistracija.Size = new System.Drawing.Size(271, 22);
             this.txtPrezimeRegistracija.TabIndex = 68;
@@ -173,7 +173,7 @@ namespace eGym
             // txtImeRegistracija
             // 
             this.txtImeRegistracija.Location = new System.Drawing.Point(489, 217);
-            this.txtImeRegistracija.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtImeRegistracija.Margin = new System.Windows.Forms.Padding(4);
             this.txtImeRegistracija.Name = "txtImeRegistracija";
             this.txtImeRegistracija.Size = new System.Drawing.Size(271, 22);
             this.txtImeRegistracija.TabIndex = 67;
@@ -234,10 +234,11 @@ namespace eGym
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmDodajZaposlenika";
             this.Text = "FrmDodajZaposlenika";
             this.Load += new System.EventHandler(this.FrmDodajZaposlenika_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmDodajZaposlenika_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 

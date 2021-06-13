@@ -42,11 +42,11 @@ namespace eGym
             this.txtUkupanIznos = new System.Windows.Forms.TextBox();
             this.bsKosarica = new System.Windows.Forms.BindingSource(this.components);
             this.dgvNazivSuplementa = new System.Windows.Forms.DataGridView();
-            this.txtKolicina = new System.Windows.Forms.TextBox();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stanjeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsSuplementi = new System.Windows.Forms.BindingSource(this.components);
+            this.txtKolicina = new System.Windows.Forms.TextBox();
             this.btnOdaberi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsKosarica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNazivSuplementa)).BeginInit();
@@ -180,14 +180,6 @@ namespace eGym
             this.dgvNazivSuplementa.TabIndex = 0;
             this.dgvNazivSuplementa.SelectionChanged += new System.EventHandler(this.dgvNazivSuplementa_SelectionChanged);
             // 
-            // txtKolicina
-            // 
-            this.txtKolicina.Location = new System.Drawing.Point(207, 334);
-            this.txtKolicina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(217, 22);
-            this.txtKolicina.TabIndex = 70;
-            // 
             // nazivDataGridViewTextBoxColumn
             // 
             this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
@@ -215,6 +207,14 @@ namespace eGym
             // bsSuplementi
             // 
             this.bsSuplementi.DataSource = typeof(eGym.Suplement);
+            // 
+            // txtKolicina
+            // 
+            this.txtKolicina.Location = new System.Drawing.Point(207, 334);
+            this.txtKolicina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtKolicina.Name = "txtKolicina";
+            this.txtKolicina.Size = new System.Drawing.Size(217, 22);
+            this.txtKolicina.TabIndex = 70;
             // 
             // btnOdaberi
             // 
@@ -253,6 +253,7 @@ namespace eGym
             this.Name = "FormaNaruciSuplement";
             this.Text = "Naruči suplement";
             this.Load += new System.EventHandler(this.FormaNaruciSuplement_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaNaruciSuplement_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.bsKosarica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNazivSuplementa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).EndInit();

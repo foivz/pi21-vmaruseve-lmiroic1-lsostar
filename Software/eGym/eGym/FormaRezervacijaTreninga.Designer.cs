@@ -40,10 +40,9 @@ namespace eGym
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(9, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 44);
+            this.label1.Size = new System.Drawing.Size(156, 55);
             this.label1.TabIndex = 2;
             this.label1.Text = "eGym";
             // 
@@ -52,10 +51,10 @@ namespace eGym
             this.btnIndividualniTrening.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnIndividualniTrening.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIndividualniTrening.ForeColor = System.Drawing.Color.White;
-            this.btnIndividualniTrening.Location = new System.Drawing.Point(38, 123);
-            this.btnIndividualniTrening.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIndividualniTrening.Location = new System.Drawing.Point(51, 151);
+            this.btnIndividualniTrening.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIndividualniTrening.Name = "btnIndividualniTrening";
-            this.btnIndividualniTrening.Size = new System.Drawing.Size(224, 115);
+            this.btnIndividualniTrening.Size = new System.Drawing.Size(299, 142);
             this.btnIndividualniTrening.TabIndex = 3;
             this.btnIndividualniTrening.Text = "Individualni trening";
             this.btnIndividualniTrening.UseVisualStyleBackColor = false;
@@ -66,10 +65,10 @@ namespace eGym
             this.btnGrupniTrening.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnGrupniTrening.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrupniTrening.ForeColor = System.Drawing.Color.White;
-            this.btnGrupniTrening.Location = new System.Drawing.Point(304, 123);
-            this.btnGrupniTrening.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGrupniTrening.Location = new System.Drawing.Point(405, 151);
+            this.btnGrupniTrening.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGrupniTrening.Name = "btnGrupniTrening";
-            this.btnGrupniTrening.Size = new System.Drawing.Size(224, 115);
+            this.btnGrupniTrening.Size = new System.Drawing.Size(299, 142);
             this.btnGrupniTrening.TabIndex = 3;
             this.btnGrupniTrening.Text = "Grupni trening";
             this.btnGrupniTrening.UseVisualStyleBackColor = false;
@@ -80,10 +79,10 @@ namespace eGym
             this.btnNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNatrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNatrag.ForeColor = System.Drawing.Color.White;
-            this.btnNatrag.Location = new System.Drawing.Point(16, 306);
-            this.btnNatrag.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNatrag.Location = new System.Drawing.Point(21, 377);
+            this.btnNatrag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNatrag.Name = "btnNatrag";
-            this.btnNatrag.Size = new System.Drawing.Size(79, 38);
+            this.btnNatrag.Size = new System.Drawing.Size(105, 47);
             this.btnNatrag.TabIndex = 20;
             this.btnNatrag.Text = "Natrag";
             this.btnNatrag.UseVisualStyleBackColor = false;
@@ -91,17 +90,18 @@ namespace eGym
             // 
             // FormaRezervacijaTreninga
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnNatrag);
             this.Controls.Add(this.btnGrupniTrening);
             this.Controls.Add(this.btnIndividualniTrening);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormaRezervacijaTreninga";
             this.Text = "FormaRezervacijaTreninga";
             this.Load += new System.EventHandler(this.FormaRezervacijaTreninga_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaRezervacijaTreninga_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 

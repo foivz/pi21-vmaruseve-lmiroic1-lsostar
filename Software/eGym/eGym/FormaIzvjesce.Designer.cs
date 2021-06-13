@@ -44,10 +44,9 @@ namespace eGym
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(38, 29);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(51, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 44);
+            this.label2.Size = new System.Drawing.Size(152, 55);
             this.label2.TabIndex = 85;
             this.label2.Text = "eGym";
             // 
@@ -56,10 +55,10 @@ namespace eGym
             this.btnNatragIzvjesce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNatragIzvjesce.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNatragIzvjesce.ForeColor = System.Drawing.Color.White;
-            this.btnNatragIzvjesce.Location = new System.Drawing.Point(46, 356);
-            this.btnNatragIzvjesce.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNatragIzvjesce.Location = new System.Drawing.Point(61, 438);
+            this.btnNatragIzvjesce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNatragIzvjesce.Name = "btnNatragIzvjesce";
-            this.btnNatragIzvjesce.Size = new System.Drawing.Size(88, 41);
+            this.btnNatragIzvjesce.Size = new System.Drawing.Size(117, 50);
             this.btnNatragIzvjesce.TabIndex = 92;
             this.btnNatragIzvjesce.Text = "Natrag";
             this.btnNatragIzvjesce.UseVisualStyleBackColor = false;
@@ -68,10 +67,11 @@ namespace eGym
             // reportViewer1
             // 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "eGym.NaruceniSuplementi.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 86);
+            this.reportViewer1.Location = new System.Drawing.Point(16, 106);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(645, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(859, 302);
             this.reportViewer1.TabIndex = 95;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
@@ -86,16 +86,17 @@ namespace eGym
             // 
             // FormaIzvjesce
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 454);
+            this.ClientSize = new System.Drawing.Size(892, 559);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnNatragIzvjesce);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormaIzvjesce";
             this.Text = "FormaIzvjesce";
             this.Load += new System.EventHandler(this.FormaIzvjesce_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaIzvjesce_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.NaruceniSuplementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KorisnikBindingSource)).EndInit();
             this.ResumeLayout(false);

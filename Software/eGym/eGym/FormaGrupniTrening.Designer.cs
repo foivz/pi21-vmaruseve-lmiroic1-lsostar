@@ -33,6 +33,11 @@ namespace eGym
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvGrupniTrening = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.broj_mjesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vrstaVjezbe_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsTermin = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.cmbVrstaVjezbe = new System.Windows.Forms.ComboBox();
@@ -40,11 +45,6 @@ namespace eGym
             this.btnNatrag = new System.Windows.Forms.Button();
             this.dtpOdaberiDatumGrupni = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.broj_mjesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vrstaVjezbe_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupniTrening)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsTermin)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +91,46 @@ namespace eGym
             this.dgvGrupniTrening.Size = new System.Drawing.Size(733, 178);
             this.dgvGrupniTrening.TabIndex = 75;
             this.dgvGrupniTrening.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "od";
+            this.dataGridViewTextBoxColumn1.HeaderText = "od";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "do";
+            this.dataGridViewTextBoxColumn2.HeaderText = "do";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // broj_mjesta
+            // 
+            this.broj_mjesta.DataPropertyName = "broj_mjesta";
+            this.broj_mjesta.HeaderText = "broj_mjesta";
+            this.broj_mjesta.MinimumWidth = 6;
+            this.broj_mjesta.Name = "broj_mjesta";
+            this.broj_mjesta.Width = 125;
+            // 
+            // vrstaVjezbe_id
+            // 
+            this.vrstaVjezbe_id.DataPropertyName = "vrstaVjezbe_id";
+            this.vrstaVjezbe_id.HeaderText = "vrstaVjezbe_id";
+            this.vrstaVjezbe_id.MinimumWidth = 6;
+            this.vrstaVjezbe_id.Name = "vrstaVjezbe_id";
+            this.vrstaVjezbe_id.Width = 125;
             // 
             // bsTermin
             // 
@@ -162,46 +202,6 @@ namespace eGym
             this.label4.TabIndex = 91;
             this.label4.Text = "Odaberi datum:";
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "od";
-            this.dataGridViewTextBoxColumn1.HeaderText = "od";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "do";
-            this.dataGridViewTextBoxColumn2.HeaderText = "do";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // broj_mjesta
-            // 
-            this.broj_mjesta.DataPropertyName = "broj_mjesta";
-            this.broj_mjesta.HeaderText = "broj_mjesta";
-            this.broj_mjesta.MinimumWidth = 6;
-            this.broj_mjesta.Name = "broj_mjesta";
-            this.broj_mjesta.Width = 125;
-            // 
-            // vrstaVjezbe_id
-            // 
-            this.vrstaVjezbe_id.DataPropertyName = "vrstaVjezbe_id";
-            this.vrstaVjezbe_id.HeaderText = "vrstaVjezbe_id";
-            this.vrstaVjezbe_id.MinimumWidth = 6;
-            this.vrstaVjezbe_id.Name = "vrstaVjezbe_id";
-            this.vrstaVjezbe_id.Width = 125;
-            // 
             // FormaGrupniTrening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -220,6 +220,7 @@ namespace eGym
             this.Name = "FormaGrupniTrening";
             this.Text = "Grupni trening";
             this.Load += new System.EventHandler(this.FormaGrupniTrening_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaGrupniTrening_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupniTrening)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsTermin)).EndInit();
             this.ResumeLayout(false);

@@ -159,6 +159,7 @@ namespace eGym
             this.Name = "FormaAzurirajSuplement";
             this.Text = "AzurirajSuplement";
             this.Load += new System.EventHandler(this.FormaAzurirajSuplement_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaAzurirajSuplement_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 
