@@ -34,9 +34,6 @@ namespace eGym
             this.btnAzurirajClanaE = new System.Windows.Forms.Button();
             this.btnNatragClanovi = new System.Windows.Forms.Button();
             this.dgvEvidencijaClanova = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.bsEvidencijaClanova = new System.Windows.Forms.BindingSource(this.components);
             this.korisnickoImeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lozinkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumregistracijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +41,9 @@ namespace eGym
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brojtelefonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsEvidencijaClanova = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaClanova)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsEvidencijaClanova)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +54,7 @@ namespace eGym
             this.btnObrisiClanaE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnObrisiClanaE.ForeColor = System.Drawing.Color.White;
             this.btnObrisiClanaE.Location = new System.Drawing.Point(536, 286);
-            this.btnObrisiClanaE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnObrisiClanaE.Margin = new System.Windows.Forms.Padding(2);
             this.btnObrisiClanaE.Name = "btnObrisiClanaE";
             this.btnObrisiClanaE.Size = new System.Drawing.Size(86, 42);
             this.btnObrisiClanaE.TabIndex = 55;
@@ -68,7 +68,7 @@ namespace eGym
             this.btnAzurirajClanaE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAzurirajClanaE.ForeColor = System.Drawing.Color.White;
             this.btnAzurirajClanaE.Location = new System.Drawing.Point(435, 288);
-            this.btnAzurirajClanaE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAzurirajClanaE.Margin = new System.Windows.Forms.Padding(2);
             this.btnAzurirajClanaE.Name = "btnAzurirajClanaE";
             this.btnAzurirajClanaE.Size = new System.Drawing.Size(86, 41);
             this.btnAzurirajClanaE.TabIndex = 54;
@@ -82,7 +82,7 @@ namespace eGym
             this.btnNatragClanovi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNatragClanovi.ForeColor = System.Drawing.Color.White;
             this.btnNatragClanovi.Location = new System.Drawing.Point(34, 288);
-            this.btnNatragClanovi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNatragClanovi.Margin = new System.Windows.Forms.Padding(2);
             this.btnNatragClanovi.Name = "btnNatragClanovi";
             this.btnNatragClanovi.Size = new System.Drawing.Size(86, 41);
             this.btnNatragClanovi.TabIndex = 52;
@@ -104,39 +104,12 @@ namespace eGym
             this.brojtelefonaDataGridViewTextBoxColumn});
             this.dgvEvidencijaClanova.DataSource = this.bsEvidencijaClanova;
             this.dgvEvidencijaClanova.Location = new System.Drawing.Point(34, 114);
-            this.dgvEvidencijaClanova.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvEvidencijaClanova.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEvidencijaClanova.Name = "dgvEvidencijaClanova";
             this.dgvEvidencijaClanova.RowHeadersWidth = 51;
             this.dgvEvidencijaClanova.RowTemplate.Height = 24;
             this.dgvEvidencijaClanova.Size = new System.Drawing.Size(588, 151);
             this.dgvEvidencijaClanova.TabIndex = 51;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(27, 40);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 44);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "eGym";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(244, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 25);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Evidencija članova";
-            // 
-            // bsEvidencijaClanova
-            // 
-            this.bsEvidencijaClanova.DataSource = typeof(Pristup_podacima.Korisnik);
             // 
             // korisnickoImeDataGridViewTextBoxColumn
             // 
@@ -180,6 +153,33 @@ namespace eGym
             this.brojtelefonaDataGridViewTextBoxColumn.HeaderText = "brojtelefona";
             this.brojtelefonaDataGridViewTextBoxColumn.Name = "brojtelefonaDataGridViewTextBoxColumn";
             // 
+            // bsEvidencijaClanova
+            // 
+            this.bsEvidencijaClanova.DataSource = typeof(Pristup_podacima.Korisnik);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(27, 40);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 44);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "eGym";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(244, 76);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(174, 25);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Evidencija članova";
+            // 
             // FormaEvidencijaClanova
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,7 +191,7 @@ namespace eGym
             this.Controls.Add(this.dgvEvidencijaClanova);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormaEvidencijaClanova";
             this.Text = "FormaEvidencijaClanova";
             this.Load += new System.EventHandler(this.FormaEvidencijaClanova_Load);

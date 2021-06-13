@@ -52,16 +52,15 @@ namespace eGym
                     placeno = "da"
                 };
                 Pristup_podacima.Dohvaćanje_podataka.UpravljanjeKorisnicimaDAL.UnosPrveClanarine(clanarina);
+                MessageBox.Show("Uspješna registracija");
+                FormaPrijava formaPrijava = new FormaPrijava();
+                formaPrijava.Show();
+                this.Hide();
 
             }
             else
                 MessageBox.Show("Morate popuniti sva polja sa vrijednostima");
-
-
-            MessageBox.Show("Uspješna registracija");
-            FormaPrijava formaPrijava = new FormaPrijava();
-            formaPrijava.Show();
-            this.Hide();
+                     
 
             
         }

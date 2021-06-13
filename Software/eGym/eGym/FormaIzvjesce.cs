@@ -30,10 +30,11 @@ namespace eGym
 
         private void FormaIzvjesce_Load(object sender, EventArgs e)
         {
-            foreach (Pristup_podacima.Suplement s in VratiListuNarucenihSuplemenata())
-            {
-
-            }
+            List<Pristup_podacima.Suplement> naruceniSuplementi = new List<Pristup_podacima.Suplement>();
+            naruceniSuplementi = VratiListuNarucenihSuplemenata();
+            NaruceniSuplementBindingSource.DataSource = null;
+            NaruceniSuplementBindingSource.DataSource = naruceniSuplementi;
+            this.reportViewer1.RefreshReport();
         }
         private int VratiBrojProdanihSuplemenata(Pristup_podacima.Suplement suplement)
         {
@@ -63,6 +64,11 @@ namespace eGym
 
 
         private void btnPrintajIzvjesce_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
         {
 
         }

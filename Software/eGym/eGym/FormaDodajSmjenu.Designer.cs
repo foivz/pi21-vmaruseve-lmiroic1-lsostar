@@ -29,6 +29,7 @@ namespace eGym
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblRadnoVrijeme = new System.Windows.Forms.Label();
@@ -38,7 +39,16 @@ namespace eGym
             this.dgvZaposlenici = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpDatum = new System.Windows.Forms.DateTimePicker();
+            this.bsDodajSmjenu = new System.Windows.Forms.BindingSource(this.components);
+            this.korisnickoImeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lozinkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datumregistracijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brojtelefonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsDodajSmjenu)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -114,7 +124,17 @@ namespace eGym
             // 
             // dgvZaposlenici
             // 
+            this.dgvZaposlenici.AutoGenerateColumns = false;
             this.dgvZaposlenici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvZaposlenici.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.korisnickoImeDataGridViewTextBoxColumn,
+            this.lozinkaDataGridViewTextBoxColumn,
+            this.datumregistracijeDataGridViewTextBoxColumn,
+            this.imeDataGridViewTextBoxColumn,
+            this.prezimeDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.brojtelefonaDataGridViewTextBoxColumn});
+            this.dgvZaposlenici.DataSource = this.bsDodajSmjenu;
             this.dgvZaposlenici.Location = new System.Drawing.Point(57, 130);
             this.dgvZaposlenici.Name = "dgvZaposlenici";
             this.dgvZaposlenici.Size = new System.Drawing.Size(456, 150);
@@ -138,6 +158,52 @@ namespace eGym
             this.dtpDatum.Size = new System.Drawing.Size(114, 20);
             this.dtpDatum.TabIndex = 52;
             // 
+            // bsDodajSmjenu
+            // 
+            this.bsDodajSmjenu.DataSource = typeof(Pristup_podacima.Korisnik);
+            // 
+            // korisnickoImeDataGridViewTextBoxColumn
+            // 
+            this.korisnickoImeDataGridViewTextBoxColumn.DataPropertyName = "korisnickoIme";
+            this.korisnickoImeDataGridViewTextBoxColumn.HeaderText = "korisnickoIme";
+            this.korisnickoImeDataGridViewTextBoxColumn.Name = "korisnickoImeDataGridViewTextBoxColumn";
+            // 
+            // lozinkaDataGridViewTextBoxColumn
+            // 
+            this.lozinkaDataGridViewTextBoxColumn.DataPropertyName = "lozinka";
+            this.lozinkaDataGridViewTextBoxColumn.HeaderText = "lozinka";
+            this.lozinkaDataGridViewTextBoxColumn.Name = "lozinkaDataGridViewTextBoxColumn";
+            // 
+            // datumregistracijeDataGridViewTextBoxColumn
+            // 
+            this.datumregistracijeDataGridViewTextBoxColumn.DataPropertyName = "datum_registracije";
+            this.datumregistracijeDataGridViewTextBoxColumn.HeaderText = "datum_registracije";
+            this.datumregistracijeDataGridViewTextBoxColumn.Name = "datumregistracijeDataGridViewTextBoxColumn";
+            // 
+            // imeDataGridViewTextBoxColumn
+            // 
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "ime";
+            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            // 
+            // prezimeDataGridViewTextBoxColumn
+            // 
+            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.HeaderText = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // brojtelefonaDataGridViewTextBoxColumn
+            // 
+            this.brojtelefonaDataGridViewTextBoxColumn.DataPropertyName = "brojtelefona";
+            this.brojtelefonaDataGridViewTextBoxColumn.HeaderText = "brojtelefona";
+            this.brojtelefonaDataGridViewTextBoxColumn.Name = "brojtelefonaDataGridViewTextBoxColumn";
+            // 
             // FormaDodajSmjenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +223,7 @@ namespace eGym
             this.Text = "Dodaj smjenu";
             this.Load += new System.EventHandler(this.FormaDodajSmjenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsDodajSmjenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +240,13 @@ namespace eGym
         private System.Windows.Forms.DataGridView dgvZaposlenici;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpDatum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn korisnickoImeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lozinkaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datumregistracijeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brojtelefonaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bsDodajSmjenu;
     }
 }

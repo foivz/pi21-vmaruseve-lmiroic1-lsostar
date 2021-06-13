@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Pristup_podacima;
+using eGymLibrary;
 
 namespace Poslovna_logika.Provjere_unosa
 {
@@ -37,14 +38,8 @@ namespace Poslovna_logika.Provjere_unosa
         }
         public static bool ProvjeraUnosaKodRegistracije(string kIme,string ime, string prezime, string brojMobitela, string email, string lozinka )
         {
-           if(kIme!=""&&ime!=""&&prezime!=""&&brojMobitela!=""&&email!=""&& lozinka != "")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return ProvjeraUnos.Provjera(kIme, ime, prezime, brojMobitela, email, lozinka);
+
         }
     }
 }
