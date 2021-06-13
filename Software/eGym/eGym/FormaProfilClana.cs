@@ -67,12 +67,6 @@ namespace eGym
         private void formProfilClana_Load(object sender, EventArgs e)
         {
             lblImeIPrezimeClana.Text = Sesija.PrijavljeniKorisnik.ime + " " + Sesija.PrijavljeniKorisnik.prezime;
-
-
-            
-
-            
-
             txtImeClana.Text = Sesija.PrijavljeniKorisnik.ime;
             txtPrezimeClana.Text = Sesija.PrijavljeniKorisnik.prezime;
             txtBrojTelefonaClana.Text = Sesija.PrijavljeniKorisnik.brojtelefona;
@@ -105,11 +99,6 @@ namespace eGym
 
         }
 
-        private void btnUrediProfil_Click(object sender, EventArgs e)
-        {
-            FormaUrediProfilClana formaUrediProfil = new FormaUrediProfilClana();
-            formaUrediProfil.Show();
-            this.Hide();
-        }
+        
     }
 }

@@ -205,24 +205,6 @@
     <Compile Include="FormaRezervacijaTreninga.Designer.cs">
       <DependentUpon>FormaRezervacijaTreninga.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormaUrediKosaricu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormaUrediKosaricu.Designer.cs">
-      <DependentUpon>FormaUrediKosaricu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormaUrediProfilClana.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormaUrediProfilClana.Designer.cs">
-      <DependentUpon>FormaUrediProfilClana.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormaUrediProfilZaposlenika.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormaUrediProfilZaposlenika.Designer.cs">
-      <DependentUpon>FormaUrediProfilZaposlenika.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormIndividualniTrening.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,15 +302,6 @@
     <EmbeddedResource Include="FormaRezervacijaTreninga.resx">
       <DependentUpon>FormaRezervacijaTreninga.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormaUrediKosaricu.resx">
-      <DependentUpon>FormaUrediKosaricu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormaUrediProfilClana.resx">
-      <DependentUpon>FormaUrediProfilClana.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormaUrediProfilZaposlenika.resx">
-      <DependentUpon>FormaUrediProfilZaposlenika.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormIndividualniTrening.resx">
       <DependentUpon>FormIndividualniTrening.cs</DependentUpon>
     </EmbeddedResource>
@@ -350,6 +323,7 @@
     <EmbeddedResource Include="FormaProfilZaposlenika.resx">
       <DependentUpon>FormaProfilZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="eGymHelp.chm" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Clanarina.datasource" />
     <None Include="Properties\DataSources\Korisnik.datasource" />

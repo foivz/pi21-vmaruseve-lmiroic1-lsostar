@@ -52,12 +52,7 @@ namespace eGym
             this.Hide();
         }
 
-        private void btnUrediProfil_Click(object sender, EventArgs e)
-        {
-            FormaUrediProfilZaposlenika formaUrediProfilZaposlenika = new FormaUrediProfilZaposlenika();
-            formaUrediProfilZaposlenika.Show();
-            this.Hide();
-        }
+      
 
         private void btnTermini_Click(object sender, EventArgs e)
         {

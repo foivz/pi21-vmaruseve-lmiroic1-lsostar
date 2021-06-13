@@ -40,25 +40,17 @@ namespace eGym
             this.lblUkupanIznos = new System.Windows.Forms.Label();
             this.txtIznosNaRacunu = new System.Windows.Forms.TextBox();
             this.txtUkupanIznos = new System.Windows.Forms.TextBox();
-            this.btnDodajSuplement = new System.Windows.Forms.Button();
-            this.grbKosarica = new System.Windows.Forms.GroupBox();
-            this.dgvKosarica = new System.Windows.Forms.DataGridView();
-            this.bsSuplementi = new System.Windows.Forms.BindingSource(this.components);
-            this.btnUrediKosaricu = new System.Windows.Forms.Button();
-            this.btnObrisiKosaricu = new System.Windows.Forms.Button();
+            this.bsKosarica = new System.Windows.Forms.BindingSource(this.components);
             this.dgvNazivSuplementa = new System.Windows.Forms.DataGridView();
+            this.txtKolicina = new System.Windows.Forms.TextBox();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stanjeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtKolicina = new System.Windows.Forms.TextBox();
-            this.bsKosarica = new System.Windows.Forms.BindingSource(this.components);
-            this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Suplement = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grbKosarica.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKosarica)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNazivSuplementa)).BeginInit();
+            this.bsSuplementi = new System.Windows.Forms.BindingSource(this.components);
+            this.btnOdaberi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsKosarica)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNazivSuplementa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNaruci
@@ -166,83 +158,9 @@ namespace eGym
             this.txtUkupanIznos.Size = new System.Drawing.Size(217, 22);
             this.txtUkupanIznos.TabIndex = 70;
             // 
-            // btnDodajSuplement
+            // bsKosarica
             // 
-            this.btnDodajSuplement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnDodajSuplement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodajSuplement.ForeColor = System.Drawing.Color.White;
-            this.btnDodajSuplement.Location = new System.Drawing.Point(205, 375);
-            this.btnDodajSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDodajSuplement.Name = "btnDodajSuplement";
-            this.btnDodajSuplement.Size = new System.Drawing.Size(219, 42);
-            this.btnDodajSuplement.TabIndex = 69;
-            this.btnDodajSuplement.Text = "Dodaj";
-            this.btnDodajSuplement.UseVisualStyleBackColor = false;
-            this.btnDodajSuplement.Click += new System.EventHandler(this.btnDodajSuplement_Click);
-            // 
-            // grbKosarica
-            // 
-            this.grbKosarica.Controls.Add(this.dgvKosarica);
-            this.grbKosarica.Controls.Add(this.btnUrediKosaricu);
-            this.grbKosarica.Controls.Add(this.btnObrisiKosaricu);
-            this.grbKosarica.ForeColor = System.Drawing.Color.Black;
-            this.grbKosarica.Location = new System.Drawing.Point(665, 135);
-            this.grbKosarica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbKosarica.Name = "grbKosarica";
-            this.grbKosarica.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbKosarica.Size = new System.Drawing.Size(531, 282);
-            this.grbKosarica.TabIndex = 71;
-            this.grbKosarica.TabStop = false;
-            this.grbKosarica.Text = "Košarica";
-            // 
-            // dgvKosarica
-            // 
-            this.dgvKosarica.AutoGenerateColumns = false;
-            this.dgvKosarica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKosarica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.kolicinaDataGridViewTextBoxColumn,
-            this.Suplement});
-            this.dgvKosarica.DataSource = this.bsKosarica;
-            this.dgvKosarica.Location = new System.Drawing.Point(19, 32);
-            this.dgvKosarica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvKosarica.Name = "dgvKosarica";
-            this.dgvKosarica.RowHeadersWidth = 51;
-            this.dgvKosarica.RowTemplate.Height = 24;
-            this.dgvKosarica.Size = new System.Drawing.Size(491, 174);
-            this.dgvKosarica.TabIndex = 0;
-            this.dgvKosarica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKosarica_CellContentClick);
-            // 
-            // bsSuplementi
-            // 
-            this.bsSuplementi.DataSource = typeof(eGym.Suplement);
-            // 
-            // btnUrediKosaricu
-            // 
-            this.btnUrediKosaricu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnUrediKosaricu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUrediKosaricu.ForeColor = System.Drawing.Color.White;
-            this.btnUrediKosaricu.Location = new System.Drawing.Point(52, 215);
-            this.btnUrediKosaricu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUrediKosaricu.Name = "btnUrediKosaricu";
-            this.btnUrediKosaricu.Size = new System.Drawing.Size(123, 50);
-            this.btnUrediKosaricu.TabIndex = 69;
-            this.btnUrediKosaricu.Text = "Uredi";
-            this.btnUrediKosaricu.UseVisualStyleBackColor = false;
-            this.btnUrediKosaricu.Click += new System.EventHandler(this.btnUrediKosaricu_Click);
-            // 
-            // btnObrisiKosaricu
-            // 
-            this.btnObrisiKosaricu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnObrisiKosaricu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnObrisiKosaricu.ForeColor = System.Drawing.Color.White;
-            this.btnObrisiKosaricu.Location = new System.Drawing.Point(349, 215);
-            this.btnObrisiKosaricu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnObrisiKosaricu.Name = "btnObrisiKosaricu";
-            this.btnObrisiKosaricu.Size = new System.Drawing.Size(123, 50);
-            this.btnObrisiKosaricu.TabIndex = 69;
-            this.btnObrisiKosaricu.Text = "Obriši";
-            this.btnObrisiKosaricu.UseVisualStyleBackColor = false;
-            this.btnObrisiKosaricu.Click += new System.EventHandler(this.btnObrisiKosaricu_Click);
+            this.bsKosarica.DataSource = typeof(Pristup_podacima.NaruceniSuplement);
             // 
             // dgvNazivSuplementa
             // 
@@ -258,9 +176,17 @@ namespace eGym
             this.dgvNazivSuplementa.Name = "dgvNazivSuplementa";
             this.dgvNazivSuplementa.RowHeadersWidth = 51;
             this.dgvNazivSuplementa.RowTemplate.Height = 24;
-            this.dgvNazivSuplementa.Size = new System.Drawing.Size(390, 105);
+            this.dgvNazivSuplementa.Size = new System.Drawing.Size(549, 105);
             this.dgvNazivSuplementa.TabIndex = 0;
             this.dgvNazivSuplementa.SelectionChanged += new System.EventHandler(this.dgvNazivSuplementa_SelectionChanged);
+            // 
+            // txtKolicina
+            // 
+            this.txtKolicina.Location = new System.Drawing.Point(207, 334);
+            this.txtKolicina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtKolicina.Name = "txtKolicina";
+            this.txtKolicina.Size = new System.Drawing.Size(217, 22);
+            this.txtKolicina.TabIndex = 70;
             // 
             // nazivDataGridViewTextBoxColumn
             // 
@@ -286,45 +212,35 @@ namespace eGym
             this.stanjeDataGridViewTextBoxColumn.Name = "stanjeDataGridViewTextBoxColumn";
             this.stanjeDataGridViewTextBoxColumn.Width = 125;
             // 
-            // txtKolicina
+            // bsSuplementi
             // 
-            this.txtKolicina.Location = new System.Drawing.Point(207, 334);
-            this.txtKolicina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(217, 22);
-            this.txtKolicina.TabIndex = 70;
+            this.bsSuplementi.DataSource = typeof(eGym.Suplement);
             // 
-            // bsKosarica
+            // btnOdaberi
             // 
-            this.bsKosarica.DataSource = typeof(Pristup_podacima.NaruceniSuplement);
-            // 
-            // kolicinaDataGridViewTextBoxColumn
-            // 
-            this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
-            this.kolicinaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // Suplement
-            // 
-            this.Suplement.DataPropertyName = "Suplement";
-            this.Suplement.HeaderText = "Suplement";
-            this.Suplement.MinimumWidth = 6;
-            this.Suplement.Name = "Suplement";
-            this.Suplement.Width = 125;
+            this.btnOdaberi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnOdaberi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOdaberi.ForeColor = System.Drawing.Color.White;
+            this.btnOdaberi.Location = new System.Drawing.Point(210, 369);
+            this.btnOdaberi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOdaberi.Name = "btnOdaberi";
+            this.btnOdaberi.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnOdaberi.Size = new System.Drawing.Size(123, 50);
+            this.btnOdaberi.TabIndex = 71;
+            this.btnOdaberi.Text = "Odaberi";
+            this.btnOdaberi.UseVisualStyleBackColor = false;
+            this.btnOdaberi.Click += new System.EventHandler(this.btnOdaberi_Click);
             // 
             // FormaNaruciSuplement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1240, 612);
+            this.ClientSize = new System.Drawing.Size(853, 612);
+            this.Controls.Add(this.btnOdaberi);
             this.Controls.Add(this.dgvNazivSuplementa);
-            this.Controls.Add(this.grbKosarica);
             this.Controls.Add(this.txtUkupanIznos);
             this.Controls.Add(this.txtKolicina);
             this.Controls.Add(this.txtIznosNaRacunu);
-            this.Controls.Add(this.btnDodajSuplement);
             this.Controls.Add(this.btnNaruci);
             this.Controls.Add(this.btnNatrag);
             this.Controls.Add(this.lblUkupanIznos);
@@ -337,11 +253,9 @@ namespace eGym
             this.Name = "FormaNaruciSuplement";
             this.Text = "Naruči suplement";
             this.Load += new System.EventHandler(this.FormaNaruciSuplement_Load);
-            this.grbKosarica.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKosarica)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNazivSuplementa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsKosarica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNazivSuplementa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,11 +273,6 @@ namespace eGym
         private System.Windows.Forms.Label lblUkupanIznos;
         private System.Windows.Forms.TextBox txtIznosNaRacunu;
         private System.Windows.Forms.TextBox txtUkupanIznos;
-        private System.Windows.Forms.Button btnDodajSuplement;
-        private System.Windows.Forms.GroupBox grbKosarica;
-        private System.Windows.Forms.DataGridView dgvKosarica;
-        private System.Windows.Forms.Button btnUrediKosaricu;
-        private System.Windows.Forms.Button btnObrisiKosaricu;
         private System.Windows.Forms.DataGridView dgvNazivSuplementa;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenaDataGridViewTextBoxColumn;
@@ -371,7 +280,6 @@ namespace eGym
         private System.Windows.Forms.BindingSource bsSuplementi;
         private System.Windows.Forms.TextBox txtKolicina;
         private System.Windows.Forms.BindingSource bsKosarica;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Suplement;
+        private System.Windows.Forms.Button btnOdaberi;
     }
 }

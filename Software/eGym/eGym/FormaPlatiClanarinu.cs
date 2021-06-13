@@ -101,7 +101,8 @@ namespace eGym
             {
                 MessageBox.Show("Članarina još traje");
             }
-            
+            Mailer.PosaljiObavijestNaMail(Sesija.PrijavljeniKorisnik, "Obavijest o uspjesnoj plaćenoj članarini.", "eGym - plaćena članarina");
+
             formProfilClana formProfilClana = new formProfilClana();
             formProfilClana.Show();
             this.Close();
