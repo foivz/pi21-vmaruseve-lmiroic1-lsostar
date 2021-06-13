@@ -30,23 +30,14 @@ namespace eGym
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.NaruceniSuplementBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.KorisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.btnNatragIzvjesce = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.NaruceniSuplementBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.KorisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.NaruceniSuplementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KorisnikBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // NaruceniSuplementBindingSource
-            // 
-            this.NaruceniSuplementBindingSource.DataSource = typeof(Pristup_podacima.NaruceniSuplement);
-            this.NaruceniSuplementBindingSource.CurrentChanged += new System.EventHandler(this.NaruceniSuplementBindingSource_CurrentChanged);
-            // 
-            // KorisnikBindingSource
-            // 
-            this.KorisnikBindingSource.DataSource = typeof(Pristup_podacima.Korisnik);
             // 
             // label2
             // 
@@ -66,7 +57,7 @@ namespace eGym
             this.btnNatragIzvjesce.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNatragIzvjesce.ForeColor = System.Drawing.Color.White;
             this.btnNatragIzvjesce.Location = new System.Drawing.Point(46, 356);
-            this.btnNatragIzvjesce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNatragIzvjesce.Margin = new System.Windows.Forms.Padding(2);
             this.btnNatragIzvjesce.Name = "btnNatragIzvjesce";
             this.btnNatragIzvjesce.Size = new System.Drawing.Size(88, 41);
             this.btnNatragIzvjesce.TabIndex = 92;
@@ -84,6 +75,15 @@ namespace eGym
             this.reportViewer1.TabIndex = 95;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
+            // NaruceniSuplementBindingSource
+            // 
+            this.NaruceniSuplementBindingSource.DataSource = typeof(Pristup_podacima.NaruceniSuplement);
+            this.NaruceniSuplementBindingSource.CurrentChanged += new System.EventHandler(this.NaruceniSuplementBindingSource_CurrentChanged);
+            // 
+            // KorisnikBindingSource
+            // 
+            this.KorisnikBindingSource.DataSource = typeof(Pristup_podacima.Korisnik);
+            // 
             // FormaIzvjesce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,7 +92,7 @@ namespace eGym
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnNatragIzvjesce);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormaIzvjesce";
             this.Text = "FormaIzvjesce";
             this.Load += new System.EventHandler(this.FormaIzvjesce_Load);
