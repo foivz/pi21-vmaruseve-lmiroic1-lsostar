@@ -48,7 +48,7 @@ namespace eGym
 
         private void cmbVrstaVjezbe_SelectedIndexChanged(object sender, EventArgs e)
         {
-           VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbe.SelectedItem as VrstaVjezbe;
+            VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbe.SelectedItem as VrstaVjezbe;
             DateTime zeljenidatum = dtpOdaberiDatumGrupni.Value.Date;
             List<Termin> terminiGrupnogTreninga = new List<Termin>();
             using (var context = new Entities())
@@ -90,16 +90,18 @@ namespace eGym
 
         private void FormaGrupniTrening_Load(object sender, EventArgs e)
         {
-            List<string> listaVjezbi = new List<string>();
+            List<VrstaVjezbe> listaVjezbi = new List<VrstaVjezbe>();
             using (var context = new Entities())
             {
                 var upit = (from vv in context.VrstaVjezbes.Include("Termins")
-                             select vv.naziv).ToList();
+                             select vv).ToList();
                 listaVjezbi = upit;
              
             }
             cmbVrstaVjezbe.DataSource = null;
             cmbVrstaVjezbe.DataSource = listaVjezbi;
+            cmbVrstaVjezbe.DisplayMember = "naziv";
+            cmbVrstaVjezbe.ValueMember = "ID";
         }
 
         private void dtpOdaberiDatumGrupni_ValueChanged(object sender, EventArgs e)
