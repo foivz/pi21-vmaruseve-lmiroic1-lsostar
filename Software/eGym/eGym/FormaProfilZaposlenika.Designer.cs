@@ -247,7 +247,7 @@ namespace eGym
             // eGymToolStripMenuItem
             // 
             this.eGymToolStripMenuItem.Name = "eGymToolStripMenuItem";
-            this.eGymToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eGymToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.eGymToolStripMenuItem.Text = "Korisnički priručnik";
             this.eGymToolStripMenuItem.Click += new System.EventHandler(this.eGymToolStripMenuItem_Click);
             // 
@@ -279,6 +279,7 @@ namespace eGym
             this.Name = "FormProfilZaposlenika";
             this.Text = "Zaposlenik";
             this.Load += new System.EventHandler(this.FormProfilZaposlenika_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormProfilZaposlenika_HelpRequested);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

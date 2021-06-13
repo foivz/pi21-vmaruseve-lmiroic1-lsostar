@@ -325,10 +325,10 @@
     <EmbeddedResource Include="FormaProfilZaposlenika.resx">
       <DependentUpon>FormaProfilZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="eGym_Help.chm">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="eGym_Help.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CustomToolNamespace>eGym_Help.chm</CustomToolNamespace>
-    </None>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Clanarina.datasource" />
     <None Include="Properties\DataSources\Korisnik.datasource" />

@@ -79,7 +79,13 @@ namespace eGym
 
         private void eGymToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, "file://C:\\PI Projekt\\Software\\eGym\\eGym\\eGym_Help.chm");
+           // Help.ShowHelp(this, "file://C:\\PI Projekt\\Software\\eGym\\eGym\\eGym_Help.chm");
+            //System.Windows.Forms.Help.ShowHelp(this, "eGym_Help.chm", HelpNavigator.Topic, "O aplikaciji.html");
+        }
+
+        private void FormProfilZaposlenika_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, "eGym_Help.chm", HelpNavigator.Topic, "O aplikaciji.html");
         }
     }
 }
