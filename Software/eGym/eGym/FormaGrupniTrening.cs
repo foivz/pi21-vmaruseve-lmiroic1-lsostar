@@ -22,7 +22,20 @@ namespace eGym
 
         private void btnRezerviraj_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Uspješno rezerviran trening.");
+            Termin odabraniTermin = dgvGrupniTrening.CurrentRow.DataBoundItem as Termin;
+            using (var context = new Entities())
+            {
+                Termin query = (from t in context.Termins
+                                where t.ID == odabraniTermin.ID
+                                select t).SingleOrDefault();
+                context.Termins.Attach(query);
+                query.broj_mjesta = query.broj_mjesta - 1;
+                context.SaveChanges();
+            }
+            MessageBox.Show("Uspješno rezerviran trening!");
+            VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbe.SelectedItem as VrstaVjezbe;
+            Mailer.PosaljiObavijestNaMail(Sesija.PrijavljeniKorisnik, "Obavijest o uspjesnoj rezervaciji termina grupnog treninga koji počinje " + odabraniTermin.od + " h, a vrsta vježbe je "+ vrstaVjezbe.naziv, " Rezervacija individualnog terninga");
+            
         }
 
         private void btnNatrag_Click(object sender, EventArgs e)
@@ -32,21 +45,22 @@ namespace eGym
             this.Hide();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void cmbVrstaVjezbe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbe.SelectedItem as VrstaVjezbe;
-            using(var context = new Entities())
+           VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbe.SelectedItem as VrstaVjezbe;
+            DateTime zeljenidatum = dtpOdaberiDatumGrupni.Value.Date;
+            List<Termin> terminiGrupnogTreninga = new List<Termin>();
+            using (var context = new Entities())
             {
-                var upit = from t in context.Termins.Include("Korisnik").Include("Trening").Include("VrstaVjezbe")
-                           where t.vrstaVjezbe_id == vrstaVjezbe.ID
-                           select t;
-                dgvGrupniTrening.DataSource = upit.ToList();
+                var upit = (from t in context.Termins
+                            where t.vrstaVjezbe_id == vrstaVjezbe.ID &&  t.od.Month == zeljenidatum.Month && t.od.Day == zeljenidatum.Day && t.broj_mjesta >= 1
+                             select t).ToList();
+                terminiGrupnogTreninga = upit;
             }
+            dgvGrupniTrening.DataSource = null;
+            dgvGrupniTrening.DataSource = terminiGrupnogTreninga; 
+        
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -76,21 +90,32 @@ namespace eGym
 
         private void FormaGrupniTrening_Load(object sender, EventArgs e)
         {
-            
-            DohvatiVrsteVjezbi();
-        }
-
-    
-
-        private void DohvatiVrsteVjezbi()
-        {
+            List<string> listaVjezbi = new List<string>();
             using (var context = new Entities())
             {
-                var upit = from vv in context.VrstaVjezbes.Include("Termin")
-                           select vv.naziv;
-                cmbVrstaVjezbe.DataSource = upit.ToList();
-
+                var upit = (from vv in context.VrstaVjezbes.Include("Termins")
+                             select vv.naziv).ToList();
+                listaVjezbi = upit;
+             
             }
+            cmbVrstaVjezbe.DataSource = null;
+            cmbVrstaVjezbe.DataSource = listaVjezbi;
+        }
+
+        private void dtpOdaberiDatumGrupni_ValueChanged(object sender, EventArgs e)
+        {
+            VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbe.SelectedItem as VrstaVjezbe;
+            DateTime zeljenidatum = dtpOdaberiDatumGrupni.Value.Date;
+            List<Termin> terminiGrupnogTreninga = new List<Termin>();
+            using (var context = new Entities())
+            {
+                var query = (from t in context.Termins
+                             where t.vrstaVjezbe_id == vrstaVjezbe.ID && t.trening_id == 2 && t.od.Month == zeljenidatum.Month && t.od.Day == zeljenidatum.Day && t.broj_mjesta >= 1
+                             select t).ToList();
+                terminiGrupnogTreninga = query;
+            }
+            dgvGrupniTrening.DataSource = null;
+            dgvGrupniTrening.DataSource = terminiGrupnogTreninga;
         }
     }
 }

@@ -33,16 +33,18 @@ namespace eGym
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvGrupniTrening = new System.Windows.Forms.DataGridView();
+            this.bsTermin = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.cmbVrstaVjezbe = new System.Windows.Forms.ComboBox();
             this.btnRezerviraj = new System.Windows.Forms.Button();
             this.btnNatrag = new System.Windows.Forms.Button();
-            this.bsTermin = new System.Windows.Forms.BindingSource(this.components);
+            this.dtpOdaberiDatumGrupni = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zaposlenik_korisnickoIme = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.broj_mjesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vrstaVjezbe_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupniTrening)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsTermin)).BeginInit();
             this.SuspendLayout();
@@ -78,8 +80,8 @@ namespace eGym
             this.iDDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.zaposlenik_korisnickoIme,
-            this.broj_mjesta});
+            this.broj_mjesta,
+            this.vrstaVjezbe_id});
             this.dgvGrupniTrening.DataSource = this.bsTermin;
             this.dgvGrupniTrening.Location = new System.Drawing.Point(39, 144);
             this.dgvGrupniTrening.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -89,6 +91,10 @@ namespace eGym
             this.dgvGrupniTrening.Size = new System.Drawing.Size(733, 178);
             this.dgvGrupniTrening.TabIndex = 75;
             this.dgvGrupniTrening.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // bsTermin
+            // 
+            this.bsTermin.DataSource = typeof(Pristup_podacima.Termin);
             // 
             // label3
             // 
@@ -138,9 +144,23 @@ namespace eGym
             this.btnNatrag.UseVisualStyleBackColor = false;
             this.btnNatrag.Click += new System.EventHandler(this.btnNatrag_Click);
             // 
-            // bsTermin
+            // dtpOdaberiDatumGrupni
             // 
-            this.bsTermin.DataSource = typeof(Pristup_podacima.Termin);
+            this.dtpOdaberiDatumGrupni.Location = new System.Drawing.Point(208, 382);
+            this.dtpOdaberiDatumGrupni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpOdaberiDatumGrupni.Name = "dtpOdaberiDatumGrupni";
+            this.dtpOdaberiDatumGrupni.Size = new System.Drawing.Size(235, 22);
+            this.dtpOdaberiDatumGrupni.TabIndex = 92;
+            this.dtpOdaberiDatumGrupni.ValueChanged += new System.EventHandler(this.dtpOdaberiDatumGrupni_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(84, 382);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 17);
+            this.label4.TabIndex = 91;
+            this.label4.Text = "Odaberi datum:";
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -166,14 +186,6 @@ namespace eGym
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 125;
             // 
-            // zaposlenik_korisnickoIme
-            // 
-            this.zaposlenik_korisnickoIme.DataPropertyName = "zaposlenik_korisnickoIme";
-            this.zaposlenik_korisnickoIme.HeaderText = "zaposlenik_korisnickoIme";
-            this.zaposlenik_korisnickoIme.MinimumWidth = 6;
-            this.zaposlenik_korisnickoIme.Name = "zaposlenik_korisnickoIme";
-            this.zaposlenik_korisnickoIme.Width = 125;
-            // 
             // broj_mjesta
             // 
             this.broj_mjesta.DataPropertyName = "broj_mjesta";
@@ -182,11 +194,21 @@ namespace eGym
             this.broj_mjesta.Name = "broj_mjesta";
             this.broj_mjesta.Width = 125;
             // 
+            // vrstaVjezbe_id
+            // 
+            this.vrstaVjezbe_id.DataPropertyName = "vrstaVjezbe_id";
+            this.vrstaVjezbe_id.HeaderText = "vrstaVjezbe_id";
+            this.vrstaVjezbe_id.MinimumWidth = 6;
+            this.vrstaVjezbe_id.Name = "vrstaVjezbe_id";
+            this.vrstaVjezbe_id.Width = 125;
+            // 
             // FormaGrupniTrening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 522);
+            this.Controls.Add(this.dtpOdaberiDatumGrupni);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnRezerviraj);
             this.Controls.Add(this.btnNatrag);
             this.Controls.Add(this.cmbVrstaVjezbe);
@@ -215,10 +237,12 @@ namespace eGym
         private System.Windows.Forms.Button btnRezerviraj;
         private System.Windows.Forms.Button btnNatrag;
         private System.Windows.Forms.BindingSource bsTermin;
+        private System.Windows.Forms.DateTimePicker dtpOdaberiDatumGrupni;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zaposlenik_korisnickoIme;
         private System.Windows.Forms.DataGridViewTextBoxColumn broj_mjesta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vrstaVjezbe_id;
     }
 }

@@ -219,6 +219,7 @@
     </Compile>
     <Compile Include="Iznimke\Iznimka.cs" />
     <Compile Include="Iznimke\NovaIznimka.cs" />
+    <Compile Include="NaruceniSuplementView.cs" />
     <Compile Include="NovacKorisnikaView.cs" />
     <Compile Include="PocetnaStranica1.cs">
       <SubType>Form</SubType>
