@@ -30,11 +30,32 @@ namespace eGym
 
         private void FormaIzvjesce_Load(object sender, EventArgs e)
         {
+           /* using (var context = new Entities())
+            {
+                var upit = from ns in context.NaruceniSuplements
+                           select new NaruceniSuplementView
+                           {
+                               SuplementID = ns.suplement_id,
+                               Kolicina = ns.kolicina,
+                               KorisnickoIme = ns.korisnik_korisnickoIme,
+                               DatumNarudzbe = ns.datum_narudzbe
+                           };
+                List<NaruceniSuplementView> sviNaruceniSuplementi = upit.ToList();
+                foreach (NaruceniSuplementView rezultat in sviNaruceniSuplementi)
+                {
+                    rezultat.DatumNarudzbe = rezultat.DatumNarudzbe.Date;
+                }
+                NaruceniSuplementBindingSource.DataSource = sviNaruceniSuplementi;
+
+            }
+            this.reportViewer1.Refresh(); */
+
             List<Pristup_podacima.Suplement> naruceniSuplementi = new List<Pristup_podacima.Suplement>();
             naruceniSuplementi = VratiListuNarucenihSuplemenata();
             NaruceniSuplementBindingSource.DataSource = null;
             NaruceniSuplementBindingSource.DataSource = naruceniSuplementi;
             this.reportViewer1.RefreshReport();
+
         }
         private int VratiBrojProdanihSuplemenata(Pristup_podacima.Suplement suplement)
         {
@@ -69,6 +90,11 @@ namespace eGym
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NaruceniSuplementBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }
