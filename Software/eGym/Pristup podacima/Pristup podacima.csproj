@@ -54,7 +54,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Dohvaćanje podataka\UpravljanjeClanarinamaDAL.cs" />
     <Compile Include="Dohvaćanje podataka\UpravljanjeKorisnicimaDAL.cs" />
+    <Compile Include="Dohvaćanje podataka\UpravljanjeRezervacijamaDAL.cs" />
     <Compile Include="Dohvaćanje podataka\UpravljanjeSmjenamaDAL.cs" />
     <Compile Include="Dohvaćanje podataka\UpravljanjeSuplementimaDAL.cs" />
     <Compile Include="Dohvaćanje podataka\UpravljanjeTerminimaDAL.cs" />

@@ -329,16 +329,25 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CustomToolNamespace>eGym_Help.chm</CustomToolNamespace>
     </Content>
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Clanarina.datasource" />
     <None Include="Properties\DataSources\Korisnik.datasource" />
     <None Include="Properties\DataSources\NaruceniSuplement.datasource" />
+    <None Include="Properties\DataSources\Pristup_podacima.Clanarina.datasource" />
+    <None Include="Properties\DataSources\Pristup_podacima.Class1.datasource" />
+    <None Include="Properties\DataSources\Pristup_podacima.Entities.datasource" />
     <None Include="Properties\DataSources\Pristup_podacima.Korisnik.datasource" />
     <None Include="Properties\DataSources\Pristup_podacima.NaruceniSuplement.datasource" />
     <None Include="Properties\DataSources\Pristup_podacima.RezervacijaTreninga.datasource" />
+    <None Include="Properties\DataSources\Pristup_podacima.Smjena.datasource" />
     <None Include="Properties\DataSources\Pristup_podacima.SmjenaZaposlenika.datasource" />
     <None Include="Properties\DataSources\Pristup_podacima.Suplement.datasource" />
     <None Include="Properties\DataSources\Pristup_podacima.Termin.datasource" />
+    <None Include="Properties\DataSources\Pristup_podacima.Trening.datasource" />
+    <None Include="Properties\DataSources\Pristup_podacima.UlogaUTeretani.datasource" />
+    <None Include="Properties\DataSources\Pristup_podacima.VrstaClanarine.datasource" />
+    <None Include="Properties\DataSources\Pristup_podacima.VrstaVjezbe.datasource" />
     <None Include="Properties\DataSources\SmjenaZaposlenika.datasource" />
     <None Include="Properties\DataSources\Suplement.datasource" />
     <None Include="Properties\DataSources\Termin.datasource" />

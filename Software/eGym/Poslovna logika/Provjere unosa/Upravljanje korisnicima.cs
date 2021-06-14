@@ -41,5 +41,15 @@ namespace Poslovna_logika.Provjere_unosa
             return ProvjeraUnos.Provjera(kIme, ime, prezime, brojMobitela, email, lozinka);
 
         }
+        public static bool ProvjeraKorisnikaKodRegistracije(string korisnickoIme,string lozinka)
+        {
+            Korisnik registriraniKorisnik=Pristup_podacima.Dohvaćanje_podataka.UpravljanjeKorisnicimaDAL.DohvatiKorisnika(korisnickoIme, lozinka);
+            if (registriraniKorisnik == null)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
     }
 }

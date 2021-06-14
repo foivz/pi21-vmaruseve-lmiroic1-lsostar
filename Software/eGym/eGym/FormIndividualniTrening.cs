@@ -24,17 +24,21 @@ namespace eGym
         private void btnRezervirajIT_Click(object sender, EventArgs e)
         {
             Termin odabraniTermin = dgvIndividualniTrening.CurrentRow.DataBoundItem as Termin;
-            using (var context = new Entities())
+            
+            RezervacijaTreninga rezervacijaTreninga = new RezervacijaTreninga
             {
-                Termin query = (from t in context.Termins
-                             where t.ID==odabraniTermin.ID
-                             select t).SingleOrDefault();
-                context.Termins.Attach(query);
-                query.broj_mjesta = query.broj_mjesta - 1;
-                context.SaveChanges();
-            }
+                trening_id = 1,
+                korisnik_korisnickoIme = Sesija.PrijavljeniKorisnik.korisnickoIme,
+                vrijemeRezervacije = DateTime.Now
+
+            };
+            Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.Rezerviraj(rezervacijaTreninga);
+            Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTermine(odabraniTermin);
             MessageBox.Show("Uspješno rezerviran trening!");
             Korisnik trener = cmbOdabirTrenera.SelectedItem as Korisnik;
+            DateTime zeljenidatum = dtpOdaberiDatumIndividualni.Value.Date;
+            dgvIndividualniTrening.DataSource = null;
+            dgvIndividualniTrening.DataSource = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTerminePremaTreneru(trener, zeljenidatum);
             Mailer.PosaljiObavijestNaMail(Sesija.PrijavljeniKorisnik, "Obavijest o uspjesnoj rezervaciji termina individualnog treninga koji počinje "+ odabraniTermin.od+" h, a vodi ga "+trener.ime +" "+trener.prezime, "Rezervacija individualnog terninga");
         }
 
@@ -47,16 +51,9 @@ namespace eGym
 
         private void FormIndividualniTrening_Load(object sender, EventArgs e)
         {
-            List<Korisnik> treneri = new List<Korisnik>();
-            using (var context = new Entities())
-            {
-                var query = (from k in context.Korisniks
-                             where k.uloga_id == 2
-                             select k).ToList();
-                treneri = query;
-            }
+    
             cmbOdabirTrenera.DataSource = null;
-            cmbOdabirTrenera.DataSource = treneri;
+            cmbOdabirTrenera.DataSource = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTrenere();
             cmbOdabirTrenera.DisplayMember = "ime" + "prezime";
             cmbOdabirTrenera.ValueMember = "korisnickoIme";
 
@@ -66,32 +63,18 @@ namespace eGym
         {           
             Korisnik trener = cmbOdabirTrenera.SelectedItem as Korisnik;
             DateTime zeljenidatum = dtpOdaberiDatumIndividualni.Value.Date;
-            List<Termin> terminiIndividualnihTreninga = new List<Termin>();
-            using (var context = new Entities())
-            {
-                var query = (from t in context.Termins
-                             where t.zaposlenik_korisnickoIme == trener.korisnickoIme && t.vrstaVjezbe_id == 1 && t.od.Month == zeljenidatum.Month && t.od.Day == zeljenidatum.Day&&t.broj_mjesta>=1
-                             select t).ToList();
-                terminiIndividualnihTreninga = query;
-            }
+            
             dgvIndividualniTrening.DataSource = null;
-            dgvIndividualniTrening.DataSource = terminiIndividualnihTreninga;
+            dgvIndividualniTrening.DataSource = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTerminePremaTreneru(trener, zeljenidatum);
         }
 
         private void dtpOdaberiDatumIndividualni_ValueChanged(object sender, EventArgs e)
         {
             Korisnik trener = cmbOdabirTrenera.SelectedItem as Korisnik;
             DateTime zeljenidatum = dtpOdaberiDatumIndividualni.Value.Date;
-            List<Termin> terminiIndividualnihTreninga = new List<Termin>();
-            using (var context = new Entities())
-            {
-                var query = (from t in context.Termins
-                             where t.zaposlenik_korisnickoIme == trener.korisnickoIme && t.vrstaVjezbe_id == 1 && t.od.Month== zeljenidatum.Month&&t.od.Day==zeljenidatum.Day&&t.broj_mjesta>=1
-                             select t).ToList();
-                terminiIndividualnihTreninga = query;
-            }
+            
             dgvIndividualniTrening.DataSource = null;
-            dgvIndividualniTrening.DataSource = terminiIndividualnihTreninga;
+            dgvIndividualniTrening.DataSource = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTerminePremaTreneru(trener, zeljenidatum);
         }
 
         private void FormIndividualniTrening_HelpRequested(object sender, HelpEventArgs hlpevent)
