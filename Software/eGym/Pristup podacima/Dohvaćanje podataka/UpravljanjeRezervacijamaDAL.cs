@@ -11,14 +11,14 @@ namespace Pristup_podacima.Dohvaćanje_podataka
         public static void VratiTermine(Termin termin)
         {
             
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                Termin query = (from t in context.Termins
+                Termin upit = (from t in db.Termins
                                 where t.ID == termin.ID
                                 select t).SingleOrDefault();
-                context.Termins.Attach(query);
-                query.broj_mjesta = query.broj_mjesta - 1;
-                context.SaveChanges();
+                db.Termins.Attach(upit);
+                upit.broj_mjesta = upit.broj_mjesta - 1;
+                db.SaveChanges();
             }
         }
         public static void Rezerviraj(RezervacijaTreninga rezervacija)
@@ -35,12 +35,12 @@ namespace Pristup_podacima.Dohvaćanje_podataka
         {
             List<Korisnik> treneri = new List<Korisnik>();
 
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var query = (from k in context.Korisniks
+                var upit = (from k in db.Korisniks
                              where k.uloga_id == 2
                              select k).ToList();
-                treneri = query;
+                treneri = upit;
 
             }
             return treneri;
@@ -50,21 +50,21 @@ namespace Pristup_podacima.Dohvaćanje_podataka
         public static List<Termin> VratiTerminePremaTreneru(Korisnik trener, DateTime zeljenidatum)
         {
             List<Termin> terminiIndividualnihTreninga = new List<Termin>();
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var query = (from t in context.Termins
+                var upit = (from t in db.Termins
                              where t.zaposlenik_korisnickoIme == trener.korisnickoIme && t.vrstaVjezbe_id == 1 && t.od.Month == zeljenidatum.Month && t.od.Day == zeljenidatum.Day && t.broj_mjesta >= 1
                              select t).ToList();
-                terminiIndividualnihTreninga = query;
+                terminiIndividualnihTreninga = upit;
             }
             return terminiIndividualnihTreninga;
         }
         public static List<Termin> VratiTerminePremaVrstiVjezbe(VrstaVjezbe vrstavjezbe, DateTime zeljenidatum)
         {
             List<Termin> terminiGrupnogTreninga = new List<Termin>();
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var upit = (from t in context.Termins
+                var upit = (from t in db.Termins
                             where t.vrstaVjezbe_id == vrstavjezbe.ID && t.od.Month == zeljenidatum.Month && t.od.Day == zeljenidatum.Day && t.broj_mjesta >= 1
                             select t).ToList();
                 terminiGrupnogTreninga = upit;
@@ -74,9 +74,9 @@ namespace Pristup_podacima.Dohvaćanje_podataka
         public static List<VrstaVjezbe> VratiVrsteVjezbi()
         {
             List<VrstaVjezbe> listaVjezbi = new List<VrstaVjezbe>();
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var upit = (from vv in context.VrstaVjezbes.Include("Termins")
+                var upit = (from vv in db.VrstaVjezbes.Include("Termins")
                             select vv).ToList();
                 listaVjezbi = upit;
 

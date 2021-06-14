@@ -10,21 +10,21 @@ namespace Pristup_podacima.Dohvaćanje_podataka
     {
         public static bool VratiVrijemePlacanja(Korisnik korisnik)
         {
-            List<Clanarina> clanarinas = new List<Clanarina>();
+            List<Clanarina> clanarina = new List<Clanarina>();
             bool clanarinaPlacena = false;
-            using (var contex = new Entities())
+            using (var db = new Entities())
             {
-                var query = from c in contex.Clanarinas.Include("Korisnik")
+                var upit = from c in db.Clanarinas.Include("Korisnik")
                             where c.korisnik_korisnickoIme == korisnik.korisnickoIme
                             orderby c.ID
                             select c;
 
-                foreach (var item in query)
+                foreach (var item in upit)
                 {
-                    clanarinas.Add(item);
+                    clanarina.Add(item);
                 }
 
-                DateTime vrijediDo = clanarinas.Last().vrijedi_do;
+                DateTime vrijediDo = clanarina.Last().vrijedi_do;
 
                 if (vrijediDo > DateTime.Now)
                 {
@@ -58,11 +58,11 @@ namespace Pristup_podacima.Dohvaćanje_podataka
         {
             List<VrstaClanarine> sveClanarine = new List<VrstaClanarine>();
 
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var query = from vc in context.VrstaClanarines.Include("Clanarinas")
+                var upit = from vc in db.VrstaClanarines.Include("Clanarinas")
                             select vc;
-                sveClanarine = query.ToList();
+                sveClanarine = upit.ToList();
 
             }
             return sveClanarine;
