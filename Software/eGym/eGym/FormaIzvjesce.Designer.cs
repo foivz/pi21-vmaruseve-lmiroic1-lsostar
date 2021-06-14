@@ -66,19 +66,18 @@ namespace eGym
             // 
             // reportViewer1
             // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "eGym.NaruceniSuplementi.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(16, 106);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "eGym.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(20, 95);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(859, 302);
             this.reportViewer1.TabIndex = 95;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // NaruceniSuplementBindingSource
             // 
             this.NaruceniSuplementBindingSource.DataSource = typeof(Pristup_podacima.NaruceniSuplement);
-            this.NaruceniSuplementBindingSource.CurrentChanged += new System.EventHandler(this.NaruceniSuplementBindingSource_CurrentChanged);
+            
             // 
             // KorisnikBindingSource
             // 
@@ -96,7 +95,6 @@ namespace eGym
             this.Name = "FormaIzvjesce";
             this.Text = "FormaIzvjesce";
             this.Load += new System.EventHandler(this.FormaIzvjesce_Load);
-            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaIzvjesce_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.NaruceniSuplementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KorisnikBindingSource)).EndInit();
             this.ResumeLayout(false);
