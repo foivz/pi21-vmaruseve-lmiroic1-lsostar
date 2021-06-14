@@ -163,11 +163,11 @@
     <Compile Include="FormaGrupniTrening.Designer.cs">
       <DependentUpon>FormaGrupniTrening.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormaIzvjesce.cs">
+    <Compile Include="FormaIzvjesce1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormaIzvjesce.Designer.cs">
-      <DependentUpon>FormaIzvjesce.cs</DependentUpon>
+    <Compile Include="FormaIzvjesce1.Designer.cs">
+      <DependentUpon>FormaIzvjesce1.cs</DependentUpon>
     </Compile>
     <Compile Include="FormaNaruciSuplement.cs">
       <SubType>Form</SubType>
@@ -282,8 +282,8 @@
     <EmbeddedResource Include="FormaGrupniTrening.resx">
       <DependentUpon>FormaGrupniTrening.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormaIzvjesce.resx">
-      <DependentUpon>FormaIzvjesce.cs</DependentUpon>
+    <EmbeddedResource Include="FormaIzvjesce1.resx">
+      <DependentUpon>FormaIzvjesce1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormaNaruciSuplement.resx">
       <DependentUpon>FormaNaruciSuplement.cs</DependentUpon>
@@ -309,7 +309,7 @@
     <EmbeddedResource Include="FrmDodajZaposlenika.resx">
       <DependentUpon>FrmDodajZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NaruceniSuplementi.rdlc" />
+    <EmbeddedResource Include="Izvjesce.rdlc" />
     <EmbeddedResource Include="PocetnaStranica1.resx">
       <DependentUpon>PocetnaStranica1.cs</DependentUpon>
     </EmbeddedResource>

@@ -30,9 +30,9 @@ namespace eGym
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnRezervirajIT = new System.Windows.Forms.Button();
-            this.btnNatragIT = new System.Windows.Forms.Button();
-            this.dtpOdaberiDatumIndividualni = new System.Windows.Forms.DateTimePicker();
+            this.btnRezerviraj = new System.Windows.Forms.Button();
+            this.btnNatrag = new System.Windows.Forms.Button();
+            this.dtpOdaberiDatum = new System.Windows.Forms.DateTimePicker();
             this.cmbOdabirTrenera = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,42 +51,42 @@ namespace eGym
             ((System.ComponentModel.ISupportInitialize)(this.bsRezervacijaInd)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnRezervirajIT
+            // btnRezerviraj
             // 
-            this.btnRezervirajIT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnRezervirajIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRezervirajIT.ForeColor = System.Drawing.Color.White;
-            this.btnRezervirajIT.Location = new System.Drawing.Point(671, 441);
-            this.btnRezervirajIT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRezervirajIT.Name = "btnRezervirajIT";
-            this.btnRezervirajIT.Size = new System.Drawing.Size(123, 50);
-            this.btnRezervirajIT.TabIndex = 92;
-            this.btnRezervirajIT.Text = "Rezerviraj";
-            this.btnRezervirajIT.UseVisualStyleBackColor = false;
-            this.btnRezervirajIT.Click += new System.EventHandler(this.btnRezervirajIT_Click);
+            this.btnRezerviraj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnRezerviraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRezerviraj.ForeColor = System.Drawing.Color.White;
+            this.btnRezerviraj.Location = new System.Drawing.Point(671, 441);
+            this.btnRezerviraj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRezerviraj.Name = "btnRezerviraj";
+            this.btnRezerviraj.Size = new System.Drawing.Size(123, 50);
+            this.btnRezerviraj.TabIndex = 92;
+            this.btnRezerviraj.Text = "Rezerviraj";
+            this.btnRezerviraj.UseVisualStyleBackColor = false;
+            this.btnRezerviraj.Click += new System.EventHandler(this.btnRezervirajIT_Click);
             // 
-            // btnNatragIT
+            // btnNatrag
             // 
-            this.btnNatragIT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnNatragIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNatragIT.ForeColor = System.Drawing.Color.White;
-            this.btnNatragIT.Location = new System.Drawing.Point(60, 441);
-            this.btnNatragIT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNatragIT.Name = "btnNatragIT";
-            this.btnNatragIT.Size = new System.Drawing.Size(117, 50);
-            this.btnNatragIT.TabIndex = 91;
-            this.btnNatragIT.Text = "Natrag";
-            this.btnNatragIT.UseVisualStyleBackColor = false;
-            this.btnNatragIT.Click += new System.EventHandler(this.btnNatragIT_Click);
+            this.btnNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnNatrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNatrag.ForeColor = System.Drawing.Color.White;
+            this.btnNatrag.Location = new System.Drawing.Point(60, 441);
+            this.btnNatrag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNatrag.Name = "btnNatrag";
+            this.btnNatrag.Size = new System.Drawing.Size(117, 50);
+            this.btnNatrag.TabIndex = 91;
+            this.btnNatrag.Text = "Natrag";
+            this.btnNatrag.UseVisualStyleBackColor = false;
+            this.btnNatrag.Click += new System.EventHandler(this.btnNatragIT_Click);
             // 
-            // dtpOdaberiDatumIndividualni
+            // dtpOdaberiDatum
             // 
-            this.dtpOdaberiDatumIndividualni.Location = new System.Drawing.Point(229, 382);
-            this.dtpOdaberiDatumIndividualni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpOdaberiDatumIndividualni.Name = "dtpOdaberiDatumIndividualni";
-            this.dtpOdaberiDatumIndividualni.Size = new System.Drawing.Size(235, 22);
-            this.dtpOdaberiDatumIndividualni.TabIndex = 90;
-            this.dtpOdaberiDatumIndividualni.ValueChanged += new System.EventHandler(this.dtpOdaberiDatumIndividualni_ValueChanged);
+            this.dtpOdaberiDatum.Location = new System.Drawing.Point(229, 382);
+            this.dtpOdaberiDatum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpOdaberiDatum.Name = "dtpOdaberiDatum";
+            this.dtpOdaberiDatum.Size = new System.Drawing.Size(235, 22);
+            this.dtpOdaberiDatum.TabIndex = 90;
+            this.dtpOdaberiDatum.ValueChanged += new System.EventHandler(this.dtpOdaberiDatumIndividualni_ValueChanged);
             // 
             // cmbOdabirTrenera
             // 
@@ -223,9 +223,9 @@ namespace eGym
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 538);
-            this.Controls.Add(this.btnRezervirajIT);
-            this.Controls.Add(this.btnNatragIT);
-            this.Controls.Add(this.dtpOdaberiDatumIndividualni);
+            this.Controls.Add(this.btnRezerviraj);
+            this.Controls.Add(this.btnNatrag);
+            this.Controls.Add(this.dtpOdaberiDatum);
             this.Controls.Add(this.cmbOdabirTrenera);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -234,7 +234,7 @@ namespace eGym
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormIndividualniTrening";
-            this.Text = "IndividualniTrening";
+            this.Text = "Individualni Trening";
             this.Load += new System.EventHandler(this.FormIndividualniTrening_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormIndividualniTrening_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIndividualniTrening)).EndInit();
@@ -246,9 +246,9 @@ namespace eGym
 
         #endregion
 
-        private System.Windows.Forms.Button btnRezervirajIT;
-        private System.Windows.Forms.Button btnNatragIT;
-        private System.Windows.Forms.DateTimePicker dtpOdaberiDatumIndividualni;
+        private System.Windows.Forms.Button btnRezerviraj;
+        private System.Windows.Forms.Button btnNatrag;
+        private System.Windows.Forms.DateTimePicker dtpOdaberiDatum;
         private System.Windows.Forms.ComboBox cmbOdabirTrenera;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

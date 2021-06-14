@@ -39,15 +39,15 @@ namespace eGym
 
         private void btnObrisiSmjenuE_Click(object sender, EventArgs e)
         {
-            if (dtgEvidencijaSmjena.CurrentRow != null)
+            if (dgvEvidencijaSmjena.CurrentRow != null)
             {
-                SmjenaZaposlenika smjena = dtgEvidencijaSmjena.CurrentRow.DataBoundItem as SmjenaZaposlenika;
+                SmjenaZaposlenika smjena = dgvEvidencijaSmjena.CurrentRow.DataBoundItem as SmjenaZaposlenika;
                 if (smjena != null)
                 {
-                    using (var context = new Entities())
+                    using (var db = new Entities())
                     {
-                        context.SmjenaZaposlenikas.Attach(smjena);
-                        context.SmjenaZaposlenikas.Remove(smjena);
+                        db.SmjenaZaposlenikas.Attach(smjena);
+                        db.SmjenaZaposlenikas.Remove(smjena);
 
                         Pristup_podacima.Dohvaćanje_podataka.UpravljanjeSmjenamaDAL.ObrisiSmjenuKorisnika(smjena);
                     }
@@ -73,12 +73,12 @@ namespace eGym
 
         private void Osvjezi()
         {
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var upit = (from s in context.SmjenaZaposlenikas.Include("Smjena").Include("Korisnik")
+                var upit = (from s in db.SmjenaZaposlenikas.Include("Smjena").Include("Korisnik")
                             select s).ToList();
-                dtgEvidencijaSmjena.DataSource = null;
-                dtgEvidencijaSmjena.DataSource = upit;
+                dgvEvidencijaSmjena.DataSource = null;
+                dgvEvidencijaSmjena.DataSource = upit;
             }
         }
 

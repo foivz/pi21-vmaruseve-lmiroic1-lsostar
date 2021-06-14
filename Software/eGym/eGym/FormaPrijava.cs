@@ -26,10 +26,10 @@ namespace eGym
         {
             try
             {
-                string username = txtUsernamePrijava.Text;
-                string lozinka = txtLozinkaPrijava.Text;
+                string korisnickoIme = txtKorisnickoIme.Text;
+                string lozinka = txtLozinka.Text;
 
-                if(Poslovna_logika.Provjere_unosa.Upravljanje_korisnicima.PrijaviKorisnika(username, lozinka))
+                if(Poslovna_logika.Provjere_unosa.Upravljanje_korisnicima.PrijaviKorisnika(korisnickoIme, lozinka))
                 {
                     if (Sesija.PrijavljeniKorisnik.uloga_id == 3)
                     {

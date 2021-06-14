@@ -40,10 +40,10 @@ namespace eGym
             this.lblPrezime = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblBrojTelefona = new System.Windows.Forms.Label();
-            this.txtImeZaposlenika = new System.Windows.Forms.TextBox();
-            this.txtPrezimeZaposlenika = new System.Windows.Forms.TextBox();
-            this.txtEmailZaposlenika = new System.Windows.Forms.TextBox();
-            this.txtBrojTelefonaZaposlenika = new System.Windows.Forms.TextBox();
+            this.txtIme = new System.Windows.Forms.TextBox();
+            this.txtPrezime = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtBrojTelefona = new System.Windows.Forms.TextBox();
             this.btnTermini = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -174,37 +174,37 @@ namespace eGym
             this.lblBrojTelefona.TabIndex = 29;
             this.lblBrojTelefona.Text = "Broj telefona:";
             // 
-            // txtImeZaposlenika
+            // txtIme
             // 
-            this.txtImeZaposlenika.Location = new System.Drawing.Point(228, 166);
-            this.txtImeZaposlenika.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtImeZaposlenika.Name = "txtImeZaposlenika";
-            this.txtImeZaposlenika.Size = new System.Drawing.Size(183, 22);
-            this.txtImeZaposlenika.TabIndex = 34;
+            this.txtIme.Location = new System.Drawing.Point(228, 166);
+            this.txtIme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIme.Name = "txtIme";
+            this.txtIme.Size = new System.Drawing.Size(183, 22);
+            this.txtIme.TabIndex = 34;
             // 
-            // txtPrezimeZaposlenika
+            // txtPrezime
             // 
-            this.txtPrezimeZaposlenika.Location = new System.Drawing.Point(228, 203);
-            this.txtPrezimeZaposlenika.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPrezimeZaposlenika.Name = "txtPrezimeZaposlenika";
-            this.txtPrezimeZaposlenika.Size = new System.Drawing.Size(183, 22);
-            this.txtPrezimeZaposlenika.TabIndex = 35;
+            this.txtPrezime.Location = new System.Drawing.Point(228, 203);
+            this.txtPrezime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrezime.Name = "txtPrezime";
+            this.txtPrezime.Size = new System.Drawing.Size(183, 22);
+            this.txtPrezime.TabIndex = 35;
             // 
-            // txtEmailZaposlenika
+            // txtEmail
             // 
-            this.txtEmailZaposlenika.Location = new System.Drawing.Point(228, 240);
-            this.txtEmailZaposlenika.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtEmailZaposlenika.Name = "txtEmailZaposlenika";
-            this.txtEmailZaposlenika.Size = new System.Drawing.Size(183, 22);
-            this.txtEmailZaposlenika.TabIndex = 36;
+            this.txtEmail.Location = new System.Drawing.Point(228, 240);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(183, 22);
+            this.txtEmail.TabIndex = 36;
             // 
-            // txtBrojTelefonaZaposlenika
+            // txtBrojTelefona
             // 
-            this.txtBrojTelefonaZaposlenika.Location = new System.Drawing.Point(228, 276);
-            this.txtBrojTelefonaZaposlenika.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBrojTelefonaZaposlenika.Name = "txtBrojTelefonaZaposlenika";
-            this.txtBrojTelefonaZaposlenika.Size = new System.Drawing.Size(183, 22);
-            this.txtBrojTelefonaZaposlenika.TabIndex = 37;
+            this.txtBrojTelefona.Location = new System.Drawing.Point(228, 276);
+            this.txtBrojTelefona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBrojTelefona.Name = "txtBrojTelefona";
+            this.txtBrojTelefona.Size = new System.Drawing.Size(183, 22);
+            this.txtBrojTelefona.TabIndex = 37;
             // 
             // btnTermini
             // 
@@ -231,10 +231,10 @@ namespace eGym
             this.Controls.Add(this.btnIzvjesce);
             this.Controls.Add(this.btnSuplementi);
             this.Controls.Add(this.btnClanovi);
-            this.Controls.Add(this.txtBrojTelefonaZaposlenika);
-            this.Controls.Add(this.txtEmailZaposlenika);
-            this.Controls.Add(this.txtPrezimeZaposlenika);
-            this.Controls.Add(this.txtImeZaposlenika);
+            this.Controls.Add(this.txtBrojTelefona);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPrezime);
+            this.Controls.Add(this.txtIme);
             this.Controls.Add(this.lblBrojTelefona);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblPrezime);
@@ -244,7 +244,7 @@ namespace eGym
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormProfilZaposlenika";
-            this.Text = "Zaposlenik";
+            this.Text = "Profil Zaposlenika";
             this.Load += new System.EventHandler(this.FormProfilZaposlenika_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormProfilZaposlenika_HelpRequested);
             this.ResumeLayout(false);
@@ -265,10 +265,10 @@ namespace eGym
         private System.Windows.Forms.Label lblPrezime;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblBrojTelefona;
-        private System.Windows.Forms.TextBox txtImeZaposlenika;
-        private System.Windows.Forms.TextBox txtPrezimeZaposlenika;
-        private System.Windows.Forms.TextBox txtEmailZaposlenika;
-        private System.Windows.Forms.TextBox txtBrojTelefonaZaposlenika;
+        private System.Windows.Forms.TextBox txtIme;
+        private System.Windows.Forms.TextBox txtPrezime;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtBrojTelefona;
         private System.Windows.Forms.Button btnTermini;
     }
 }

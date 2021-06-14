@@ -251,7 +251,7 @@ namespace eGym
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormaNaruciSuplement";
-            this.Text = "Naruči suplement";
+            this.Text = "Naručivanje Suplementa";
             this.Load += new System.EventHandler(this.FormaNaruciSuplement_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaNaruciSuplement_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.bsKosarica)).EndInit();

@@ -43,7 +43,7 @@ namespace eGym
             this.cmbVrstaVjezbe = new System.Windows.Forms.ComboBox();
             this.btnRezerviraj = new System.Windows.Forms.Button();
             this.btnNatrag = new System.Windows.Forms.Button();
-            this.dtpOdaberiDatumGrupni = new System.Windows.Forms.DateTimePicker();
+            this.dtpOdaberiDatum = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupniTrening)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsTermin)).BeginInit();
@@ -184,14 +184,14 @@ namespace eGym
             this.btnNatrag.UseVisualStyleBackColor = false;
             this.btnNatrag.Click += new System.EventHandler(this.btnNatrag_Click);
             // 
-            // dtpOdaberiDatumGrupni
+            // dtpOdaberiDatum
             // 
-            this.dtpOdaberiDatumGrupni.Location = new System.Drawing.Point(208, 382);
-            this.dtpOdaberiDatumGrupni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpOdaberiDatumGrupni.Name = "dtpOdaberiDatumGrupni";
-            this.dtpOdaberiDatumGrupni.Size = new System.Drawing.Size(235, 22);
-            this.dtpOdaberiDatumGrupni.TabIndex = 92;
-            this.dtpOdaberiDatumGrupni.ValueChanged += new System.EventHandler(this.dtpOdaberiDatumGrupni_ValueChanged);
+            this.dtpOdaberiDatum.Location = new System.Drawing.Point(208, 382);
+            this.dtpOdaberiDatum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpOdaberiDatum.Name = "dtpOdaberiDatum";
+            this.dtpOdaberiDatum.Size = new System.Drawing.Size(235, 22);
+            this.dtpOdaberiDatum.TabIndex = 92;
+            this.dtpOdaberiDatum.ValueChanged += new System.EventHandler(this.dtpOdaberiDatumGrupni_ValueChanged);
             // 
             // label4
             // 
@@ -207,7 +207,7 @@ namespace eGym
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 522);
-            this.Controls.Add(this.dtpOdaberiDatumGrupni);
+            this.Controls.Add(this.dtpOdaberiDatum);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnRezerviraj);
             this.Controls.Add(this.btnNatrag);
@@ -238,7 +238,7 @@ namespace eGym
         private System.Windows.Forms.Button btnRezerviraj;
         private System.Windows.Forms.Button btnNatrag;
         private System.Windows.Forms.BindingSource bsTermin;
-        private System.Windows.Forms.DateTimePicker dtpOdaberiDatumGrupni;
+        private System.Windows.Forms.DateTimePicker dtpOdaberiDatum;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

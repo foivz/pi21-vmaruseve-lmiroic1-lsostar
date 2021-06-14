@@ -29,11 +29,11 @@ namespace eGym
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtKolicinaAzurirajSuplement = new System.Windows.Forms.TextBox();
-            this.txtCijenaAzurirajSuplement = new System.Windows.Forms.TextBox();
-            this.txtNazivAzurirajSuplement = new System.Windows.Forms.TextBox();
-            this.btnAzurirajSuplementA = new System.Windows.Forms.Button();
-            this.btnNatragAzurirajSuplement = new System.Windows.Forms.Button();
+            this.txtKolicinaSuplementa = new System.Windows.Forms.TextBox();
+            this.txtCijenaSuplementa = new System.Windows.Forms.TextBox();
+            this.txtNazivSuplementa = new System.Windows.Forms.TextBox();
+            this.btnAzurirajSuplement = new System.Windows.Forms.Button();
+            this.btnNatrag = new System.Windows.Forms.Button();
             this.lblRadnoVrijeme = new System.Windows.Forms.Label();
             this.lblDatum = new System.Windows.Forms.Label();
             this.lblImeiPrezime = new System.Windows.Forms.Label();
@@ -41,54 +41,54 @@ namespace eGym
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtKolicinaAzurirajSuplement
+            // txtKolicinaSuplementa
             // 
-            this.txtKolicinaAzurirajSuplement.Location = new System.Drawing.Point(225, 266);
-            this.txtKolicinaAzurirajSuplement.Name = "txtKolicinaAzurirajSuplement";
-            this.txtKolicinaAzurirajSuplement.Size = new System.Drawing.Size(218, 22);
-            this.txtKolicinaAzurirajSuplement.TabIndex = 72;
+            this.txtKolicinaSuplementa.Location = new System.Drawing.Point(225, 266);
+            this.txtKolicinaSuplementa.Name = "txtKolicinaSuplementa";
+            this.txtKolicinaSuplementa.Size = new System.Drawing.Size(218, 22);
+            this.txtKolicinaSuplementa.TabIndex = 72;
             // 
-            // txtCijenaAzurirajSuplement
+            // txtCijenaSuplementa
             // 
-            this.txtCijenaAzurirajSuplement.Location = new System.Drawing.Point(225, 227);
-            this.txtCijenaAzurirajSuplement.Name = "txtCijenaAzurirajSuplement";
-            this.txtCijenaAzurirajSuplement.Size = new System.Drawing.Size(218, 22);
-            this.txtCijenaAzurirajSuplement.TabIndex = 71;
+            this.txtCijenaSuplementa.Location = new System.Drawing.Point(225, 227);
+            this.txtCijenaSuplementa.Name = "txtCijenaSuplementa";
+            this.txtCijenaSuplementa.Size = new System.Drawing.Size(218, 22);
+            this.txtCijenaSuplementa.TabIndex = 71;
             // 
-            // txtNazivAzurirajSuplement
+            // txtNazivSuplementa
             // 
-            this.txtNazivAzurirajSuplement.Location = new System.Drawing.Point(225, 188);
-            this.txtNazivAzurirajSuplement.Name = "txtNazivAzurirajSuplement";
-            this.txtNazivAzurirajSuplement.Size = new System.Drawing.Size(218, 22);
-            this.txtNazivAzurirajSuplement.TabIndex = 70;
+            this.txtNazivSuplementa.Location = new System.Drawing.Point(225, 188);
+            this.txtNazivSuplementa.Name = "txtNazivSuplementa";
+            this.txtNazivSuplementa.Size = new System.Drawing.Size(218, 22);
+            this.txtNazivSuplementa.TabIndex = 70;
             // 
-            // btnAzurirajSuplementA
+            // btnAzurirajSuplement
             // 
-            this.btnAzurirajSuplementA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAzurirajSuplementA.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAzurirajSuplementA.ForeColor = System.Drawing.Color.White;
-            this.btnAzurirajSuplementA.Location = new System.Drawing.Point(321, 345);
-            this.btnAzurirajSuplementA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAzurirajSuplementA.Name = "btnAzurirajSuplementA";
-            this.btnAzurirajSuplementA.Size = new System.Drawing.Size(122, 50);
-            this.btnAzurirajSuplementA.TabIndex = 69;
-            this.btnAzurirajSuplementA.Text = "Ažuriraj suplement";
-            this.btnAzurirajSuplementA.UseVisualStyleBackColor = false;
-            this.btnAzurirajSuplementA.Click += new System.EventHandler(this.btnAzurirajSuplementA_Click);
+            this.btnAzurirajSuplement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAzurirajSuplement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAzurirajSuplement.ForeColor = System.Drawing.Color.White;
+            this.btnAzurirajSuplement.Location = new System.Drawing.Point(321, 345);
+            this.btnAzurirajSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAzurirajSuplement.Name = "btnAzurirajSuplement";
+            this.btnAzurirajSuplement.Size = new System.Drawing.Size(122, 50);
+            this.btnAzurirajSuplement.TabIndex = 69;
+            this.btnAzurirajSuplement.Text = "Ažuriraj suplement";
+            this.btnAzurirajSuplement.UseVisualStyleBackColor = false;
+            this.btnAzurirajSuplement.Click += new System.EventHandler(this.btnAzurirajSuplementA_Click);
             // 
-            // btnNatragAzurirajSuplement
+            // btnNatrag
             // 
-            this.btnNatragAzurirajSuplement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnNatragAzurirajSuplement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNatragAzurirajSuplement.ForeColor = System.Drawing.Color.White;
-            this.btnNatragAzurirajSuplement.Location = new System.Drawing.Point(102, 345);
-            this.btnNatragAzurirajSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNatragAzurirajSuplement.Name = "btnNatragAzurirajSuplement";
-            this.btnNatragAzurirajSuplement.Size = new System.Drawing.Size(117, 50);
-            this.btnNatragAzurirajSuplement.TabIndex = 68;
-            this.btnNatragAzurirajSuplement.Text = "Natrag";
-            this.btnNatragAzurirajSuplement.UseVisualStyleBackColor = false;
-            this.btnNatragAzurirajSuplement.Click += new System.EventHandler(this.btnNatragAzurirajSuplement_Click);
+            this.btnNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnNatrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNatrag.ForeColor = System.Drawing.Color.White;
+            this.btnNatrag.Location = new System.Drawing.Point(102, 345);
+            this.btnNatrag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNatrag.Name = "btnNatrag";
+            this.btnNatrag.Size = new System.Drawing.Size(117, 50);
+            this.btnNatrag.TabIndex = 68;
+            this.btnNatrag.Text = "Natrag";
+            this.btnNatrag.UseVisualStyleBackColor = false;
+            this.btnNatrag.Click += new System.EventHandler(this.btnNatragAzurirajSuplement_Click);
             // 
             // lblRadnoVrijeme
             // 
@@ -146,18 +146,18 @@ namespace eGym
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 450);
-            this.Controls.Add(this.txtKolicinaAzurirajSuplement);
-            this.Controls.Add(this.txtCijenaAzurirajSuplement);
-            this.Controls.Add(this.txtNazivAzurirajSuplement);
-            this.Controls.Add(this.btnAzurirajSuplementA);
-            this.Controls.Add(this.btnNatragAzurirajSuplement);
+            this.Controls.Add(this.txtKolicinaSuplementa);
+            this.Controls.Add(this.txtCijenaSuplementa);
+            this.Controls.Add(this.txtNazivSuplementa);
+            this.Controls.Add(this.btnAzurirajSuplement);
+            this.Controls.Add(this.btnNatrag);
             this.Controls.Add(this.lblRadnoVrijeme);
             this.Controls.Add(this.lblDatum);
             this.Controls.Add(this.lblImeiPrezime);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Name = "FormaAzurirajSuplement";
-            this.Text = "AzurirajSuplement";
+            this.Text = "Ažuriranje Suplementa";
             this.Load += new System.EventHandler(this.FormaAzurirajSuplement_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaAzurirajSuplement_HelpRequested);
             this.ResumeLayout(false);
@@ -167,11 +167,11 @@ namespace eGym
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtKolicinaAzurirajSuplement;
-        private System.Windows.Forms.TextBox txtCijenaAzurirajSuplement;
-        private System.Windows.Forms.TextBox txtNazivAzurirajSuplement;
-        private System.Windows.Forms.Button btnAzurirajSuplementA;
-        private System.Windows.Forms.Button btnNatragAzurirajSuplement;
+        private System.Windows.Forms.TextBox txtKolicinaSuplementa;
+        private System.Windows.Forms.TextBox txtCijenaSuplementa;
+        private System.Windows.Forms.TextBox txtNazivSuplementa;
+        private System.Windows.Forms.Button btnAzurirajSuplement;
+        private System.Windows.Forms.Button btnNatrag;
         private System.Windows.Forms.Label lblRadnoVrijeme;
         private System.Windows.Forms.Label lblDatum;
         private System.Windows.Forms.Label lblImeiPrezime;

@@ -30,9 +30,9 @@ namespace eGym
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnObrisiClanaE = new System.Windows.Forms.Button();
-            this.btnAzurirajClanaE = new System.Windows.Forms.Button();
-            this.btnNatragClanovi = new System.Windows.Forms.Button();
+            this.btnObrisiClana = new System.Windows.Forms.Button();
+            this.btnAzurirajClana = new System.Windows.Forms.Button();
+            this.btnNatrag = new System.Windows.Forms.Button();
             this.dgvEvidencijaClanova = new System.Windows.Forms.DataGridView();
             this.korisnickoImeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lozinkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,47 +48,47 @@ namespace eGym
             ((System.ComponentModel.ISupportInitialize)(this.bsEvidencijaClanova)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnObrisiClanaE
+            // btnObrisiClana
             // 
-            this.btnObrisiClanaE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnObrisiClanaE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnObrisiClanaE.ForeColor = System.Drawing.Color.White;
-            this.btnObrisiClanaE.Location = new System.Drawing.Point(715, 352);
-            this.btnObrisiClanaE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnObrisiClanaE.Name = "btnObrisiClanaE";
-            this.btnObrisiClanaE.Size = new System.Drawing.Size(115, 52);
-            this.btnObrisiClanaE.TabIndex = 55;
-            this.btnObrisiClanaE.Text = "Obriši člana";
-            this.btnObrisiClanaE.UseVisualStyleBackColor = false;
-            this.btnObrisiClanaE.Click += new System.EventHandler(this.btnObrisiClanaE_Click);
+            this.btnObrisiClana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnObrisiClana.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObrisiClana.ForeColor = System.Drawing.Color.White;
+            this.btnObrisiClana.Location = new System.Drawing.Point(715, 352);
+            this.btnObrisiClana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnObrisiClana.Name = "btnObrisiClana";
+            this.btnObrisiClana.Size = new System.Drawing.Size(115, 52);
+            this.btnObrisiClana.TabIndex = 55;
+            this.btnObrisiClana.Text = "Obriši člana";
+            this.btnObrisiClana.UseVisualStyleBackColor = false;
+            this.btnObrisiClana.Click += new System.EventHandler(this.btnObrisiClanaE_Click);
             // 
-            // btnAzurirajClanaE
+            // btnAzurirajClana
             // 
-            this.btnAzurirajClanaE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAzurirajClanaE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAzurirajClanaE.ForeColor = System.Drawing.Color.White;
-            this.btnAzurirajClanaE.Location = new System.Drawing.Point(580, 354);
-            this.btnAzurirajClanaE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAzurirajClanaE.Name = "btnAzurirajClanaE";
-            this.btnAzurirajClanaE.Size = new System.Drawing.Size(115, 50);
-            this.btnAzurirajClanaE.TabIndex = 54;
-            this.btnAzurirajClanaE.Text = "Ažuriraj člana";
-            this.btnAzurirajClanaE.UseVisualStyleBackColor = false;
-            this.btnAzurirajClanaE.Click += new System.EventHandler(this.btnAzurirajClanaE_Click);
+            this.btnAzurirajClana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAzurirajClana.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAzurirajClana.ForeColor = System.Drawing.Color.White;
+            this.btnAzurirajClana.Location = new System.Drawing.Point(580, 354);
+            this.btnAzurirajClana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAzurirajClana.Name = "btnAzurirajClana";
+            this.btnAzurirajClana.Size = new System.Drawing.Size(115, 50);
+            this.btnAzurirajClana.TabIndex = 54;
+            this.btnAzurirajClana.Text = "Ažuriraj člana";
+            this.btnAzurirajClana.UseVisualStyleBackColor = false;
+            this.btnAzurirajClana.Click += new System.EventHandler(this.btnAzurirajClanaE_Click);
             // 
-            // btnNatragClanovi
+            // btnNatrag
             // 
-            this.btnNatragClanovi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnNatragClanovi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNatragClanovi.ForeColor = System.Drawing.Color.White;
-            this.btnNatragClanovi.Location = new System.Drawing.Point(45, 354);
-            this.btnNatragClanovi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNatragClanovi.Name = "btnNatragClanovi";
-            this.btnNatragClanovi.Size = new System.Drawing.Size(115, 50);
-            this.btnNatragClanovi.TabIndex = 52;
-            this.btnNatragClanovi.Text = "Natrag";
-            this.btnNatragClanovi.UseVisualStyleBackColor = false;
-            this.btnNatragClanovi.Click += new System.EventHandler(this.btnNatragClanovi_Click);
+            this.btnNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnNatrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNatrag.ForeColor = System.Drawing.Color.White;
+            this.btnNatrag.Location = new System.Drawing.Point(45, 354);
+            this.btnNatrag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNatrag.Name = "btnNatrag";
+            this.btnNatrag.Size = new System.Drawing.Size(115, 50);
+            this.btnNatrag.TabIndex = 52;
+            this.btnNatrag.Text = "Natrag";
+            this.btnNatrag.UseVisualStyleBackColor = false;
+            this.btnNatrag.Click += new System.EventHandler(this.btnNatragClanovi_Click);
             // 
             // dgvEvidencijaClanova
             // 
@@ -197,15 +197,15 @@ namespace eGym
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 482);
-            this.Controls.Add(this.btnObrisiClanaE);
-            this.Controls.Add(this.btnAzurirajClanaE);
-            this.Controls.Add(this.btnNatragClanovi);
+            this.Controls.Add(this.btnObrisiClana);
+            this.Controls.Add(this.btnAzurirajClana);
+            this.Controls.Add(this.btnNatrag);
             this.Controls.Add(this.dgvEvidencijaClanova);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormaEvidencijaClanova";
-            this.Text = "FormaEvidencijaClanova";
+            this.Text = "Evidencija Članova";
             this.Load += new System.EventHandler(this.FormaEvidencijaClanova_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaEvidencijaClanova_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaClanova)).EndInit();
@@ -217,9 +217,9 @@ namespace eGym
 
         #endregion
 
-        private System.Windows.Forms.Button btnObrisiClanaE;
-        private System.Windows.Forms.Button btnAzurirajClanaE;
-        private System.Windows.Forms.Button btnNatragClanovi;
+        private System.Windows.Forms.Button btnObrisiClana;
+        private System.Windows.Forms.Button btnAzurirajClana;
+        private System.Windows.Forms.Button btnNatrag;
         private System.Windows.Forms.DataGridView dgvEvidencijaClanova;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

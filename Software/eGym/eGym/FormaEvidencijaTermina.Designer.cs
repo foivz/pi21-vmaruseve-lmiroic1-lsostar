@@ -42,8 +42,8 @@ namespace eGym
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnObrisiTermin = new System.Windows.Forms.Button();
-            this.btnNatragSuplement = new System.Windows.Forms.Button();
-            this.btnDodajTerminE = new System.Windows.Forms.Button();
+            this.btnNatragTermin = new System.Windows.Forms.Button();
+            this.btnDodajTermin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaTermina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsTermin)).BeginInit();
             this.SuspendLayout();
@@ -164,33 +164,33 @@ namespace eGym
             this.btnObrisiTermin.UseVisualStyleBackColor = false;
             this.btnObrisiTermin.Click += new System.EventHandler(this.btnObrisiTermin_Click);
             // 
-            // btnNatragSuplement
+            // btnNatragTermin
             // 
-            this.btnNatragSuplement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnNatragSuplement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNatragSuplement.ForeColor = System.Drawing.Color.White;
-            this.btnNatragSuplement.Location = new System.Drawing.Point(87, 480);
-            this.btnNatragSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNatragSuplement.Name = "btnNatragSuplement";
-            this.btnNatragSuplement.Size = new System.Drawing.Size(115, 50);
-            this.btnNatragSuplement.TabIndex = 82;
-            this.btnNatragSuplement.Text = "Natrag";
-            this.btnNatragSuplement.UseVisualStyleBackColor = false;
-            this.btnNatragSuplement.Click += new System.EventHandler(this.btnNatragSuplement_Click);
+            this.btnNatragTermin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnNatragTermin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNatragTermin.ForeColor = System.Drawing.Color.White;
+            this.btnNatragTermin.Location = new System.Drawing.Point(87, 480);
+            this.btnNatragTermin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNatragTermin.Name = "btnNatragTermin";
+            this.btnNatragTermin.Size = new System.Drawing.Size(115, 50);
+            this.btnNatragTermin.TabIndex = 82;
+            this.btnNatragTermin.Text = "Natrag";
+            this.btnNatragTermin.UseVisualStyleBackColor = false;
+            this.btnNatragTermin.Click += new System.EventHandler(this.btnNatragSuplement_Click);
             // 
-            // btnDodajTerminE
+            // btnDodajTermin
             // 
-            this.btnDodajTerminE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnDodajTerminE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodajTerminE.ForeColor = System.Drawing.Color.White;
-            this.btnDodajTerminE.Location = new System.Drawing.Point(625, 478);
-            this.btnDodajTerminE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDodajTerminE.Name = "btnDodajTerminE";
-            this.btnDodajTerminE.Size = new System.Drawing.Size(115, 50);
-            this.btnDodajTerminE.TabIndex = 83;
-            this.btnDodajTerminE.Text = "Dodaj termin";
-            this.btnDodajTerminE.UseVisualStyleBackColor = false;
-            this.btnDodajTerminE.Click += new System.EventHandler(this.btnDodajTerminE_Click);
+            this.btnDodajTermin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDodajTermin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodajTermin.ForeColor = System.Drawing.Color.White;
+            this.btnDodajTermin.Location = new System.Drawing.Point(625, 478);
+            this.btnDodajTermin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDodajTermin.Name = "btnDodajTermin";
+            this.btnDodajTermin.Size = new System.Drawing.Size(115, 50);
+            this.btnDodajTermin.TabIndex = 83;
+            this.btnDodajTermin.Text = "Dodaj termin";
+            this.btnDodajTermin.UseVisualStyleBackColor = false;
+            this.btnDodajTermin.Click += new System.EventHandler(this.btnDodajTerminE_Click);
             // 
             // FormaEvidencijaTermina
             // 
@@ -198,14 +198,14 @@ namespace eGym
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 590);
             this.Controls.Add(this.btnObrisiTermin);
-            this.Controls.Add(this.btnNatragSuplement);
-            this.Controls.Add(this.btnDodajTerminE);
+            this.Controls.Add(this.btnNatragTermin);
+            this.Controls.Add(this.btnDodajTermin);
             this.Controls.Add(this.dgvEvidencijaTermina);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormaEvidencijaTermina";
-            this.Text = "Evidencija termina";
+            this.Text = "Evidencija Termina";
             this.Load += new System.EventHandler(this.FormaEvidencijaTermina_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaEvidencijaTermina_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaTermina)).EndInit();
@@ -221,8 +221,8 @@ namespace eGym
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnObrisiTermin;
-        private System.Windows.Forms.Button btnNatragSuplement;
-        private System.Windows.Forms.Button btnDodajTerminE;
+        private System.Windows.Forms.Button btnNatragTermin;
+        private System.Windows.Forms.Button btnDodajTermin;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn odDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn doDataGridViewTextBoxColumn;

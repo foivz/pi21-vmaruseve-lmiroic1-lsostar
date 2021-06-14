@@ -68,18 +68,18 @@ namespace eGym
         private void formProfilClana_Load(object sender, EventArgs e)
         {
             lblImeIPrezimeClana.Text = Sesija.PrijavljeniKorisnik.ime + " " + Sesija.PrijavljeniKorisnik.prezime;
-            txtImeClana.Text = Sesija.PrijavljeniKorisnik.ime;
-            txtPrezimeClana.Text = Sesija.PrijavljeniKorisnik.prezime;
-            txtBrojTelefonaClana.Text = Sesija.PrijavljeniKorisnik.brojtelefona;
-            txtEmailClana.Text = Sesija.PrijavljeniKorisnik.email;
-            using (var context = new Entities())
+            txtIme.Text = Sesija.PrijavljeniKorisnik.ime;
+            txtPrezime.Text = Sesija.PrijavljeniKorisnik.prezime;
+            txtBrojTelefona.Text = Sesija.PrijavljeniKorisnik.brojtelefona;
+            txtEmail.Text = Sesija.PrijavljeniKorisnik.email;
+            using (var db = new Entities())
             {
-                var query = from c in context.Clanarinas.Include("Korisnik")
+                var upit = from c in db.Clanarinas.Include("Korisnik")
                             where c.korisnik_korisnickoIme == Sesija.PrijavljeniKorisnik.korisnickoIme
                             orderby c.ID
                             select c;
 
-                foreach (var item in query)
+                foreach (var item in upit)
                 {
                     clanarinas.Add(item);
                 }

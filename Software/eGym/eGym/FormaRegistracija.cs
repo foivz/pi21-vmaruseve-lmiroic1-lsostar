@@ -22,12 +22,12 @@ namespace eGym
 
         private void btnRegistrirajSe_Click(object sender, EventArgs e)
         {
-                string korisnickoIme = txtUsernameRegistracija.Text;
-                string ime = txtImeRegistracija.Text;
-                string prezime = txtPrezimeRegistracija.Text;
-                string email = txtEmailRegistracija.Text;
-                string brojMobitela = txtBrojMobRegistracija.Text;
-                string lozinka = txtLozinkaRegistracija.Text;
+                string korisnickoIme = txtKorisnickoIme.Text;
+                string ime = txtIme.Text;
+                string prezime = txtPrezime.Text;
+                string email = txtEmail.Text;
+                string brojMobitela = txtBrojMob.Text;
+                string lozinka = txtLozinka.Text;
             if (Poslovna_logika.Provjere_unosa.Upravljanje_korisnicima.ProvjeraUnosaKodRegistracije(korisnickoIme, ime, prezime, brojMobitela, email, lozinka)&&Poslovna_logika.Provjere_unosa.Upravljanje_korisnicima.ProvjeraKorisnikaKodRegistracije(korisnickoIme,lozinka))
             {
                 Korisnik noviKorisnik = new Korisnik

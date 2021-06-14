@@ -44,10 +44,10 @@ namespace eGym
                 Korisnik korisnik = dgvEvidencijaZaposlenika.CurrentRow.DataBoundItem as Korisnik;
                 if (korisnik != null)
                 {
-                    using (var context = new Entities())
+                    using (var db = new Entities())
                     {
-                        context.Korisniks.Attach(korisnik);
-                        context.Korisniks.Remove(korisnik);
+                        db.Korisniks.Attach(korisnik);
+                        db.Korisniks.Remove(korisnik);
                         Pristup_podacima.Dohvaćanje_podataka.UpravljanjeKorisnicimaDAL.ObrisiZaposlenika(korisnik);
                     }
 
@@ -71,9 +71,9 @@ namespace eGym
 
         private void Osvjezi()
         {
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var upit = from k in context.Korisniks
+                var upit = from k in db.Korisniks
                            where k.uloga_id == 2
                            orderby k.korisnickoIme ascending
                            select k;

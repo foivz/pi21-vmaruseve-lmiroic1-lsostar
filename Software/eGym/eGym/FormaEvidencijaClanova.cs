@@ -30,9 +30,9 @@ namespace eGym
         }
         private void Osvjezi()
         {
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var upit = from k in context.Korisniks
+                var upit = from k in db.Korisniks
                            where k.uloga_id == 3
                            orderby k.korisnickoIme ascending
                            select k;

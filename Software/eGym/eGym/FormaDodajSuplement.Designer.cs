@@ -29,31 +29,31 @@ namespace eGym
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDodajSuplementD = new System.Windows.Forms.Button();
+            this.btnDodajSuplement = new System.Windows.Forms.Button();
             this.btnNatragDodajSuplement = new System.Windows.Forms.Button();
             this.lblRadnoVrijeme = new System.Windows.Forms.Label();
             this.lblDatum = new System.Windows.Forms.Label();
             this.lblImeiPrezime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNazivDodajSuplement = new System.Windows.Forms.TextBox();
-            this.txtCijenaDodajSuplement = new System.Windows.Forms.TextBox();
-            this.txtKolicinaDodajSuplement = new System.Windows.Forms.TextBox();
+            this.txtNazivSuplementa = new System.Windows.Forms.TextBox();
+            this.txtCijenaSuplementa = new System.Windows.Forms.TextBox();
+            this.txtKolicinaSuplementa = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnDodajSuplementD
+            // btnDodajSuplement
             // 
-            this.btnDodajSuplementD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnDodajSuplementD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodajSuplementD.ForeColor = System.Drawing.Color.White;
-            this.btnDodajSuplementD.Location = new System.Drawing.Point(311, 345);
-            this.btnDodajSuplementD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDodajSuplementD.Name = "btnDodajSuplementD";
-            this.btnDodajSuplementD.Size = new System.Drawing.Size(123, 50);
-            this.btnDodajSuplementD.TabIndex = 59;
-            this.btnDodajSuplementD.Text = "Dodaj suplement";
-            this.btnDodajSuplementD.UseVisualStyleBackColor = false;
-            this.btnDodajSuplementD.Click += new System.EventHandler(this.btnDodajSuplementD_Click);
+            this.btnDodajSuplement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDodajSuplement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodajSuplement.ForeColor = System.Drawing.Color.White;
+            this.btnDodajSuplement.Location = new System.Drawing.Point(311, 345);
+            this.btnDodajSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDodajSuplement.Name = "btnDodajSuplement";
+            this.btnDodajSuplement.Size = new System.Drawing.Size(123, 50);
+            this.btnDodajSuplement.TabIndex = 59;
+            this.btnDodajSuplement.Text = "Dodaj suplement";
+            this.btnDodajSuplement.UseVisualStyleBackColor = false;
+            this.btnDodajSuplement.Click += new System.EventHandler(this.btnDodajSuplementD_Click);
             // 
             // btnNatragDodajSuplement
             // 
@@ -120,39 +120,39 @@ namespace eGym
             this.label2.TabIndex = 50;
             this.label2.Text = "eGym";
             // 
-            // txtNazivDodajSuplement
+            // txtNazivSuplementa
             // 
-            this.txtNazivDodajSuplement.Location = new System.Drawing.Point(215, 188);
-            this.txtNazivDodajSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNazivDodajSuplement.Name = "txtNazivDodajSuplement";
-            this.txtNazivDodajSuplement.Size = new System.Drawing.Size(217, 22);
-            this.txtNazivDodajSuplement.TabIndex = 60;
+            this.txtNazivSuplementa.Location = new System.Drawing.Point(215, 188);
+            this.txtNazivSuplementa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNazivSuplementa.Name = "txtNazivSuplementa";
+            this.txtNazivSuplementa.Size = new System.Drawing.Size(217, 22);
+            this.txtNazivSuplementa.TabIndex = 60;
             // 
-            // txtCijenaDodajSuplement
+            // txtCijenaSuplementa
             // 
-            this.txtCijenaDodajSuplement.Location = new System.Drawing.Point(215, 226);
-            this.txtCijenaDodajSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCijenaDodajSuplement.Name = "txtCijenaDodajSuplement";
-            this.txtCijenaDodajSuplement.Size = new System.Drawing.Size(217, 22);
-            this.txtCijenaDodajSuplement.TabIndex = 61;
+            this.txtCijenaSuplementa.Location = new System.Drawing.Point(215, 226);
+            this.txtCijenaSuplementa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCijenaSuplementa.Name = "txtCijenaSuplementa";
+            this.txtCijenaSuplementa.Size = new System.Drawing.Size(217, 22);
+            this.txtCijenaSuplementa.TabIndex = 61;
             // 
-            // txtKolicinaDodajSuplement
+            // txtKolicinaSuplementa
             // 
-            this.txtKolicinaDodajSuplement.Location = new System.Drawing.Point(215, 266);
-            this.txtKolicinaDodajSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtKolicinaDodajSuplement.Name = "txtKolicinaDodajSuplement";
-            this.txtKolicinaDodajSuplement.Size = new System.Drawing.Size(217, 22);
-            this.txtKolicinaDodajSuplement.TabIndex = 62;
+            this.txtKolicinaSuplementa.Location = new System.Drawing.Point(215, 266);
+            this.txtKolicinaSuplementa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtKolicinaSuplementa.Name = "txtKolicinaSuplementa";
+            this.txtKolicinaSuplementa.Size = new System.Drawing.Size(217, 22);
+            this.txtKolicinaSuplementa.TabIndex = 62;
             // 
             // FormaDodajSuplement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 450);
-            this.Controls.Add(this.txtKolicinaDodajSuplement);
-            this.Controls.Add(this.txtCijenaDodajSuplement);
-            this.Controls.Add(this.txtNazivDodajSuplement);
-            this.Controls.Add(this.btnDodajSuplementD);
+            this.Controls.Add(this.txtKolicinaSuplementa);
+            this.Controls.Add(this.txtCijenaSuplementa);
+            this.Controls.Add(this.txtNazivSuplementa);
+            this.Controls.Add(this.btnDodajSuplement);
             this.Controls.Add(this.btnNatragDodajSuplement);
             this.Controls.Add(this.lblRadnoVrijeme);
             this.Controls.Add(this.lblDatum);
@@ -161,7 +161,7 @@ namespace eGym
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormaDodajSuplement";
-            this.Text = "DodajSuplement";
+            this.Text = "Dodavanje Suplementa";
             this.Load += new System.EventHandler(this.FormaDodajSuplement_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaDodajSuplement_HelpRequested);
             this.ResumeLayout(false);
@@ -171,15 +171,15 @@ namespace eGym
 
         #endregion
 
-        private System.Windows.Forms.Button btnDodajSuplementD;
+        private System.Windows.Forms.Button btnDodajSuplement;
         private System.Windows.Forms.Button btnNatragDodajSuplement;
         private System.Windows.Forms.Label lblRadnoVrijeme;
         private System.Windows.Forms.Label lblDatum;
         private System.Windows.Forms.Label lblImeiPrezime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNazivDodajSuplement;
-        private System.Windows.Forms.TextBox txtCijenaDodajSuplement;
-        private System.Windows.Forms.TextBox txtKolicinaDodajSuplement;
+        private System.Windows.Forms.TextBox txtNazivSuplementa;
+        private System.Windows.Forms.TextBox txtCijenaSuplementa;
+        private System.Windows.Forms.TextBox txtKolicinaSuplementa;
     }
 }

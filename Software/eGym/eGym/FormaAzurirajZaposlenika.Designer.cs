@@ -30,10 +30,10 @@ namespace eGym
         private void InitializeComponent()
         {
             this.lblImeiPrezimeZaposlenika = new System.Windows.Forms.Label();
-            this.txtBrojTelefonaZaposlenikaAzuriranje = new System.Windows.Forms.TextBox();
-            this.txtEmailZaposlenikaAzuriranje = new System.Windows.Forms.TextBox();
-            this.txtPrezimeZaposlenikaAzuriranje = new System.Windows.Forms.TextBox();
-            this.txtImeZaposlenikaAzuriranje = new System.Windows.Forms.TextBox();
+            this.txtBrojTelefonaZaposlenika = new System.Windows.Forms.TextBox();
+            this.txtEmailZaposlenika = new System.Windows.Forms.TextBox();
+            this.txtPrezimeZaposlenika = new System.Windows.Forms.TextBox();
+            this.txtImeZaposlenika = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,37 +56,37 @@ namespace eGym
             this.lblImeiPrezimeZaposlenika.TabIndex = 61;
             this.lblImeiPrezimeZaposlenika.Text = "Ažuriraj podatke o zaposleniku";
             // 
-            // txtBrojTelefonaZaposlenikaAzuriranje
+            // txtBrojTelefonaZaposlenika
             // 
-            this.txtBrojTelefonaZaposlenikaAzuriranje.Location = new System.Drawing.Point(364, 352);
-            this.txtBrojTelefonaZaposlenikaAzuriranje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtBrojTelefonaZaposlenikaAzuriranje.Name = "txtBrojTelefonaZaposlenikaAzuriranje";
-            this.txtBrojTelefonaZaposlenikaAzuriranje.Size = new System.Drawing.Size(273, 22);
-            this.txtBrojTelefonaZaposlenikaAzuriranje.TabIndex = 59;
+            this.txtBrojTelefonaZaposlenika.Location = new System.Drawing.Point(364, 352);
+            this.txtBrojTelefonaZaposlenika.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBrojTelefonaZaposlenika.Name = "txtBrojTelefonaZaposlenika";
+            this.txtBrojTelefonaZaposlenika.Size = new System.Drawing.Size(273, 22);
+            this.txtBrojTelefonaZaposlenika.TabIndex = 59;
             // 
-            // txtEmailZaposlenikaAzuriranje
+            // txtEmailZaposlenika
             // 
-            this.txtEmailZaposlenikaAzuriranje.Location = new System.Drawing.Point(364, 293);
-            this.txtEmailZaposlenikaAzuriranje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtEmailZaposlenikaAzuriranje.Name = "txtEmailZaposlenikaAzuriranje";
-            this.txtEmailZaposlenikaAzuriranje.Size = new System.Drawing.Size(273, 22);
-            this.txtEmailZaposlenikaAzuriranje.TabIndex = 58;
+            this.txtEmailZaposlenika.Location = new System.Drawing.Point(364, 293);
+            this.txtEmailZaposlenika.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmailZaposlenika.Name = "txtEmailZaposlenika";
+            this.txtEmailZaposlenika.Size = new System.Drawing.Size(273, 22);
+            this.txtEmailZaposlenika.TabIndex = 58;
             // 
-            // txtPrezimeZaposlenikaAzuriranje
+            // txtPrezimeZaposlenika
             // 
-            this.txtPrezimeZaposlenikaAzuriranje.Location = new System.Drawing.Point(364, 242);
-            this.txtPrezimeZaposlenikaAzuriranje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPrezimeZaposlenikaAzuriranje.Name = "txtPrezimeZaposlenikaAzuriranje";
-            this.txtPrezimeZaposlenikaAzuriranje.Size = new System.Drawing.Size(273, 22);
-            this.txtPrezimeZaposlenikaAzuriranje.TabIndex = 57;
+            this.txtPrezimeZaposlenika.Location = new System.Drawing.Point(364, 242);
+            this.txtPrezimeZaposlenika.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrezimeZaposlenika.Name = "txtPrezimeZaposlenika";
+            this.txtPrezimeZaposlenika.Size = new System.Drawing.Size(273, 22);
+            this.txtPrezimeZaposlenika.TabIndex = 57;
             // 
-            // txtImeZaposlenikaAzuriranje
+            // txtImeZaposlenika
             // 
-            this.txtImeZaposlenikaAzuriranje.Location = new System.Drawing.Point(364, 198);
-            this.txtImeZaposlenikaAzuriranje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtImeZaposlenikaAzuriranje.Name = "txtImeZaposlenikaAzuriranje";
-            this.txtImeZaposlenikaAzuriranje.Size = new System.Drawing.Size(273, 22);
-            this.txtImeZaposlenikaAzuriranje.TabIndex = 56;
+            this.txtImeZaposlenika.Location = new System.Drawing.Point(364, 198);
+            this.txtImeZaposlenika.Margin = new System.Windows.Forms.Padding(4);
+            this.txtImeZaposlenika.Name = "txtImeZaposlenika";
+            this.txtImeZaposlenika.Size = new System.Drawing.Size(273, 22);
+            this.txtImeZaposlenika.TabIndex = 56;
             // 
             // label5
             // 
@@ -180,7 +180,7 @@ namespace eGym
             // txtLozinka
             // 
             this.txtLozinka.Location = new System.Drawing.Point(364, 407);
-            this.txtLozinka.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLozinka.Margin = new System.Windows.Forms.Padding(4);
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(273, 22);
             this.txtLozinka.TabIndex = 69;
@@ -197,17 +197,17 @@ namespace eGym
             this.Controls.Add(this.btnAzuriraj);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblImeiPrezimeZaposlenika);
-            this.Controls.Add(this.txtBrojTelefonaZaposlenikaAzuriranje);
-            this.Controls.Add(this.txtEmailZaposlenikaAzuriranje);
-            this.Controls.Add(this.txtPrezimeZaposlenikaAzuriranje);
-            this.Controls.Add(this.txtImeZaposlenikaAzuriranje);
+            this.Controls.Add(this.txtBrojTelefonaZaposlenika);
+            this.Controls.Add(this.txtEmailZaposlenika);
+            this.Controls.Add(this.txtPrezimeZaposlenika);
+            this.Controls.Add(this.txtImeZaposlenika);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormaAzurirajZaposlenika";
-            this.Text = "FormaAzurirajZaposlenika";
+            this.Text = "Ažuriranje zaposlenika";
             this.Load += new System.EventHandler(this.FormaAzurirajZaposlenika_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaAzurirajZaposlenika_HelpRequested);
             this.ResumeLayout(false);
@@ -218,10 +218,10 @@ namespace eGym
         #endregion
 
         private System.Windows.Forms.Label lblImeiPrezimeZaposlenika;
-        private System.Windows.Forms.TextBox txtBrojTelefonaZaposlenikaAzuriranje;
-        private System.Windows.Forms.TextBox txtEmailZaposlenikaAzuriranje;
-        private System.Windows.Forms.TextBox txtPrezimeZaposlenikaAzuriranje;
-        private System.Windows.Forms.TextBox txtImeZaposlenikaAzuriranje;
+        private System.Windows.Forms.TextBox txtBrojTelefonaZaposlenika;
+        private System.Windows.Forms.TextBox txtEmailZaposlenika;
+        private System.Windows.Forms.TextBox txtPrezimeZaposlenika;
+        private System.Windows.Forms.TextBox txtImeZaposlenika;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

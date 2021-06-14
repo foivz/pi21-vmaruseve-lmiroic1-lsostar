@@ -38,7 +38,6 @@ namespace eGym
         {
 
             lblImeIPrezimeAdmina.Text = Sesija.PrijavljeniKorisnik.ime + " " + Sesija.PrijavljeniKorisnik.prezime;
-
             txtImeAdmina.Text = Sesija.PrijavljeniKorisnik.ime;
             txtPrezimeAdmina.Text = Sesija.PrijavljeniKorisnik.prezime;
             txtBrojTelefonaAdmina.Text = Sesija.PrijavljeniKorisnik.brojtelefona;

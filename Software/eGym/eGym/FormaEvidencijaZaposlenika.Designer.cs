@@ -44,7 +44,7 @@ namespace eGym
             this.btnAzurirajZaposlenika = new System.Windows.Forms.Button();
             this.btnObrisiZaposlenika = new System.Windows.Forms.Button();
             this.btnEvidencijaZaposlenikaNatrag = new System.Windows.Forms.Button();
-            this.btnDodaj = new System.Windows.Forms.Button();
+            this.btnDodajZaposlenika = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaZaposlenika)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsEvidencijaZaposlenika)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +74,7 @@ namespace eGym
             this.brojtelefonaDataGridViewTextBoxColumn});
             this.dgvEvidencijaZaposlenika.DataSource = this.bsEvidencijaZaposlenika;
             this.dgvEvidencijaZaposlenika.Location = new System.Drawing.Point(16, 142);
-            this.dgvEvidencijaZaposlenika.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvEvidencijaZaposlenika.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEvidencijaZaposlenika.Name = "dgvEvidencijaZaposlenika";
             this.dgvEvidencijaZaposlenika.RowHeadersWidth = 51;
             this.dgvEvidencijaZaposlenika.Size = new System.Drawing.Size(1035, 289);
@@ -193,19 +193,19 @@ namespace eGym
             this.btnEvidencijaZaposlenikaNatrag.UseVisualStyleBackColor = false;
             this.btnEvidencijaZaposlenikaNatrag.Click += new System.EventHandler(this.btnEvidencijaZaposlenikaNatrag_Click);
             // 
-            // btnDodaj
+            // btnDodajZaposlenika
             // 
-            this.btnDodaj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodaj.ForeColor = System.Drawing.Color.White;
-            this.btnDodaj.Location = new System.Drawing.Point(664, 448);
-            this.btnDodaj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(105, 47);
-            this.btnDodaj.TabIndex = 28;
-            this.btnDodaj.Text = "Dodaj";
-            this.btnDodaj.UseVisualStyleBackColor = false;
-            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
+            this.btnDodajZaposlenika.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDodajZaposlenika.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodajZaposlenika.ForeColor = System.Drawing.Color.White;
+            this.btnDodajZaposlenika.Location = new System.Drawing.Point(664, 448);
+            this.btnDodajZaposlenika.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDodajZaposlenika.Name = "btnDodajZaposlenika";
+            this.btnDodajZaposlenika.Size = new System.Drawing.Size(105, 47);
+            this.btnDodajZaposlenika.TabIndex = 28;
+            this.btnDodajZaposlenika.Text = "Dodaj";
+            this.btnDodajZaposlenika.UseVisualStyleBackColor = false;
+            this.btnDodajZaposlenika.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // FormaEvidencijaZaposlenika
             // 
@@ -213,16 +213,16 @@ namespace eGym
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.btnDodaj);
+            this.Controls.Add(this.btnDodajZaposlenika);
             this.Controls.Add(this.btnEvidencijaZaposlenikaNatrag);
             this.Controls.Add(this.btnObrisiZaposlenika);
             this.Controls.Add(this.btnAzurirajZaposlenika);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvEvidencijaZaposlenika);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormaEvidencijaZaposlenika";
-            this.Text = "FormaEvidencijaZaposlenika";
+            this.Text = "Evidencija Zaposlenika";
             this.Load += new System.EventHandler(this.FormaEvidencijaZaposlenika_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaEvidencijaZaposlenika_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaZaposlenika)).EndInit();
@@ -239,7 +239,7 @@ namespace eGym
         private System.Windows.Forms.Button btnAzurirajZaposlenika;
         private System.Windows.Forms.Button btnObrisiZaposlenika;
         private System.Windows.Forms.Button btnEvidencijaZaposlenikaNatrag;
-        private System.Windows.Forms.Button btnDodaj;
+        private System.Windows.Forms.Button btnDodajZaposlenika;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnickoImeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lozinkaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumregistracijeDataGridViewTextBoxColumn;

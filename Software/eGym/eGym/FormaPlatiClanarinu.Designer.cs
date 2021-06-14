@@ -128,7 +128,7 @@ namespace eGym
             this.cijenaDataGridViewTextBoxColumn});
             this.dgvClanarina.DataSource = this.bsVrstaClanarine;
             this.dgvClanarina.Location = new System.Drawing.Point(33, 170);
-            this.dgvClanarina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvClanarina.Margin = new System.Windows.Forms.Padding(4);
             this.dgvClanarina.Name = "dgvClanarina";
             this.dgvClanarina.RowHeadersWidth = 51;
             this.dgvClanarina.Size = new System.Drawing.Size(460, 97);
@@ -175,9 +175,9 @@ namespace eGym
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblImeiPrezimeZaposlenika);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormaPlatiClanarinu";
-            this.Text = "FormaPlatiClanarinu";
+            this.Text = "Plaćanje Članarine";
             this.Load += new System.EventHandler(this.FormaPlatiClanarinu_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaPlatiClanarinu_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClanarina)).EndInit();

@@ -27,12 +27,12 @@ namespace eGym
         {
             using(var context = new Entities())
             {
-                string korisnickoIme = txtUsernameRegistracija.Text;
-                string ime = txtImeRegistracija.Text;
-                string prezime = txtPrezimeRegistracija.Text;
-                string email = txtEmailRegistracija.Text;
-                string brojMobitela = txtBrojMobRegistracija.Text;
-                string lozinka = txtLozinkaRegistracija.Text;
+                string korisnickoIme = txtKorisnickoIme.Text;
+                string ime = txtIme.Text;
+                string prezime = txtPrezime.Text;
+                string email = txtEmail.Text;
+                string brojMobitela = txtBrojMob.Text;
+                string lozinka = txtLozinka.Text;
 
                 Korisnik noviKorisnik = new Korisnik
                 {

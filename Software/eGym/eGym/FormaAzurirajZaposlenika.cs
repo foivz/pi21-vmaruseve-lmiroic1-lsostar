@@ -36,10 +36,10 @@ namespace eGym
 
         private void btnAzuriraj_Click_1(object sender, EventArgs e)
         {
-            odabraniKorisnik.ime = txtImeZaposlenikaAzuriranje.Text;
-            odabraniKorisnik.prezime = txtPrezimeZaposlenikaAzuriranje.Text;
-            odabraniKorisnik.email = txtEmailZaposlenikaAzuriranje.Text;
-            odabraniKorisnik.brojtelefona = txtBrojTelefonaZaposlenikaAzuriranje.Text;
+            odabraniKorisnik.ime = txtImeZaposlenika.Text;
+            odabraniKorisnik.prezime = txtPrezimeZaposlenika.Text;
+            odabraniKorisnik.email = txtEmailZaposlenika.Text;
+            odabraniKorisnik.brojtelefona = txtBrojTelefonaZaposlenika.Text;
             odabraniKorisnik.lozinka = txtLozinka.Text;
             Pristup_podacima.Dohvaćanje_podataka.UpravljanjeKorisnicimaDAL.AzuriranjeZaposlenika(odabraniKorisnik);
             MessageBox.Show("Korisnik uspješno ažuriran!!");
@@ -50,10 +50,10 @@ namespace eGym
 
         private void FormaAzurirajZaposlenika_Load(object sender, EventArgs e)
         {
-            txtImeZaposlenikaAzuriranje.Text = odabraniKorisnik.ime;
-            txtPrezimeZaposlenikaAzuriranje.Text = odabraniKorisnik.prezime;
-            txtEmailZaposlenikaAzuriranje.Text = odabraniKorisnik.email;
-            txtBrojTelefonaZaposlenikaAzuriranje.Text = odabraniKorisnik.brojtelefona;
+            txtImeZaposlenika.Text = odabraniKorisnik.ime;
+            txtPrezimeZaposlenika.Text = odabraniKorisnik.prezime;
+            txtEmailZaposlenika.Text = odabraniKorisnik.email;
+            txtBrojTelefonaZaposlenika.Text = odabraniKorisnik.brojtelefona;
             txtLozinka.Text = odabraniKorisnik.lozinka;
         }
 

@@ -37,10 +37,7 @@ namespace eGym
 
         private void btnAzurirajSuplementE_Click(object sender, EventArgs e)
         {
-            //SuplementView odabranisuplement = dtgEvidencijaSuplemenata.CurrentRow.DataBoundItem as SuplementView;
-         
-
-            Pristup_podacima.Suplement suplement = dtgEvidencijaSuplemenata.CurrentRow.DataBoundItem as Pristup_podacima.Suplement;
+            Pristup_podacima.Suplement suplement = dgvEvidencijaSuplemenata.CurrentRow.DataBoundItem as Pristup_podacima.Suplement;
             FormaAzurirajSuplement formaAzurirajSuplement = new FormaAzurirajSuplement(suplement);
             formaAzurirajSuplement.Show();
             this.Hide();
@@ -48,15 +45,15 @@ namespace eGym
 
         private void btnObrisiSuplementE_Click(object sender, EventArgs e)
         {
-            if (dtgEvidencijaSuplemenata.CurrentRow != null)
+            if (dgvEvidencijaSuplemenata.CurrentRow != null)
             {
-                Pristup_podacima.Suplement suplement = dtgEvidencijaSuplemenata.CurrentRow.DataBoundItem as Pristup_podacima.Suplement;
+                Pristup_podacima.Suplement suplement = dgvEvidencijaSuplemenata.CurrentRow.DataBoundItem as Pristup_podacima.Suplement;
                 if (suplement != null)
                 {
-                    using (var context = new Entities())
+                    using (var db = new Entities())
                     {
-                        context.Suplements.Attach(suplement);
-                        context.Suplements.Remove(suplement);
+                        db.Suplements.Attach(suplement);
+                        db.Suplements.Remove(suplement);
                         Pristup_podacima.Dohvaćanje_podataka.UpravljanjeSuplementimaDAL.ObrisiSuplement(suplement);
                     }
 
@@ -72,11 +69,11 @@ namespace eGym
         }
         private void Osvjezi()
         {
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var upit = from s in context.Suplements.Include("NaruceniSuplements")
+                var upit = from s in db.Suplements.Include("NaruceniSuplements")
                            select s;
-                dtgEvidencijaSuplemenata.DataSource = upit.ToList();
+                dgvEvidencijaSuplemenata.DataSource = upit.ToList();
 
             }
         }

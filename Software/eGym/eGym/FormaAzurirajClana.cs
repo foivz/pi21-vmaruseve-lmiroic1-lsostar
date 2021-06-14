@@ -23,17 +23,13 @@ namespace eGym
 
         private void btnAzurirajClanaA_Click(object sender, EventArgs e)
         {
-            
-          
-                
-            OdabraniKorisnik.ime = txtImeClanaA.Text;
-            OdabraniKorisnik.prezime = txtPrezimeClanaA.Text;
-            OdabraniKorisnik.email = txtEmailClanaA.Text;
-            OdabraniKorisnik.brojtelefona = txtBrojTelefonaClanaA.Text;
-            OdabraniKorisnik.stanjeNaRacunu = decimal.Parse(txtIznosNaRacunuA.Text);
+            OdabraniKorisnik.ime = txtImeClana.Text;
+            OdabraniKorisnik.prezime = txtPrezimeClana.Text;
+            OdabraniKorisnik.email = txtEmailClana.Text;
+            OdabraniKorisnik.brojtelefona = txtBrojTelefonaClana.Text;
+            OdabraniKorisnik.stanjeNaRacunu = decimal.Parse(txtIznosNaRacunu.Text);
             Pristup_podacima.Dohvaćanje_podataka.UpravljanjeKorisnicimaDAL.AzuriranjeClana(OdabraniKorisnik);
             
-         
             MessageBox.Show("Uspješno ste ažurirali člana!");
             FormaEvidencijaClanova formaEvidencijaClanova = new FormaEvidencijaClanova();
             formaEvidencijaClanova.Show();
@@ -51,11 +47,11 @@ namespace eGym
 
         private void FormaAzurirajClana_Load(object sender, EventArgs e)
         {
-            txtBrojTelefonaClanaA.Text = OdabraniKorisnik.brojtelefona;
-            txtEmailClanaA.Text = OdabraniKorisnik.email;
-            txtImeClanaA.Text = OdabraniKorisnik.ime;
-            txtPrezimeClanaA.Text = OdabraniKorisnik.prezime;
-            txtIznosNaRacunuA.Text = OdabraniKorisnik.stanjeNaRacunu.ToString();
+            txtBrojTelefonaClana.Text = OdabraniKorisnik.brojtelefona;
+            txtEmailClana.Text = OdabraniKorisnik.email;
+            txtImeClana.Text = OdabraniKorisnik.ime;
+            txtPrezimeClana.Text = OdabraniKorisnik.prezime;
+            txtIznosNaRacunu.Text = OdabraniKorisnik.stanjeNaRacunu.ToString();
 
         }
 

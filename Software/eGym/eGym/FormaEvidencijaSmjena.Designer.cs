@@ -32,15 +32,15 @@ namespace eGym
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtgEvidencijaSmjena = new System.Windows.Forms.DataGridView();
+            this.dgvEvidencijaSmjena = new System.Windows.Forms.DataGridView();
             this.zaposlenikkorisnickoImeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.smjena_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsSmjena = new System.Windows.Forms.BindingSource(this.components);
-            this.btnObrisiSmjenuE = new System.Windows.Forms.Button();
-            this.btnDodajSmjenuE = new System.Windows.Forms.Button();
-            this.btnNatragSmjena = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEvidencijaSmjena)).BeginInit();
+            this.btnObrisiSmjenu = new System.Windows.Forms.Button();
+            this.btnDodajSmjenu = new System.Windows.Forms.Button();
+            this.btnNatrag = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaSmjena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSmjena)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,22 +66,22 @@ namespace eGym
             this.label2.TabIndex = 0;
             this.label2.Text = "eGym";
             // 
-            // dtgEvidencijaSmjena
+            // dgvEvidencijaSmjena
             // 
-            this.dtgEvidencijaSmjena.AutoGenerateColumns = false;
-            this.dtgEvidencijaSmjena.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEvidencijaSmjena.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEvidencijaSmjena.AutoGenerateColumns = false;
+            this.dgvEvidencijaSmjena.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvidencijaSmjena.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.zaposlenikkorisnickoImeDataGridViewTextBoxColumn,
             this.datumDataGridViewTextBoxColumn,
             this.smjena_id});
-            this.dtgEvidencijaSmjena.DataSource = this.bsSmjena;
-            this.dtgEvidencijaSmjena.Location = new System.Drawing.Point(49, 121);
-            this.dtgEvidencijaSmjena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtgEvidencijaSmjena.Name = "dtgEvidencijaSmjena";
-            this.dtgEvidencijaSmjena.RowHeadersWidth = 51;
-            this.dtgEvidencijaSmjena.RowTemplate.Height = 24;
-            this.dtgEvidencijaSmjena.Size = new System.Drawing.Size(784, 186);
-            this.dtgEvidencijaSmjena.TabIndex = 1;
+            this.dgvEvidencijaSmjena.DataSource = this.bsSmjena;
+            this.dgvEvidencijaSmjena.Location = new System.Drawing.Point(49, 121);
+            this.dgvEvidencijaSmjena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvEvidencijaSmjena.Name = "dgvEvidencijaSmjena";
+            this.dgvEvidencijaSmjena.RowHeadersWidth = 51;
+            this.dgvEvidencijaSmjena.RowTemplate.Height = 24;
+            this.dgvEvidencijaSmjena.Size = new System.Drawing.Size(784, 186);
+            this.dgvEvidencijaSmjena.TabIndex = 1;
             // 
             // zaposlenikkorisnickoImeDataGridViewTextBoxColumn
             // 
@@ -111,65 +111,65 @@ namespace eGym
             // 
             this.bsSmjena.DataSource = typeof(Pristup_podacima.SmjenaZaposlenika);
             // 
-            // btnObrisiSmjenuE
+            // btnObrisiSmjenu
             // 
-            this.btnObrisiSmjenuE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnObrisiSmjenuE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnObrisiSmjenuE.ForeColor = System.Drawing.Color.White;
-            this.btnObrisiSmjenuE.Location = new System.Drawing.Point(717, 334);
-            this.btnObrisiSmjenuE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnObrisiSmjenuE.Name = "btnObrisiSmjenuE";
-            this.btnObrisiSmjenuE.Size = new System.Drawing.Size(115, 52);
-            this.btnObrisiSmjenuE.TabIndex = 48;
-            this.btnObrisiSmjenuE.Text = "Obriši smjenu";
-            this.btnObrisiSmjenuE.UseVisualStyleBackColor = false;
-            this.btnObrisiSmjenuE.Click += new System.EventHandler(this.btnObrisiSmjenuE_Click);
+            this.btnObrisiSmjenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnObrisiSmjenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObrisiSmjenu.ForeColor = System.Drawing.Color.White;
+            this.btnObrisiSmjenu.Location = new System.Drawing.Point(717, 334);
+            this.btnObrisiSmjenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnObrisiSmjenu.Name = "btnObrisiSmjenu";
+            this.btnObrisiSmjenu.Size = new System.Drawing.Size(115, 52);
+            this.btnObrisiSmjenu.TabIndex = 48;
+            this.btnObrisiSmjenu.Text = "Obriši smjenu";
+            this.btnObrisiSmjenu.UseVisualStyleBackColor = false;
+            this.btnObrisiSmjenu.Click += new System.EventHandler(this.btnObrisiSmjenuE_Click);
             // 
-            // btnDodajSmjenuE
+            // btnDodajSmjenu
             // 
-            this.btnDodajSmjenuE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnDodajSmjenuE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodajSmjenuE.ForeColor = System.Drawing.Color.White;
-            this.btnDodajSmjenuE.Location = new System.Drawing.Point(581, 334);
-            this.btnDodajSmjenuE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDodajSmjenuE.Name = "btnDodajSmjenuE";
-            this.btnDodajSmjenuE.Size = new System.Drawing.Size(117, 50);
-            this.btnDodajSmjenuE.TabIndex = 46;
-            this.btnDodajSmjenuE.Text = "Dodaj smjenu";
-            this.btnDodajSmjenuE.UseVisualStyleBackColor = false;
-            this.btnDodajSmjenuE.Click += new System.EventHandler(this.btnDodajSmjenuE_Click);
+            this.btnDodajSmjenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDodajSmjenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodajSmjenu.ForeColor = System.Drawing.Color.White;
+            this.btnDodajSmjenu.Location = new System.Drawing.Point(581, 334);
+            this.btnDodajSmjenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDodajSmjenu.Name = "btnDodajSmjenu";
+            this.btnDodajSmjenu.Size = new System.Drawing.Size(117, 50);
+            this.btnDodajSmjenu.TabIndex = 46;
+            this.btnDodajSmjenu.Text = "Dodaj smjenu";
+            this.btnDodajSmjenu.UseVisualStyleBackColor = false;
+            this.btnDodajSmjenu.Click += new System.EventHandler(this.btnDodajSmjenuE_Click);
             // 
-            // btnNatragSmjena
+            // btnNatrag
             // 
-            this.btnNatragSmjena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnNatragSmjena.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNatragSmjena.ForeColor = System.Drawing.Color.White;
-            this.btnNatragSmjena.Location = new System.Drawing.Point(49, 335);
-            this.btnNatragSmjena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNatragSmjena.Name = "btnNatragSmjena";
-            this.btnNatragSmjena.Size = new System.Drawing.Size(115, 50);
-            this.btnNatragSmjena.TabIndex = 46;
-            this.btnNatragSmjena.Text = "Natrag";
-            this.btnNatragSmjena.UseVisualStyleBackColor = false;
-            this.btnNatragSmjena.Click += new System.EventHandler(this.btnNatragSmjena_Click);
+            this.btnNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnNatrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNatrag.ForeColor = System.Drawing.Color.White;
+            this.btnNatrag.Location = new System.Drawing.Point(49, 335);
+            this.btnNatrag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNatrag.Name = "btnNatrag";
+            this.btnNatrag.Size = new System.Drawing.Size(115, 50);
+            this.btnNatrag.TabIndex = 46;
+            this.btnNatrag.Text = "Natrag";
+            this.btnNatrag.UseVisualStyleBackColor = false;
+            this.btnNatrag.Click += new System.EventHandler(this.btnNatragSmjena_Click);
             // 
             // FormaEvidencijaSmjena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 416);
-            this.Controls.Add(this.btnObrisiSmjenuE);
-            this.Controls.Add(this.btnNatragSmjena);
-            this.Controls.Add(this.btnDodajSmjenuE);
-            this.Controls.Add(this.dtgEvidencijaSmjena);
+            this.Controls.Add(this.btnObrisiSmjenu);
+            this.Controls.Add(this.btnNatrag);
+            this.Controls.Add(this.btnDodajSmjenu);
+            this.Controls.Add(this.dgvEvidencijaSmjena);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormaEvidencijaSmjena";
-            this.Text = "Smjene";
+            this.Text = "Evidencija Smjena";
             this.Load += new System.EventHandler(this.FormaEvidencijaSmjena_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaEvidencijaSmjena_HelpRequested);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEvidencijaSmjena)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaSmjena)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSmjena)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,10 +180,10 @@ namespace eGym
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dtgEvidencijaSmjena;
-        private System.Windows.Forms.Button btnObrisiSmjenuE;
-        private System.Windows.Forms.Button btnDodajSmjenuE;
-        private System.Windows.Forms.Button btnNatragSmjena;
+        private System.Windows.Forms.DataGridView dgvEvidencijaSmjena;
+        private System.Windows.Forms.Button btnObrisiSmjenu;
+        private System.Windows.Forms.Button btnDodajSmjenu;
+        private System.Windows.Forms.Button btnNatrag;
         private System.Windows.Forms.BindingSource bsSmjena;
         private System.Windows.Forms.DataGridViewTextBoxColumn zaposlenikkorisnickoImeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumDataGridViewTextBoxColumn;

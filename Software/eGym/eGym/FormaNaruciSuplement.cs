@@ -28,11 +28,11 @@ namespace eGym
     
         private void btnNaruci_Click(object sender, EventArgs e)
         {
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
                 Pristup_podacima.Suplement odabraniSuplement = dgvNazivSuplementa.CurrentRow.DataBoundItem as Pristup_podacima.Suplement;
-                context.Suplements.Attach(odabraniSuplement);
-                context.Korisniks.Attach(OdabraniKorisnik);
+                db.Suplements.Attach(odabraniSuplement);
+                db.Korisniks.Attach(OdabraniKorisnik);
                 int kolicina = int.Parse(txtKolicina.Text);
                 NaruceniSuplement naruceniSuplement = new NaruceniSuplement
                 {
@@ -44,8 +44,8 @@ namespace eGym
                 OdabraniKorisnik.stanjeNaRacunu = OdabraniKorisnik.stanjeNaRacunu - (odabraniSuplement.cijena * kolicina);
                 odabraniSuplement.stanje = odabraniSuplement.stanje - kolicina;
                 
-                context.NaruceniSuplements.Add(naruceniSuplement);
-                context.SaveChanges();
+                db.NaruceniSuplements.Add(naruceniSuplement);
+                db.SaveChanges();
 
             }
             MessageBox.Show("Uspješno naručen suplement.");
@@ -60,17 +60,17 @@ namespace eGym
         }
         private void Osvjezi()
         {
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
+                var upit = from k in db.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
                             where k.korisnickoIme == OdabraniKorisnik.korisnickoIme
                             select k.stanjeNaRacunu;
-                txtIznosNaRacunu.Text = query.FirstOrDefault().ToString();
+                txtIznosNaRacunu.Text = upit.FirstOrDefault().ToString();
             }
 
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var upit = from su in context.Suplements.Include("NaruceniSuplements")
+                var upit = from su in db.Suplements.Include("NaruceniSuplements")
                            select su;
                 dgvNazivSuplementa.DataSource = upit.ToList();
             }

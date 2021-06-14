@@ -209,9 +209,9 @@ namespace eGym
             this.Controls.Add(this.lblImeIPrezimeAdmina);
             this.Controls.Add(this.lblDobrosao);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormaAdmin";
-            this.Text = "FormaAdmin";
+            this.Text = "Profil Admina";
             this.Load += new System.EventHandler(this.FormaAdmin_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaAdmin_HelpRequested);
             this.ResumeLayout(false);

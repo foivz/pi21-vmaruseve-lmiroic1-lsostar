@@ -31,15 +31,15 @@ namespace eGym
         {
             this.btnDodajTermin = new System.Windows.Forms.Button();
             this.btnNatrag = new System.Windows.Forms.Button();
-            this.dtpDatumTerminaOdD = new System.Windows.Forms.DateTimePicker();
+            this.dtpDatumTerminaOd = new System.Windows.Forms.DateTimePicker();
             this.lblRadnoVrijeme = new System.Windows.Forms.Label();
             this.lblDatum = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtBrojMjestaD = new System.Windows.Forms.TextBox();
-            this.dtpDatumDoD = new System.Windows.Forms.DateTimePicker();
+            this.txtBrojMjesta = new System.Windows.Forms.TextBox();
+            this.dtpDatumDo = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvZaposlenici = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
@@ -77,13 +77,13 @@ namespace eGym
             this.btnNatrag.UseVisualStyleBackColor = false;
             this.btnNatrag.Click += new System.EventHandler(this.btnNatrag_Click);
             // 
-            // dtpDatumTerminaOdD
+            // dtpDatumTerminaOd
             // 
-            this.dtpDatumTerminaOdD.Location = new System.Drawing.Point(128, 169);
-            this.dtpDatumTerminaOdD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpDatumTerminaOdD.Name = "dtpDatumTerminaOdD";
-            this.dtpDatumTerminaOdD.Size = new System.Drawing.Size(217, 22);
-            this.dtpDatumTerminaOdD.TabIndex = 56;
+            this.dtpDatumTerminaOd.Location = new System.Drawing.Point(128, 169);
+            this.dtpDatumTerminaOd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpDatumTerminaOd.Name = "dtpDatumTerminaOd";
+            this.dtpDatumTerminaOd.Size = new System.Drawing.Size(217, 22);
+            this.dtpDatumTerminaOd.TabIndex = 56;
             // 
             // lblRadnoVrijeme
             // 
@@ -146,21 +146,21 @@ namespace eGym
             this.label6.TabIndex = 54;
             this.label6.Text = "Vrsta treninga:";
             // 
-            // txtBrojMjestaD
+            // txtBrojMjesta
             // 
-            this.txtBrojMjestaD.Location = new System.Drawing.Point(857, 172);
-            this.txtBrojMjestaD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBrojMjestaD.Name = "txtBrojMjestaD";
-            this.txtBrojMjestaD.Size = new System.Drawing.Size(217, 22);
-            this.txtBrojMjestaD.TabIndex = 60;
+            this.txtBrojMjesta.Location = new System.Drawing.Point(857, 172);
+            this.txtBrojMjesta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBrojMjesta.Name = "txtBrojMjesta";
+            this.txtBrojMjesta.Size = new System.Drawing.Size(217, 22);
+            this.txtBrojMjesta.TabIndex = 60;
             // 
-            // dtpDatumDoD
+            // dtpDatumDo
             // 
-            this.dtpDatumDoD.Location = new System.Drawing.Point(471, 170);
-            this.dtpDatumDoD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpDatumDoD.Name = "dtpDatumDoD";
-            this.dtpDatumDoD.Size = new System.Drawing.Size(217, 22);
-            this.dtpDatumDoD.TabIndex = 56;
+            this.dtpDatumDo.Location = new System.Drawing.Point(471, 170);
+            this.dtpDatumDo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpDatumDo.Name = "dtpDatumDo";
+            this.dtpDatumDo.Size = new System.Drawing.Size(217, 22);
+            this.dtpDatumDo.TabIndex = 56;
             // 
             // label5
             // 
@@ -218,11 +218,11 @@ namespace eGym
             this.Controls.Add(this.cbVrstaTreninga);
             this.Controls.Add(this.dgvVrstaVjezbe);
             this.Controls.Add(this.dgvZaposlenici);
-            this.Controls.Add(this.txtBrojMjestaD);
+            this.Controls.Add(this.txtBrojMjesta);
             this.Controls.Add(this.btnDodajTermin);
             this.Controls.Add(this.btnNatrag);
-            this.Controls.Add(this.dtpDatumDoD);
-            this.Controls.Add(this.dtpDatumTerminaOdD);
+            this.Controls.Add(this.dtpDatumDo);
+            this.Controls.Add(this.dtpDatumTerminaOd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -233,7 +233,7 @@ namespace eGym
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormaDodajTermin";
-            this.Text = "Dodaj termin";
+            this.Text = "Dodavanje Termina";
             this.Load += new System.EventHandler(this.FormaDodajTermin_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaDodajTermin_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();
@@ -247,15 +247,15 @@ namespace eGym
 
         private System.Windows.Forms.Button btnDodajTermin;
         private System.Windows.Forms.Button btnNatrag;
-        private System.Windows.Forms.DateTimePicker dtpDatumTerminaOdD;
+        private System.Windows.Forms.DateTimePicker dtpDatumTerminaOd;
         private System.Windows.Forms.Label lblRadnoVrijeme;
         private System.Windows.Forms.Label lblDatum;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtBrojMjestaD;
-        private System.Windows.Forms.DateTimePicker dtpDatumDoD;
+        private System.Windows.Forms.TextBox txtBrojMjesta;
+        private System.Windows.Forms.DateTimePicker dtpDatumDo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvZaposlenici;
         private System.Windows.Forms.Label label4;

@@ -36,7 +36,7 @@ namespace eGym
             Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTermine(odabraniTermin);
             MessageBox.Show("Uspješno rezerviran trening!");
             Korisnik trener = cmbOdabirTrenera.SelectedItem as Korisnik;
-            DateTime zeljenidatum = dtpOdaberiDatumIndividualni.Value.Date;
+            DateTime zeljenidatum = dtpOdaberiDatum.Value.Date;
             dgvIndividualniTrening.DataSource = null;
             dgvIndividualniTrening.DataSource = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTerminePremaTreneru(trener, zeljenidatum);
             Mailer.PosaljiObavijestNaMail(Sesija.PrijavljeniKorisnik, "Obavijest o uspjesnoj rezervaciji termina individualnog treninga koji počinje "+ odabraniTermin.od+" h, a vodi ga "+trener.ime +" "+trener.prezime, "Rezervacija individualnog terninga");
@@ -62,7 +62,7 @@ namespace eGym
         private void cmbOdabirTrenera_SelectedIndexChanged(object sender, EventArgs e)
         {           
             Korisnik trener = cmbOdabirTrenera.SelectedItem as Korisnik;
-            DateTime zeljenidatum = dtpOdaberiDatumIndividualni.Value.Date;
+            DateTime zeljenidatum = dtpOdaberiDatum.Value.Date;
             
             dgvIndividualniTrening.DataSource = null;
             dgvIndividualniTrening.DataSource = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTerminePremaTreneru(trener, zeljenidatum);
@@ -71,7 +71,7 @@ namespace eGym
         private void dtpOdaberiDatumIndividualni_ValueChanged(object sender, EventArgs e)
         {
             Korisnik trener = cmbOdabirTrenera.SelectedItem as Korisnik;
-            DateTime zeljenidatum = dtpOdaberiDatumIndividualni.Value.Date;
+            DateTime zeljenidatum = dtpOdaberiDatum.Value.Date;
             
             dgvIndividualniTrening.DataSource = null;
             dgvIndividualniTrening.DataSource = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTerminePremaTreneru(trener, zeljenidatum);

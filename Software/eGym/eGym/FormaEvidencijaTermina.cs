@@ -28,10 +28,10 @@ namespace eGym
                 Termin termin = dgvEvidencijaTermina.CurrentRow.DataBoundItem as Termin;
                 if (termin != null)
                 {
-                    using (var context = new Entities())
+                    using (var db = new Entities())
                     {
-                        context.Termins.Attach(termin);
-                        context.Termins.Remove(termin);
+                        db.Termins.Attach(termin);
+                        db.Termins.Remove(termin);
                         Pristup_podacima.Dohvaćanje_podataka.UpravljanjeTerminimaDAL.ObrisiTermin(termin);
                     }
 
@@ -67,9 +67,9 @@ namespace eGym
 
         private void Osvjezi()
         {
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var upit = from t in context.Termins.Include("Trening").Include("Korisnik").Include("VrstaVjezbe")
+                var upit = from t in db.Termins.Include("Trening").Include("Korisnik").Include("VrstaVjezbe")
                            select t;
                 dgvEvidencijaTermina.DataSource = upit.ToList();
 

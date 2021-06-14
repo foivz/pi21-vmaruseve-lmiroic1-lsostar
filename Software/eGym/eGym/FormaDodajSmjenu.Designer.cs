@@ -133,7 +133,7 @@ namespace eGym
             this.brojtelefonaDataGridViewTextBoxColumn});
             this.dgvZaposlenici.DataSource = this.bsDodajSmjenu;
             this.dgvZaposlenici.Location = new System.Drawing.Point(76, 160);
-            this.dgvZaposlenici.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvZaposlenici.Margin = new System.Windows.Forms.Padding(4);
             this.dgvZaposlenici.Name = "dgvZaposlenici";
             this.dgvZaposlenici.RowHeadersWidth = 51;
             this.dgvZaposlenici.Size = new System.Drawing.Size(608, 185);
@@ -212,7 +212,7 @@ namespace eGym
             // dtpDatum
             // 
             this.dtpDatum.Location = new System.Drawing.Point(532, 373);
-            this.dtpDatum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDatum.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDatum.Name = "dtpDatum";
             this.dtpDatum.Size = new System.Drawing.Size(151, 22);
             this.dtpDatum.TabIndex = 52;
@@ -233,7 +233,7 @@ namespace eGym
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormaDodajSmjenu";
-            this.Text = "Dodaj smjenu";
+            this.Text = "Dodavanje smjene";
             this.Load += new System.EventHandler(this.FormaDodajSmjenu_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaDodajSmjenu_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();

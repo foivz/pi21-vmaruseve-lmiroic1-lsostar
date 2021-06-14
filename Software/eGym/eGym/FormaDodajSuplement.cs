@@ -30,9 +30,9 @@ namespace eGym
         private void btnDodajSuplementD_Click(object sender, EventArgs e)
         {
            
-                string naziv = txtNazivDodajSuplement.Text;
-                decimal cijena = decimal.Parse(txtCijenaDodajSuplement.Text);
-                int kolicina = int.Parse(txtKolicinaDodajSuplement.Text);
+                string naziv = txtNazivSuplementa.Text;
+                decimal cijena = decimal.Parse(txtCijenaSuplementa.Text);
+                int kolicina = int.Parse(txtKolicinaSuplementa.Text);
              
 
                 Pristup_podacima.Suplement noviSuplement = new Pristup_podacima.Suplement

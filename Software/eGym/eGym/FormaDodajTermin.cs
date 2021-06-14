@@ -27,34 +27,33 @@ namespace eGym
             DohvatiVrsteVjezbi();
             DohvatiZaposlenika();
 
-            dtpDatumTerminaOdD.Format = DateTimePickerFormat.Time;
-            dtpDatumDoD.Format = DateTimePickerFormat.Time;
+            dtpDatumTerminaOd.Format = DateTimePickerFormat.Time;
+            dtpDatumDo.Format = DateTimePickerFormat.Time;
 
-            dtpDatumDoD.ShowUpDown = true;
-            dtpDatumTerminaOdD.ShowUpDown = true;
+            dtpDatumDo.ShowUpDown = true;
+            dtpDatumTerminaOd.ShowUpDown = true;
 
         }
 
         private void DohvatiVrsteVjezbi()
         {
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var query = from vv in context.VrstaVjezbes.Include("Termins")
-
+                var upit = from vv in db.VrstaVjezbes.Include("Termins")
                             select vv;
-                dgvVrstaVjezbe.DataSource = query.ToList();
+                dgvVrstaVjezbe.DataSource = upit.ToList();
 
             }
         }
 
         private void DohvatiVrsteTreninga()
         {
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var query = from vt in context.Trenings.Include("RezervacijaTreningas").Include("Termins")
+                var upit = from vt in db.Trenings.Include("RezervacijaTreningas").Include("Termins")
                             select vt;
                 cbVrstaTreninga.DataSource = null;
-                cbVrstaTreninga.DataSource = query.Distinct().ToList();
+                cbVrstaTreninga.DataSource = upit.Distinct().ToList();
                 cbVrstaTreninga.DisplayMember = "naziv";
                 cbVrstaTreninga.ValueMember = "ID";
 
@@ -63,12 +62,12 @@ namespace eGym
 
         private void DohvatiZaposlenika()
         {
-            using (var context = new Entities())
+            using (var db = new Entities())
             {
-                var query = from k in context.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
+                var upit = from k in db.Korisniks.Include("Clanarinas").Include("UlogaUTeretani").Include("NaruceniSuplements").Include("RezervacijaTreningas").Include("SmjenaZaposlenikas").Include("Termins")
                             where k.uloga_id == 2
                             select k;
-                dgvZaposlenici.DataSource = query.Distinct().ToList();
+                dgvZaposlenici.DataSource = upit.Distinct().ToList();
 
             }
         }
@@ -76,23 +75,23 @@ namespace eGym
         private void btnDodajTermin_Click(object sender, EventArgs e)
         {
 
-            dtpDatumTerminaOdD.Format = DateTimePickerFormat.Time;
-            dtpDatumDoD.Format = DateTimePickerFormat.Time;
+            dtpDatumTerminaOd.Format = DateTimePickerFormat.Time;
+            dtpDatumDo.Format = DateTimePickerFormat.Time;
 
-            dtpDatumDoD.ShowUpDown = true;
-            dtpDatumTerminaOdD.ShowUpDown = true;
+            dtpDatumDo.ShowUpDown = true;
+            dtpDatumTerminaOd.ShowUpDown = true;
 
             Korisnik korisnik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
             VrstaVjezbe vrstaVjezbe = dgvVrstaVjezbe.CurrentRow.DataBoundItem as VrstaVjezbe;
             Pristup_podacima.Trening trening = cbVrstaTreninga.SelectedItem as Pristup_podacima.Trening;
-            DateTime od = this.dtpDatumTerminaOdD.Value.ToLocalTime();
-            DateTime do1 = this.dtpDatumDoD.Value.ToLocalTime();
-            int brojMjesta = int.Parse(txtBrojMjestaD.Text);
+            DateTime datumOd = this.dtpDatumTerminaOd.Value.ToLocalTime();
+            DateTime datumDo = this.dtpDatumDo.Value.ToLocalTime();
+            int brojMjesta = int.Parse(txtBrojMjesta.Text);
 
             Termin noviTermin = new Termin
             {
-                od = od,
-                @do = do1,
+                od = datumOd,
+                @do = datumDo,
                 broj_mjesta = brojMjesta,
                 zaposlenik_korisnickoIme = korisnik.korisnickoIme,
                 vrstaVjezbe_id = vrstaVjezbe.ID,

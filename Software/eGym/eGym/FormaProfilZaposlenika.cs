@@ -48,7 +48,8 @@ namespace eGym
 
         private void btnIzvjesce_Click(object sender, EventArgs e)
         {
-            FormaIzvjesce formaIzvjesce = new FormaIzvjesce();
+           
+            FormaIzvjesce1 formaIzvjesce = new FormaIzvjesce1();
             formaIzvjesce.Show();
             this.Hide();
         }
@@ -66,10 +67,10 @@ namespace eGym
         {
             lblImeIPrezimeClana.Text = Sesija.PrijavljeniKorisnik.ime + " " + Sesija.PrijavljeniKorisnik.prezime;
 
-            txtImeZaposlenika.Text = Sesija.PrijavljeniKorisnik.ime;
-            txtPrezimeZaposlenika.Text = Sesija.PrijavljeniKorisnik.prezime;
-            txtBrojTelefonaZaposlenika.Text = Sesija.PrijavljeniKorisnik.brojtelefona;
-            txtEmailZaposlenika.Text = Sesija.PrijavljeniKorisnik.email;
+            txtIme.Text = Sesija.PrijavljeniKorisnik.ime;
+            txtPrezime.Text = Sesija.PrijavljeniKorisnik.prezime;
+            txtBrojTelefona.Text = Sesija.PrijavljeniKorisnik.brojtelefona;
+            txtEmail.Text = Sesija.PrijavljeniKorisnik.email;
         }
 
        

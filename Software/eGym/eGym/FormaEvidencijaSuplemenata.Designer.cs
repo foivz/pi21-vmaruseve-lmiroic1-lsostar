@@ -30,11 +30,11 @@ namespace eGym
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnObrisiSuplementE = new System.Windows.Forms.Button();
-            this.btnAzurirajSuplementE = new System.Windows.Forms.Button();
+            this.btnObrisiSuplement = new System.Windows.Forms.Button();
+            this.btnAzurirajSuplement = new System.Windows.Forms.Button();
             this.btnNatragSuplement = new System.Windows.Forms.Button();
-            this.btnDodajSSuplementE = new System.Windows.Forms.Button();
-            this.dtgEvidencijaSuplemenata = new System.Windows.Forms.DataGridView();
+            this.btnDodajSuplement = new System.Windows.Forms.Button();
+            this.dgvEvidencijaSuplemenata = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,38 +43,38 @@ namespace eGym
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bsSuplementi = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEvidencijaSuplemenata)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaSuplemenata)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suplementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnObrisiSuplementE
+            // btnObrisiSuplement
             // 
-            this.btnObrisiSuplementE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnObrisiSuplementE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnObrisiSuplementE.ForeColor = System.Drawing.Color.White;
-            this.btnObrisiSuplementE.Location = new System.Drawing.Point(726, 362);
-            this.btnObrisiSuplementE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnObrisiSuplementE.Name = "btnObrisiSuplementE";
-            this.btnObrisiSuplementE.Size = new System.Drawing.Size(115, 52);
-            this.btnObrisiSuplementE.TabIndex = 55;
-            this.btnObrisiSuplementE.Text = "Obriši suplement";
-            this.btnObrisiSuplementE.UseVisualStyleBackColor = false;
-            this.btnObrisiSuplementE.Click += new System.EventHandler(this.btnObrisiSuplementE_Click);
+            this.btnObrisiSuplement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnObrisiSuplement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObrisiSuplement.ForeColor = System.Drawing.Color.White;
+            this.btnObrisiSuplement.Location = new System.Drawing.Point(726, 362);
+            this.btnObrisiSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnObrisiSuplement.Name = "btnObrisiSuplement";
+            this.btnObrisiSuplement.Size = new System.Drawing.Size(115, 52);
+            this.btnObrisiSuplement.TabIndex = 55;
+            this.btnObrisiSuplement.Text = "Obriši suplement";
+            this.btnObrisiSuplement.UseVisualStyleBackColor = false;
+            this.btnObrisiSuplement.Click += new System.EventHandler(this.btnObrisiSuplementE_Click);
             // 
-            // btnAzurirajSuplementE
+            // btnAzurirajSuplement
             // 
-            this.btnAzurirajSuplementE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAzurirajSuplementE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAzurirajSuplementE.ForeColor = System.Drawing.Color.White;
-            this.btnAzurirajSuplementE.Location = new System.Drawing.Point(592, 364);
-            this.btnAzurirajSuplementE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAzurirajSuplementE.Name = "btnAzurirajSuplementE";
-            this.btnAzurirajSuplementE.Size = new System.Drawing.Size(115, 50);
-            this.btnAzurirajSuplementE.TabIndex = 54;
-            this.btnAzurirajSuplementE.Text = "Ažuriraj suplement";
-            this.btnAzurirajSuplementE.UseVisualStyleBackColor = false;
-            this.btnAzurirajSuplementE.Click += new System.EventHandler(this.btnAzurirajSuplementE_Click);
+            this.btnAzurirajSuplement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAzurirajSuplement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAzurirajSuplement.ForeColor = System.Drawing.Color.White;
+            this.btnAzurirajSuplement.Location = new System.Drawing.Point(592, 364);
+            this.btnAzurirajSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAzurirajSuplement.Name = "btnAzurirajSuplement";
+            this.btnAzurirajSuplement.Size = new System.Drawing.Size(115, 50);
+            this.btnAzurirajSuplement.TabIndex = 54;
+            this.btnAzurirajSuplement.Text = "Ažuriraj suplement";
+            this.btnAzurirajSuplement.UseVisualStyleBackColor = false;
+            this.btnAzurirajSuplement.Click += new System.EventHandler(this.btnAzurirajSuplementE_Click);
             // 
             // btnNatragSuplement
             // 
@@ -90,36 +90,36 @@ namespace eGym
             this.btnNatragSuplement.UseVisualStyleBackColor = false;
             this.btnNatragSuplement.Click += new System.EventHandler(this.btnNatragSuplement_Click);
             // 
-            // btnDodajSSuplementE
+            // btnDodajSuplement
             // 
-            this.btnDodajSSuplementE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnDodajSSuplementE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodajSSuplementE.ForeColor = System.Drawing.Color.White;
-            this.btnDodajSSuplementE.Location = new System.Drawing.Point(458, 364);
-            this.btnDodajSSuplementE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDodajSSuplementE.Name = "btnDodajSSuplementE";
-            this.btnDodajSSuplementE.Size = new System.Drawing.Size(115, 50);
-            this.btnDodajSSuplementE.TabIndex = 53;
-            this.btnDodajSSuplementE.Text = "Dodaj suplement";
-            this.btnDodajSSuplementE.UseVisualStyleBackColor = false;
-            this.btnDodajSSuplementE.Click += new System.EventHandler(this.btnDodajSSuplementE_Click);
+            this.btnDodajSuplement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDodajSuplement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodajSuplement.ForeColor = System.Drawing.Color.White;
+            this.btnDodajSuplement.Location = new System.Drawing.Point(458, 364);
+            this.btnDodajSuplement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDodajSuplement.Name = "btnDodajSuplement";
+            this.btnDodajSuplement.Size = new System.Drawing.Size(115, 50);
+            this.btnDodajSuplement.TabIndex = 53;
+            this.btnDodajSuplement.Text = "Dodaj suplement";
+            this.btnDodajSuplement.UseVisualStyleBackColor = false;
+            this.btnDodajSuplement.Click += new System.EventHandler(this.btnDodajSSuplementE_Click);
             // 
-            // dtgEvidencijaSuplemenata
+            // dgvEvidencijaSuplemenata
             // 
-            this.dtgEvidencijaSuplemenata.AutoGenerateColumns = false;
-            this.dtgEvidencijaSuplemenata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEvidencijaSuplemenata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEvidencijaSuplemenata.AutoGenerateColumns = false;
+            this.dgvEvidencijaSuplemenata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvidencijaSuplemenata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
             this.nazivDataGridViewTextBoxColumn,
             this.cijenaDataGridViewTextBoxColumn,
             this.stanjeDataGridViewTextBoxColumn});
-            this.dtgEvidencijaSuplemenata.DataSource = this.suplementBindingSource;
-            this.dtgEvidencijaSuplemenata.Location = new System.Drawing.Point(58, 150);
-            this.dtgEvidencijaSuplemenata.Name = "dtgEvidencijaSuplemenata";
-            this.dtgEvidencijaSuplemenata.RowHeadersWidth = 51;
-            this.dtgEvidencijaSuplemenata.RowTemplate.Height = 24;
-            this.dtgEvidencijaSuplemenata.Size = new System.Drawing.Size(784, 186);
-            this.dtgEvidencijaSuplemenata.TabIndex = 51;
+            this.dgvEvidencijaSuplemenata.DataSource = this.suplementBindingSource;
+            this.dgvEvidencijaSuplemenata.Location = new System.Drawing.Point(58, 150);
+            this.dgvEvidencijaSuplemenata.Name = "dgvEvidencijaSuplemenata";
+            this.dgvEvidencijaSuplemenata.RowHeadersWidth = 51;
+            this.dgvEvidencijaSuplemenata.RowTemplate.Height = 24;
+            this.dgvEvidencijaSuplemenata.Size = new System.Drawing.Size(784, 186);
+            this.dgvEvidencijaSuplemenata.TabIndex = 51;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -183,18 +183,18 @@ namespace eGym
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 547);
-            this.Controls.Add(this.btnObrisiSuplementE);
-            this.Controls.Add(this.btnAzurirajSuplementE);
+            this.Controls.Add(this.btnObrisiSuplement);
+            this.Controls.Add(this.btnAzurirajSuplement);
             this.Controls.Add(this.btnNatragSuplement);
-            this.Controls.Add(this.btnDodajSSuplementE);
-            this.Controls.Add(this.dtgEvidencijaSuplemenata);
+            this.Controls.Add(this.btnDodajSuplement);
+            this.Controls.Add(this.dgvEvidencijaSuplemenata);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormaEvidencijaSuplemenata";
-            this.Text = "EvidencijaSuplemenata";
+            this.Text = "Evidencija Suplemenata";
             this.Load += new System.EventHandler(this.FormaEvidencijaSuplemenata_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormaEvidencijaSuplemenata_HelpRequested);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEvidencijaSuplemenata)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencijaSuplemenata)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suplementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSuplementi)).EndInit();
             this.ResumeLayout(false);
@@ -204,11 +204,11 @@ namespace eGym
 
         #endregion
 
-        private System.Windows.Forms.Button btnObrisiSuplementE;
-        private System.Windows.Forms.Button btnAzurirajSuplementE;
+        private System.Windows.Forms.Button btnObrisiSuplement;
+        private System.Windows.Forms.Button btnAzurirajSuplement;
         private System.Windows.Forms.Button btnNatragSuplement;
-        private System.Windows.Forms.Button btnDodajSSuplementE;
-        private System.Windows.Forms.DataGridView dtgEvidencijaSuplemenata;
+        private System.Windows.Forms.Button btnDodajSuplement;
+        private System.Windows.Forms.DataGridView dgvEvidencijaSuplemenata;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;

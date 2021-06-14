@@ -33,8 +33,9 @@ namespace eGym
             Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.Rezerviraj(rezervacijaTreninga);
             Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTermine(odabraniTermin);
             MessageBox.Show("Uspješno rezerviran trening!");
+
             VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbe.SelectedItem as VrstaVjezbe;
-            DateTime zeljenidatum = dtpOdaberiDatumGrupni.Value.Date;
+            DateTime zeljenidatum = dtpOdaberiDatum.Value.Date;
             dgvGrupniTrening.DataSource = null;
             dgvGrupniTrening.DataSource = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTerminePremaVrstiVjezbe(vrstaVjezbe, zeljenidatum);
             Mailer.PosaljiObavijestNaMail(Sesija.PrijavljeniKorisnik, "Obavijest o uspjesnoj rezervaciji termina grupnog treninga koji počinje " + odabraniTermin.od + " h, a vrsta vježbe je "+ vrstaVjezbe.naziv, " Rezervacija individualnog terninga");
@@ -52,7 +53,7 @@ namespace eGym
         private void cmbVrstaVjezbe_SelectedIndexChanged(object sender, EventArgs e)
         {
             VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbe.SelectedItem as VrstaVjezbe;
-            DateTime zeljenidatum = dtpOdaberiDatumGrupni.Value.Date;
+            DateTime zeljenidatum = dtpOdaberiDatum.Value.Date;
            
             dgvGrupniTrening.DataSource = null;
             dgvGrupniTrening.DataSource = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTerminePremaVrstiVjezbe(vrstaVjezbe, zeljenidatum); 
@@ -96,7 +97,7 @@ namespace eGym
         private void dtpOdaberiDatumGrupni_ValueChanged(object sender, EventArgs e)
         {
             VrstaVjezbe vrstaVjezbe = cmbVrstaVjezbe.SelectedItem as VrstaVjezbe;
-            DateTime zeljenidatum = dtpOdaberiDatumGrupni.Value.Date;
+            DateTime zeljenidatum = dtpOdaberiDatum.Value.Date;
             
             dgvGrupniTrening.DataSource = null;
             dgvGrupniTrening.DataSource = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeRezervacijamaDAL.VratiTerminePremaVrstiVjezbe(vrstaVjezbe, zeljenidatum);

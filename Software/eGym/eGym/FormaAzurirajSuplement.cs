@@ -33,9 +33,9 @@ namespace eGym
         private void btnAzurirajSuplementA_Click(object sender, EventArgs e)
         {
 
-            OdabraniSuplement.naziv = txtNazivAzurirajSuplement.Text;
-            OdabraniSuplement.stanje = int.Parse(txtKolicinaAzurirajSuplement.Text);
-            OdabraniSuplement.cijena = decimal.Parse(txtCijenaAzurirajSuplement.Text);
+            OdabraniSuplement.naziv = txtNazivSuplementa.Text;
+            OdabraniSuplement.stanje = int.Parse(txtKolicinaSuplementa.Text);
+            OdabraniSuplement.cijena = decimal.Parse(txtCijenaSuplementa.Text);
             Pristup_podacima.Dohvaćanje_podataka.UpravljanjeSuplementimaDAL.AzuriranjeSuplementa(OdabraniSuplement);
             MessageBox.Show("Uspješno ste ažurirali suplement!");
             FormaEvidencijaSuplemenata formaEvidencijaSuplemenata = new FormaEvidencijaSuplemenata();
@@ -45,9 +45,9 @@ namespace eGym
 
         private void FormaAzurirajSuplement_Load(object sender, EventArgs e)
         {
-            txtNazivAzurirajSuplement.Text = OdabraniSuplement.naziv;
-            txtKolicinaAzurirajSuplement.Text = OdabraniSuplement.stanje.ToString();
-            txtCijenaAzurirajSuplement.Text = OdabraniSuplement.cijena.ToString();
+            txtNazivSuplementa.Text = OdabraniSuplement.naziv;
+            txtKolicinaSuplementa.Text = OdabraniSuplement.stanje.ToString();
+            txtCijenaSuplementa.Text = OdabraniSuplement.cijena.ToString();
 
         }
 

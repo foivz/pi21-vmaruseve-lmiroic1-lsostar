@@ -38,10 +38,10 @@ namespace eGym
             this.lblBrojTelefona = new System.Windows.Forms.Label();
             this.lblVrijediOd = new System.Windows.Forms.Label();
             this.lblVrijediDo = new System.Windows.Forms.Label();
-            this.txtImeClana = new System.Windows.Forms.TextBox();
-            this.txtPrezimeClana = new System.Windows.Forms.TextBox();
-            this.txtEmailClana = new System.Windows.Forms.TextBox();
-            this.txtBrojTelefonaClana = new System.Windows.Forms.TextBox();
+            this.txtIme = new System.Windows.Forms.TextBox();
+            this.txtPrezime = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtBrojTelefona = new System.Windows.Forms.TextBox();
             this.btnPlatiClanarinu = new System.Windows.Forms.Button();
             this.btnNaruciSuplement = new System.Windows.Forms.Button();
             this.btnRezervacijaTreninga = new System.Windows.Forms.Button();
@@ -142,37 +142,37 @@ namespace eGym
             this.lblVrijediDo.Text = "Vrijedi do:";
             this.lblVrijediDo.Click += new System.EventHandler(this.lblVrijediDo_Click);
             // 
-            // txtImeClana
+            // txtIme
             // 
-            this.txtImeClana.Location = new System.Drawing.Point(211, 180);
-            this.txtImeClana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtImeClana.Name = "txtImeClana";
-            this.txtImeClana.Size = new System.Drawing.Size(183, 22);
-            this.txtImeClana.TabIndex = 11;
+            this.txtIme.Location = new System.Drawing.Point(211, 180);
+            this.txtIme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIme.Name = "txtIme";
+            this.txtIme.Size = new System.Drawing.Size(183, 22);
+            this.txtIme.TabIndex = 11;
             // 
-            // txtPrezimeClana
+            // txtPrezime
             // 
-            this.txtPrezimeClana.Location = new System.Drawing.Point(211, 217);
-            this.txtPrezimeClana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPrezimeClana.Name = "txtPrezimeClana";
-            this.txtPrezimeClana.Size = new System.Drawing.Size(183, 22);
-            this.txtPrezimeClana.TabIndex = 12;
+            this.txtPrezime.Location = new System.Drawing.Point(211, 217);
+            this.txtPrezime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrezime.Name = "txtPrezime";
+            this.txtPrezime.Size = new System.Drawing.Size(183, 22);
+            this.txtPrezime.TabIndex = 12;
             // 
-            // txtEmailClana
+            // txtEmail
             // 
-            this.txtEmailClana.Location = new System.Drawing.Point(211, 254);
-            this.txtEmailClana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtEmailClana.Name = "txtEmailClana";
-            this.txtEmailClana.Size = new System.Drawing.Size(183, 22);
-            this.txtEmailClana.TabIndex = 13;
+            this.txtEmail.Location = new System.Drawing.Point(211, 254);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(183, 22);
+            this.txtEmail.TabIndex = 13;
             // 
-            // txtBrojTelefonaClana
+            // txtBrojTelefona
             // 
-            this.txtBrojTelefonaClana.Location = new System.Drawing.Point(211, 290);
-            this.txtBrojTelefonaClana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBrojTelefonaClana.Name = "txtBrojTelefonaClana";
-            this.txtBrojTelefonaClana.Size = new System.Drawing.Size(183, 22);
-            this.txtBrojTelefonaClana.TabIndex = 14;
+            this.txtBrojTelefona.Location = new System.Drawing.Point(211, 290);
+            this.txtBrojTelefona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBrojTelefona.Name = "txtBrojTelefona";
+            this.txtBrojTelefona.Size = new System.Drawing.Size(183, 22);
+            this.txtBrojTelefona.TabIndex = 14;
             // 
             // btnPlatiClanarinu
             // 
@@ -262,10 +262,10 @@ namespace eGym
             this.Controls.Add(this.btnRezervacijaTreninga);
             this.Controls.Add(this.btnNaruciSuplement);
             this.Controls.Add(this.btnPlatiClanarinu);
-            this.Controls.Add(this.txtBrojTelefonaClana);
-            this.Controls.Add(this.txtEmailClana);
-            this.Controls.Add(this.txtPrezimeClana);
-            this.Controls.Add(this.txtImeClana);
+            this.Controls.Add(this.txtBrojTelefona);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPrezime);
+            this.Controls.Add(this.txtIme);
             this.Controls.Add(this.lblVrijediDo);
             this.Controls.Add(this.lblVrijediOd);
             this.Controls.Add(this.lblBrojTelefona);
@@ -277,7 +277,7 @@ namespace eGym
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "formProfilClana";
-            this.Text = "Clan";
+            this.Text = "Profil Člana";
             this.Load += new System.EventHandler(this.formProfilClana_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.formProfilClana_HelpRequested);
             this.ResumeLayout(false);
@@ -296,10 +296,10 @@ namespace eGym
         private System.Windows.Forms.Label lblBrojTelefona;
         private System.Windows.Forms.Label lblVrijediOd;
         private System.Windows.Forms.Label lblVrijediDo;
-        private System.Windows.Forms.TextBox txtImeClana;
-        private System.Windows.Forms.TextBox txtPrezimeClana;
-        private System.Windows.Forms.TextBox txtEmailClana;
-        private System.Windows.Forms.TextBox txtBrojTelefonaClana;
+        private System.Windows.Forms.TextBox txtIme;
+        private System.Windows.Forms.TextBox txtPrezime;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtBrojTelefona;
         private System.Windows.Forms.Button btnPlatiClanarinu;
         private System.Windows.Forms.Button btnNaruciSuplement;
         private System.Windows.Forms.Button btnRezervacijaTreninga;

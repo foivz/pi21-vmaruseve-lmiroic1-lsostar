@@ -15,12 +15,12 @@ namespace eGym
 {
     public partial class FormaPlatiClanarinu : Form
     {
-        Korisnik odabraniKorisnik;
+        Korisnik OdabraniKorisnik;
 
         public FormaPlatiClanarinu(Korisnik korisnik)
         {
             InitializeComponent();
-            odabraniKorisnik = korisnik;
+            OdabraniKorisnik = korisnik;
 
         }
 
@@ -36,29 +36,29 @@ namespace eGym
         {
             Pristup_podacima.VrstaClanarine vrstaClanarine = dgvClanarina.CurrentRow.DataBoundItem as Pristup_podacima.VrstaClanarine;
 
-            if (!Pristup_podacima.Dohvaćanje_podataka.UpravljanjeClanarinamaDAL.VratiVrijemePlacanja(odabraniKorisnik))
+            if (!Pristup_podacima.Dohvaćanje_podataka.UpravljanjeClanarinamaDAL.VratiVrijemePlacanja(OdabraniKorisnik))
             {
-                using (var context = new Entities())
+                using (var db = new Entities())
                 {
                     DateTime vrijedi_od = DateTime.Now;
                     DateTime vrijedi_do = vrijedi_od.AddDays(30); 
 
-                    context.Korisniks.Attach(odabraniKorisnik);
+                    db.Korisniks.Attach(OdabraniKorisnik);
 
                     Clanarina novaClanarina = new Clanarina
                     {
                         vrijedi_do = vrijedi_do,
                         vrijedi_od = vrijedi_od,
                         vrsta_id = vrstaClanarine.ID,
-                        korisnik_korisnickoIme = odabraniKorisnik.korisnickoIme,
+                        korisnik_korisnickoIme = OdabraniKorisnik.korisnickoIme,
                         placeno = "Da"
 
                     };
                     
                     Pristup_podacima.Dohvaćanje_podataka.UpravljanjeClanarinamaDAL.PlatiClanarinu(novaClanarina);
-                    odabraniKorisnik.stanjeNaRacunu = odabraniKorisnik.stanjeNaRacunu - vrstaClanarine.cijena;
-                    lblIznosNaRacunuClanarina.Text = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeClanarinamaDAL.PrikaziStanjeNaRacunu(odabraniKorisnik);
-                    context.SaveChanges();
+                    OdabraniKorisnik.stanjeNaRacunu = OdabraniKorisnik.stanjeNaRacunu - vrstaClanarine.cijena;
+                    lblIznosNaRacunuClanarina.Text = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeClanarinamaDAL.PrikaziStanjeNaRacunu(OdabraniKorisnik);
+                    db.SaveChanges();
                 }
                 Mailer.PosaljiObavijestNaMail(Sesija.PrijavljeniKorisnik, "Obavijest o uspjesnoj plaćenoj članarini.", "eGym - plaćena članarina");
                 MessageBox.Show("Članarina uspješno plaćena!");
@@ -77,7 +77,7 @@ namespace eGym
         private void FormaPlatiClanarinu_Load(object sender, EventArgs e)
         {
             dgvClanarina.DataSource = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeClanarinamaDAL.DohvatiVrsteClanarine();
-            lblIznosNaRacunuClanarina.Text = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeClanarinamaDAL.PrikaziStanjeNaRacunu(odabraniKorisnik);
+            lblIznosNaRacunuClanarina.Text = Pristup_podacima.Dohvaćanje_podataka.UpravljanjeClanarinamaDAL.PrikaziStanjeNaRacunu(OdabraniKorisnik);
         }
 
         
