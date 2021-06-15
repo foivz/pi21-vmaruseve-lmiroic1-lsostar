@@ -46,7 +46,7 @@ namespace eGym
         {
             FormaRezervacijaTreninga formaRezervacijaTreninga = new FormaRezervacijaTreninga();
             formaRezervacijaTreninga.Show();
-            this.Hide();
+            this.Close();
         }
 
 

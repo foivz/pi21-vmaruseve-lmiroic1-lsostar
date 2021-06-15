@@ -30,5 +30,12 @@ namespace eGym
             }
             this.rwNaruceniSuplementi.RefreshReport();
         }
+
+        private void btnNatragIzvjesce_Click(object sender, EventArgs e)
+        {
+            FormProfilZaposlenika formProfilZaposlenika = new FormProfilZaposlenika();
+            formProfilZaposlenika.Show();
+            this.Close();
+        }
     }
 }

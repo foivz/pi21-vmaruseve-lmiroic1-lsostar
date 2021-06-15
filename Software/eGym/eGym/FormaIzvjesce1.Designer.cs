@@ -49,9 +49,10 @@ namespace eGym
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(23, 25);
+            this.label2.Location = new System.Drawing.Point(17, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 55);
+            this.label2.Size = new System.Drawing.Size(123, 44);
             this.label2.TabIndex = 86;
             this.label2.Text = "eGym";
             // 
@@ -61,11 +62,10 @@ namespace eGym
             reportDataSource1.Value = this.bsNaruceniSuplement;
             this.rwNaruceniSuplementi.LocalReport.DataSources.Add(reportDataSource1);
             this.rwNaruceniSuplementi.LocalReport.ReportEmbeddedResource = "eGym.Izvjesce.rdlc";
-            this.rwNaruceniSuplementi.Location = new System.Drawing.Point(133, 135);
-            this.rwNaruceniSuplementi.Margin = new System.Windows.Forms.Padding(4);
+            this.rwNaruceniSuplementi.Location = new System.Drawing.Point(100, 110);
             this.rwNaruceniSuplementi.Name = "rwNaruceniSuplementi";
             this.rwNaruceniSuplementi.ServerReport.BearerToken = null;
-            this.rwNaruceniSuplementi.Size = new System.Drawing.Size(859, 302);
+            this.rwNaruceniSuplementi.Size = new System.Drawing.Size(645, 246);
             this.rwNaruceniSuplementi.TabIndex = 96;
             // 
             // btnNatragIzvjesce
@@ -73,13 +73,14 @@ namespace eGym
             this.btnNatragIzvjesce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNatragIzvjesce.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNatragIzvjesce.ForeColor = System.Drawing.Color.White;
-            this.btnNatragIzvjesce.Location = new System.Drawing.Point(69, 496);
-            this.btnNatragIzvjesce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNatragIzvjesce.Location = new System.Drawing.Point(52, 403);
+            this.btnNatragIzvjesce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNatragIzvjesce.Name = "btnNatragIzvjesce";
-            this.btnNatragIzvjesce.Size = new System.Drawing.Size(117, 50);
+            this.btnNatragIzvjesce.Size = new System.Drawing.Size(88, 41);
             this.btnNatragIzvjesce.TabIndex = 97;
             this.btnNatragIzvjesce.Text = "Natrag";
             this.btnNatragIzvjesce.UseVisualStyleBackColor = false;
+            this.btnNatragIzvjesce.Click += new System.EventHandler(this.btnNatragIzvjesce_Click);
             // 
             // NaruceniSuplementBindingSource
             // 
@@ -87,12 +88,13 @@ namespace eGym
             // 
             // FormaIzvjesce1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1097, 584);
+            this.ClientSize = new System.Drawing.Size(823, 474);
             this.Controls.Add(this.btnNatragIzvjesce);
             this.Controls.Add(this.rwNaruceniSuplementi);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormaIzvjesce1";
             this.Text = "Izvješće O Naručenim Suplementima";
             this.Load += new System.EventHandler(this.FormaIzvjesce1_Load);

@@ -72,6 +72,7 @@ namespace eGym
             txtPrezime.Text = Sesija.PrijavljeniKorisnik.prezime;
             txtBrojTelefona.Text = Sesija.PrijavljeniKorisnik.brojtelefona;
             txtEmail.Text = Sesija.PrijavljeniKorisnik.email;
+            lblStanjeNaRacunu.Text = Sesija.PrijavljeniKorisnik.stanjeNaRacunu.ToString();
             using (var db = new Entities())
             {
                 var upit = from c in db.Clanarinas.Include("Korisnik")
