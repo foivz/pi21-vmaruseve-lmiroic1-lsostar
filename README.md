@@ -15,7 +15,7 @@ Ova bi aplikacija omogućila zaposlenicima evidentiranje članova, zaposlenika, 
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Registracija | Za pristup aplikaciji potrebna je registracija korisnika (uloga u sustavu - obični korisnik, moderator i administrator) svojim osobnim podacima. Administrator prihvaća ili odbija registracije korisnika. | Lorena Šoštar
+F01 | Registracija | Za pristup aplikaciji potrebna je registracija korisnika (uloga u sustavu - obični korisnik, moderator i administrator) svojim osobnim podacima.| Lorena Šoštar
 F02 | Login | Nakon registracije i nakon što administrator prihvati korisnika, svaki korisnik aplikacije može pristupiti aplikaciji pomoću svojih korisničkih podataka koje je unio prilikom registracije | Lorena Šoštar
 F03 | Evidencija članova | Zaposlenik može pregledati popis svih članova, njihove profile (CRUD operacije), unijeti im određenu svotu novca koju član uplati u teretani. Tim novčanim iznosom korisnik može naručivati suplemente. | Lucija Miroić
 F04 | Naručivanje suplemenata | Član, koji ima uplaćen iznos na svom profilu, može naručivati suplemente koje želi. Kada naruči suplement, ukupna cijena svih naručenih suplemenata oduzima se od iznosa na korisnikovom računu. | Valentina Maruševec
